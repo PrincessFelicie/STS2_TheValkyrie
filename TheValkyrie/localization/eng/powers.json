@@ -1,0 +1,25 @@
+{
+  "THEVALKYRIE-BLEED_POWER.title": "Bleed",
+  "THEVALKYRIE-BLEED_POWER.description": "Bleeding creatures lose HP every time bleed is applied.",
+  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.",
+
+  "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
+  "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you fail to block all damage this turn.",
+  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take damage this turn, lose [blue]{Amount}[/blue] HP. Lose this status at turn end.",
+
+  "THEVALKYRIE-ARMOR_POWER.title": "Armor",
+  "THEVALKYRIE-ARMOR_POWER.description": "Armor lowers damage taken from all attacks, before Block.",
+  "THEVALKYRIE-ARMOR_POWER.smartDescription": "All enemy attacks deal [blue]{Amount}[/blue] less.",
+
+  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.title": "Temporary Armor",
+  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.description": "Armor lowers damage taken from all attacks, before Block.",
+  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.smartDescription": "Gain [blue]{Amount}[/blue] Armor until the end of this turn.",
+
+  "THEVALKYRIE-BURN_BRIGHT_POWER.title": "Burning Brightly",
+  "THEVALKYRIE-BURN_BRIGHT_POWER.description": "Gain energy at the start of each turn.",
+  "THEVALKYRIE-BURN_BRIGHT_POWER.smartDescription": "Gain {energyPrefix:energyIcons{Amount}} at the start of each turn.",
+
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.title": "Deepest Cuts",
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.description": "Apply more Bleed with every Bleed.",
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.smartDescription": "Whenever you apply [gold]Bleed[/gold], apply an additional [blue]{Amount}[/blue] [gold]Bleed[/gold]."
+}

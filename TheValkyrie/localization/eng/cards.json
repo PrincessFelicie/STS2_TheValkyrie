@@ -1,0 +1,45 @@
+{
+  "THEVALKYRIE-STRIKE_VALKYRIE.title": "Strike",
+  "THEVALKYRIE-STRIKE_VALKYRIE.description": "Deal {Damage:diff()} damage.",
+  
+  "THEVALKYRIE-DEFEND_VALKYRIE.title": "Defend",
+  "THEVALKYRIE-DEFEND_VALKYRIE.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  
+  "THEVALKYRIE-MAKE_IT_BLEED.title": "Make it bleed",
+  "THEVALKYRIE-MAKE_IT_BLEED.description": "Deal {Damage:diff()} damage.\nInflict {BleedPower:diff()} [gold]Bleed[/gold].",
+
+  "THEVALKYRIE-SHIELD_OF_FAITH.title": "Shield of faith",
+  "THEVALKYRIE-SHIELD_OF_FAITH.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.",
+
+  
+  
+
+  "THEVALKYRIE-CUT_APART.title": "Cut Apart",
+  "THEVALKYRIE-CUT_APART.description": "Inflict {BleedPower:diff()} [gold]Bleed[/gold].",
+
+  "THEVALKYRIE-DIVINE_INSPIRATION.title": "Divine Inspiration",
+  "THEVALKYRIE-DIVINE_INSPIRATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd {quantity:diff()} [gold]Smites[/gold] into your hand.",
+
+
+
+
+  "THEVALKYRIE-BURN_BRIGHT.title": "Burn Bright",
+  "THEVALKYRIE-BURN_BRIGHT.description": "Lose {StrengthPower:diff()} [gold]Strength[/gold].\nLose {DexterityPower:diff()} [gold]Dexterity[/gold].\nGain {energyPrefix:energyIcons(1)} at the start of each turn.",
+  
+  "THEVALKYRIE-RAIN_OF_FEATHERS.title": "Rain of Feathers",
+  "THEVALKYRIE-RAIN_OF_FEATHERS.description": "Inflict {BleedPower:diff()} [gold]Bleed[/gold] and deal {Damage:diff()} damage to all enemies {Hits:diff()} times.",
+
+
+
+  "THEVALKYRIE-ANGELIC_FORM.title": "Angelic Form",
+  "THEVALKYRIE-ANGELIC_FORM.description": "Gain {ArmorPower:diff()} armor.",
+  
+  "THEVALKYRIE-DEEPEST_CUTS.title": "Deepest Cuts",
+  "THEVALKYRIE-DEEPEST_CUTS.description": "Your [gold]Bleeds[/gold] apply {DeepestCutsPower:diff()} more [gold]Bleed[/gold].",
+  
+  
+  
+  
+  "THEVALKYRIE-SMITE.title": "Smite",
+  "THEVALKYRIE-SMITE.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}."
+}

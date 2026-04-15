@@ -1,0 +1,47 @@
+using BaseLib.Extensions;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Commands.Builders;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.ValueProps;
+
+namespace TheValkyrie.TheValkyrieCode.Powers;
+
+public sealed class OverexertionPower : TheValkyriePower
+{
+    private class Data
+    {
+    }
+
+    protected override object InitInternalData()
+    {
+        return new Data();
+    }
+    
+    public override PowerType Type => PowerType.Debuff;
+    public override PowerStackType StackType => PowerStackType.Counter;
+    
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
+        Creature? dealer, CardModel? cardSource)
+    {
+        if (target != this.Owner || dealer == this.Owner)
+        {
+            return;
+        }
+        //todo need to check the attack didn't get blocked
+        await Cmd.Wait(0.1f); // add these timers to make it easier to read the damage + understand what happened...
+        await CreatureCmd.Damage((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), this.Owner, (decimal) this.Amount, ValueProp.Unblockable | ValueProp.Unpowered, this.Owner, null);
+        await Cmd.Wait(0.1f);
+        await PowerCmd.Remove(this);
+    }
+
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    {
+        await PowerCmd.Remove(this);
+        //todo if you have the uncommon power, unactivated overexertion becomes AOE damage
+    }
+}
