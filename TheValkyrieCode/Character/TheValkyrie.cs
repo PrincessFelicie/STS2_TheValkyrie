@@ -61,7 +61,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     
     public override string CustomArmPointingTexturePath
     {
-        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_point.png");
+        get => "/ui/hands/the_valkyrie_arm_point.png".ImagePath();
     }
 
     public override string CustomArmRockTexturePath

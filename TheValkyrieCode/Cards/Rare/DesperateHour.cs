@@ -32,7 +32,7 @@ public class DesperateHour : TheValkyrieCard
         validEnchantments.Add(ModelDb.Enchantment<Sharp>());
         validEnchantments.Add(ModelDb.Enchantment<Nimble>());
         validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
-        //validEnchantments.Add(ModelDb.Enchantment<Refrain>()); //too strong
+        validEnchantments.Add(ModelDb.Enchantment<Aegis>());
 
         
         int enchantmentCount = 1;
@@ -49,7 +49,7 @@ public class DesperateHour : TheValkyrieCard
                 case Sanguine:
                     enchantmentCount = 2;
                     break;
-                case Refrain:
+                case Aegis:
                     enchantmentCount = 1;
                     break;
             }

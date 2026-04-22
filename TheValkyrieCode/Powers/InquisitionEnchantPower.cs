@@ -41,7 +41,7 @@ public class InquisitionEnchantPower : TheValkyriePower
             validEnchantments.Add(ModelDb.Enchantment<Sharp>());
             validEnchantments.Add(ModelDb.Enchantment<Nimble>());
             validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
-            //validEnchantments.Add(ModelDb.Enchantment<Refrain>()); //too strong
+            validEnchantments.Add(ModelDb.Enchantment<Aegis>());
 
             EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.Player.RunState.Rng.CombatCardGeneration).First();
             int enchantmentCount = 1;
@@ -54,7 +54,7 @@ public class InquisitionEnchantPower : TheValkyriePower
                 case Sanguine:
                     enchantmentCount = 2;
                     break;
-                case Refrain:
+                case Aegis:
                     enchantmentCount = 1;
                     break;
             }

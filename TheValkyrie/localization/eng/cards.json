@@ -114,6 +114,12 @@
   "THEVALKYRIE-SONG_OF_DESTRUCTION.title": "Song of Destruction",
   "THEVALKYRIE-SONG_OF_DESTRUCTION.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nAdd a [purple]Sanguine {Sanguine:diff()}[/purple] [gold]Smite[/gold] into your hand.",
 
+  "THEVALKYRIE-DIG_YOUR_HEELS_IN.title": "Dig Your Heels In",
+  "THEVALKYRIE-DIG_YOUR_HEELS_IN.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+
+  "THEVALKYRIE-SONG_OF_SAFETY.title": "Song of Safety",
+  "THEVALKYRIE-SONG_OF_SAFETY.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nAdd {Quantity:diff()} [purple]Aegis {Aegis:diff()}[/purple] [gold]Smites[/gold] into your hand.",
+
 
 
 
@@ -147,7 +153,9 @@
   "THEVALKYRIE-SPIKED_PAULDRONS.title": "Spiked Pauldrons",
   "THEVALKYRIE-SPIKED_PAULDRONS.description": "{IfUpgraded:show:Gain {ArmorPower:diff()} [gold]Armor[/gold].\\n|}You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
 
-  
+  "THEVALKYRIE-ZEAL.title": "Zeal",
+  "THEVALKYRIE-ZEAL.description": "Gain {Energy:energyIcons()}.\\nDraw, [gold]Upgrade[/gold] and [purple]Enchant[/purple] {Cards:diff()} {Cards:plural:card|cards}.\nAlready [purple]Enchanted[/purple] cards get stronger.",
+
 
 
   "THEVALKYRIE-SMITE.title": "Smite",

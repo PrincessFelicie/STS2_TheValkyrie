@@ -33,7 +33,7 @@ public class SpikedPauldronsPower : TheValkyriePower
         Creature? applier,
         CardModel? cardSource)
     {
-        if (power is not ArmorPower)
+        if (power is not ArmorPower || power.Owner != this.Owner)
             return;
         await PowerCmd.Apply<ThornsPower>(this.Owner, amount, applier, cardSource, true);
     }
