@@ -32,7 +32,7 @@ public class InquisitionEnchantPower : TheValkyriePower
 
     public override async Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
     {
-        if (!addedByPlayer || !card.Tags.Contains<CardTag>(CustomEnum.Smite) || card.Owner.Creature != this.Owner)
+        if (!addedByPlayer || !card.Tags.Contains(CustomEnum.Smite) || card.Owner.Creature != this.Owner)
             return;
         this.Flash();
         if (card.Enchantment == null)
@@ -43,6 +43,7 @@ public class InquisitionEnchantPower : TheValkyriePower
             validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
             validEnchantments.Add(ModelDb.Enchantment<Aegis>());
 
+            if (Owner.Player == null) return;
             EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.Player.RunState.Rng.CombatCardGeneration).First();
             int enchantmentCount = 1;
             switch (enchantment.CanonicalInstance)
@@ -62,7 +63,7 @@ public class InquisitionEnchantPower : TheValkyriePower
         }
         else
         {
-            card.Enchantment.Amount = card.Enchantment.Amount + this.Amount;
+            card.Enchantment.Amount += this.Amount;
         }
     }
 }

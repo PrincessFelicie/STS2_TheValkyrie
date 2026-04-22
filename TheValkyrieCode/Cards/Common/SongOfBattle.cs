@@ -23,6 +23,7 @@ public class SongOfBattle : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        if (CombatState == null) return;
         await Smite.CreateInHandWithEnchantment<Sharp>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Sharp"].IntValue, CombatState);
     }
 

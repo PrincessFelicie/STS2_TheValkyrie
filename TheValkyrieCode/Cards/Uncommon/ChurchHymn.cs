@@ -21,6 +21,7 @@ public class ChurchHymn : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        if (CombatState == null) return;
         if (this.IsUpgraded)
             await Smite.CreateInHand(Owner,1, CombatState);
         

@@ -26,9 +26,10 @@ public class RousingSolo : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature)
-                     .Where<Creature>((Func<Creature, bool>)(c => c != null && c.IsAlive && c.IsPlayer && c != Owner.Creature)))
+        if (CombatState == null) return;
+        foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature).Where(c => c.IsAlive && c.IsPlayer && c != Owner.Creature))
         {
+            if (creature.Player == null) return;
             await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, creature.Player);
             await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, creature.Player);
         }

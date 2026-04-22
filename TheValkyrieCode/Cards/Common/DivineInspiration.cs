@@ -22,7 +22,8 @@ public class DivineInspiration : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await Smite.CreateInHand(Owner, this.DynamicVars["Quantity"].IntValue, CombatState);
+        if (CombatState == null) return; //solves a warning
+        await Smite.CreateInHand(Owner, DynamicVars["Quantity"].IntValue, CombatState);
     }
 
     protected override void OnUpgrade()

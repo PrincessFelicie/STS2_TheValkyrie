@@ -24,6 +24,7 @@ public class RainOfFeathers : TheValkyrieCard
         for (int i = 0; i < this.DynamicVars["Hits"].BaseValue; ++i)
         {
             await CommonActions.CardAttack(this, play).Execute(choiceContext);
+            if (CombatState == null) return;
             await PowerCmd.Apply<BleedPower>((IEnumerable<Creature>) CombatState.HittableEnemies, DynamicVars["BleedPower"].BaseValue, Owner.Creature, null);
         }
     }

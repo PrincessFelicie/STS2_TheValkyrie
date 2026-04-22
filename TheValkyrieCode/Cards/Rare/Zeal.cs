@@ -34,7 +34,7 @@ public class Zeal : TheValkyrieCard
 
             if (card.Enchantment != null)
             {
-                if (card.Enchantment.ShowAmount) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be
+                if (card.Enchantment.ShowAmount) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be. Unfortunately, means it doesn't work with Spiral... Blame the base game devs
                 {
                     card.Enchantment.Amount++;
                 }

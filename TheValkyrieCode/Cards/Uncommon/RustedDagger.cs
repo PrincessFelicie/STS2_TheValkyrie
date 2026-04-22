@@ -54,7 +54,8 @@ public class RustedDagger : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        bool shouldTriggerFatal = play.Target.Powers.All<PowerModel>((Func<PowerModel, bool>) (p => p.ShouldOwnerDeathTriggerFatal()));
+        
+        bool shouldTriggerFatal = play.Target != null && play.Target.Powers.All( p => p.ShouldOwnerDeathTriggerFatal());
         
         AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         

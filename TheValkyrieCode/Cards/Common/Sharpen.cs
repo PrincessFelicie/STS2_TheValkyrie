@@ -24,9 +24,8 @@ public class Sharpen : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        CardModel card = (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (Func<CardModel, bool>) (card => card.Type == CardType.Attack && card.TargetType != TargetType.RandomEnemy && card.Enchantment == null), (AbstractModel) this)).FirstOrDefault<CardModel>();
-        if (card == null)
-            return;
+        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (Func<CardModel, bool>) (card => card.Type == CardType.Attack && card.TargetType != TargetType.RandomEnemy && card.Enchantment == null), this)).FirstOrDefault();
+        if (card == null) return;
         CardCmd.Enchant<Sanguine>(card, DynamicVars["BleedPower"].BaseValue);
     }
 

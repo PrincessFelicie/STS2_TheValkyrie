@@ -25,7 +25,8 @@ public class SongOfDivinity : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-       await Smite.CreateInHandWithEnchantment<Refrain>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Replay"].IntValue, CombatState);
+        if (CombatState == null) return;
+        await Smite.CreateInHandWithEnchantment<Refrain>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Replay"].IntValue, CombatState);
     }
 
     protected override void OnUpgrade()

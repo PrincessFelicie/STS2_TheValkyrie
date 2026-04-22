@@ -26,12 +26,14 @@ public class Sanguine : CustomEnchantmentModel
     
     public override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay? cardPlay)
     {
+        if (Card.CombatState == null) return; //solves a warning
         switch (Card.TargetType)
         {
             case TargetType.AllEnemies:
-                await PowerCmd.Apply<BleedPower>((IEnumerable<Creature>) Card.CombatState.HittableEnemies, this.Amount, Card.Owner.Creature, Card);
+                await PowerCmd.Apply<BleedPower>(Card.CombatState.HittableEnemies, this.Amount, Card.Owner.Creature, Card);
                 break;
             case TargetType.AnyEnemy:
+                if (cardPlay?.Target == null) return; //solves a warning
                 await PowerCmd.Apply<BleedPower>(cardPlay.Target, this.Amount, Card.Owner.Creature, Card);
                 break;
             case TargetType.RandomEnemy:

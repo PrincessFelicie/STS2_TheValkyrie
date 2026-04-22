@@ -32,9 +32,9 @@ public sealed class BottledEcho : TheValkyriePotion
     {
         PotionModel.AssertValidForTargetedPotion(target);
         DamageVar damage = DynamicVars.Damage;
-        NCombatRoom instance = NCombatRoom.Instance;
+        /*NCombatRoom instance = NCombatRoom.Instance;
         if (instance != null)
-            instance.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(target)); //todo choose a vfx that's fun
+            instance.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(target));*/ //todo choose a vfx that's fun
         await CreatureCmd.Damage(choiceContext, target, damage.BaseValue, damage.Props, Owner.Creature, null);
         await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].BaseValue, Owner.Creature, null);
     }

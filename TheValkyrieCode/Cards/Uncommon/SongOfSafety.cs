@@ -29,6 +29,7 @@ public class SongOfSafety : TheValkyrieCard
     {
         await PowerCmd.Apply<TemporaryArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
         await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        if (CombatState == null) return; //solves a warning
         await Smite.CreateInHandWithEnchantment<Aegis>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Aegis"].IntValue, CombatState);
     }
 

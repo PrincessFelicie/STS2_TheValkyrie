@@ -27,8 +27,10 @@ public class SongOfDestruction : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        if (play.Target == null) return; //solves a warning
         await PowerCmd.Apply<BleedPower>(play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
         await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        if (CombatState == null) return; //solves a warning
         await Smite.CreateInHandWithEnchantment<Sanguine>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Sanguine"].IntValue, CombatState);
     }
 

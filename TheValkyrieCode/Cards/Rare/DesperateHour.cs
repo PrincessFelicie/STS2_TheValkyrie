@@ -23,7 +23,7 @@ public class DesperateHour : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        List<CardModel> list1 = PileType.Hand.GetPile(this.Owner).Cards.ToList<CardModel>();
+        List<CardModel> list1 = PileType.Hand.GetPile(this.Owner).Cards.ToList();
         int exhaustCount = list1.Count;
         foreach (CardModel card in list1)
             await CardCmd.Exhaust(choiceContext, card);
@@ -53,6 +53,7 @@ public class DesperateHour : TheValkyrieCard
                     enchantmentCount = 1;
                     break;
             }
+            if (CombatState == null) return;
             await Smite.CreateInHandWithEnchantment(Owner, 1, enchantment, enchantmentCount, CombatState);
             await Cmd.Wait(0.1f);
         }

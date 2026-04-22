@@ -37,7 +37,8 @@ public class BookOfOrnithology : TheValkyrieRelic
         this.Flash();
         for (int i = 0; i < DynamicVars["Smites"].BaseValue; ++i)
         {
-            CardModel card = await Smite.CreateInHand(Owner, combatState);
+            CardModel? card = await Smite.CreateInHand(Owner, combatState);
+            if (card == null) return; //solves a warning
             CardCmd.Upgrade(card);
         }
     }
