@@ -14,16 +14,16 @@ public class BurnBright : TheValkyrieCard
 {
     public BurnBright() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVars(new PowerVar<StrengthPower>(1));
-        WithVars(new PowerVar<DexterityPower>(1));
-        WithVars(new PowerVar<BurnBrightPower>(1));
+        WithPower<StrengthPower>(1);
+        WithPower<DexterityPower>(1);
+        WithPower<BurnBrightPower>(1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<StrengthPower>(this.Owner.Creature, -DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<DexterityPower>(this.Owner.Creature, -DynamicVars["DexterityPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<BurnBrightPower>(this.Owner.Creature, DynamicVars["DexterityPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(Owner.Creature, -DynamicVars["StrengthPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<DexterityPower>(Owner.Creature, -DynamicVars["DexterityPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<BurnBrightPower>(Owner.Creature, DynamicVars["BurnBrightPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

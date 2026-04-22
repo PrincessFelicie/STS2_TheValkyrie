@@ -12,7 +12,7 @@ public class DefendValkyrie : TheValkyrieCard
 {
     public DefendValkyrie() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
-        WithBlock(5);
+        WithBlock(5, 3);
         WithTags(CardTag.Defend);
     }
     
@@ -23,6 +23,5 @@ public class DefendValkyrie : TheValkyrieCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Block"].UpgradeValueBy(3);
     }
 }

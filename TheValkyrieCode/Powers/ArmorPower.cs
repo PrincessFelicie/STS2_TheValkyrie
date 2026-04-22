@@ -27,8 +27,8 @@ public sealed class ArmorPower : TheValkyriePower
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
         CardModel? cardSource)
     {
-        if (Owner == dealer) return 0;
-        if (props.IsPoweredAttack_() && dealer.IsEnemy)
+        if (Owner == dealer || dealer == null || target != Owner) return 0;
+        if (props.IsPoweredAttack_() && dealer.IsEnemy) //this means the power won't work if given to enemies, which limits design space a bit (not that I think giving enemies negative armor would be in flavor for this character, but still). I tried replacing isEnemy with dealer.side != target.side, but it just caused the game to crash if armor was given to the enemy. Aaaaaaah welllll)
         {
             return -Amount;
         }

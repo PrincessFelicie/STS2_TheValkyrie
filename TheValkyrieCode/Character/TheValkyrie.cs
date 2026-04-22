@@ -3,21 +3,23 @@ using BaseLib.Utils.NodeFactories;
 using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
+using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
 using TheValkyrie.TheValkyrieCode.Cards.Basic;
+using TheValkyrie.TheValkyrieCode.Relics;
 
 namespace TheValkyrie.TheValkyrieCode.Character;
 public class TheValkyrie : PlaceholderCharacterModel
 {
     public const string CharacterId = "TheValkyrie";
 
-    public static readonly Color Color = new("ffffff");
+    public static readonly Color Color = new("8e400d");
 
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Feminine;
-    public override int StartingHp => 70;
+    public override int StartingHp => 68;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
@@ -35,7 +37,7 @@ public class TheValkyrie : PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<BookOfFaith>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<TheValkyrieCardPool>();
@@ -46,6 +48,7 @@ public class TheValkyrie : PlaceholderCharacterModel
         override all the other methods that define those assets.
         These are just some of the simplest assets, given some placeholders to differentiate your character with.
         You don't have to, but you're suggested to rename these images. */
+    
     public override Control CustomIcon
     {
         get
@@ -54,6 +57,26 @@ public class TheValkyrie : PlaceholderCharacterModel
             icon.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);
             return icon;
         }
+    }
+    
+    public override string CustomArmPointingTexturePath
+    {
+        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_point.png");
+    }
+
+    public override string CustomArmRockTexturePath
+    {
+        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_rock.png");
+    }
+
+    public override string CustomArmPaperTexturePath
+    {
+        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_paper.png");
+    }
+
+    public override string CustomArmScissorsTexturePath
+    {
+        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_scissors.png");
     }
 
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();

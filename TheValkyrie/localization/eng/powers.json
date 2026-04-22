@@ -1,25 +1,57 @@
 {
   "THEVALKYRIE-BLEED_POWER.title": "Bleed",
-  "THEVALKYRIE-BLEED_POWER.description": "Bleeding creatures lose HP every time bleed is applied.",
-  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.",
+  "THEVALKYRIE-BLEED_POWER.description": "Bleeding creatures lose HP every time Bleed is applied. Each turn, Bleed is reduced by 1.",
+  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount. Lowers by 1 each turn.",
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
   "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you fail to block all damage this turn.",
   "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take damage this turn, lose [blue]{Amount}[/blue] HP. Lose this status at turn end.",
 
   "THEVALKYRIE-ARMOR_POWER.title": "Armor",
-  "THEVALKYRIE-ARMOR_POWER.description": "Armor lowers damage taken from all attacks, before Block.",
+  "THEVALKYRIE-ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
   "THEVALKYRIE-ARMOR_POWER.smartDescription": "All enemy attacks deal [blue]{Amount}[/blue] less.",
 
   "THEVALKYRIE-TEMPORARY_ARMOR_POWER.title": "Temporary Armor",
-  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.description": "Armor lowers damage taken from all attacks, before Block.",
-  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.smartDescription": "Gain [blue]{Amount}[/blue] Armor until the end of this turn.",
+  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
+  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Armor[/gold] until the end of this turn.",
 
   "THEVALKYRIE-BURN_BRIGHT_POWER.title": "Burning Brightly",
-  "THEVALKYRIE-BURN_BRIGHT_POWER.description": "Gain energy at the start of each turn.",
-  "THEVALKYRIE-BURN_BRIGHT_POWER.smartDescription": "Gain {energyPrefix:energyIcons{Amount}} at the start of each turn.",
+  "THEVALKYRIE-BURN_BRIGHT_POWER.description": "Gain Energy at the start of each turn.",
+  "THEVALKYRIE-BURN_BRIGHT_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
 
   "THEVALKYRIE-DEEPEST_CUTS_POWER.title": "Deepest Cuts",
-  "THEVALKYRIE-DEEPEST_CUTS_POWER.description": "Apply more Bleed with every Bleed.",
-  "THEVALKYRIE-DEEPEST_CUTS_POWER.smartDescription": "Whenever you apply [gold]Bleed[/gold], apply an additional [blue]{Amount}[/blue] [gold]Bleed[/gold]."
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.description": "Apply more [gold]Bleed[/gold] with every [gold]Bleed[/gold].",
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.smartDescription": "Whenever you apply [gold]Bleed[/gold], apply an additional [blue]{Amount}[/blue] [gold]Bleed[/gold].",
+
+  "THEVALKYRIE-BALANCED_STRIKE_POWER.title": "Balanced Advance",
+  "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Do not [gold]Overexert[/gold] this turn. Stacks.",
+  "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Do not [gold]Overexert[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}.",
+
+  "THEVALKYRIE-CRUSADE_POWER.title": "Crusade",
+  "THEVALKYRIE-CRUSADE_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_POWER.smartDescription": "Your [gold]Smites[/gold] grant [blue]{Amount}[/blue] extra [gold]Block[/gold].",
+
+  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.title": "Inquisition",
+  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.description": "Your [gold]Smites[/gold] are created Upgraded.",
+  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.smartDescription": "Your [gold]Smites[/gold] are created Upgraded.",
+
+  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.title": "Inquisitest",
+  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.description": "Your [gold]Smites[/gold] are created [purple]Enchanted[/purple].",
+  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.smartDescription": "Your [gold]Smites[/gold] are created [purple]Enchanted[/purple]. Your already [purple]Enchanted[/purple] Smites are stronger by [blue]{Amount}[/blue].",
+
+  "THEVALKYRIE-CHURCH_HYMN_POWER.title": "Church Hymn",
+  "THEVALKYRIE-CHURCH_HYMN_POWER.description": "At the start of your turn, add a [gold]Smite[/gold] into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue].",
+  "THEVALKYRIE-CHURCH_HYMN_POWER.smartDescription": "At the start of your turn, add {Amount:plural:a [gold]Smite[/gold]|[blue]{}[/blue] [gold]Smites[/gold]} into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue] for each.",
+
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.title": "Exsanguinating Force",
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.description": "At the start of your turn, apply [gold]Bleed[/gold] to all enemies.",
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.smartDescription": "At the start of your turn, apply [gold]Bleed[/gold] [blue]{Amount}[/blue] to all enemies.",
+
+  "THEVALKYRIE-RAZOR_WINGS_POWER.title": "Razor Wings",
+  "THEVALKYRIE-RAZOR_WINGS_POWER.description": "When hit by an attack, apply [gold]Bleed[/gold] to the attacker.",
+  "THEVALKYRIE-RAZOR_WINGS_POWER.smartDescription": "When hit by an attack, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] back.",
+
+  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.title": "Spiked Pauldrons",
+  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.description": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
+  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.smartDescription": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold]."
 }

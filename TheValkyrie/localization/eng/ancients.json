@@ -1,6 +1,15 @@
 {
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.char": "I am angry at the architect",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.char": "Are you the Architect? My people need help! They suffer down in the docks, waiting for [blue]Mazaleth[/blue]--",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.next": "Continue",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-1r.ancient": "You die",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-attack": "Both"
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-1r.ancient": "Their misery is self-inflicted. I have better things to do with my time.",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-1r.next": "Argue",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-2r.char": "What!? Can't you see they need help!? You cannot possibly imagine nobler cause!",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-2r.next": "Continue",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-3r.ancient": "If it is nobility you seek, Nonupeipe is a few floors down. Now begone.",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-attack": "Both",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]Little birdling[/sine], your feathers are so pretty! Why must you fear them so?",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Reply",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "I never asked for them! I meant to save my people, not join them in madness!",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "The path to a better you isn't always charted, my dear.\nMay my gift help you connect with your self!"
 }

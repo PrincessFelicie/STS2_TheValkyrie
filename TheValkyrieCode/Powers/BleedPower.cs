@@ -1,4 +1,7 @@
 using BaseLib.Extensions;
+using BaseLib.Hooks;
+using Godot;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -23,9 +26,25 @@ public sealed class BleedPower : TheValkyriePower
     public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
+    public override IEnumerable<HealthBarForecastSegment> GetHealthBarForecastSegments(HealthBarForecastContext context)
+    {
+        return [new HealthBarForecastSegment(Amount, Color.FromHtml("#890000"), HealthBarForecastDirection.FromRight)];
+    }
+    
     public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
-        if (power == this) // whoops! Don't want it to create a damage event on *all* status changes!!!
-            await CreatureCmd.Damage((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), power.Owner, (decimal) power.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);
+        if (power == this && amount > 0)
+        {
+            await Cmd.Wait(0.1f);
+            await CreatureCmd.Damage((PlayerChoiceContext)new ThrowingPlayerChoiceContext(), power.Owner, (decimal)power.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);
+        }
+    }
+    
+    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    {
+        if (side != this.Owner.Side)
+            return;
+        if (this.Owner.IsAlive)
+            await PowerCmd.Decrement(this);
     }
 }

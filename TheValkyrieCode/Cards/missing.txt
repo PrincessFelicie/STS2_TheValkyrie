@@ -1,0 +1,16 @@
+Bleed:
+ - 2 uncommon
+ - 1 rare
+ 
+ Smite:
+ - 1 uncommon
+ 
+ Armor:
+ - as needed
+ 
+ Overexert:
+ - as needed
+ 
+ 1 rare X cost card
+ 16 rares total
+ 23 uncommons total

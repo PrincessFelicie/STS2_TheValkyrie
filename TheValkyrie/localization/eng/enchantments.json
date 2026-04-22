@@ -1,0 +1,8 @@
+{
+  "THEVALKYRIE-REFRAIN.title": "Refrain",
+  "THEVALKYRIE-REFRAIN.description": "This card gains [gold]Replay[/gold] [blue]{Amount}[/blue].",
+
+  "THEVALKYRIE-SANGUINE.title": "Sanguine",
+  "THEVALKYRIE-SANGUINE.description": "Apply [blue]{Amount}[/blue] [gold]Bleed[/gold].",
+  "THEVALKYRIE-SANGUINE.extraCardText": "Apply [blue]{Amount}[/blue] [gold]Bleed[/gold]{TargetType:choose(AllEnemies): to ALL enemies|}."
+}

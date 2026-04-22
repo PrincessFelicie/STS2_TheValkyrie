@@ -12,18 +12,19 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
 public class DeepestCuts : TheValkyrieCard
 {
-    public DeepestCuts() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public DeepestCuts() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        WithVars(new PowerVar<DeepestCutsPower>(1));
+        WithVar("DeepestCutsPower", 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
+        WithTip(typeof(BleedPower)); //We do want the tooltip for the Bleed mechanic though
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<DeepestCutsPower>(this.Owner.Creature, DynamicVars["DeepestCutsPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<DeepestCutsPower>(Owner.Creature, DynamicVars["DeepestCutsPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["DeepestCutsPower"].UpgradeValueBy(1);
+        EnergyCost.UpgradeBy(-1);
     }
 }

@@ -14,19 +14,18 @@ public class RainOfFeathers : TheValkyrieCard
 {
     public RainOfFeathers() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithVars(new PowerVar<BleedPower>(1));
-        WithDamage(1);
-        WithVar("Hits", 2, 1);
+        WithPower<BleedPower>(1, 1);
+        WithDamage(1, 1);
+        WithVar("Hits", 2);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         for (int i = 0; i < this.DynamicVars["Hits"].BaseValue; ++i)
-            foreach (Creature hittableEnemy in (IEnumerable<Creature>) this.CombatState.HittableEnemies)
-            {
-                await CommonActions.CardAttack(this, hittableEnemy).Execute(choiceContext);
-                await PowerCmd.Apply<BleedPower>(hittableEnemy, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
-            }
+        {
+            await CommonActions.CardAttack(this, play).Execute(choiceContext);
+            await PowerCmd.Apply<BleedPower>((IEnumerable<Creature>) CombatState.HittableEnemies, DynamicVars["BleedPower"].BaseValue, Owner.Creature, null);
+        }
     }
 
     protected override void OnUpgrade()

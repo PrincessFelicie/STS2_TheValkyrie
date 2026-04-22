@@ -1,3 +1,10 @@
 {
-  
+  "THEVALKYRIE-OVEREXERT.title": "Overexert",
+  "THEVALKYRIE-OVEREXERT.description": "Overexertion deals damage to you if you fail to block all damage this turn.",
+
+  "THEVALKYRIE-BLEED.title": "Bleed",
+  "THEVALKYRIE-BLEED.description": "Bleeding creatures lose HP every time Bleed is applied. Each turn, Bleed is reduced by 1.",
+
+  "THEVALKYRIE-ARMOR.title": "Armor",
+  "THEVALKYRIE-ARMOR.description": "Armor lowers damage taken from all attacks, before Block."
 }

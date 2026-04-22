@@ -61,8 +61,14 @@
 
     <ItemGroup>
         <Folder Include="TheValkyrie\images\card_portraits\big\"/>
+        <Folder Include="TheValkyrie\images\enchantments\" />
+        <Folder Include="TheValkyrie\images\potions\" />
         <Folder Include="TheValkyrie\images\powers\big\"/>
         <Folder Include="TheValkyrie\images\relics\big\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="TheValkyrieCode\Cards\missing.txt" />
     </ItemGroup>
 
     <Target Name="CheckDependencyPaths">

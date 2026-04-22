@@ -14,22 +14,18 @@ public class DivineInspiration : TheValkyrieCard
 {
     public DivineInspiration() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(2);
-        WithVar("quantity", 2);
+        WithBlock(2,3);
+        WithVar("Quantity", 2);
+        WithTip(typeof(Smite));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        for (int i = 0; i < this.DynamicVars["quantity"].BaseValue; ++i)
-        {
-            await Smite.CreateInHand(this.Owner, this.CombatState);
-            await Cmd.Wait(0.1f);
-        }
+        await Smite.CreateInHand(Owner, this.DynamicVars["Quantity"].IntValue, CombatState);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Block"].UpgradeValueBy(3);
     }
 }

@@ -15,8 +15,8 @@ public class ShieldOfFaith : TheValkyrieCard
 {
     public ShieldOfFaith() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
-        WithBlock(3);
-        WithVars(new PowerVar<ArmorPower>(1));
+        WithBlock(3, 2);
+        WithPower<ArmorPower>(1, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -27,7 +27,5 @@ public class ShieldOfFaith : TheValkyrieCard
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Block"].UpgradeValueBy(2);
-        DynamicVars["ArmorPower"].UpgradeValueBy(1);
     }
 }

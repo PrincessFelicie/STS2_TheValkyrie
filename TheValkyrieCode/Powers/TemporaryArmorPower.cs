@@ -26,17 +26,29 @@ public sealed class TemporaryArmorPower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task BeforeApplied(
+    /*public override async Task BeforeApplied(
         Creature target,
         decimal amount,
         Creature? applier,
         CardModel? cardSource)
     {
         await PowerCmd.Apply<ArmorPower>(target, amount, applier, cardSource, true);
+    }*/
+    
+    public override async Task AfterPowerAmountChanged(
+        PowerModel power,
+        decimal amount,
+        Creature? applier,
+        CardModel? cardSource)
+    {
+        if (power != this)
+            return;
+        await PowerCmd.Apply<ArmorPower>(this.Owner, amount, applier, cardSource, true);
     }
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
+        this.Flash();
         await PowerCmd.Apply<ArmorPower>(this.Owner, -this.Amount, null, null, true);
         await PowerCmd.Remove(this);
     }

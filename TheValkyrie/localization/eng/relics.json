@@ -1,3 +1,25 @@
 {
-  
+  "THEVALKYRIE-BOOK_OF_FAITH.title": "Book of Faith",
+  "THEVALKYRIE-BOOK_OF_FAITH.description": "At the start of combat, add 3 [gold]Smites[/gold] to your hand.",
+  "THEVALKYRIE-BOOK_OF_FAITH.flavor": "It hums with latent energy.",
+
+  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.title": "Book of Ornithology",
+  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.description": "At the start of combat, add 3 [gold]Smites+[/gold] to your hand.\nYour [gold]Smites[/gold] deal +2 damage.",
+  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.flavor": "Its true visage has been revealed!",
+
+  "THEVALKYRIE-FEATHERED_HELMET.title": "Feathered Helmet",
+  "THEVALKYRIE-FEATHERED_HELMET.description": "Start each combat with 1 [gold]Armor[/gold].",
+  "THEVALKYRIE-FEATHERED_HELMET.flavor": "Mazaleth's cultists typically aren't warriors, but there are always exceptions. Though you're not a cultist, are you...?",
+
+  "THEVALKYRIE-MYSTIC_MATCHBOX.title": "Mystic Matchbox",
+  "THEVALKYRIE-MYSTIC_MATCHBOX.description": "[purple]Enchanted[/purple] Attacks deal [blue]{Damage}[/blue] additional damage.\n[purple]Enchanted[/purple] cards grant [blue]{Block}[/blue] additional [gold]Block[/gold].",
+  "THEVALKYRIE-MYSTIC_MATCHBOX.flavor": "Proper lighters are rare down there.",
+
+  "THEVALKYRIE-BLOODIED_TITHE.title": "Bloodied Tithe",
+  "THEVALKYRIE-BLOODIED_TITHE.description": "Whenever you apply [gold]Bleed[/gold] on an enemy with no [gold]Bleed[/gold], apply an additional [blue]{BleedPower}[/blue] [gold]Bleed[/gold].",
+  "THEVALKYRIE-BLOODIED_TITHE.flavor": "All must pay the price.",
+
+  "THEVALKYRIE-FISHING_HOOK.title": "Fishing Hook",
+  "THEVALKYRIE-FISHING_HOOK.description": "Upon pickup, [gold]Enchant[/gold] up to [blue]{Cards}[/blue] {Cards:plural:Attack|Attacks} with [purple]Sanguine[/purple] [blue]{SanguineAmount:diff()}[/blue].",
+  "THEVALKYRIE-FISHING_HOOK.flavor": "It brings to mind memories of dried kelp."
 }

@@ -1,0 +1,48 @@
+using BaseLib.Extensions;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Relics;
+using MegaCrit.Sts2.Core.Rooms;
+using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Powers;
+
+namespace TheValkyrie.TheValkyrieCode.Relics;
+
+public class MysticMatchbox : TheValkyrieRelic
+{
+    public override RelicRarity Rarity => RelicRarity.Uncommon;
+    protected override IEnumerable<DynamicVar> CanonicalVars => [
+        new DamageVar(3, ValueProp.Unpowered),
+        new BlockVar(1, ValueProp.Unpowered)
+    ];
+
+    public override Decimal ModifyDamageAdditive(
+        Creature? target,
+        Decimal amount,
+        ValueProp props,
+        Creature? dealer,
+        CardModel? cardSource)
+    {
+        return !props.IsPoweredAttack() || cardSource?.Enchantment == null || cardSource.Owner != this.Owner ? 0 : (Decimal) this.DynamicVars.Damage.IntValue;
+    }
+    
+    public override Decimal ModifyBlockAdditive(
+        Creature target,
+        Decimal block,
+        ValueProp props,
+        CardModel? cardSource,
+        CardPlay? cardPlay)
+    {
+        return this.Owner.Creature != target || cardSource?.Enchantment == null || cardSource.Owner != this.Owner ? 0 : (Decimal) this.DynamicVars.Block.IntValue;
+    }
+}

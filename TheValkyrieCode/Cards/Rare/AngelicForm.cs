@@ -14,16 +14,15 @@ public class AngelicForm : TheValkyrieCard
 {
     public AngelicForm() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        WithVars(new PowerVar<ArmorPower>(5));
+        WithPower<ArmorPower>(5, 2);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<ArmorPower>(this.Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<ArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["ArmorPower"].UpgradeValueBy(2);
     }
 }
