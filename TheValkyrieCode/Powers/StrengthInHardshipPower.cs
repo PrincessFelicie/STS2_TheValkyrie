@@ -6,13 +6,14 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
-public sealed class TemporaryArmorPower : TheValkyriePower
+public sealed class StrengthInHardshipPower : TheValkyriePower
 {
     private class Data
     {
@@ -25,24 +26,15 @@ public sealed class TemporaryArmorPower : TheValkyriePower
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-    
+
     public override async Task AfterPowerAmountChanged(
         PowerModel power,
         decimal amount,
         Creature? applier,
         CardModel? cardSource)
     {
-        if (power != this)
+        if (power is not OverexertionPower || power.Owner != this.Owner)
             return;
-        await PowerCmd.Apply<ArmorPower>(this.Owner, amount, applier, cardSource, true);
-    }
-
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-    {
-        if (side == Owner.Side)
-            return;
-        this.Flash();
-        await PowerCmd.Apply<ArmorPower>(this.Owner, -this.Amount, null, null, true);
-        await PowerCmd.Remove(this);
+        await PowerCmd.Apply<TemporaryArmorPower>(this.Owner, this.Amount, applier, cardSource, true);
     }
 }

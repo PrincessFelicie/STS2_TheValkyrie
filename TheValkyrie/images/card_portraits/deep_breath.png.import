@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvfe82riuhbtm"
-path="res://.godot/imported/angelic_form.png-932f25d31d070a23cead7ed1b6ab2a60.ctex"
+uid="uid://c5yu5h7m8ivdt"
+path="res://.godot/imported/deep_breath.png-a9083d4affeb000685765b633d083bf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheValkyrie/images/card_portraits/big/angelic_form.png"
-dest_files=["res://.godot/imported/angelic_form.png-932f25d31d070a23cead7ed1b6ab2a60.ctex"]
+source_file="res://TheValkyrie/images/card_portraits/deep_breath.png"
+dest_files=["res://.godot/imported/deep_breath.png-a9083d4affeb000685765b633d083bf2.ctex"]
 
 [params]
 

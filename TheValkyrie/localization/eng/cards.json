@@ -120,11 +120,17 @@
   "THEVALKYRIE-SONG_OF_SAFETY.title": "Song of Safety",
   "THEVALKYRIE-SONG_OF_SAFETY.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nAdd {Quantity:diff()} [purple]Aegis {Aegis:diff()}[/purple] [gold]Smites[/gold] into your hand.",
 
+  "THEVALKYRIE-PULL_A_MUSCLE.title": "Pull a Muscle",
+  "THEVALKYRIE-PULL_A_MUSCLE.description": "Gain {Block:diff()} [gold]Block[/gold].\nFor the rest of the fight, [gold]Overexert[/gold] {OverexertionPower:diff()} at the start of each turn.",
+
+  "THEVALKYRIE-EAGLE_DIVE.title": "Eagle Dive",
+  "THEVALKYRIE-EAGLE_DIVE.description": "Deal {Damage:diff()} damage to ALL enemies.\nCosts 1 less {energyPrefix:energyIcons(1)} for every 5 [gold]Overexertion[/gold] you currently have.",
+
+  
 
 
-
-  "THEVALKYRIE-ANGELIC_FORM.title": "Angel Form",
-  "THEVALKYRIE-ANGELIC_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].",
+  "THEVALKYRIE-ANGEL_FORM.title": "Angel Form",
+  "THEVALKYRIE-ANGEL_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\nAt the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold] gain [gold]Ethereal[/gold].",
   
   "THEVALKYRIE-DEEPEST_CUTS.title": "Deepest Cuts",
   "THEVALKYRIE-DEEPEST_CUTS.description": "Your [gold]Bleeds[/gold] apply {DeepestCutsPower:diff()} more [gold]Bleed[/gold].",
@@ -156,7 +162,11 @@
   "THEVALKYRIE-ZEAL.title": "Zeal",
   "THEVALKYRIE-ZEAL.description": "Gain {Energy:energyIcons()}.\\nDraw, [gold]Upgrade[/gold] and [purple]Enchant[/purple] {Cards:diff()} {Cards:plural:card|cards}.\nAlready [purple]Enchanted[/purple] cards get stronger.",
 
+  "THEVALKYRIE-STRENGTH_IN_HARDSHIP.title": "Strength In Hardship",
+  "THEVALKYRIE-STRENGTH_IN_HARDSHIP.description": "Whenever you [gold]Overexert[/gold], gain {StrengthInHardshipPower:diff()} [gold]Armor[/gold] this turn.",
 
+  
+  
 
   "THEVALKYRIE-SMITE.title": "Smite",
   "THEVALKYRIE-SMITE.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",

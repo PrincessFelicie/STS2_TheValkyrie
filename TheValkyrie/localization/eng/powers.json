@@ -53,5 +53,17 @@
 
   "THEVALKYRIE-SPIKED_PAULDRONS_POWER.title": "Spiked Pauldrons",
   "THEVALKYRIE-SPIKED_PAULDRONS_POWER.description": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
-  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.smartDescription": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold]."
+  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.smartDescription": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
+
+  "THEVALKYRIE-STRENGTH_IN_HARDSHIP_POWER.title": "Strength in Hardship",
+  "THEVALKYRIE-STRENGTH_IN_HARDSHIP_POWER.description": "Whenever you [gold]Overexert[/gold], gain [gold]Armor[/gold] this turn.",
+  "THEVALKYRIE-STRENGTH_IN_HARDSHIP_POWER.smartDescription": "Whenever you [gold]Overexert[/gold], gain [blue]{Amount}[/blue] [gold]Armor[/gold] this turn.",
+
+  "THEVALKYRIE-ANGEL_FORM_POWER.title": "Angel Form",
+  "THEVALKYRIE-ANGEL_FORM_POWER.description": "At the start of your turn, gain [gold]Armor[/gold].",
+  "THEVALKYRIE-ANGEL_FORM_POWER.smartDescription": "At the start of your turn, gain [blue]{Amount}[/blue] [gold]Armor[/gold].",
+
+  "THEVALKYRIE-PULL_A_MUSCLE_POWER.title": "Muscle Pulled",
+  "THEVALKYRIE-PULL_A_MUSCLE_POWER.description": "At the start of your turn, [gold]Overexert[/gold].",
+  "THEVALKYRIE-PULL_A_MUSCLE_POWER.smartDescription": "At the start of your turn, [gold]Overexert[/gold] [blue]{Amount}[/blue]."
 }

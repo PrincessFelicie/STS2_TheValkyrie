@@ -6,23 +6,26 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
-public class AngelicForm : TheValkyrieCard
+public class StrengthInHardship : TheValkyrieCard
 {
-    public AngelicForm() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public StrengthInHardship() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        WithPower<ArmorPower>(5, 2);
+        WithPower<StrengthInHardshipPower>(1);
+        WithTip(typeof(OverexertionPower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<ArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthInHardshipPower>(Owner.Creature, DynamicVars["StrengthInHardshipPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
+        EnergyCost.UpgradeBy(-1); //can we find more interesting?
     }
 }

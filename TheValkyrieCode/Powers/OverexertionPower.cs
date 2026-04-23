@@ -35,7 +35,7 @@ public sealed class OverexertionPower : TheValkyriePower
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (target != this.Owner || dealer == this.Owner || result.UnblockedDamage <= 0)
+        if (target != this.Owner || result.UnblockedDamage <= 0)
         {
             return;
         }
@@ -45,8 +45,11 @@ public sealed class OverexertionPower : TheValkyriePower
         await PowerCmd.Remove(this);
     }
 
-    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
+        if (side == Owner.Side)
+            return;
+        this.Flash();
         await PowerCmd.Remove(this);
     }
 }

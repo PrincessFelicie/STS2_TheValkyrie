@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cudolf3uyn7s1"
-path="res://.godot/imported/angelic_form.png-16c329f594966f31087e5269d59e868a.ctex"
+path="res://.godot/imported/angel_form.png-c908496b53e4dcfe17cbaba8b6f14764.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheValkyrie/images/card_portraits/angelic_form.png"
-dest_files=["res://.godot/imported/angelic_form.png-16c329f594966f31087e5269d59e868a.ctex"]
+source_file="res://TheValkyrie/images/card_portraits/angel_form.png"
+dest_files=["res://.godot/imported/angel_form.png-c908496b53e4dcfe17cbaba8b6f14764.ctex"]
 
 [params]
 
