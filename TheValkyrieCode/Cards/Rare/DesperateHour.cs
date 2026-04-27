@@ -19,6 +19,7 @@ public class DesperateHour : TheValkyrieCard
     {
         WithKeyword(CardKeyword.Exhaust);
         WithTip(typeof(Smite));
+        WithVar("Bless", 1); WithTip(CustomEnum.Bless);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

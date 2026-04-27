@@ -17,16 +17,27 @@ public class Sharpen : TheValkyrieCard
 {
     public Sharpen() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithPower<BleedPower>(2, 2);
+        WithVar("Bless", 2, 2); WithTip(CustomEnum.Bless);
         WithKeyword(CardKeyword.Exhaust);
+        WithTip(typeof(Sanguine));
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (Func<CardModel, bool>) (card => card.Type == CardType.Attack && card.TargetType != TargetType.RandomEnemy && card.Enchantment == null), this)).FirstOrDefault();
-        if (card == null) return;
-        CardCmd.Enchant<Sanguine>(card, DynamicVars["BleedPower"].BaseValue);
+        Sanguine canonicalEnchantment = ModelDb.Enchantment<Sanguine>();
+        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(this.Owner).Cards.Where(c => canonicalEnchantment.CanEnchant(c) || c.Enchantment is Sanguine).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), this.Owner, prefs)).ToList())
+        {
+            if (card.Enchantment == null)
+            {
+                CardCmd.Enchant<Sanguine>(card, DynamicVars["Bless"].BaseValue);
+                CardCmd.Preview(card);
+            }
+            else
+            {
+                card.Enchantment.Amount += DynamicVars["Bless"].IntValue;
+            }
+        }
     }
 
     protected override void OnUpgrade()

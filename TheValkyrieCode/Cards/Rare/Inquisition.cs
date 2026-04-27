@@ -16,13 +16,14 @@ public class Inquisition : TheValkyrieCard
     public Inquisition() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithTip(typeof(Smite));
+        WithTip(CustomEnum.Bless); //idk how to make the tip show up only when the card is upgraded.
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<InquisitionUpgradePower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<InquisitionUpgradePower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
         if (this.IsUpgraded)
-            await PowerCmd.Apply<InquisitionEnchantPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<InquisitionEnchantPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

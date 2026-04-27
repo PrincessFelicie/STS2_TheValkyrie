@@ -22,7 +22,7 @@ public class ShieldOfFaith : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<TemporaryArmorPower>(this.Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, this.Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

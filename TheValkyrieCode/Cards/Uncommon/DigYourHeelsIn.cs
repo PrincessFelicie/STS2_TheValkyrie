@@ -13,14 +13,14 @@ public class DigYourHeelsIn : TheValkyrieCard
 {
     public DigYourHeelsIn() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<ArmorPower>(2, 1);
+        WithPower<ArmorPower>(1, 1);
         WithPower<OverexertionPower>(9);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<ArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

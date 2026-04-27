@@ -28,6 +28,7 @@ public sealed class StrengthInHardshipPower : TheValkyriePower
     public override PowerStackType StackType => PowerStackType.Counter;
 
     public override async Task AfterPowerAmountChanged(
+        PlayerChoiceContext choiceContext,
         PowerModel power,
         decimal amount,
         Creature? applier,
@@ -35,6 +36,6 @@ public sealed class StrengthInHardshipPower : TheValkyriePower
     {
         if (power is not OverexertionPower || power.Owner != this.Owner)
             return;
-        await PowerCmd.Apply<TemporaryArmorPower>(this.Owner, this.Amount, applier, cardSource, true);
+        await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, this.Owner, this.Amount, applier, cardSource, true);
     }
 }

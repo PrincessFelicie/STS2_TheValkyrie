@@ -20,7 +20,7 @@ public class RazorWings : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<RazorWingsPower>(Owner.Creature, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<RazorWingsPower>(choiceContext, Owner.Creature, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

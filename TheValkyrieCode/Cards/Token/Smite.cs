@@ -26,7 +26,7 @@ public class Smite : TheValkyrieCard
         WithTags(CustomEnum.Smite);
     }
     
-    public static async Task<CardModel?> CreateInHand(Player owner, CombatState combatState)
+    public static async Task<CardModel?> CreateInHand(Player owner, ICombatState combatState)
     {
         return (await CreateInHand(owner, 1, combatState)).FirstOrDefault<CardModel>();
     }
@@ -34,7 +34,7 @@ public class Smite : TheValkyrieCard
     public static async Task<IEnumerable<CardModel>> CreateInHand(
         Player owner,
         int count,
-        CombatState combatState)
+        ICombatState combatState)
     {
         if (count == 0)
             return (IEnumerable<CardModel>) Array.Empty<CardModel>();
@@ -43,7 +43,7 @@ public class Smite : TheValkyrieCard
         List<CardModel> smites = new List<CardModel>();
         for (int index = 0; index < count; ++index)
             smites.Add((CardModel) combatState.CreateCard<Smite>(owner));
-        IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, true);
+        IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, owner);
         return (IEnumerable<CardModel>) smites;
     }
 
@@ -51,7 +51,7 @@ public class Smite : TheValkyrieCard
         Player owner,
         int count,
         int enchantmentCount,
-        CombatState combatState) where T : EnchantmentModel
+        ICombatState combatState) where T : EnchantmentModel
     {
         return (await CreateInHandWithEnchantment(owner, count, ModelDb.Enchantment<T>(), enchantmentCount, combatState));
     }
@@ -61,7 +61,7 @@ public class Smite : TheValkyrieCard
         int count,
         EnchantmentModel enchantment,
         int enchantmentCount,
-        CombatState combatState)
+        ICombatState combatState)
     {
         if (count == 0)
             return (IEnumerable<CardModel>) Array.Empty<CardModel>();
@@ -75,7 +75,7 @@ public class Smite : TheValkyrieCard
             CardCmd.Enchant(enchantment.ToMutable(), c, enchantmentCount);
         }
 
-        IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, true);
+        IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, owner);
         return (IEnumerable<CardModel>) smites;
     }
 
@@ -83,7 +83,7 @@ public class Smite : TheValkyrieCard
     {
         await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

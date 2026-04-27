@@ -25,7 +25,7 @@ public class ChopUp : TheValkyrieCard
         {
             if (play.Target != null)
             {
-                await PowerCmd.Apply<BleedPower>(play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
+                await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
             }
         }
     }

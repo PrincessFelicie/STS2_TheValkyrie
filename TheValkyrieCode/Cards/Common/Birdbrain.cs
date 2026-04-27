@@ -29,7 +29,7 @@ public class Birdbrain : TheValkyrieCard
         if (card2 == null) return;
         if (this.IsUpgraded)
             CardCmd.Upgrade(card2);
-        await CardPileCmd.AddGeneratedCardToCombat(card2, PileType.Hand, true);
+        await CardPileCmd.AddGeneratedCardToCombat(card2, PileType.Hand, this.Owner);
     }
 
     protected override void OnUpgrade()

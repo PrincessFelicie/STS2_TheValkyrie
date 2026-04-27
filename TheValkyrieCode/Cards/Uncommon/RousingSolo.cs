@@ -33,7 +33,7 @@ public class RousingSolo : TheValkyrieCard
             await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, creature.Player);
             await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, creature.Player);
         }
-        await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

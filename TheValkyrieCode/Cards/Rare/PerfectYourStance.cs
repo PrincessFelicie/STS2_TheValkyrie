@@ -23,7 +23,7 @@ public class PerfectYourStance : TheValkyrieCard
         AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         if (attackCommand.Results.Sum(r => r.UnblockedDamage) > 0)
         {
-            await PowerCmd.Apply<ArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
         }
     }
 

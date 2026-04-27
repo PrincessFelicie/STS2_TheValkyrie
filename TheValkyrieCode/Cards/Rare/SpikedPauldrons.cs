@@ -22,11 +22,11 @@ public class SpikedPauldrons : TheValkyrieCard
     {
         if (!this.Owner.Creature.HasPower<SpikedPauldronsPower>())
         {
-            await PowerCmd.Apply<ThornsPower>(Owner.Creature, Owner.Creature.GetPowerAmount<ArmorPower>(), Owner.Creature, this);
+            await PowerCmd.Apply<ThornsPower>(choiceContext, Owner.Creature, Owner.Creature.GetPowerAmount<ArmorPower>(), Owner.Creature, this);
         }
-        await PowerCmd.Apply<SpikedPauldronsPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<SpikedPauldronsPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
         if (this.IsUpgraded)
-            await PowerCmd.Apply<ArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

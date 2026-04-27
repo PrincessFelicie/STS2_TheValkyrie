@@ -25,7 +25,7 @@ public class ChurchHymn : TheValkyrieCard
         if (this.IsUpgraded)
             await Smite.CreateInHand(Owner,1, CombatState);
         
-        await PowerCmd.Apply<ChurchHymnPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<ChurchHymnPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

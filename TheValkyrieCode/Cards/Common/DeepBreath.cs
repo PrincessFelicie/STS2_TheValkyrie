@@ -21,7 +21,7 @@ public class DeepBreath : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<OverexertionPower>(Owner.Creature, -Math.Min(DynamicVars["OverexertionPower"].IntValue, Owner.Creature.GetPowerAmount<OverexertionPower>()), Owner.Creature, this);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, -Math.Min(DynamicVars["OverexertionPower"].IntValue, Owner.Creature.GetPowerAmount<OverexertionPower>()), Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

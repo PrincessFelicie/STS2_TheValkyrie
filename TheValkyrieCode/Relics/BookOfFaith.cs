@@ -24,7 +24,7 @@ public class BookOfFaith : TheValkyrieRelic
         get => HoverTipFactory.FromCardWithCardHoverTips<Smite>();
     }
 
-    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
+    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
         if (player != Owner || combatState.RoundNumber > 1)
             return;

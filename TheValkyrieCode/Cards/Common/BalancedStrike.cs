@@ -20,8 +20,7 @@ public class BalancedStrike : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
-        await PowerCmd.Apply<BalancedStrikePower>(Owner.Creature, 1, Owner.Creature,
-            this);
+        await PowerCmd.Apply<BalancedStrikePower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

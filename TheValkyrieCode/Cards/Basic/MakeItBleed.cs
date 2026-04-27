@@ -31,7 +31,7 @@ public class MakeItBleed : TheValkyrieCard, ITranscendenceCard
         await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         if (play.Target != null)
         {
-            await PowerCmd.Apply<BleedPower>(play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
         }
     }
 

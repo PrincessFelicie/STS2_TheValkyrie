@@ -29,7 +29,7 @@ public class HallowedAura : TheValkyrieCard
     {
         if (CombatState == null) return;
         foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature).Where( c => c.IsAlive && c.IsPlayer))
-            await PowerCmd.Apply<ArmorPower>(creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<ArmorPower>(choiceContext, creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

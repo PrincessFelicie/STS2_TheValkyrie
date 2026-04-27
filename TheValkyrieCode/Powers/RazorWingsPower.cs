@@ -36,7 +36,7 @@ public sealed class RazorWingsPower : TheValkyriePower
     {
         if (target != this.Owner || dealer == null || !props.IsPoweredAttack())
             return;
-        await PowerCmd.Apply<BleedPower>(dealer, this.Amount, this.Owner, null);
+        await PowerCmd.Apply<BleedPower>(choiceContext, dealer, this.Amount, this.Owner, null);
     }
     
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)

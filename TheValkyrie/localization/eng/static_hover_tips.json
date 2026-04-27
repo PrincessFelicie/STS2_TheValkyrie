@@ -6,5 +6,8 @@
   "THEVALKYRIE-BLEED.description": "Bleeding creatures lose HP every time Bleed is applied. Each turn, Bleed is reduced by 1.",
 
   "THEVALKYRIE-ARMOR.title": "Armor",
-  "THEVALKYRIE-ARMOR.description": "Armor lowers damage taken from all attacks, before Block."
+  "THEVALKYRIE-ARMOR.description": "Armor lowers damage taken from all attacks, before Block.",
+
+  "THEVALKYRIE-BLESS.title": "Bless",
+  "THEVALKYRIE-BLESS.description": "Blessing makes most [purple]Enchantments[/purple] stronger. If not specified, Blessing an unenchanted card gives it a random blessable enchantment."
 }

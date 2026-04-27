@@ -27,6 +27,7 @@ public sealed class TemporaryArmorPower : TheValkyriePower
     public override PowerStackType StackType => PowerStackType.Counter;
     
     public override async Task AfterPowerAmountChanged(
+        PlayerChoiceContext choiceContext,
         PowerModel power,
         decimal amount,
         Creature? applier,
@@ -34,7 +35,7 @@ public sealed class TemporaryArmorPower : TheValkyriePower
     {
         if (power != this)
             return;
-        await PowerCmd.Apply<ArmorPower>(this.Owner, amount, applier, cardSource, true);
+        await PowerCmd.Apply<ArmorPower>(choiceContext, this.Owner, amount, applier, cardSource, true);
     }
 
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
@@ -42,7 +43,7 @@ public sealed class TemporaryArmorPower : TheValkyriePower
         if (side == Owner.Side)
             return;
         this.Flash();
-        await PowerCmd.Apply<ArmorPower>(this.Owner, -this.Amount, null, null, true);
+        await PowerCmd.Apply<ArmorPower>(choiceContext, this.Owner, -this.Amount, null, null, true);
         await PowerCmd.Remove(this);
     }
 }

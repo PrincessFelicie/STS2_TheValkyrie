@@ -31,7 +31,7 @@ public sealed class BleedPower : TheValkyriePower
         return [new HealthBarForecastSegment(Amount, Color.FromHtml("#890000"), HealthBarForecastDirection.FromRight)];
     }
     
-    public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power == this && amount > 0)
         {
@@ -40,7 +40,7 @@ public sealed class BleedPower : TheValkyriePower
         }
     }
     
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side != this.Owner.Side)
             return;

@@ -5,9 +5,11 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -30,9 +32,9 @@ public class InquisitionEnchantPower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
+    public override async Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
-        if (!addedByPlayer || !card.Tags.Contains(CustomEnum.Smite) || card.Owner.Creature != this.Owner)
+        if (creator == null || !card.Tags.Contains(CustomEnum.Smite) || card.Owner.Creature != this.Owner || Owner.Player == null)
             return;
         this.Flash();
         if (card.Enchantment == null)
@@ -43,20 +45,20 @@ public class InquisitionEnchantPower : TheValkyriePower
             validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
             validEnchantments.Add(ModelDb.Enchantment<Aegis>());
 
-            if (Owner.Player == null) return;
+            
             EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.Player.RunState.Rng.CombatCardGeneration).First();
             int enchantmentCount = 1;
             switch (enchantment.CanonicalInstance)
             {
                 case Sharp:
-                    enchantmentCount = 3;
+                    enchantmentCount = this.Amount+2;
                     break;
                 case Nimble:
                 case Sanguine:
-                    enchantmentCount = 2;
+                    enchantmentCount = this.Amount+1;
                     break;
                 case Aegis:
-                    enchantmentCount = 1;
+                    enchantmentCount = this.Amount;
                     break;
             }
             CardCmd.Enchant(enchantment.ToMutable(), card, enchantmentCount);

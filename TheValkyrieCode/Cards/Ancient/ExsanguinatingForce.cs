@@ -21,7 +21,7 @@ public class ExsanguinatingForce : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<ExsanguinatingForcePower>(Owner.Creature, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<ExsanguinatingForcePower>(choiceContext, Owner.Creature, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

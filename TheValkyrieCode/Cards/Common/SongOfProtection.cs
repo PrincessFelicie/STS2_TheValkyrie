@@ -27,7 +27,7 @@ public class SongOfProtection : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
         if (CombatState == null) return;
         await Smite.CreateInHandWithEnchantment<Nimble>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Nimble"].IntValue, CombatState);
     }

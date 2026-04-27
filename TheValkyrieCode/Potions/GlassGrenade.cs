@@ -38,7 +38,7 @@ public sealed class GlassGrenade : TheValkyriePotion
         {
             if (target != null)
             {
-                await PowerCmd.Apply<BleedPower>(target, DynamicVars["BleedPower"].BaseValue, Owner.Creature, null);
+                await PowerCmd.Apply<BleedPower>(choiceContext, target, DynamicVars["BleedPower"].BaseValue, Owner.Creature, null);
             }
         }
     }

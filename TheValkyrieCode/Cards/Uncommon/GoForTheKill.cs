@@ -24,7 +24,7 @@ public class GoForTheKill : TheValkyrieCard
     {
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
         AttackCommand attackCommand = await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target).Execute(choiceContext);
-        await PowerCmd.Apply<BleedPower>(play.Target, attackCommand.Results.Sum((DamageResult r) => r.TotalDamage), Owner.Creature, this);
+        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, attackCommand.Results.Sum((DamageResult r) => r.TotalDamage), Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

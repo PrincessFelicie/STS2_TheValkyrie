@@ -30,11 +30,11 @@ public class Sanguine : CustomEnchantmentModel
         switch (Card.TargetType)
         {
             case TargetType.AllEnemies:
-                await PowerCmd.Apply<BleedPower>(Card.CombatState.HittableEnemies, this.Amount, Card.Owner.Creature, Card);
+                await PowerCmd.Apply<BleedPower>(choiceContext, Card.CombatState.HittableEnemies, this.Amount, Card.Owner.Creature, Card);
                 break;
             case TargetType.AnyEnemy:
                 if (cardPlay?.Target == null) return; //solves a warning
-                await PowerCmd.Apply<BleedPower>(cardPlay.Target, this.Amount, Card.Owner.Creature, Card);
+                await PowerCmd.Apply<BleedPower>(choiceContext, cardPlay.Target, this.Amount, Card.Owner.Creature, Card);
                 break;
             case TargetType.RandomEnemy:
                 //I don't think this is the right task to handle this but I don't feel like refactoring rn

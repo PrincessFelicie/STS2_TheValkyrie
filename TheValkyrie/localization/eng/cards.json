@@ -72,8 +72,8 @@
   "THEVALKYRIE-PREPARE_SERMON.description": "If you have no [gold]Smites[/gold] in your [gold]Hand[/gold], add {Quantity:diff()} [gold]Smites[/gold] into your hand.",
 
   "THEVALKYRIE-SHARPEN.title": "Sharpen",
-  "THEVALKYRIE-SHARPEN.description": "Enchant an Attack with [purple]Sanguine[/purple] {BleedPower:diff()}.",
-  "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose a card to add [purple]Sanguine[/purple] [blue]{BleedPower:diff()}[/blue] to.",
+  "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Sanguine[/purple] {Bless:diff()}.",
+  "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose a card to add [purple]Sanguine[/purple] [blue]{Bless:diff()}[/blue] to.",
   
   
 
@@ -126,8 +126,11 @@
   "THEVALKYRIE-EAGLE_DIVE.title": "Eagle Dive",
   "THEVALKYRIE-EAGLE_DIVE.description": "Deal {Damage:diff()} damage to ALL enemies.\nCosts 1 less {energyPrefix:energyIcons(1)} for every 5 [gold]Overexertion[/gold] you currently have.",
 
+  "THEVALKYRIE-CRESCENDO_STRIKE.title": "Crescendo Strike",
+  "THEVALKYRIE-CRESCENDO_STRIKE.description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, [gold]Bless[/gold] it{IfUpgraded:show: twice|}.",
   
 
+  
 
   "THEVALKYRIE-ANGEL_FORM.title": "Angel Form",
   "THEVALKYRIE-ANGEL_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\nAt the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold] gain [gold]Ethereal[/gold].",
@@ -151,20 +154,27 @@
   "THEVALKYRIE-REQUIEM.description": "Play every [gold]Smite[/gold] in your [gold]Exhaust Pile[/gold] on the enemy.{InCombat:\\n(Plays {CalculatedSmites:diff()} [gold]{CalculatedSmites:plural:Smite|Smites}[/gold], including {CalculatedEnchantedSmites:diff()} [purple]Enchanted[/purple].)|}",
 
   "THEVALKYRIE-INQUISITION.title": "Inquisition",
-  "THEVALKYRIE-INQUISITION.description": "Your [gold]Smites[/gold] are created Upgraded{IfUpgraded:show: and randomly [purple]Enchanted[/purple]. Already [purple]Enchanted[/purple] [gold]Smites[/gold] get stronger}.",
+  "THEVALKYRIE-INQUISITION.description": "Your [gold]Smites[/gold] are created Upgraded{IfUpgraded:show: and [gold]Blessed[/gold]|}.",
   
   "THEVALKYRIE-DESPERATE_HOUR.title": "Desperate Hour",
-  "THEVALKYRIE-DESPERATE_HOUR.description": "[gold]Exhaust[/gold] your [gold]Hand[/gold].\nAdd 1 randomly [purple]Enchanted[/purple] [gold]Smite[/gold] into your [gold]Hand[/gold] for each card [gold]Exhausted[/gold].",
+  "THEVALKYRIE-DESPERATE_HOUR.description": "[gold]Exhaust[/gold] your [gold]Hand[/gold].\nAdd 1 [gold]Blessed[/gold] [gold]Smite[/gold] into your [gold]Hand[/gold] for each card [gold]Exhausted[/gold].",
 
   "THEVALKYRIE-SPIKED_PAULDRONS.title": "Spiked Pauldrons",
   "THEVALKYRIE-SPIKED_PAULDRONS.description": "{IfUpgraded:show:Gain {ArmorPower:diff()} [gold]Armor[/gold].\\n|}You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
 
   "THEVALKYRIE-ZEAL.title": "Zeal",
-  "THEVALKYRIE-ZEAL.description": "Gain {Energy:energyIcons()}.\\nDraw, [gold]Upgrade[/gold] and [purple]Enchant[/purple] {Cards:diff()} {Cards:plural:card|cards}.\nAlready [purple]Enchanted[/purple] cards get stronger.",
+  "THEVALKYRIE-ZEAL.description": "Gain {Energy:energyIcons()}.\\nDraw, [gold]Upgrade[/gold] and [gold]Bless[/gold] {Cards:diff()} {Cards:plural:card|cards}.",
 
   "THEVALKYRIE-STRENGTH_IN_HARDSHIP.title": "Strength In Hardship",
   "THEVALKYRIE-STRENGTH_IN_HARDSHIP.description": "Whenever you [gold]Overexert[/gold], gain {StrengthInHardshipPower:diff()} [gold]Armor[/gold] this turn.",
 
+  "THEVALKYRIE-PLUMED_WISH.title": "Plumed Wish",
+  "THEVALKYRIE-PLUMED_WISH.description": "Put a card from ANY of your [gold]Piles[/gold] into your [gold]Hand[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-PLUMED_WISH.selectionScreenPrompt": "Choose a card to put into your [gold]Hand[/gold].",
+
+  "THEVALKYRIE-BURST_OF_POWER.title": "Burst of Power",
+  "THEVALKYRIE-BURST_OF_POWER.description": "[gold]Bless[/gold] ALL cards in your hands{IfUpgraded:show: twice|}.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  
   
   
 

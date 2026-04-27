@@ -27,6 +27,6 @@ public class FeatheredHelmet : TheValkyrieRelic
         if (!(room is CombatRoom))
             return;
         this.Flash();
-        await PowerCmd.Apply<ArmorPower>(Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, null);
+        await PowerCmd.Apply<ArmorPower>((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, null);
     }
 }

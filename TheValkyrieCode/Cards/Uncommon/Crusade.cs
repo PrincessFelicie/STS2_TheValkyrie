@@ -17,7 +17,7 @@ public class Crusade : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<CrusadePower>(Owner.Creature, DynamicVars["CrusadePower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<CrusadePower>(choiceContext, Owner.Creature, DynamicVars["CrusadePower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

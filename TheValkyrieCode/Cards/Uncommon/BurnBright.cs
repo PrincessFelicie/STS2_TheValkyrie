@@ -21,9 +21,9 @@ public class BurnBright : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<StrengthPower>(Owner.Creature, -DynamicVars["StrengthPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<DexterityPower>(Owner.Creature, -DynamicVars["DexterityPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<BurnBrightPower>(Owner.Creature, DynamicVars["BurnBrightPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, -DynamicVars["StrengthPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<DexterityPower>(choiceContext, Owner.Creature, -DynamicVars["DexterityPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<BurnBrightPower>(choiceContext, Owner.Creature, DynamicVars["BurnBrightPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

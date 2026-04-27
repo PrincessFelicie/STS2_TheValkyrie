@@ -26,7 +26,7 @@ public sealed class ExsanguinatingForcePower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side != Owner.Side)
             return;
@@ -38,6 +38,6 @@ public sealed class ExsanguinatingForcePower : TheValkyriePower
             if (creatureNode != null)
                 NCombatRoom.Instance.CombatVfxContainer.AddChildSafely((Node) NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("83eb85")));
         }*/
-        await PowerCmd.Apply<BleedPower>((IEnumerable<Creature>) CombatState.HittableEnemies, this.Amount, this.Owner, null);
+        await PowerCmd.Apply<BleedPower>(new ThrowingPlayerChoiceContext(), CombatState.HittableEnemies, this.Amount, this.Owner, null);
     }
 }

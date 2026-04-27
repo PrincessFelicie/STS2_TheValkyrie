@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Extensions;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
@@ -21,6 +22,7 @@ public class Zeal : TheValkyrieCard
         WithCards(1, 1);
         WithEnergy(1);
         WithKeyword(CardKeyword.Exhaust);
+        WithVar("Bless", 1); WithTip(CustomEnum.Bless);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -34,9 +36,13 @@ public class Zeal : TheValkyrieCard
 
             if (card.Enchantment != null)
             {
-                if (card.Enchantment.ShowAmount) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be. Unfortunately, means it doesn't work with Spiral... Blame the base game devs
+                if (card.Enchantment.ShowAmount || card.Enchantment is Sown) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be. Exception is made for Sown, which does use enchantment.amount, surprisingly
                 {
                     card.Enchantment.Amount++;
+                }
+                else
+                {
+                    ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), Owner.Creature, 2.0);
                 }
             }
             else
@@ -49,6 +55,8 @@ public class Zeal : TheValkyrieCard
                     validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
                 if (card.DynamicVars.ContainsKey("Block"))
                     validEnchantments.Add(ModelDb.Enchantment<Nimble>());
+                else
+                    validEnchantments.Add(ModelDb.Enchantment<Adroit>());
                 
                 EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.RunState.Rng.CombatCardGeneration).First();
                 int enchantmentCount = 1;
@@ -59,6 +67,7 @@ public class Zeal : TheValkyrieCard
                         break;
                     case Nimble:
                     case Sanguine:
+                    case Adroit:
                         enchantmentCount = 2;
                         break;
                     case Aegis:

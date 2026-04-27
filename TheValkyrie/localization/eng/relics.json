@@ -1,10 +1,10 @@
 {
   "THEVALKYRIE-BOOK_OF_FAITH.title": "Book of Faith",
-  "THEVALKYRIE-BOOK_OF_FAITH.description": "At the start of combat, add 3 [gold]Smites[/gold] to your hand.",
+  "THEVALKYRIE-BOOK_OF_FAITH.description": "At the start of each combat, add 3 [gold]Smites[/gold] to your hand.",
   "THEVALKYRIE-BOOK_OF_FAITH.flavor": "It hums with latent energy.",
 
   "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.title": "Book of Ornithology",
-  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.description": "At the start of combat, add 3 [gold]Smites+[/gold] to your hand.\nYour [gold]Smites[/gold] deal +2 damage.",
+  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.description": "At the start of each combat, add 3 [gold]Smites+[/gold] to your hand.\nYour [gold]Smites[/gold] deal +2 damage.",
   "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.flavor": "Its true visage has been revealed!",
 
   "THEVALKYRIE-FEATHERED_HELMET.title": "Feathered Helmet",

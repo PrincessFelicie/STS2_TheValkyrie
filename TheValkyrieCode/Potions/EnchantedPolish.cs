@@ -33,6 +33,6 @@ public sealed class EnchantedPolish : TheValkyriePotion
         //NCombatRoom instance = NCombatRoom.Instance;
         //if (instance != null)
             //instance.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(target)); //todo choose a vfx that's fun
-        await PowerCmd.Apply<ArmorPower>(target, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, null);
+        await PowerCmd.Apply<ArmorPower>(choiceContext, target, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, null);
     }
 }

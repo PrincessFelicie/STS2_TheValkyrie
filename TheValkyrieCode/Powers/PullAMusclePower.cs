@@ -26,11 +26,11 @@ public sealed class PullAMusclePower : TheValkyriePower
     public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
     {
         if (side != Owner.Side)
             return;
         this.Flash();
-        await PowerCmd.Apply<OverexertionPower>(this.Owner, this.Amount, this.Owner, null);
+        await PowerCmd.Apply<OverexertionPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
     }
 }

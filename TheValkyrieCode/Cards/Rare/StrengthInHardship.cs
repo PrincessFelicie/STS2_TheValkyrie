@@ -15,13 +15,14 @@ public class StrengthInHardship : TheValkyrieCard
 {
     public StrengthInHardship() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
+        // Too strong. Rework into "whenever you overexert, gain half of the amount as block, rounded down."
         WithPower<StrengthInHardshipPower>(1);
         WithTip(typeof(OverexertionPower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<StrengthInHardshipPower>(Owner.Creature, DynamicVars["StrengthInHardshipPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthInHardshipPower>(choiceContext, Owner.Creature, DynamicVars["StrengthInHardshipPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

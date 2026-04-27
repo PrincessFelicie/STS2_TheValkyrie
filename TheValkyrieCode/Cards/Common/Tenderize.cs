@@ -20,8 +20,8 @@ public class Tenderize : TheValkyrieCard
     protected override async Task OnPlay(MegaCrit.Sts2.Core.GameActions.Multiplayer.PlayerChoiceContext choiceContext, CardPlay play)
     {
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        await PowerCmd.Apply<VulnerablePower>(play.Target, DynamicVars["VulnerablePower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<BleedPower>(play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, DynamicVars["VulnerablePower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

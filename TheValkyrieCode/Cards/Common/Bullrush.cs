@@ -23,7 +23,7 @@ public class Bullrush : TheValkyrieCard
     {
         AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         if (!attackCommand.Results.Any<DamageResult>((Func<DamageResult, bool>)(r => r.WasTargetKilled)))
-            await PowerCmd.Apply<OverexertionPower>(Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

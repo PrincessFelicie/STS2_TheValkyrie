@@ -20,7 +20,7 @@ public class DeepestCuts : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<DeepestCutsPower>(Owner.Creature, DynamicVars["DeepestCutsPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<DeepestCutsPower>(choiceContext, Owner.Creature, DynamicVars["DeepestCutsPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

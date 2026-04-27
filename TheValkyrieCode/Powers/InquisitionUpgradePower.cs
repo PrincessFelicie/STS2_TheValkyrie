@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
@@ -26,9 +27,9 @@ public class InquisitionUpgradePower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Single;
 
-    public override async Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
+    public override async Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
-        if (!addedByPlayer || !card.Tags.Contains<CardTag>(CustomEnum.Smite) || card.Owner.Creature != this.Owner)
+        if (creator == null || !card.Tags.Contains<CardTag>(CustomEnum.Smite) || card.Owner.Creature != this.Owner)
             return;
         this.Flash();
         CardCmd.Upgrade(card);

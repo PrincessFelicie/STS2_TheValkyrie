@@ -30,7 +30,7 @@ public sealed class ChurchHymnPower : TheValkyriePower
     public override async Task BeforeHandDraw(
         Player player,
         PlayerChoiceContext choiceContext,
-        CombatState combatState)
+        ICombatState combatState)
     {
         if (player != Owner.Player)
             return;
@@ -41,6 +41,6 @@ public sealed class ChurchHymnPower : TheValkyriePower
 
     public override async Task AfterPlayerTurnStartLate(PlayerChoiceContext choiceContext, Player player)
     {
-        await PowerCmd.Apply<OverexertionPower>(this.Owner, Amount*3, this.Owner, null, true);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, Amount*3, this.Owner, null, true);
     }
 }
