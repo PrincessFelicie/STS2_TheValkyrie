@@ -78,6 +78,28 @@ public class Smite : TheValkyrieCard
         IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, owner);
         return (IEnumerable<CardModel>) smites;
     }
+    
+    public static async Task<IEnumerable<CardModel>> CreateInHandBlessed(
+        Player owner,
+        int smiteCount,
+        int enchantmentCount,
+        ICombatState combatState)
+    {
+        if (smiteCount == 0)
+            return Array.Empty<CardModel>();
+        if (CombatManager.Instance.IsOverOrEnding)
+            return Array.Empty<CardModel>();
+        List<CardModel> smites = new List<CardModel>();
+        for (int index = 0; index < smiteCount; ++index)
+        {
+            CardModel c = combatState.CreateCard<Smite>(owner);
+            smites.Add(c);
+            await BlessCmd.EnchantOrUpgradeEnchant(c, enchantmentCount);
+        }
+
+        await CardPileCmd.AddGeneratedCardsToCombat(smites, PileType.Hand, owner);
+        return smites;
+    }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {

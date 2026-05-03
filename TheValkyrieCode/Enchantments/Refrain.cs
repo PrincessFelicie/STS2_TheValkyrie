@@ -13,6 +13,8 @@ public class Refrain : CustomEnchantmentModel
         return base.CanEnchant(c);
     }
     
+    public override bool IsStackable => true;
+    
     public override bool ShowAmount => true;
     
     public override int EnchantPlayCount(int originalPlayCount)

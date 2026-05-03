@@ -29,7 +29,7 @@ public class RustedDagger : TheValkyrieCard
         {
             this.AssertMutable();
             this._currentDamage = value;
-            this.DynamicVars.Damage.BaseValue = (Decimal) this._currentDamage;
+            this.DynamicVars.Damage.BaseValue = this._currentDamage;
         }
     }
 
@@ -59,7 +59,7 @@ public class RustedDagger : TheValkyrieCard
         
         AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         
-        if (!shouldTriggerFatal || !attackCommand.Results.Any<DamageResult>((Func<DamageResult, bool>) (r => r.WasTargetKilled)))
+        if (!shouldTriggerFatal || !attackCommand.Results.Any(r => r.WasTargetKilled))
             return;
         
         int intValue = DynamicVars["Increase"].IntValue;

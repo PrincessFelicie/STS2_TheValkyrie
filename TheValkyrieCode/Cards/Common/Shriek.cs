@@ -15,7 +15,6 @@ public class Shriek : TheValkyrieCard
 {
     public Shriek() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        CardModel card = this;
         WithCalculatedDamage(0, ( card, _) => card.Owner.Creature.GetPowerAmount<OverexertionPower>());
         WithTip(typeof(OverexertionPower)); //We do want the tooltip for the Bleed mechanic though
     }

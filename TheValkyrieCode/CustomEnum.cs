@@ -10,5 +10,5 @@ public class CustomEnum
 {
     [CustomEnum] public static CardTag Smite;
     [CustomEnum] public static CardKeyword Bless;
-
+    [CustomEnum] public static StaticHoverTip HatchFromNest;
 }

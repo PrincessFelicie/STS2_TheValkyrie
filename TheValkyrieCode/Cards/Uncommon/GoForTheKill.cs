@@ -16,7 +16,7 @@ public class GoForTheKill : TheValkyrieCard
 {
     public GoForTheKill() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(6, 2);
+        WithDamage(5, 3);
         WithTip(typeof(BleedPower));
     }
 

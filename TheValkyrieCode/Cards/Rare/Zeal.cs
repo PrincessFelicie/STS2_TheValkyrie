@@ -34,49 +34,7 @@ public class Zeal : TheValkyrieCard
             if (!card.IsUpgraded)
                 CardCmd.Upgrade(card);
 
-            if (card.Enchantment != null)
-            {
-                if (card.Enchantment.ShowAmount || card.Enchantment is Sown) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be. Exception is made for Sown, which does use enchantment.amount, surprisingly
-                {
-                    card.Enchantment.Amount++;
-                }
-                else
-                {
-                    ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), Owner.Creature, 2.0);
-                }
-            }
-            else
-            {
-                List<EnchantmentModel> validEnchantments = new List<EnchantmentModel>();
-                validEnchantments.Add(ModelDb.Enchantment<Aegis>()); //always valid
-                if (card.Type == CardType.Attack)
-                    validEnchantments.Add(ModelDb.Enchantment<Sharp>());
-                if (card.Type == CardType.Attack && card.TargetType != TargetType.RandomEnemy)
-                    validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
-                if (card.DynamicVars.ContainsKey("Block"))
-                    validEnchantments.Add(ModelDb.Enchantment<Nimble>());
-                else
-                    validEnchantments.Add(ModelDb.Enchantment<Adroit>());
-                
-                EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.RunState.Rng.CombatCardGeneration).First();
-                int enchantmentCount = 1;
-                switch (enchantment.CanonicalInstance)
-                {
-                    case Sharp:
-                        enchantmentCount = 3;
-                        break;
-                    case Nimble:
-                    case Sanguine:
-                    case Adroit:
-                        enchantmentCount = 2;
-                        break;
-                    case Aegis:
-                        enchantmentCount = 1;
-                        break;
-                }
-                if(enchantment.CanEnchant(card)) //one last check to filter out curses and statuses and the like. Sadly "canEnchant" exists on enchantment but not on cardModel, so we have to select the enchantment *before* that filter instead of not wasting compute time :/ 
-                    CardCmd.Enchant(enchantment.ToMutable(), card, enchantmentCount);
-            }
+            await BlessCmd.EnchantOrUpgradeEnchant(card, 1);
             
             CardCmd.Preview(card);
         }

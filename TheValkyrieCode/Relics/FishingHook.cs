@@ -28,6 +28,8 @@ public class FishingHook : TheValkyrieRelic
         new DynamicVar("SanguineAmount", 2)
     ];
     
+    public override bool HasUponPickupEffect => true;
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips
     {
         get => HoverTipFactory.FromEnchantment<Sanguine>(DynamicVars["SanguineAmount"].IntValue);
@@ -41,7 +43,7 @@ public class FishingHook : TheValkyrieRelic
             RequireManualConfirmation = true
         };
         Sanguine canonicalEnchantment = ModelDb.Enchantment<Sanguine>();
-        foreach (CardModel card in await CardSelectCmd.FromDeckForEnchantment(this.Owner, canonicalEnchantment, DynamicVars["SanguineAmount"].IntValue, prefs))
+        foreach (CardModel card in await CardSelectCmd.FromDeckForEnchantment(this.Owner, canonicalEnchantment, DynamicVars["SanguineAmount"].IntValue, c => c?.Type == CardType.Attack, prefs))
         {
             CardCmd.Enchant(canonicalEnchantment.ToMutable(), card, DynamicVars["SanguineAmount"].BaseValue);
             CardCmd.Preview(card);

@@ -28,8 +28,8 @@
   "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Do not [gold]Overexert[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}.",
 
   "THEVALKYRIE-CRUSADE_POWER.title": "Crusade",
-  "THEVALKYRIE-CRUSADE_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold].",
-  "THEVALKYRIE-CRUSADE_POWER.smartDescription": "Your [gold]Smites[/gold] grant [blue]{Amount}[/blue] extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold] and deal additional damage.",
+  "THEVALKYRIE-CRUSADE_POWER.smartDescription": "Your [gold]Smites[/gold] grant [blue]{Amount}[/blue] extra [gold]Block[/gold] and deal [blue]{Amount}[/blue] additional damage.",
 
   "THEVALKYRIE-INQUISITION_UPGRADE_POWER.title": "Inquisition",
   "THEVALKYRIE-INQUISITION_UPGRADE_POWER.description": "Your [gold]Smites[/gold] are created Upgraded.",
@@ -65,5 +65,21 @@
 
   "THEVALKYRIE-PULL_A_MUSCLE_POWER.title": "Muscle Pulled",
   "THEVALKYRIE-PULL_A_MUSCLE_POWER.description": "At the start of your turn, [gold]Overexert[/gold].",
-  "THEVALKYRIE-PULL_A_MUSCLE_POWER.smartDescription": "At the start of your turn, [gold]Overexert[/gold] [blue]{Amount}[/blue]."
+  "THEVALKYRIE-PULL_A_MUSCLE_POWER.smartDescription": "At the start of your turn, [gold]Overexert[/gold] [blue]{Amount}[/blue].",
+
+  "THEVALKYRIE-WRITTEN_IN_BLOOD_POWER.title": "Inspiration Forming",
+  "THEVALKYRIE-WRITTEN_IN_BLOOD_POWER.description": "If you win this fight without taking damage, permanently [gold]Bless[/gold] a card in your deck.",
+  "THEVALKYRIE-WRITTEN_IN_BLOOD_POWER.smartDescription": "If you win this fight without taking damage, permanently [gold]Bless[/gold] a card in your deck.",
+
+  "THEVALKYRIE-SECOND_WIND_POWER.title": "Second Wind",
+  "THEVALKYRIE-SECOND_WIND_POWER.description": "At the end of your turn, lose some [gold]Overexhaustion[/gold].",
+  "THEVALKYRIE-SECOND_WIND_POWER.smartDescription": "At the end of your turn, lose [blue]{Amount}[/blue] [gold]Overexhaustion[/gold].",
+
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.title": "Territorial Purpose",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the end of your turn, lose some [gold]Overexhaustion[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, add a [gold]Byrd Card[/gold] to your hand.\nGain 1 [gold]Byrd Strength[/gold] at the end of the turn.",
+
+  "THEVALKYRIE-BYRD_STRENGTH_POWER.title": "Byrd Strength",
+  "THEVALKYRIE-BYRD_STRENGTH_POWER.description": "Your [gold]Byrd Cards[/gold] deal additional damage.",
+  "THEVALKYRIE-BYRD_STRENGTH_POWER.smartDescription": "Your [gold]Byrd Cards[/gold] deal [blue]{Amount}[/blue] additional damage."
 }

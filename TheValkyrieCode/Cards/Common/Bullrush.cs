@@ -15,7 +15,7 @@ public class Bullrush : TheValkyrieCard
 {
     public Bullrush() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(22, 6);
+        WithDamage(26, 6);
         WithPower<OverexertionPower>(10);
     }
 

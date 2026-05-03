@@ -1,9 +1,8 @@
 Bleed:
- - 2 uncommon
- - 1 rare
+full!
  
  Smite:
- - 1 uncommon
+full!
  
  Armor:
  - as needed
@@ -12,5 +11,5 @@ Bleed:
  - as needed
  
  1 rare X cost card
- 16 rares total
- 23 uncommons total
+ 8 rares total
+ 17 uncommons total

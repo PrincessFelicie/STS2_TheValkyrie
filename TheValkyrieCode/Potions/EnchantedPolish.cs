@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Extensions;
 using TheValkyrie.TheValkyrieCode.Potions;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -21,6 +22,8 @@ public sealed class EnchantedPolish : TheValkyriePotion
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 
     public override TargetType TargetType => TargetType.AnyAlly;
+    
+    public override string CustomPackedImagePath => "/potions/enchanted_polish.png".ImagePath();
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [

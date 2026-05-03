@@ -32,52 +32,14 @@ public class CrescendoStrike : TheValkyrieCard
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target).Execute(choiceContext);
     }
     
-    public override Task AfterCardDrawn(
+    public override async Task AfterCardDrawn(
         PlayerChoiceContext choiceContext,
         CardModel card,
         bool fromHandDraw)
     {
         if (card != this)
-            return Task.CompletedTask;
-        if (card.Enchantment != null)
-        {
-            if (card.Enchantment.ShowAmount ||
-                card.Enchantment is Sown) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be. Exception is made for Sown, which does use enchantment.amount, surprisingly
-            {
-                card.Enchantment.Amount += DynamicVars["Bless"].IntValue;
-            }
-            else
-            {
-                ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), Owner.Creature, 2.0);
-            }
-        }
-        else
-        {
-            List<EnchantmentModel> validEnchantments = new List<EnchantmentModel>();
-            validEnchantments.Add(ModelDb.Enchantment<Sharp>());
-            validEnchantments.Add(ModelDb.Enchantment<Adroit>());
-            validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
-            validEnchantments.Add(ModelDb.Enchantment<Aegis>());
-
-            
-            EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.RunState.Rng.CombatCardGeneration).First();
-            int enchantmentCount = 1;
-            switch (enchantment.CanonicalInstance)
-            {
-                case Sharp:
-                    enchantmentCount = DynamicVars["Bless"].IntValue+2;
-                    break;
-                case Adroit:
-                case Sanguine:
-                    enchantmentCount = DynamicVars["Bless"].IntValue+1;
-                    break;
-                case Aegis:
-                    enchantmentCount = DynamicVars["Bless"].IntValue;
-                    break;
-            }
-            CardCmd.Enchant(enchantment.ToMutable(), card, enchantmentCount);
-        }
-        return Task.CompletedTask;
+            return;
+        await BlessCmd.EnchantOrUpgradeEnchant(card, DynamicVars["Bless"].IntValue);
     }
 
     protected override void OnUpgrade()

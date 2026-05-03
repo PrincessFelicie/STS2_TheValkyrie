@@ -29,33 +29,10 @@ public class DesperateHour : TheValkyrieCard
         foreach (CardModel card in list1)
             await CardCmd.Exhaust(choiceContext, card);
         
-        List<EnchantmentModel> validEnchantments = new List<EnchantmentModel>();
-        validEnchantments.Add(ModelDb.Enchantment<Sharp>());
-        validEnchantments.Add(ModelDb.Enchantment<Nimble>());
-        validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
-        validEnchantments.Add(ModelDb.Enchantment<Aegis>());
-
-        
-        int enchantmentCount = 1;
-        
         for (int i = 0; i < exhaustCount ; ++i)
         {
-            EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.RunState.Rng.CombatCardGeneration).First();
-            switch (enchantment.CanonicalInstance)
-            {
-                case Sharp:
-                    enchantmentCount = 3;
-                    break;
-                case Nimble:
-                case Sanguine:
-                    enchantmentCount = 2;
-                    break;
-                case Aegis:
-                    enchantmentCount = 1;
-                    break;
-            }
             if (CombatState == null) return;
-            await Smite.CreateInHandWithEnchantment(Owner, 1, enchantment, enchantmentCount, CombatState);
+            await Smite.CreateInHandBlessed(Owner, 1,  DynamicVars["Bless"].IntValue, CombatState);
             await Cmd.Wait(0.1f);
         }
     }

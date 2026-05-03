@@ -37,35 +37,7 @@ public class InquisitionEnchantPower : TheValkyriePower
         if (creator == null || !card.Tags.Contains(CustomEnum.Smite) || card.Owner.Creature != this.Owner || Owner.Player == null)
             return;
         this.Flash();
-        if (card.Enchantment == null)
-        {
-            List<EnchantmentModel> validEnchantments = new List<EnchantmentModel>();
-            validEnchantments.Add(ModelDb.Enchantment<Sharp>());
-            validEnchantments.Add(ModelDb.Enchantment<Nimble>());
-            validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
-            validEnchantments.Add(ModelDb.Enchantment<Aegis>());
 
-            
-            EnchantmentModel enchantment = validEnchantments.TakeRandom(1, Owner.Player.RunState.Rng.CombatCardGeneration).First();
-            int enchantmentCount = 1;
-            switch (enchantment.CanonicalInstance)
-            {
-                case Sharp:
-                    enchantmentCount = this.Amount+2;
-                    break;
-                case Nimble:
-                case Sanguine:
-                    enchantmentCount = this.Amount+1;
-                    break;
-                case Aegis:
-                    enchantmentCount = this.Amount;
-                    break;
-            }
-            CardCmd.Enchant(enchantment.ToMutable(), card, enchantmentCount);
-        }
-        else
-        {
-            card.Enchantment.Amount += this.Amount;
-        }
+        await BlessCmd.EnchantOrUpgradeEnchant(card, this.Amount);
     }
 }

@@ -26,17 +26,10 @@ public class Sharpen : TheValkyrieCard
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
         Sanguine canonicalEnchantment = ModelDb.Enchantment<Sanguine>();
-        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(this.Owner).Cards.Where(c => canonicalEnchantment.CanEnchant(c) || c.Enchantment is Sanguine).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), this.Owner, prefs)).ToList())
+        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(this.Owner).Cards.Where(c => canonicalEnchantment.CanEnchant(c) && c.Type == CardType.Attack).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), this.Owner, prefs)).ToList())
         {
-            if (card.Enchantment == null)
-            {
-                CardCmd.Enchant<Sanguine>(card, DynamicVars["Bless"].BaseValue);
-                CardCmd.Preview(card);
-            }
-            else
-            {
-                card.Enchantment.Amount += DynamicVars["Bless"].IntValue;
-            }
+            CardCmd.Enchant<Sanguine>(card, DynamicVars["Bless"].BaseValue); //Because Sanguine is flagged as stackable, CardCmd.Enchant handles either creating the new enchantment or incrementing the enchantment.amount
+            CardCmd.Preview(card);
         }
     }
 

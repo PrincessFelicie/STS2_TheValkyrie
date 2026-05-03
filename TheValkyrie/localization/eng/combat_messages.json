@@ -1,4 +1,6 @@
 {
   "CANT_IMPROVE_ENCHANT": "I can't improve this enchantment.",
-  "CAW_CAW": "[jitter]CAW CAW![/jitter]"
+  "CAW_CAW": "[jitter]CAW CAW![/jitter]",
+  "ALREADY_TOOK_DAMAGE_THIS_FIGHT": "I already took damage!",
+  "ENCHANT_NO_TARGET": "There's no valid target for this enchantment!"
 }

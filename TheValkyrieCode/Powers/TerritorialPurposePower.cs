@@ -1,0 +1,71 @@
+using BaseLib.Extensions;
+using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Commands.Builders;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.Factories;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Cards;
+using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
+
+namespace TheValkyrie.TheValkyrieCode.Powers;
+
+public sealed class TerritorialPurposePower : TheValkyriePower
+{
+    private class Data
+    {
+    }
+
+    protected override object InitInternalData()
+    {
+        return new Data();
+    }
+    
+    protected override IEnumerable<DynamicVar> CanonicalVars => [
+        new DynamicVar("TurnCounter", 0),
+        new BoolVar("IsUpgraded", false),
+    ];
+    
+    public override bool IsInstanced => true;
+    
+    public override PowerType Type => PowerType.Buff;
+    public override PowerStackType StackType => PowerStackType.Single;
+
+    public override async Task BeforeHandDraw(
+        Player player,
+        PlayerChoiceContext choiceContext,
+        ICombatState combatState)
+    {
+        if (player != Owner.Player)
+            return;
+        this.Flash();
+        CardModel card;
+        if (this.DynamicVars["TurnCounter"].BaseValue % 2 == 0)
+        {
+            card = combatState.CreateCard<Peck>(Owner.Player);
+        }
+        else
+        {
+            card = combatState.CreateCard<ByrdSwoop>(Owner.Player);
+        }
+        if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
+            CardCmd.Upgrade(card);
+        await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner.Player);
+    }
+    
+    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    {
+        if (side != Owner.Side)
+            return;
+        this.Flash();
+        await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, this.Owner, 1, Owner, null);
+        this.DynamicVars["TurnCounter"].BaseValue++;
+    }
+}

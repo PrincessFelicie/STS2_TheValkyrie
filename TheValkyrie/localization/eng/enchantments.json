@@ -4,7 +4,7 @@
 
   "THEVALKYRIE-SANGUINE.title": "Sanguine",
   "THEVALKYRIE-SANGUINE.description": "Apply [blue]{Amount}[/blue] [gold]Bleed[/gold].",
-  "THEVALKYRIE-SANGUINE.extraCardText": "Apply [blue]{Amount}[/blue] [gold]Bleed[/gold]{TargetType:choose(AllEnemies): to ALL enemies|}.",
+  "THEVALKYRIE-SANGUINE.extraCardText": "Apply [blue]{Amount}[/blue] [gold]Bleed[/gold]{TargetType:choose(AllEnemies): to ALL enemies|}{TargetType:choose(RandomEnemy): to a random enemy|}.",
 
   "THEVALKYRIE-AEGIS.title": "Aegis",
   "THEVALKYRIE-AEGIS.description": "Gain [blue]{Amount}[/blue] [gold]Armor[/gold] this turn.",

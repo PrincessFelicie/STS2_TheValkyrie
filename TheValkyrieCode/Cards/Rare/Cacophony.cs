@@ -11,9 +11,9 @@ using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
-public class Unleash : TheValkyrieCard
+public class Cacophony : TheValkyrieCard
 {
-    public Unleash() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
+    public Cacophony() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
         CardModel card = this;
         WithCalculatedDamage(0, ( card, _) => card.Owner.Creature.GetPowerAmount<OverexertionPower>());

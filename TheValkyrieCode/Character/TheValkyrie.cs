@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 using TheValkyrie.TheValkyrieCode.Cards.Basic;
 using TheValkyrie.TheValkyrieCode.Relics;
 
@@ -18,6 +19,10 @@ public class TheValkyrie : PlaceholderCharacterModel
     public static readonly Color Color = new("8e400d");
 
     public override Color NameColor => Color;
+    public override Color MapDrawingColor => Color;
+    
+    public override Color DialogueColor => new Color("590700");
+    public override VfxColor SpeechBubbleColor => VfxColor.Orange;
     public override CharacterGender Gender => CharacterGender.Feminine;
     public override int StartingHp => 68;
 
@@ -79,8 +84,8 @@ public class TheValkyrie : PlaceholderCharacterModel
         get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_scissors.png");
     }
 
-    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
-    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+    public override string CustomIconTexturePath => "character_icon_valkyrie.png".CharacterUiPath();
+    public override string CustomCharacterSelectIconPath => "char_select_valkyrie.png".CharacterUiPath();
+    public override string CustomCharacterSelectLockedIconPath => "char_select_valkyrie_locked.png".CharacterUiPath();
+    public override string CustomMapMarkerPath => "map_marker_valkyrie.png".CharacterUiPath();
 }

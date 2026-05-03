@@ -11,16 +11,16 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
 public class Haemorrhage : TheValkyrieCard
 {
-    public Haemorrhage() : base(2, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
+    public Haemorrhage() : base(2, CardType.Skill, CardRarity.Rare, TargetType.AllEnemies)
     {
-        WithPower<BleedPower>(15, 5);
+        WithPower<BleedPower>(11, 4);
         WithKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
+        if (CombatState == null) return;
+        await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
