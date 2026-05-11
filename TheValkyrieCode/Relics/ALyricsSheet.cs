@@ -21,7 +21,7 @@ using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Relics;
 
-public class LyricsSheet : TheValkyrieRelic
+public class ALyricsSheet : TheValkyrieRelic
 {
     public override RelicRarity Rarity => RelicRarity.Event;
     protected override IEnumerable<DynamicVar> CanonicalVars => [
@@ -44,7 +44,7 @@ public class LyricsSheet : TheValkyrieRelic
         };
         //FromDeckForEnchantment requires an enchantmentModel, we don't know what we want to enchant with yet so we need a generic; because it's a generic we need to do all the common isEnchantable checks in the filter
         foreach (CardModel card in await CardSelectCmd.FromDeckGeneric(this.Owner, prefs, 
-                     c => (c.Enchantment == null || c.Enchantment.ShowAmount || c.Enchantment is Sown) //enchantment (or lack thereof) is valid
+                     c => (c.Enchantment == null || c.Enchantment.ShowAmount) //enchantment (or lack thereof) is valid
                            && c.Type is not (CardType.Curse or CardType.Status or CardType.Quest) //AND cardType is valid
                      ))
         {

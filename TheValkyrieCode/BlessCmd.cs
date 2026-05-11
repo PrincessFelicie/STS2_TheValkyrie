@@ -17,7 +17,7 @@ public class BlessCmd
 {
     public static async Task EnchantOrUpgradeEnchant(
         CardModel card,
-        int amount)
+        int amount = 1)
     {
         if (card.Enchantment == null) //create a new enchant
         {
@@ -58,14 +58,21 @@ public class BlessCmd
         }
         else //otherwise improve the current enchant
         {
-            if (card.Enchantment.ShowAmount || card.Enchantment is Sown) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be. Exception is made for Sown, which does use enchantment.amount, surprisingly
+            if (card.Enchantment.ShowAmount) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be.
             {
-                card.Enchantment.Amount++;
+                card.Enchantment.Amount+=amount;
+                card.Enchantment.RecalculateValues(); //do this otherwise Adroit causes multiplayer state divergences
             }
             else
             {
                 ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), card.Owner.Creature, 2.0);
             }
         }
+    }
+
+    public static bool CanBless(
+        CardModel card)
+    {
+        return (card.Enchantment == null || card.Enchantment.ShowAmount) && card.Type is not (CardType.Curse or CardType.Status or CardType.Quest);
     }
 }

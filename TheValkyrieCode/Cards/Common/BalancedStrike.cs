@@ -15,12 +15,13 @@ public class BalancedStrike : TheValkyrieCard
     {
         WithDamage(8, 3);
         WithTags(CardTag.Strike);
+        WithVar("BalancedStrikePower",2, 1);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
-        await PowerCmd.Apply<BalancedStrikePower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<BalancedStrikePower>(choiceContext, Owner.Creature, DynamicVars["BalancedStrikePower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

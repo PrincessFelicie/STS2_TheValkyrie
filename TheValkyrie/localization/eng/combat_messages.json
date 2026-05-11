@@ -2,5 +2,10 @@
   "CANT_IMPROVE_ENCHANT": "I can't improve this enchantment.",
   "CAW_CAW": "[jitter]CAW CAW![/jitter]",
   "ALREADY_TOOK_DAMAGE_THIS_FIGHT": "I already took damage!",
-  "ENCHANT_NO_TARGET": "There's no valid target for this enchantment!"
+  "ENCHANT_NO_TARGET": "There's no valid target for this enchantment!",
+  "FIGHTING_CULTIST": "Wait! [jitter]This isn't necessary...![/jitter]",
+  "FIGHTING_CULTIST_UNSTOPPABLE": "[jitter]GET OUT OF MY WAY, [blue]C-CAW!!![/blue][/jitter]",
+  "CALCIFIED_CULTIST_REPLY": "Pay your tithe, sister!",
+  "DAMP_CULTIST_REPLY": "Your mask! You must wear your mask!",
+  "DEVOTED_SCULPTOR_REPLY": "..."
 }

@@ -18,6 +18,8 @@ public class Aegis : CustomEnchantmentModel
         return base.CanEnchant(c);
     }
     
+    public override bool IsStackable => true;
+    
     public override bool HasExtraCardText => true;
     
     public override bool ShowAmount => true;

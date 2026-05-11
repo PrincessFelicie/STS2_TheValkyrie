@@ -50,10 +50,10 @@ public class ByrdNest : TheValkyrieRelic
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        //HoverTipFactory.Static(CustomEnum.HatchFromNest) //I swear I do not know how to make static tips work
-        //HoverTipFactory.FromCard<ByrdSwoop>(), //will keep the cards a surprise until the static tooltip works
-        //HoverTipFactory.FromCard<Peck>(), //todo fix me
-        //HoverTipFactory.FromCard<TerritorialPurpose>(),
+        CustomEnum.GetStaticHoverTip("THEVALKYRIE-HATCH_FROM_NEST"),
+        HoverTipFactory.FromCard<ByrdSwoop>(),
+        HoverTipFactory.FromCard<Peck>(),
+        HoverTipFactory.FromCard<TerritorialInstincts>(),
     ];
 
     public override bool TryModifyRestSiteOptions(Player player, ICollection<RestSiteOption> options)

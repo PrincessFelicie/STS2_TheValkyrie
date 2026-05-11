@@ -31,13 +31,26 @@ public class BalancedStrikePower : TheValkyriePower
         Creature? target,
         CardModel? cardSource)
     {
-        return (power is OverexertionPower) && (target == Owner) ? 0 : amount;
+        if (power is OverexertionPower && target == Owner)
+        {
+            PowerCmd.Decrement(this);
+            return 0;
+        }
+        return amount;
     }
-    
+
+    public override async Task AfterModifyingPowerAmountGiven(PowerModel power)
+    {
+        if (power is OverexertionPower && power.Owner == this.Owner)
+        {
+            await PowerCmd.Decrement(this);
+        }
+    }
+
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
         if (side != Owner.Side)
             return;
-        await PowerCmd.Decrement(this);
+        await PowerCmd.Remove(this);
     }
 }

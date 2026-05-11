@@ -28,7 +28,7 @@ public sealed class ArmorPower : TheValkyriePower
         CardModel? cardSource)
     {
         if (Owner == dealer || dealer == null || target != Owner) return 0;
-        if (props.IsPoweredAttack_() && dealer.IsEnemy) //this means the power won't work if given to enemies, which limits design space a bit (not that I think giving enemies negative armor would be in flavor for this character, but still). I tried replacing isEnemy with dealer.side != target.side, but it just caused the game to crash if armor was given to the enemy. Aaaaaaah welllll)
+        if (props.IsPoweredAttack_() && dealer.Side != target.Side)
         {
             return -Amount;
         }

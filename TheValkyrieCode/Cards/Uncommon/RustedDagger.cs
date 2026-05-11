@@ -21,6 +21,8 @@ public class RustedDagger : TheValkyrieCard
     private int _currentDamage = 6;
     private int _increasedDamage;
     
+    public override bool CanBeGeneratedInCombat => false;
+    
     [SavedProperty]
     public int CurrentDamage
     {
@@ -59,7 +61,7 @@ public class RustedDagger : TheValkyrieCard
         
         AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
         
-        if (!shouldTriggerFatal || !attackCommand.Results.Any(r => r.WasTargetKilled))
+        if (!shouldTriggerFatal || !attackCommand.Results.SelectMany(r => r).Any(r => r.WasTargetKilled))
             return;
         
         int intValue = DynamicVars["Increase"].IntValue;

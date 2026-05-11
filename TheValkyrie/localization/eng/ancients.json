@@ -1,5 +1,5 @@
 {
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.char": "Are you the Architect? My people need help! They suffer down in the docks, waiting for [blue]Mazaleth[/blue]--",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.char": "Are you the Architect? [blue]Mazaleth[/blue]'s people need help! They suffer down in the docks--",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.next": "Continue",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-1r.ancient": "Their misery is self-inflicted. I have better things to do with my time.",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-1r.next": "Argue",
@@ -7,6 +7,7 @@
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-2r.next": "Continue",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-3r.ancient": "If it is nobility you seek, Nonupeipe is a few floors down. Now begone.",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-attack": "Both",
+  
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.char": "Architect, we are in need, if you could just assist us...!",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.next": "Continue",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-1r.ancient": "You again? Haven't I made it clear this isn't [red]my[/red] problem?",
@@ -14,6 +15,15 @@
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-2r.char": "Such... egocentrism! How dare you!",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-2r.next": "Attack",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-attack": "Both",
+
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.char": "Architect! You betray your duty to the people of the Spire!",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.next": "Continue",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-1r.ancient": "I have no such duty. Leave, now.",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-1r.next": "Shout",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-2r.char": "[jitter]Your reign ends now![/jitter]",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-2r.next": "Attack",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-attack": "Both",
+  
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]Little birdling[/sine], your feathers are so pretty! Why must you fear them so?",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Reply",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "I never asked for them! I meant to save my people, not join them in madness!",

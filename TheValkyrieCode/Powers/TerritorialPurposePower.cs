@@ -33,10 +33,9 @@ public sealed class TerritorialPurposePower : TheValkyriePower
         new BoolVar("IsUpgraded", false),
     ];
     
-    public override bool IsInstanced => true;
-    
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Single;
+    public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
 
     public override async Task BeforeHandDraw(
         Player player,
@@ -49,22 +48,16 @@ public sealed class TerritorialPurposePower : TheValkyriePower
         CardModel card;
         if (this.DynamicVars["TurnCounter"].BaseValue % 2 == 0)
         {
-            card = combatState.CreateCard<Peck>(Owner.Player);
+            card = combatState.CreateCard<ByrdSwoop>(Owner.Player);
         }
         else
         {
-            card = combatState.CreateCard<ByrdSwoop>(Owner.Player);
+            card = combatState.CreateCard<Peck>(Owner.Player);
         }
         if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
             CardCmd.Upgrade(card);
         await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner.Player);
-    }
-    
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
-    {
-        if (side != Owner.Side)
-            return;
-        this.Flash();
+
         await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, this.Owner, 1, Owner, null);
         this.DynamicVars["TurnCounter"].BaseValue++;
     }

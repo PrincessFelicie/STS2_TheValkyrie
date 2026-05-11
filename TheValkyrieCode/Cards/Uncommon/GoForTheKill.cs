@@ -16,7 +16,7 @@ public class GoForTheKill : TheValkyrieCard
 {
     public GoForTheKill() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(5, 3);
+        WithDamage(5, 2);
         WithTip(typeof(BleedPower));
     }
 
@@ -24,7 +24,7 @@ public class GoForTheKill : TheValkyrieCard
     {
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
         AttackCommand attackCommand = await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target).Execute(choiceContext);
-        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, attackCommand.Results.Sum((DamageResult r) => r.TotalDamage), Owner.Creature, this);
+        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, attackCommand.Results.SelectMany(r => r).Sum((r) => r.TotalDamage), Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

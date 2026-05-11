@@ -2,6 +2,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
@@ -17,11 +18,12 @@ public class SongOfProtection : TheValkyrieCard
     public SongOfProtection() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(5, 3);
-        WithPower<OverexertionPower>(6);
+        WithPower<OverexertionPower>(3);
         WithVar("Quantity", 1);
         WithVar("Nimble", 2);
+        
         WithTip(typeof(Smite));
-        WithTip(typeof(Nimble));
+        WithTips(c => HoverTipFactory.FromEnchantment<Nimble>(c.DynamicVars["Nimble"].IntValue));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

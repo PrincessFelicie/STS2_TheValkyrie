@@ -1,8 +1,8 @@
-Bleed:
-full!
+ Bleed:
+ full!
  
  Smite:
-full!
+ full!
  
  Armor:
  - as needed
@@ -10,6 +10,7 @@ full!
  Overexert:
  - as needed
  
- 1 rare X cost card
- 8 rares total
- 17 uncommons total
+ Bless:
+ - as needed
+ 
+ 11 uncommons total (at least 3 attacks, at least 4 skills)

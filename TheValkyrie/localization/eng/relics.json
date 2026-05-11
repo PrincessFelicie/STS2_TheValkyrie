@@ -27,27 +27,29 @@
   "THEVALKYRIE-CRUDE_IDOL.description": "At the end of your turn, lose half your [gold]Overexertion[/gold], rounded up.",
   "THEVALKYRIE-CRUDE_IDOL.flavor": "An handmade effigy of Mazaleth, encouraging its believers to reach for the sky.",
 
-  "THEVALKYRIE-LYRICS_SHEET.title": "Lyrics Sheet",
-  "THEVALKYRIE-LYRICS_SHEET.description": "Upon pickup, [gold]Bless[/gold] one card.",
-  "THEVALKYRIE-LYRICS_SHEET.flavor": "Inspiration struck!",
+  "THEVALKYRIE-A_LYRICS_SHEET.title": "Lyrics Sheet",
+  "THEVALKYRIE-A_LYRICS_SHEET.description": "Upon pickup, [gold]Bless[/gold] one card.",
+  "THEVALKYRIE-A_LYRICS_SHEET.flavor": "Inspiration struck!",
 
   "THEVALKYRIE-BYRD_NEST.title": "Byrd Nest",
   "THEVALKYRIE-BYRD_NEST.description": "You may [gold]Hatch from the Nest[/gold] at Rest Sites. ([blue]3[/blue] times max)",
-  "THEVALKYRIE-BYRD_NEST.flavor": "So many friends-to-be...",
+  "THEVALKYRIE-BYRD_NEST.flavor": "You are overcome with the will to protect.",
 
   "THEVALKYRIE-YELLOW_BYRDPIP.title": "Yellow Byrdpip",
   "THEVALKYRIE-YELLOW_BYRDPIP.description": "Upon pickup, gain the card [gold]Byrd Swoop[/gold]. A [gold]Byrdpip[/gold] will accompany you in battles.",
   "THEVALKYRIE-YELLOW_BYRDPIP.flavor": "He is fiercely defensive of his shinies. He feels like a Leslio.",
 
   "THEVALKYRIE-RED_BYRDPIP.title": "Red Byrdpip",
-  "THEVALKYRIE-RED_BYRDPIP.description": "Upon pickup, gain the card [gold]Peck[/gold]. Start every fight with 2 [gold]Byrd Strength[/gold]. A [gold]Byrdpip[/gold] will accompany you in battles.",
+  "THEVALKYRIE-RED_BYRDPIP.description": "Upon pickup, gain the card [gold]Peck[/gold]. Start every fight with 2 [gold]Byrd Strength[/gold]. Another [gold]Byrdpip[/gold] will accompany you in battles.",
   "THEVALKYRIE-RED_BYRDPIP.flavor": "He has taken the role of leader of the group. He's giving you Hecry vibes.",
 
   "THEVALKYRIE-BLUE_BYRDPIP.title": "Blue Byrdpip",
-  "THEVALKYRIE-BLUE_BYRDPIP.description": "Start every fight with an Upgraded [gold]Territorial Strength[/gold] in your hand.\nYour [gold]Territorial Strength[/gold] cards cost 1 less.",
+  "THEVALKYRIE-BLUE_BYRDPIP.description": "Start every fight with an Upgraded [gold]Abnormal Instincts[/gold] in your hand. Your [gold]Abnormal Instincts[/gold] cards cost 1 less. A third [gold]Byrdpip[/gold] will accompany you in battles.",
   "THEVALKYRIE-BLUE_BYRDPIP.flavor": "This one is particularly chipper! He's obviously named Dimien.",
 
   "THEVALKYRIE-ARIA_OF_WIND.title": "Aria of Wind",
   "THEVALKYRIE-ARIA_OF_WIND.description": "At the start of each combat, [gold]Bless[/gold] your starting hand.",
-  "THEVALKYRIE-ARIA_OF_WIND.flavor": "A masterpiece of historical importance. Holding this feels almost forbidden."
+  "THEVALKYRIE-ARIA_OF_WIND.flavor": "A masterpiece of historical importance. Holding this feels almost forbidden.",
+
+  "SEA_GLASS.THEVALKYRIE-THE_VALKYRIE.title": "Bird Glass"
 }

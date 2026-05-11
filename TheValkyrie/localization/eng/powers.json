@@ -5,7 +5,7 @@
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
   "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you fail to block all damage this turn.",
-  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take damage this turn, lose [blue]{Amount}[/blue] HP. Lose this status at turn end.",
+  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take damage this turn, lose [blue]{Amount}[/blue] HP.",
 
   "THEVALKYRIE-ARMOR_POWER.title": "Armor",
   "THEVALKYRIE-ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
@@ -24,8 +24,8 @@
   "THEVALKYRIE-DEEPEST_CUTS_POWER.smartDescription": "Whenever you apply [gold]Bleed[/gold], apply an additional [blue]{Amount}[/blue] [gold]Bleed[/gold].",
 
   "THEVALKYRIE-BALANCED_STRIKE_POWER.title": "Balanced Advance",
-  "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Do not [gold]Overexert[/gold] this turn. Stacks.",
-  "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Do not [gold]Overexert[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}.",
+  "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Prevent the next time you would gain [gold]Overexertion[/gold] this turn.",
+  "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Prevent the next {Amount:plural:time|[blue]{}[/blue] times} you would gain [gold]Overexertion[/gold] this turn.",
 
   "THEVALKYRIE-CRUSADE_POWER.title": "Crusade",
   "THEVALKYRIE-CRUSADE_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold] and deal additional damage.",
@@ -76,10 +76,42 @@
   "THEVALKYRIE-SECOND_WIND_POWER.smartDescription": "At the end of your turn, lose [blue]{Amount}[/blue] [gold]Overexhaustion[/gold].",
 
   "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.title": "Territorial Purpose",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the end of your turn, lose some [gold]Overexhaustion[/gold].",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, add a [gold]Byrd Card[/gold] to your hand.\nGain 1 [gold]Byrd Strength[/gold] at the end of the turn.",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, add a [gold]Byrd Card[/gold] to your hand.\nGain 1 [gold]Byrd Strength[/gold] at the end of the turn.",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, add a{IsUpgraded:n Upgraded|} [gold]Byrd Card[/gold] to your hand.\nGain 1 [gold]Byrd Strength[/gold] at the end of the turn.",
 
   "THEVALKYRIE-BYRD_STRENGTH_POWER.title": "Byrd Strength",
   "THEVALKYRIE-BYRD_STRENGTH_POWER.description": "Your [gold]Byrd Cards[/gold] deal additional damage.",
-  "THEVALKYRIE-BYRD_STRENGTH_POWER.smartDescription": "Your [gold]Byrd Cards[/gold] deal [blue]{Amount}[/blue] additional damage."
+  "THEVALKYRIE-BYRD_STRENGTH_POWER.smartDescription": "Your [gold]Byrd Cards[/gold] deal [blue]{Amount}[/blue] additional damage.",
+
+  "THEVALKYRIE-BOON_POWER.title": "Boon",
+  "THEVALKYRIE-BOON_POWER.description": "At the start of your turn, [gold]Bless[/gold] random cards in your hand.",
+  "THEVALKYRIE-BOON_POWER.smartDescription": "At the start of your turn, [gold]Bless[/gold] [blue]{Amount}[/blue] random {Amount:plural:card|cards} in your hand.",
+
+  "THEVALKYRIE-DOMINION_POWER.title": "Dominion",
+  "THEVALKYRIE-DOMINION_POWER.description": "Whenever you [gold]Exhaust[/gold] a card, deal damage to a random enemy.",
+  "THEVALKYRIE-DOMINION_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, deal [blue]{Amount}[/blue] damage to a random enemy.",
+
+  "THEVALKYRIE-BRIMMING_POWER.title": "Topped up!",
+  "THEVALKYRIE-BRIMMING_POWER.description": "At the start of your turn, before drawing, gain [gold]Block[/gold] for every card in your hand.",
+  "THEVALKYRIE-BRIMMING_POWER.smartDescription": "At the start of your turn, before drawing, gain [blue]{Amount}[/blue] [gold]Block[/gold] for every card in your hand.",
+
+  "THEVALKYRIE-TEMPORARY_THORNS_POWER.title": "Temporary Thorns",
+  "THEVALKYRIE-TEMPORARY_THORNS_POWER.description": "When hit by an attack, deal damage back.",
+  "THEVALKYRIE-TEMPORARY_THORNS_POWER.smartDescription": "When hit by an attack, deal [blue]{Amount}[/blue] damage back until the end of this turn.",
+
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS_POWER.title": "Crushing Spirits",
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS_POWER.description": "At the end of your turn, deal damage to all enemies for each point of [gold]Armor[/gold] you have.",
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS_POWER.smartDescription": "At the end of your turn, deal [blue]{Amount}[/blue] damage to all enemies for each point of [gold]Armor[/gold] you have.",
+
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.title": "Close Quarters Combat",
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.description": "At the start of your turn, apply [gold]Vulnerable[/gold] to yourself and enemies.",
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Vulnerable[/gold] to yourself and {IsUpgraded:all enemies|a random enemy}.",
+
+  "THEVALKYRIE-SHINING_STAR_POWER.title": "Shining Star",
+  "THEVALKYRIE-SHINING_STAR_POWER.description": "Whenever you survive a turn without taking any damage, gain [gold]Vigor[/gold].",
+  "THEVALKYRIE-SHINING_STAR_POWER.smartDescription": "Whenever you survive a turn without taking any damage, gain [blue]{Amount}[/blue] [gold]Vigor[/gold].\nCurrently {IsActive:[green]Active![/green]|[red]Inactive...[/red]}",
+
+  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.title": "Found Hope",
+  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.description": "Your next card is played an extra time.",
+  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.smartDescription": "Your next card is played {Amount:plural:an extra time|[blue]{}[/blue] extra times} this turn."
 }

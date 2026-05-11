@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -17,8 +18,10 @@ public class MusicalBridge : TheValkyrieCard
 {
     public MusicalBridge() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithVar("Bless", 1); WithTip(CustomEnum.Bless);
-        WithTip(typeof(Refrain));
+        WithVar("Bless", 1); 
+        
+        WithTip(CustomEnum.Bless);
+        WithTips(c => HoverTipFactory.FromEnchantment<Refrain>(c.DynamicVars["Bless"].IntValue));
     }
     
     protected override bool HasEnergyCostX => true;

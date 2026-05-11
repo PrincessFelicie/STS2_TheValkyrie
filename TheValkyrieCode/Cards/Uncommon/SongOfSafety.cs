@@ -2,6 +2,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
@@ -21,8 +22,9 @@ public class SongOfSafety : TheValkyrieCard
         WithPower<ArmorPower>(2, 2);
         WithVar("Quantity", 2);
         WithVar("Aegis", 1);
+        
         WithTip(typeof(Smite));
-        WithTip(typeof(Aegis));
+        WithTips(c => HoverTipFactory.FromEnchantment<Aegis>(c.DynamicVars["Aegis"].IntValue));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

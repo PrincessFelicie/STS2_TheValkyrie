@@ -19,6 +19,7 @@ using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheValkyrie.TheValkyrieCode.Cards.Rare;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Extensions;
 using TheValkyrie.TheValkyrieCode.Pets;
 
 namespace TheValkyrie.TheValkyrieCode.Relics.NestBirdpyps;
@@ -26,6 +27,8 @@ namespace TheValkyrie.TheValkyrieCode.Relics.NestBirdpyps;
 //first one obtained
 public class YellowByrdpip : TheValkyrieRelic
 {
+    protected override string PackedIconOutlinePath => "byrdpip_outline.png".RelicImagePath();
+    
     private string _skin = SkinOptions[0];
 
     public override bool AddsPet => true;

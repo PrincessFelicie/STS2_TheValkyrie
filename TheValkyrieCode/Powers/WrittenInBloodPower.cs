@@ -46,7 +46,7 @@ public sealed class WrittenInBloodPower : TheValkyriePower
         if (ownerPlayer != null)
             for (int i = 0; i < this.Amount; ++i)
             {
-                room.AddExtraReward(ownerPlayer, new RelicReward(ModelDb.Relic<LyricsSheet>().ToMutable(), ownerPlayer));
+                room.AddExtraReward(ownerPlayer, new RelicReward(ModelDb.Relic<ALyricsSheet>().ToMutable(), ownerPlayer));
             }
         return Task.CompletedTask;
     }

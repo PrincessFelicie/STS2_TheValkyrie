@@ -24,7 +24,7 @@
   "THEVALKYRIE-STRENUOUS_PARRY.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-BALANCED_STRIKE.title": "Balanced Strike",
-  "THEVALKYRIE-BALANCED_STRIKE.description": "Deal {Damage:diff()} damage.\nDo not [gold]Overexert[/gold] this turn.",
+  "THEVALKYRIE-BALANCED_STRIKE.description": "Deal {Damage:diff()} damage.\nPrevent the next {BalancedStrikePower:diff()} times you would [gold]Overexert[/gold] this turn.",
 
   "THEVALKYRIE-SANCTUARY.title": "Sanctuary",
   "THEVALKYRIE-SANCTUARY.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold] this turn.",
@@ -63,7 +63,7 @@
   "THEVALKYRIE-CHARGING_TARGE.description": "Deal {Damage:diff()} damage to ALL enemies.\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.",
 
   "THEVALKYRIE-DEEP_BREATH.title": "Deep Breath",
-  "THEVALKYRIE-DEEP_BREATH.description": "Gain {Block:diff()} [gold]Block[/gold].\nRemove up to {OverexertionPower:diff()} [gold]Overexertion[/gold].",
+  "THEVALKYRIE-DEEP_BREATH.description": "Gain {Block:diff()} [gold]Block[/gold].\nRemove up to {OverexertionRemove:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-BIRDBRAIN.title": "Birdbrain",
   "THEVALKYRIE-BIRDBRAIN.description": "[gold]Exhaust[/gold] 1 card.\nAdd a random {IfUpgraded:show:[gold]Upgraded[/gold] }card into your [gold]Hand[/gold]. It costs 1 {energyPrefix:energyIcons(1)} less this turn.",
@@ -73,7 +73,7 @@
 
   "THEVALKYRIE-SHARPEN.title": "Sharpen",
   "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Sanguine[/purple] {Bless:diff()}.",
-  "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose a card to add [purple]Sanguine[/purple] [blue]{Bless:diff()}[/blue] to.",
+  "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Sanguine[/purple] [blue]{Bless:diff()}[/blue].",
   
   
 
@@ -129,16 +129,45 @@
   "THEVALKYRIE-CRESCENDO_STRIKE.title": "Crescendo Strike",
   "THEVALKYRIE-CRESCENDO_STRIKE.description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, [gold]Bless[/gold] it{IfUpgraded:show: twice|}.",
 
-  "THEVALKYRIE-DEBASING_INSTINCTS.title": "Debasing Instincts",
-  "THEVALKYRIE-DEBASING_INSTINCTS.description": "If you have 10 or more [gold]Overexhaustion[/gold], Apply {BleedPower:diff()} [gold]Bleed[/gold].\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-LOSE_YOURSELF.title": "Lose Yourself",
+  "THEVALKYRIE-LOSE_YOURSELF.description": "If you have 10 or more [gold]Overexertion[/gold], Apply {BleedPower:diff()} [gold]Bleed[/gold].\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-POLISH.title": "Polish",
   "THEVALKYRIE-POLISH.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].",
 
+  "THEVALKYRIE-BRIMMING.title": "Brimming",
+  "THEVALKYRIE-BRIMMING.description": "At the start of your turn, if you have 10 cards in your hand, gain {BrimmingPower:diff()} [gold]Block[/gold].",
+
+  "THEVALKYRIE-REINFORCE.title": "Reinforce",
+  "THEVALKYRIE-REINFORCE.description": "Choose a Skill in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Aegis[/purple] {Bless:diff()}.",
+  "THEVALKYRIE-REINFORCE.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Aegis[/purple] [blue]{Bless:diff()}[/blue].",
+
+  "THEVALKYRIE-BUCKLER_FEINT.title": "Buckler Feint",
+  "THEVALKYRIE-BUCKLER_FEINT.description": "Deal {Damage:diff()} damage.\nGain {TemporaryThornsPower:diff()} [gold]Thorns[/gold] until next turn.",
+
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.title": "Crush Their Spirits",
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.description": "{IfUpgraded:show: Apply 1 [gold]Weak[/gold] to ALL enemies.\n|}At the end of your turn, deal damage to ALL enemies equal to your amount of [gold]Armor[/gold].",
+
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.title": "Close and Personal",
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.description": "At the start of your turn, Apply 1 [gold]Vulnerable[/gold] to you and {IfUpgraded:show:ALL enemies|a random enemy}.",
+
+  "THEVALKYRIE-SHINING_STAR.title": "Shining Star",
+  "THEVALKYRIE-SHINING_STAR.description": "Whenever you survive a turn without taking any damage, gain {ShiningStarPower:diff()} [gold]Vigor[/gold].",
+
+  "THEVALKYRIE-HOPE_IN_DESPAIR.title": "Find Hope in Despair",
+  "THEVALKYRIE-HOPE_IN_DESPAIR.description": "If your [gold]Hand[/gold] is empty,\ngain {Block:diff()} [gold]Block[/gold], and your next card is played an extra time.",
+
+  "THEVALKYRIE-PRESS_YOUR_ADVANTAGE.title": "Press Your Advantage",
+  "THEVALKYRIE-PRESS_YOUR_ADVANTAGE.description": "Apply {WeakPower:diff()} [gold]Weak[/gold].\nGain {DisplayBlockPerDebuff:diff()} [gold]Block[/gold] for each unique debuff on the enemy.{InCombat:\\n(Gain {DisplayBlock:diff()} [gold]Block[/gold])|}",
+
+  "THEVALKYRIE-WARNING_STRIKE.title": "Warning Strike",
+  "THEVALKYRIE-WARNING_STRIKE.description": "Deal {Damage:diff()} damage.\nGain {VigorPower:diff()} [gold]Vigor[/gold].",
+  
 
 
+  
   "THEVALKYRIE-ANGEL_FORM.title": "Angel Form",
-  "THEVALKYRIE-ANGEL_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\nAt the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold] gain [gold]Ethereal[/gold].",
+  "THEVALKYRIE-ANGEL_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\nAt the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold]'s [gold]Retain[/gold] is replaced with [gold]Ethereal[/gold].",
   
   "THEVALKYRIE-DEEPEST_CUTS.title": "Deepest Cuts",
   "THEVALKYRIE-DEEPEST_CUTS.description": "Your [gold]Bleeds[/gold] apply {DeepestCutsPower:diff()} more [gold]Bleed[/gold].",
@@ -185,17 +214,35 @@
   
   "THEVALKYRIE-SANCTIFY.title": "Sanctify",
   "THEVALKYRIE-SANCTIFY.description": "Choose ANY card in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Refrain[/purple] {Bless:diff()}.",
-  "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose a card to [gold]Bless[/gold] with [purple]Refrain[/purple] [blue]{Bless:diff()}[/blue]. Any previous enchantment will be removed.",
+  "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Refrain[/purple] [blue]{Bless:diff()}[/blue].",
 
-  "THEVALKYRIE-TERRITORIAL_PURPOSE.title": "Territorial Purpose",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE.description": "At the start of your turn, add a{IfUpgraded:show:n [gold]Upgraded[/gold]|} [gold]Byrd Card[/gold] into your [gold]Hand[/gold].\nAt the end of your turn, gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",
+  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, add a{IfUpgraded:show:n [gold]Upgraded[/gold]|} [gold]Byrd Card[/gold] into your [gold]Hand[/gold], and gain 1 [gold]Byrd Strength[/gold].",
 
   "THEVALKYRIE-MUSICAL_BRIDGE.title": "Musical Bridge",
   "THEVALKYRIE-MUSICAL_BRIDGE.description": "[gold]Bless[/gold] {IfUpgraded:show:X+1|X} random cards in your hand with [purple]Refrain[/purple] 1.",
 
   "THEVALKYRIE-DEATH_WALTZ.title": "Death Waltz",
   "THEVALKYRIE-DEATH_WALTZ.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nIf you have at least as much [gold]Overexertion[/gold] as HP, [red]Die[/red].\nReturn this card to your hand.",
-  
+
+  "THEVALKYRIE-BOON.title": "Boon",
+  "THEVALKYRIE-BOON.description": "At the start of your turn, [gold]Bless[/gold] {BoonPower:diff()} random {BoonPower:plural:card|cards} in your hand.",
+
+  "THEVALKYRIE-TRUE_HEROISM.title": "True Heroism",
+  "THEVALKYRIE-TRUE_HEROISM.description": "Deal {Damage:diff()} damage to ALL enemies.\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+
+  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.title": "Weight of Responsibility",
+  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for all cards from your [gold]Deck[/gold] that [gold]Overexert[/gold].",
+
+  "THEVALKYRIE-DOMINION.title": "Dominion",
+  "THEVALKYRIE-DOMINION.description": "Whenever you [gold]Exhaust[/gold] a card, deal {DominionPower:diff()} damage to a random enemy.",
+
+  "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.title": "Break the Sound Barrier",
+  "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {Times:diff()} times.",
+
+  "THEVALKYRIE-HEAVY_FLAIL.title": "Heavy Flail",
+  "THEVALKYRIE-HEAVY_FLAIL.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for each point of [gold]Armor[/gold].",
+
 
 
 
@@ -218,5 +265,8 @@
   "THEVALKYRIE-MAESTRO_SLICE.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold].\nGain [gold]Block[/gold] equal to the [gold]Bleed[/gold] on this enemy.",
 
   "THEVALKYRIE-SECOND_WIND.title": "Second Wind (deprecated)",
-  "THEVALKYRIE-SECOND_WIND.description": "At the end of your turn, lose {SecondWindPower:diff()} [gold]Overexertion[/gold]."
+  "THEVALKYRIE-SECOND_WIND.description": "At the end of your turn, lose {SecondWindPower:diff()} [gold]Overexertion[/gold].",
+
+  "THEVALKYRIE-SWOOP.title": "Swoop (deprecated)",
+  "THEVALKYRIE-SWOOP.description": "Deal {Damage:diff()} damage.\nTransform this card into [gold]{IfUpgraded:show: Byrd Swoop+|Byrd Swoop}[/gold]. It keeps its current enchantment."
 }

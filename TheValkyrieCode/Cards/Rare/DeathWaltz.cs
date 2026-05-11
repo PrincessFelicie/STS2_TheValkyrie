@@ -16,7 +16,7 @@ public class DeathWaltz : TheValkyrieCard
     public DeathWaltz() : base(0, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
         WithPower<OverexertionPower>(6);
-        WithDamage(3, 2);
+        WithDamage(2, 1);
     }
     
     protected override bool ShouldGlowRedInternal => Owner.Creature.GetPowerAmount<OverexertionPower>()+DynamicVars["OverexertionPower"].IntValue >= Owner.Creature.CurrentHp;
@@ -35,9 +35,9 @@ public class DeathWaltz : TheValkyrieCard
         }
     }
     
-    protected override PileType GetResultPileType()
+    protected override PileType GetResultPileTypeForCardPlay()
     {
-        PileType resultPileType = base.GetResultPileType();
+        PileType resultPileType = base.GetResultPileTypeForCardPlay();
         return resultPileType != PileType.Discard ? resultPileType : PileType.Hand;
     }
 

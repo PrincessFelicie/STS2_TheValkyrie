@@ -2,6 +2,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
@@ -17,8 +18,9 @@ public class SongOfBattle : TheValkyrieCard
     {
         WithVar("Quantity", 3);
         WithVar("Sharp", 3, 1);
+        
         WithTip(typeof(Smite));
-        WithTip(typeof(Sharp));
+        WithTips(c => HoverTipFactory.FromEnchantment<Sharp>(c.DynamicVars["Sharp"].IntValue));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

@@ -16,6 +16,7 @@ public class AngelForm : TheValkyrieCard
     {
         WithPower<ArmorPower>(1, 2);
         WithVar("AngelFormPower", 1);
+        //rebalance option: remove on equip armor gain, move per turn gain to 2, upgrade gives retain
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

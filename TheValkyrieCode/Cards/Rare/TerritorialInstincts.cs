@@ -13,13 +13,14 @@ using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
-public class TerritorialPurpose : TheValkyrieCard
+public class TerritorialInstincts : TheValkyrieCard
 {
-    public TerritorialPurpose() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public TerritorialInstincts() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithVar("TerritorialPurposePower", 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
         WithTip(typeof(Peck));
         WithTip(typeof(ByrdSwoop));
+        WithTip(typeof(ByrdStrengthPower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

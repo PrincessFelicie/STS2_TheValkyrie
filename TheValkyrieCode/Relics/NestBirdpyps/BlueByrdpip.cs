@@ -20,6 +20,7 @@ using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheValkyrie.TheValkyrieCode.Cards.Rare;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Extensions;
 using TheValkyrie.TheValkyrieCode.Pets;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -28,6 +29,8 @@ namespace TheValkyrie.TheValkyrieCode.Relics.NestBirdpyps;
 //third one obtained
 public class BlueByrdpip : TheValkyrieRelic
 {
+    protected override string PackedIconOutlinePath => "byrdpip_outline.png".RelicImagePath();
+    
     private string _skin = SkinOptions[0];
 
     public override bool AddsPet => true;
@@ -59,7 +62,7 @@ public class BlueByrdpip : TheValkyrieRelic
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips
     {
-        get => HoverTipFactory.FromCardWithCardHoverTips<TerritorialPurpose>();
+        get => HoverTipFactory.FromCardWithCardHoverTips<TerritorialInstincts>();
     }
 
     public override async Task AfterObtained()
@@ -77,7 +80,7 @@ public class BlueByrdpip : TheValkyrieRelic
         if (player != Owner || combatState.RoundNumber > 1)
             return;
         this.Flash();
-        CardModel card = combatState.CreateCard<TerritorialPurpose>(Owner);
+        CardModel card = combatState.CreateCard<TerritorialInstincts>(Owner);
         CardCmd.Upgrade(card);
         await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
     }
@@ -88,7 +91,7 @@ public class BlueByrdpip : TheValkyrieRelic
         out Decimal modifiedCost)
     {
         modifiedCost = originalCost;
-        if (card.Owner.Creature != this.Owner.Creature || card is not TerritorialPurpose)
+        if (card.Owner.Creature != this.Owner.Creature || card is not TerritorialInstincts)
             return false;
         modifiedCost = originalCost - 1;
         return true;

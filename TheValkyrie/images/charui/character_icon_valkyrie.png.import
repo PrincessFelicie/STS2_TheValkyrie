@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3wnx75e1dxxx"
-path="res://.godot/imported/character_icon_char_name.png-000b2a8a6e6cf6fdd5ce39f30c35ec2e.ctex"
+path="res://.godot/imported/character_icon_valkyrie.png-02ac41c8eff081b8e6019a4178282bdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheValkyrie/images/charui/character_icon_char_name.png"
-dest_files=["res://.godot/imported/character_icon_char_name.png-000b2a8a6e6cf6fdd5ce39f30c35ec2e.ctex"]
+source_file="res://TheValkyrie/images/charui/character_icon_valkyrie.png"
+dest_files=["res://.godot/imported/character_icon_valkyrie.png-02ac41c8eff081b8e6019a4178282bdd.ctex"]
 
 [params]
 

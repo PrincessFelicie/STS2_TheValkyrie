@@ -19,11 +19,11 @@ using TheValkyrie.TheValkyrieCode.Relics;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
-public class DebasingInstincts : TheValkyrieCard
+public class LoseYourself : TheValkyrieCard
 {
     protected override bool ShouldGlowGoldInternal => this.Owner.Creature.GetPowerAmount<OverexertionPower>() >= 10;
 
-    public DebasingInstincts() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy)
+    public LoseYourself() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithPower<BleedPower>(6, 3);
         WithPower<OverexertionPower>(10);

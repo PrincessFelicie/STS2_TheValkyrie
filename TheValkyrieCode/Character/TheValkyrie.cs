@@ -1,4 +1,5 @@
 ﻿using BaseLib.Abstracts;
+using BaseLib.Patches.UI;
 using BaseLib.Utils.NodeFactories;
 using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
@@ -16,7 +17,12 @@ public class TheValkyrie : PlaceholderCharacterModel
 {
     public const string CharacterId = "TheValkyrie";
 
-    public static readonly Color Color = new("8e400d");
+    public static readonly Color Color = new("923c00");
+    
+    public override string CustomAttackSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_ram";
+    public override string CustomCastSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_war_chant";
+    public override string CustomDeathSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_die";
+    
 
     public override Color NameColor => Color;
     public override Color MapDrawingColor => Color;
@@ -88,4 +94,11 @@ public class TheValkyrie : PlaceholderCharacterModel
     public override string CustomCharacterSelectIconPath => "char_select_valkyrie.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_valkyrie_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_valkyrie.png".CharacterUiPath();
+    
+    public override RelicIconData? CustomYummyCookie => 
+        new RelicIconData(
+            "yummy_cookie_valkyrie.png".BigRelicImagePath(),
+            "yummy_cookie_valkyrie.png".RelicImagePath(),
+            "yummy_cookie_valkyrie_outline.png".BigRelicImagePath()
+            );
 }

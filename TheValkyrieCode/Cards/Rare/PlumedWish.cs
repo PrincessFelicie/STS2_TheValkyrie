@@ -16,7 +16,7 @@ public class PlumedWish : TheValkyrieCard
 {
     public PlumedWish() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithPower<OverexertionPower>(4);
+        WithPower<OverexertionPower>(8);
         WithKeyword(CardKeyword.Exhaust);
     }
     
