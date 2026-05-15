@@ -4,8 +4,8 @@
   "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount. Lowers by 1 each turn.",
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
-  "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you fail to block all damage this turn.",
-  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take damage this turn, lose [blue]{Amount}[/blue] HP.",
+  "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you take unblocked damage this turn.",
+  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take [gold]unblocked[/gold] damage this turn, lose [blue]{Amount}[/blue] HP.",
 
   "THEVALKYRIE-ARMOR_POWER.title": "Armor",
   "THEVALKYRIE-ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
@@ -113,5 +113,13 @@
 
   "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.title": "Found Hope",
   "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.description": "Your next card is played an extra time.",
-  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.smartDescription": "Your next card is played {Amount:plural:an extra time|[blue]{}[/blue] extra times} this turn."
+  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.smartDescription": "Your next card is played {Amount:plural:an extra time|[blue]{}[/blue] extra times} this turn.",
+
+  "THEVALKYRIE-TUNE_UP_POWER.title": "Tune Up",
+  "THEVALKYRIE-TUNE_UP_POWER.description": "The next [gold]Retain card[/gold] you play costs [blue]0[/blue].",
+  "THEVALKYRIE-TUNE_UP_POWER.smartDescription": "The next [blue]{Amount}[/blue] [gold]Retain[/gold] {Amount:plural:card|cards} you play {Amount:plural:costs|cost} [blue]0[/blue].",
+
+  "THEVALKYRIE-BIRD_FIST_POWER.title": "Bird Fist",
+  "THEVALKYRIE-BIRD_FIST_POWER.description": "You take half damage and no longer [gold]Overexert[/gold].",
+  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold]."
 }

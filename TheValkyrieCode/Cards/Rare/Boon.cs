@@ -13,7 +13,7 @@ public class Boon : TheValkyrieCard
 {
     public Boon() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        WithVar("BoonPower",1, 1); //no need for tooltip on that
+        WithVar("BoonPower",2, 1); //no need for tooltip on that
         WithTip(CustomEnum.Bless);
     }
     

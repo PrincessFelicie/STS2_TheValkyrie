@@ -72,7 +72,7 @@
   "THEVALKYRIE-PREPARE_SERMON.description": "If you have no [gold]Smites[/gold] in your [gold]Hand[/gold], add {Quantity:diff()} [gold]Smites[/gold] into your hand.",
 
   "THEVALKYRIE-SHARPEN.title": "Sharpen",
-  "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Sanguine[/purple] {Bless:diff()}.",
+  "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Sanguine[/purple] {Bless:diff()}.\nReplace the current enchantment if necessary.",
   "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Sanguine[/purple] [blue]{Bless:diff()}[/blue].",
   
   
@@ -139,7 +139,7 @@
   "THEVALKYRIE-BRIMMING.description": "At the start of your turn, if you have 10 cards in your hand, gain {BrimmingPower:diff()} [gold]Block[/gold].",
 
   "THEVALKYRIE-REINFORCE.title": "Reinforce",
-  "THEVALKYRIE-REINFORCE.description": "Choose a Skill in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Aegis[/purple] {Bless:diff()}.",
+  "THEVALKYRIE-REINFORCE.description": "Choose a Skill in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Aegis[/purple] {Bless:diff()}.\nReplace the current enchantment if necessary.",
   "THEVALKYRIE-REINFORCE.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Aegis[/purple] [blue]{Bless:diff()}[/blue].",
 
   "THEVALKYRIE-BUCKLER_FEINT.title": "Buckler Feint",
@@ -162,10 +162,18 @@
 
   "THEVALKYRIE-WARNING_STRIKE.title": "Warning Strike",
   "THEVALKYRIE-WARNING_STRIKE.description": "Deal {Damage:diff()} damage.\nGain {VigorPower:diff()} [gold]Vigor[/gold].",
+
+  "THEVALKYRIE-HYPERFOCUS.title": "Hyperfocus",
+  "THEVALKYRIE-HYPERFOCUS.description": "Choose a card in your [gold]Hand[/gold]{IfUpgraded:show: and add [gold]Retain[/gold] to it|}.\n[gold]Exhaust[/gold] all others.",
+  "THEVALKYRIE-HYPERFOCUS.selectionScreenPrompt": "Choose a card to keep. [gold]Exhaust[/gold] all others.",
+  "THEVALKYRIE-HYPERFOCUS.selectionScreenPromptUpgraded": "Choose a card to add [gold]Retain[/gold] to. [gold]Exhaust[/gold] all others.",
+
+  "THEVALKYRIE-TUNE_UP.title": "Tune Up",
+  "THEVALKYRIE-TUNE_UP.description": "Deal {Damage:diff()} damage.\nThe next [gold]Retain[/gold] card you play costs 0 {energyPrefix:energyIcons(1)}.",
+  
+  
   
 
-
-  
   "THEVALKYRIE-ANGEL_FORM.title": "Angel Form",
   "THEVALKYRIE-ANGEL_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\nAt the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold]'s [gold]Retain[/gold] is replaced with [gold]Ethereal[/gold].",
   
@@ -199,7 +207,7 @@
   "THEVALKYRIE-ZEAL.title": "Zeal",
   "THEVALKYRIE-ZEAL.description": "Gain {Energy:energyIcons()}.\\nDraw, [gold]Upgrade[/gold] and [gold]Bless[/gold] {Cards:diff()} {Cards:plural:card|cards}.",
 
-  "THEVALKYRIE-STRENGTH_IN_HARDSHIP.title": "Strength In Hardship",
+  "THEVALKYRIE-STRENGTH_IN_HARDSHIP.title": "Strength From Hardship",
   "THEVALKYRIE-STRENGTH_IN_HARDSHIP.description": "Whenever you [gold]Overexert[/gold], gain {StrengthInHardshipPower:diff()} [gold]Armor[/gold] this turn.",
 
   "THEVALKYRIE-PLUMED_WISH.title": "Plumed Wish",
@@ -213,7 +221,7 @@
   "THEVALKYRIE-WRITTEN_IN_BLOOD.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold].\nIf you win this fight without taking any damage, permanently [gold]Bless[/gold] a card in your deck.",
   
   "THEVALKYRIE-SANCTIFY.title": "Sanctify",
-  "THEVALKYRIE-SANCTIFY.description": "Choose ANY card in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Refrain[/purple] {Bless:diff()}.",
+  "THEVALKYRIE-SANCTIFY.description": "Choose ANY card in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Refrain[/purple] {Bless:diff()}.\nReplace the current enchantment if necessary.",
   "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Refrain[/purple] [blue]{Bless:diff()}[/blue].",
 
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",
@@ -233,16 +241,18 @@
 
   "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.title": "Weight of Responsibility",
   "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for all cards from your [gold]Deck[/gold] that [gold]Overexert[/gold].",
-
-  "THEVALKYRIE-DOMINION.title": "Dominion",
-  "THEVALKYRIE-DOMINION.description": "Whenever you [gold]Exhaust[/gold] a card, deal {DominionPower:diff()} damage to a random enemy.",
-
+  
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.title": "Break the Sound Barrier",
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {Times:diff()} times.",
 
   "THEVALKYRIE-HEAVY_FLAIL.title": "Heavy Flail",
   "THEVALKYRIE-HEAVY_FLAIL.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for each point of [gold]Armor[/gold].",
 
+  "THEVALKYRIE-DOMINION.title": "Dominion",
+  "THEVALKYRIE-DOMINION.description": "Whenever you [gold]Exhaust[/gold] a card, deal {DominionPower:diff()} damage to a random enemy.",
+
+  "THEVALKYRIE-RISING_PUNCH.title": "Rising Punch",
+  "THEVALKYRIE-RISING_PUNCH.description": "Deal {Damage:diff()} damage.",
 
 
 
@@ -268,5 +278,8 @@
   "THEVALKYRIE-SECOND_WIND.description": "At the end of your turn, lose {SecondWindPower:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-SWOOP.title": "Swoop (deprecated)",
-  "THEVALKYRIE-SWOOP.description": "Deal {Damage:diff()} damage.\nTransform this card into [gold]{IfUpgraded:show: Byrd Swoop+|Byrd Swoop}[/gold]. It keeps its current enchantment."
+  "THEVALKYRIE-SWOOP.description": "Deal {Damage:diff()} damage.\nTransform this card into [gold]{IfUpgraded:show: Byrd Swoop+|Byrd Swoop}[/gold]. It keeps its current enchantment.",
+
+  "THEVALKYRIE-BIRD_FIST.title": "Bird Fist (deprecated)",
+  "THEVALKYRIE-BIRD_FIST.description": "[gold]Exhaust[/gold] ALL of your Skills.\nYou take half damage and no longer [gold]Overexert[/gold]."
 }

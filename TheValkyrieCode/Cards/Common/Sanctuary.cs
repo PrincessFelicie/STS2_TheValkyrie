@@ -11,9 +11,9 @@ public class Sanctuary : TheValkyrieCard
 {
     public Sanctuary() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithPower<ArmorPower>(2);
+        WithPower<ArmorPower>(2, 1);
         WithKeyword(CardKeyword.Exhaust);
-        WithKeyword(CardKeyword.Retain, UpgradeType.Add);
+        WithKeyword(CardKeyword.Retain);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

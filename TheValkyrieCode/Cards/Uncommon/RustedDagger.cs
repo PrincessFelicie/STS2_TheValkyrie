@@ -79,7 +79,7 @@ public class RustedDagger : TheValkyrieCard
     
     private void UpdateDamage() => this.CurrentDamage = 6 + this.IncreasedDamage;
 
-    protected override void OnUpgrade()
-    {
-    }
+    protected override void OnUpgrade() {}
+    
+    protected override void AfterDowngraded() => this.UpdateDamage();
 }

@@ -14,7 +14,7 @@ public class HopeInDespair : TheValkyrieCard
 {
     public HopeInDespair() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(5, 3);
+        WithBlock(12, 6);
         WithVar("HopeInDespairPower", 1);
     }
     

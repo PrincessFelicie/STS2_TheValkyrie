@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Powers;
@@ -18,6 +19,8 @@ public class Aegis : CustomEnchantmentModel
         return base.CanEnchant(c);
     }
     
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ArmorPower>()];
+
     public override bool IsStackable => true;
     
     public override bool HasExtraCardText => true;

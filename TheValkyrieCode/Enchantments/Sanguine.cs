@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Powers;
@@ -18,6 +19,8 @@ public class Sanguine : CustomEnchantmentModel
     {
         return base.CanEnchant(c) && c.TargetType is TargetType.AllEnemies or TargetType.AnyEnemy or TargetType.RandomEnemy;
     }
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<BleedPower>()];
     
     public override bool HasExtraCardText => true;
     

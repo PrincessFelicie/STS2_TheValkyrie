@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -20,7 +21,9 @@ public class PressYourAdvantage : TheValkyrieCard
         WithCalculatedBlock(0, 3, (card, target) => target != null ? target.Powers.Count(ShouldCountPower) : 0,
             ValueProp.Move, 0, 1);
         WithVar("DisplayBlockPerDebuff", 3, 1);
-        WithCalculatedVar("DisplayBlock",3,3, (card, target) => target != null ? target.Powers.Count(ShouldCountPowerForDisplay) : 0, 1, 1); //adds the extra 4 of the weak. This counts wrong on Artifact...!!!
+        WithCalculatedVar("DisplayBlock",3,3, 
+            (card, target) => target != null ? target.Powers.Count(ShouldCountPower) + AccountForArtifactAndWeak(target) : 0,
+            1, 1); //adds the extra 3(4) of the weak. AccountForAAW removes 3(4) if the creature has artifact or already has Weak.
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -38,9 +41,9 @@ public class PressYourAdvantage : TheValkyrieCard
     {
         return power.TypeForCurrentAmount == PowerType.Debuff && power is not ITemporaryPower;
     }
-    
-    private static bool ShouldCountPowerForDisplay(PowerModel power)
+
+    private static int AccountForArtifactAndWeak(Creature target)
     {
-        return power.TypeForCurrentAmount == PowerType.Debuff && power is not ITemporaryPower && power is not WeakPower;
+        return target.HasPower<ArtifactPower>() || target.HasPower<WeakPower>() ? -1 : 0;
     }
 }
