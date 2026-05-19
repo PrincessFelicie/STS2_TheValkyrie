@@ -54,11 +54,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     public override CardPoolModel CardPool => ModelDb.CardPool<TheValkyrieCardPool>();
     public override RelicPoolModel RelicPool => ModelDb.RelicPool<TheValkyrieRelicPool>();
     public override PotionPoolModel PotionPool => ModelDb.PotionPool<TheValkyriePotionPool>();
-
-    /*  PlaceholderCharacterModel will utilize placeholder basegame assets for most of your character assets until you
-        override all the other methods that define those assets.
-        These are just some of the simplest assets, given some placeholders to differentiate your character with.
-        You don't have to, but you're suggested to rename these images. */
+    
     
     public override Control CustomIcon
     {
@@ -70,27 +66,21 @@ public class TheValkyrie : PlaceholderCharacterModel
         }
     }
     
-    public override string CustomArmPointingTexturePath
-    {
-        get => "/ui/hands/the_valkyrie_arm_point.png".ImagePath();
-    }
+    //public override string CustomVisualPath => "/character/the_valkyrie_standing.png".ImagePath(); todo
+    //public override string CustomRestSiteAnimPath => "/character/the_valkyrie_rest_site.png".ImagePath(); todo
+    //public override string CustomMerchantAnimPath => "/character/the_valkyrie_merchant.png".ImagePath(); todo
+    
+    public override string CustomArmPointingTexturePath => "/ui/hands/the_valkyrie_arm_point.png".ImagePath();
+    public override string CustomArmRockTexturePath => "/ui/hands/the_valkyrie_arm_rock.png".ImagePath(); //todo
+    public override string CustomArmPaperTexturePath => "/ui/hands/the_valkyrie_arm_paper.png".ImagePath(); //todo
+    public override string CustomArmScissorsTexturePath => "/ui/hands/the_valkyrie_arm_scissors.png".ImagePath(); //todo 
 
-    public override string CustomArmRockTexturePath
-    {
-        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_rock.png");
-    }
-
-    public override string CustomArmPaperTexturePath
-    {
-        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_paper.png");
-    }
-
-    public override string CustomArmScissorsTexturePath
-    {
-        get => ImageHelper.GetImagePath($"ui/hands/the_valkyrie_arm_scissors.png");
-    }
-
+    
+    //public override string CustomEnergyCounterPath => "energy_counter.tscn".CharacterUiPath(); todo
     public override string CustomIconTexturePath => "character_icon_valkyrie.png".CharacterUiPath();
+    public override string CustomIconOutlineTexturePath => "character_icon_valkyrie_outline.png".CharacterUiPath();
+    
+    //public override string CustomCharacterSelectBg => "char_select_valkyrie_background.tscn".CharacterUiPath(); todo
     public override string CustomCharacterSelectIconPath => "char_select_valkyrie.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_valkyrie_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_valkyrie.png".CharacterUiPath();

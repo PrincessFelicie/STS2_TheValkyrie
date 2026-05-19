@@ -14,7 +14,7 @@ public class BucklerFeint : TheValkyrieCard
     public BucklerFeint() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(6, 2);
-        WithPower<TemporaryThornsPower>(2, 1);
+        WithPower<TemporaryThornsPower>(4, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

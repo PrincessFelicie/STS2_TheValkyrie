@@ -14,22 +14,23 @@ public class HopeInDespair : TheValkyrieCard
 {
     public HopeInDespair() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(12, 6);
+        WithBlock(10, 4);
         WithVar("HopeInDespairPower", 1);
+        WithVar("OverexertionThreshold", 20);
     }
     
-    protected override bool ShouldGlowGoldInternal => IsOnlyCardInHand;
+    protected override bool ShouldGlowGoldInternal => IsActive;
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        if (IsOnlyCardInHand)
+        if (IsActive)
         {
             await CommonActions.CardBlock(this, play);
             await PowerCmd.Apply<HopeInDespairPower>(choiceContext, Owner.Creature, DynamicVars["HopeInDespairPower"].IntValue, Owner.Creature, this);
         }
     }
-    
-    private bool IsOnlyCardInHand => !PileType.Hand.GetPile(this.Owner).Cards.Except<CardModel>([this]).Any();
+
+    private bool IsActive => Owner.Creature.GetPowerAmount<OverexertionPower>() >= DynamicVars["OverexertionThreshold"].IntValue;
 
     protected override void OnUpgrade()
     {

@@ -25,6 +25,9 @@ public class Reinforce : TheValkyrieCard
         WithTip(CustomEnum.Bless);
         WithTips(c => HoverTipFactory.FromEnchantment<Aegis>(c.DynamicVars["Bless"].IntValue));
     }
+    
+    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(this.Owner).Cards.Any(c => c.Type == CardType.Skill);
+
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {

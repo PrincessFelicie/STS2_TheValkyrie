@@ -24,6 +24,7 @@ public class PressYourAdvantage : TheValkyrieCard
         WithCalculatedVar("DisplayBlock",3,3, 
             (card, target) => target != null ? target.Powers.Count(ShouldCountPower) + AccountForArtifactAndWeak(target) : 0,
             1, 1); //adds the extra 3(4) of the weak. AccountForAAW removes 3(4) if the creature has artifact or already has Weak.
+        //sadly this causes issues with Frail, Dexterity, etc... probably need to rethink how the displayed number is implemented
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

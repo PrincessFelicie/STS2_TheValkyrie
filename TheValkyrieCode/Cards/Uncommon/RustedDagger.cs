@@ -14,6 +14,7 @@ using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
+//Fatal is really weak in multiplayer. I could remove its condition and lower the damage gain, if I don't mind losing the flavor and increasing the overlap with The Scythe... Pretty big downsides, but the alternative is a card that's just non-viable outside of act 1.
 public class RustedDagger : TheValkyrieCard
 {
     private const string _increaseKey = "Increase";

@@ -29,7 +29,7 @@ public class BlessCmd
             if (card.TargetType is TargetType.AllEnemies or TargetType.AnyEnemy or TargetType.RandomEnemy)
                 validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
             
-            if (card.DynamicVars.ContainsKey("Block"))
+            if (card.GainsBlock)
                 validEnchantments.Add(ModelDb.Enchantment<Nimble>());
             else
                 validEnchantments.Add(ModelDb.Enchantment<Adroit>());

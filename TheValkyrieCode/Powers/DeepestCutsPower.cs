@@ -30,6 +30,6 @@ public sealed class DeepestCutsPower : TheValkyriePower
         Creature? target,
         CardModel? cardSource)
     {
-        return (power is BleedPower) && (giver == Owner) ? amount + this.Amount : amount;
+        return power is BleedPower && giver == Owner ? amount + this.Amount : amount;
     }
 }

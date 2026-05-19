@@ -34,6 +34,7 @@ public sealed class AngelFormPower : TheValkyriePower
         {
             CardCmd.ApplyKeyword(card, CardKeyword.Ethereal);
             CardCmd.RemoveKeyword(card, CardKeyword.Retain); //saves up space on the card text.
+            //We could consider stealing the visual of Hexed from Spectral Knight -- but not the affliction itself, since cards can only have one affliction at a time. It'd have gameplay implications.
         }
         return Task.CompletedTask;
     }

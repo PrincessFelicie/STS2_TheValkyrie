@@ -113,7 +113,7 @@
 
   "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.title": "Found Hope",
   "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.description": "Your next card is played an extra time.",
-  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.smartDescription": "Your next card is played {Amount:plural:an extra time|[blue]{}[/blue] extra times} this turn.",
+  "THEVALKYRIE-HOPE_IN_DESPAIR_POWER.smartDescription": "Your next card is played {Amount:plural:an extra time|[blue]{}[/blue] extra times}.",
 
   "THEVALKYRIE-TUNE_UP_POWER.title": "Tune Up",
   "THEVALKYRIE-TUNE_UP_POWER.description": "The next [gold]Retain card[/gold] you play costs [blue]0[/blue].",
@@ -121,5 +121,9 @@
 
   "THEVALKYRIE-BIRD_FIST_POWER.title": "Bird Fist",
   "THEVALKYRIE-BIRD_FIST_POWER.description": "You take half damage and no longer [gold]Overexert[/gold].",
-  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold]."
+  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold].",
+
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.title": "Icarus Complex",
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.description": "Your [gold]Vigor[/gold] gains are increased.",
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.smartDescription": "Gain [blue]{Amount}[/blue]% more [gold]Vigor[/gold]."
 }

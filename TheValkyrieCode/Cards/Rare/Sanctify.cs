@@ -25,6 +25,9 @@ public class Sanctify : TheValkyrieCard
         WithTip(CustomEnum.Bless);
         WithTips(c => HoverTipFactory.FromEnchantment<Refrain>(c.DynamicVars["Bless"].IntValue));
     }
+    
+    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(this.Owner).Cards.Any(c => c.Type is not (CardType.Curse or CardType.Quest or CardType.Status));
+
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {

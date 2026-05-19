@@ -27,6 +27,8 @@ public class Sharpen : TheValkyrieCard
         WithTips(c => HoverTipFactory.FromEnchantment<Sanguine>(c.DynamicVars["Bless"].IntValue));
     }
 
+    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(this.Owner).Cards.Any(c => c.Type == CardType.Attack);
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);

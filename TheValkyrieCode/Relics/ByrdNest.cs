@@ -1,5 +1,6 @@
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -60,7 +61,7 @@ public class ByrdNest : TheValkyrieRelic
     {
         if (player != this.Owner || this.TimesHatched >= 3)
             return false;
-        options.Add((RestSiteOption) new ValkyrieNestHatchRestSiteOption(player));
+        options.Add(new ValkyrieNestHatchRestSiteOption(player));
         return true;
     }
 }

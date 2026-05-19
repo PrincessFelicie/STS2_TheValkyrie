@@ -15,8 +15,7 @@ public class StrengthInHardship : TheValkyrieCard
 {
     public StrengthInHardship() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
-        // Too strong. Rework into "whenever you overexert, gain half of the amount as block, rounded down."
-        WithPower<StrengthInHardshipPower>(1);
+        WithVar("StrengthInHardshipPower", 1); //no tooltip needed
         WithTip(typeof(OverexertionPower));
     }
     

@@ -14,7 +14,7 @@ public class TuneUp : TheValkyrieCard
     public TuneUp() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(10, 3); //alt option if 1 cost is too strong: 2 cost, 12 (+6)
-        WithPower<TuneUpPower>(1);
+        WithVar("TuneUpPower", 1); //no tooltip needed
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
