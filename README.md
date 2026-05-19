@@ -6,6 +6,8 @@ The Valkyrie is a character mod for Slay The Spire 2.
  - Smite your way up to the top of the Spire
  - But beware Overexertion -- putting yourself into harm's way risks making you more fragile than ever!
 
+<img width="1396" height="1407" alt="image" src="https://github.com/user-attachments/assets/27d64eee-fb47-4424-9c83-5f25e41f58f4" />
+
 Currently in Alpha. Art is not final. Volunteer artists are welcome!
 
 ### Made for Slay the Spire 2 v.0.105.1 (Beta Branch as of May 19th 2026)
