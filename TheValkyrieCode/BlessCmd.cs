@@ -19,6 +19,13 @@ public class BlessCmd
         CardModel card,
         int amount = 1)
     {
+        if (!CanBless(card))
+        {
+            if (card.Type is not (CardType.Curse or CardType.Status or CardType.Quest))
+                ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), card.Owner.Creature, 2.0);
+            return;
+        }
+        
         if (card.Enchantment == null) //create a new enchant
         {
             List<EnchantmentModel> validEnchantments = new List<EnchantmentModel>();
@@ -53,20 +60,12 @@ public class BlessCmd
                     enchantmentCount = amount;
                     break;
             }
-            if(enchantment.CanEnchant(card)) //one last check to filter out curses and statuses and the like. Sadly "canEnchant" exists on enchantment but not on cardModel, so we have to select the enchantment *before* that filter instead of not wasting compute time :/ 
-                CardCmd.Enchant(enchantment.ToMutable(), card, enchantmentCount);
+            CardCmd.Enchant(enchantment.ToMutable(), card, enchantmentCount);
         }
         else //otherwise improve the current enchant
         {
-            if (card.Enchantment.ShowAmount) //assume that if it's a non-show-amount enchantment (e.g. Clone, Glam, Corrupted, etc) that we can't "improve" it, so leave it be.
-            {
-                card.Enchantment.Amount+=amount;
-                card.Enchantment.RecalculateValues(); //do this otherwise Adroit causes multiplayer state divergences
-            }
-            else
-            {
-                ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), card.Owner.Creature, 2.0);
-            }
+            card.Enchantment.Amount+=amount;
+            card.Enchantment.RecalculateValues(); //do this otherwise Adroit causes multiplayer state divergences
         }
     }
 
