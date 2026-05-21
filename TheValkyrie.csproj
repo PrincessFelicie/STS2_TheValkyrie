@@ -66,6 +66,7 @@
         <Folder Include="TheValkyrie\images\potions\" />
         <Folder Include="TheValkyrie\images\relics\big\"/>
         <Folder Include="TheValkyrie\images\ui\rest_site\" />
+        <Folder Include="TheValkyrie\scenes\combat\energy_counters\" />
     </ItemGroup>
 
     <ItemGroup>

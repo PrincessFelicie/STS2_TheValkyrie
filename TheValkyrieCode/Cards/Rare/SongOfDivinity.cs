@@ -28,6 +28,7 @@ public class SongOfDivinity : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (CombatState == null) return;
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await Smite.CreateInHandWithEnchantment<Refrain>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Replay"].IntValue, CombatState);
     }
 

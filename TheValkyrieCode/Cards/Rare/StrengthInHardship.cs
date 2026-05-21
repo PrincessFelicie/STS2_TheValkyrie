@@ -21,6 +21,7 @@ public class StrengthInHardship : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await PowerCmd.Apply<StrengthInHardshipPower>(choiceContext, Owner.Creature, DynamicVars["StrengthInHardshipPower"].IntValue, Owner.Creature, this);
     }
 

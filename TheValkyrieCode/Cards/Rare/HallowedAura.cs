@@ -28,6 +28,7 @@ public class HallowedAura : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (CombatState == null) return;
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature).Where( c => c.IsAlive && c.IsPlayer))
             await PowerCmd.Apply<ArmorPower>(choiceContext, creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
     }

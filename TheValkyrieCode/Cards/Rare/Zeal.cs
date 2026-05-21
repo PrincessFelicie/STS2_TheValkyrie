@@ -27,6 +27,7 @@ public class Zeal : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         IEnumerable<CardModel> cardsDrawn = await CommonActions.Draw(this, choiceContext);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
         foreach (CardModel card in cardsDrawn)

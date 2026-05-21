@@ -21,6 +21,7 @@ public class ShieldOfFaith : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await CommonActions.CardBlock(this, play);
         await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, this.Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
     }

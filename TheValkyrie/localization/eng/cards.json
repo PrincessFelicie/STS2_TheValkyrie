@@ -177,7 +177,7 @@
   "THEVALKYRIE-RISING_PUNCH.description": "Deal {Damage:diff()} damage.",
 
   "THEVALKYRIE-OVERPREPARE.title": "Overprepare",
-  "THEVALKYRIE-OVERPREPARE.description": "Put 1 card from your [gold]Hand[/gold] at the bottom of your [gold]Draw Pile[/gold].\nApply 1 [gold]Vulnerable[/gold] to all enemies when you draw it.",
+  "THEVALKYRIE-OVERPREPARE.description": "Put 1 card from your [gold]Hand[/gold] at the bottom of your [gold]Draw Pile[/gold].\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to all enemies when you draw it.",
   "THEVALKYRIE-OVERPREPARE.selectionScreenPrompt": "Choose a card to put at the bottom of your Draw Pile. Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to all enemies when you draw it.",
 
   "THEVALKYRIE-ICARUS_COMPLEX.title": "Icarus Complex",

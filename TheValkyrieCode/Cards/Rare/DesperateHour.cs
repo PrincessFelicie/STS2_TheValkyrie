@@ -24,6 +24,7 @@ public class DesperateHour : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         List<CardModel> list1 = PileType.Hand.GetPile(this.Owner).Cards.ToList();
         int exhaustCount = list1.Count;
         foreach (CardModel card in list1)

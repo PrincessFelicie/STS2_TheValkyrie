@@ -21,6 +21,7 @@ public class AngelForm : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);
         await PowerCmd.Apply<AngelFormPower>(choiceContext, Owner.Creature, DynamicVars["AngelFormPower"].BaseValue, Owner.Creature, this);
     }

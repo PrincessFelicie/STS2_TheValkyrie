@@ -21,6 +21,7 @@ public class CawCaw : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         TalkCmd.Play(new LocString("combat_messages", "CAW_CAW"), Owner.Creature, VfxColor.Blue);
         await PowerCmd.Apply<RitualPower>(choiceContext, Owner.Creature, DynamicVars["RitualPower"].IntValue, Owner.Creature, this);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);

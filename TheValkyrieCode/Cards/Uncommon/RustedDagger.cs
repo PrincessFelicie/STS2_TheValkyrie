@@ -67,9 +67,10 @@ public class RustedDagger : TheValkyrieCard
         
         int intValue = DynamicVars["Increase"].IntValue;
         this.BuffFromPlay(intValue);
-        if (!(this.DeckVersion is RustedDagger deckVersion))
+        if (this.DeckVersion is not RustedDagger deckVersion)
             return;
         deckVersion.BuffFromPlay(intValue);
+        CardCmd.Preview(deckVersion);
     }
     
     private void BuffFromPlay(int extraDamage)

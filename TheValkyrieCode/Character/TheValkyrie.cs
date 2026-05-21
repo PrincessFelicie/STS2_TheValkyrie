@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using TheValkyrie.TheValkyrieCode.Cards.Basic;
 using TheValkyrie.TheValkyrieCode.Relics;
@@ -18,6 +19,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     public const string CharacterId = "TheValkyrie";
 
     public static readonly Color Color = new("923c00");
+    public override Color EnergyLabelOutlineColor => Color;
     
     public override string CustomAttackSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_ram";
     public override string CustomCastSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_war_chant";
@@ -66,7 +68,7 @@ public class TheValkyrie : PlaceholderCharacterModel
         }
     }
     
-    //public override string CustomVisualPath => "/character/the_valkyrie_standing.png".ImagePath(); todo
+    public override string CustomVisualPath => "/combat/creature_visuals/the_valkyrie_temp.tscn".ScenesPath();
     //public override string CustomRestSiteAnimPath => "/character/the_valkyrie_rest_site.png".ImagePath(); todo
     //public override string CustomMerchantAnimPath => "/character/the_valkyrie_merchant.png".ImagePath(); todo
     
@@ -76,7 +78,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     public override string CustomArmScissorsTexturePath => "/ui/hands/the_valkyrie_arm_scissors.png".ImagePath(); //todo 
 
     
-    //public override string CustomEnergyCounterPath => "energy_counter.tscn".CharacterUiPath(); todo
+    public override string CustomEnergyCounterPath => "/combat/energy_counters/valkyrie_energy_counter.tscn".ScenesPath();
     public override string CustomIconTexturePath => "character_icon_valkyrie.png".CharacterUiPath();
     public override string CustomIconOutlineTexturePath => "character_icon_valkyrie_outline.png".CharacterUiPath();
     
