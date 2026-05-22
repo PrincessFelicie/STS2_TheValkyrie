@@ -19,9 +19,9 @@ public class BlessCmd
         CardModel card,
         int amount = 1)
     {
-        if (!CanBless(card))
+        if (!CanBless(card)) //if we can't bless the card, return early
         {
-            if (card.Type is not (CardType.Curse or CardType.Status or CardType.Quest))
+            if (card.Enchantment != null) //if there is an enchantment but it's of a kind we can't bless, let the character have a thought bubble about it
                 ThinkCmd.Play(new LocString("combat_messages", "CANT_IMPROVE_ENCHANT"), card.Owner.Creature, 2.0);
             return;
         }

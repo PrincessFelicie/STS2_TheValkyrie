@@ -27,7 +27,7 @@ public sealed class BrimmingPower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterSideTurnStartLate(CombatSide side, ICombatState combatState)
+    public override async Task AfterSideTurnStartLate(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (Owner.Player == null) return;
         IReadOnlyList<CardModel> cards = PileType.Hand.GetPile(Owner.Player).Cards;

@@ -48,7 +48,7 @@ public sealed class AngelFormPower : TheValkyriePower
         return Task.CompletedTask;
     }
 
-    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side != Owner.Side)
             return;

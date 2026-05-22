@@ -45,7 +45,7 @@ public sealed class ShiningStarPower : TheValkyriePower
         this.DynamicVars["IsActive"].BaseValue = 0;
     }
     
-    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
+    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         if (side != Owner.Side || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
             return;
@@ -53,7 +53,7 @@ public sealed class ShiningStarPower : TheValkyriePower
         this.Flash();
     }
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side == Owner.Side || this.DynamicVars["IsActive"].BaseValue == 0) //at the end of the enemy turn, check if we had a perfect turn...
             return;

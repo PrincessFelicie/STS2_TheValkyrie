@@ -27,7 +27,7 @@ public class CrudeIdol : TheValkyrieRelic
         get => HoverTipFactory.FromPowerWithPowerHoverTips<OverexertionPower>();
     }
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side != Owner.Creature.Side || Owner.Creature.GetPowerAmount<OverexertionPower>() == 0)
             return;
