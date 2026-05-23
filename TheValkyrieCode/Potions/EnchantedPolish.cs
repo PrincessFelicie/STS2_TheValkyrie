@@ -21,7 +21,7 @@ public sealed class EnchantedPolish : TheValkyriePotion
 
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 
-    public override TargetType TargetType => TargetType.AnyAlly;
+    public override TargetType TargetType => TargetType.AnyPlayer;
     
     public override string CustomPackedImagePath => "/potions/enchanted_polish.png".ImagePath();
 
