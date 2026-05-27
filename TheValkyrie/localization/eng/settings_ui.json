@@ -1,0 +1,6 @@
+{
+  "THEVALKYRIE.mod_title": "The Valkyrie",
+  "THEVALKYRIE-MYSTIC_LIGHTER_NERF.title": "Nerf Mystic Lighter (+9 damage -> +6 Damage) [red](Requires Restart)[/red]",
+  "THEVALKYRIE-MYSTIC_LIGHTER_NERF.hover.title": "Nerf Mystic Lighter",
+  "THEVALKYRIE-MYSTIC_LIGHTER_NERF.hover.desc": "Mystic Lighter is a base game shop relic that raises the damage of all enchanted attacks by 9.\nDue to the many sources of reliable enchantments in this mod, Mystic Lighter is nerfed by default. Uncheck to set its value back to normal.\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]"
+}

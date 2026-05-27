@@ -17,8 +17,8 @@ public class Requiem : TheValkyrieCard
     public Requiem() : base(3, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
     {
         CardModel card = this;
-        WithCalculatedVar("CalculatedSmites",0, (card, _) => (decimal) PileType.Exhaust.GetPile(card.Owner).Cards.Count((Func<CardModel, bool>) (c => c.Tags.Contains(CustomEnum.Smite))));
-        WithCalculatedVar("CalculatedEnchantedSmites",0, (card, _) => (decimal) PileType.Exhaust.GetPile(card.Owner).Cards.Count((Func<CardModel, bool>) (c => c.Tags.Contains(CustomEnum.Smite) && c.Enchantment != null)));
+        WithCalculatedVar("CalculatedSmites",0, (card, _) => PileType.Exhaust.GetPile(card.Owner).Cards.Count(c => c.Tags.Contains(CustomEnum.Smite)));
+        WithCalculatedVar("CalculatedEnchantedSmites",0, (card, _) => PileType.Exhaust.GetPile(card.Owner).Cards.Count(c => c.Tags.Contains(CustomEnum.Smite) && c.Enchantment != null));
         WithTip(typeof(Smite));
         WithKeyword(CardKeyword.Exhaust);
         WithKeyword(CardKeyword.Retain, UpgradeType.Add);

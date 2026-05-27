@@ -187,7 +187,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_lj1ok"]
 resource_name = "hurt"
-length = 1.5
+length = 1.0000033
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -195,7 +195,7 @@ tracks/0/path = NodePath("Visuals:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.88636076, 1.5),
+"times": PackedFloat32Array(0, 0.068585984, 0.14793056, 0.22861995, 0.311999, 0.58499813, 0.99),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 5.8563204),
 "update": 0,
 "values": [Vector2(0, -133), Vector2(-32, -143), Vector2(-56, -161.00002), Vector2(-67, -141), Vector2(-76, -128), Vector2(-76, -128), Vector2(0, -133)]
@@ -207,7 +207,7 @@ tracks/1/path = NodePath("Visuals:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.88636076, 1.5),
+"times": PackedFloat32Array(0, 0.068585984, 0.14793056, 0.22861995, 0.311999, 0.58499813, 0.99),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 5.8563204),
 "update": 0,
 "values": [0.0, -0.22265005, -0.09469068, 0.06183474, 0.0, 0.0, 0.0]
@@ -219,7 +219,7 @@ tracks/2/path = NodePath("Visuals:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.88636076, 1.5),
+"times": PackedFloat32Array(0, 0.068585984, 0.14793056, 0.22861995, 0.311999, 0.58499813, 0.99),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 5.8563204),
 "update": 0,
 "values": [Vector2(0.7, 0.7), Vector2(0.6468147, 0.72634035), Vector2(0.6468147, 0.72634035), Vector2(0.6468147, 0.72634035), Vector2(0.7389914, 0.6760105), Vector2(0.7389914, 0.6760105), Vector2(0.7, 0.7)]
@@ -340,7 +340,7 @@ states/hurt/position = Vector2(686, 215)
 states/idle_loop/node = SubResource("AnimationNodeAnimation_f18xl")
 states/idle_loop/position = Vector2(518, 100)
 transitions = ["Start", "idle_loop", SubResource("AnimationNodeStateMachineTransition_wh21t"), "attack", "idle_loop", SubResource("AnimationNodeStateMachineTransition_rl4ii"), "idle_loop", "End", SubResource("AnimationNodeStateMachineTransition_lj1ok"), "cast", "idle_loop", SubResource("AnimationNodeStateMachineTransition_u1pg6"), "hurt", "idle_loop", SubResource("AnimationNodeStateMachineTransition_ueoqp")]
-graph_offset = Vector2(132, 74)
+graph_offset = Vector2(21, 27)
 
 [node name="TheValkyrieTemp" type="Control"]
 layout_mode = 3

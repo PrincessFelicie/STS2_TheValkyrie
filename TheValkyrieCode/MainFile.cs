@@ -1,6 +1,8 @@
+using BaseLib.Config;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
+using TheValkyrie.TheValkyrieCode.ModConfiguration;
 
 namespace TheValkyrie.TheValkyrieCode;
 
@@ -15,6 +17,7 @@ public partial class MainFile : Node
 
     public static void Initialize()
     {
+        ModConfigRegistry.Register(ModId, new ValkyrieModConfig());
         Harmony harmony = new(ModId);
 
         harmony.PatchAll();
