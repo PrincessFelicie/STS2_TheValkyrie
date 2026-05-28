@@ -135,7 +135,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_ylelb"]
 resource_name = "die"
-length = 4.0
+length = 3.0000036
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -143,7 +143,7 @@ tracks/0/path = NodePath("Visuals:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.73333335, 0.76666665, 0.8, 0.82319486, 0.8666667, 1.4996817, 1.6219, 1.9029189, 2.2676513, 2.4, 2.9333334, 3, 3.0666666, 3.1333334, 3.2119462, 3.5432, 3.6333334, 4),
+"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.73333335, 0.76666665, 0.8, 0.82319486, 0.8666667, 1.4257995, 1.502797, 1.6798389, 1.9096203, 1.993, 2.329, 2.3709998, 2.413, 2.455, 2.5666666, 2.7132158, 2.77, 3.001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, -133), Vector2(-32, -143), Vector2(-56, -161.00002), Vector2(-67, -141), Vector2(-76, -128), Vector2(-76, -128), Vector2(-88, -125), Vector2(-74.00001, -124), Vector2(-79, -125.00001), Vector2(-72, -125), Vector2(-72, -125), Vector2(-53.000004, -147.00002), Vector2(-14.999994, -133), Vector2(25.999996, -70), Vector2(42, -66), Vector2(42, -66), Vector2(32, -66), Vector2(52, -66), Vector2(42, -66), Vector2(42, -66), Vector2(41.999996, 0.5), Vector2(60.64125, 43.246307), Vector2(60.64125, 43.246307)]
@@ -155,7 +155,7 @@ tracks/1/path = NodePath("Visuals:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.6333333, 0.8394957, 1.3, 1.6219383, 2.2676513, 2.4, 3.2119462),
+"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.6333333, 0.8394957, 1.3, 1.5028211, 1.9096203, 1.993, 2.5666666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, -0.22265005, -0.09469068, 0.06183474, 0.0, 0.0, 0.07925563, 0.07925563, 0.41162774, 1.4960308, 1.5707963267948966, 1.5707963267948966]
@@ -167,7 +167,7 @@ tracks/2/path = NodePath("Visuals:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.8333333, 1.4996817, 1.6219, 2.4, 3.2119462, 3.5431783, 3.6333334, 4),
+"times": PackedFloat32Array(0, 0.10391816, 0.2241372, 0.34639385, 0.47272575, 0.8333333, 1.4257995, 1.502797, 1.993, 2.5666666, 2.7132025, 2.77, 3.001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0.7, 0.7), Vector2(0.6468147, 0.72634035), Vector2(0.6468147, 0.72634035), Vector2(0.6468147, 0.72634035), Vector2(0.7389914, 0.6760105), Vector2(0.7389914, 0.6760105), Vector2(0.7389914, 0.6760105), Vector2(0.62513864, 0.7319642), Vector2(0.7, 0.7), Vector2(0.7, 0.7), Vector2(-0.0037037036, 0.7), Vector2(0.46543127, 0.7), Vector2(0.46543127, 0.7)]
@@ -179,7 +179,7 @@ tracks/3/path = NodePath("Visuals:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 3.4891896, 3.5432),
+"times": PackedFloat32Array(0, 2.6791894, 2.7132158),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, false, true]
@@ -187,7 +187,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_lj1ok"]
 resource_name = "hurt"
-length = 1.0000033
+length = 0.66667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -195,7 +195,7 @@ tracks/0/path = NodePath("Visuals:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.068585984, 0.14793056, 0.22861995, 0.311999, 0.58499813, 0.99),
+"times": PackedFloat32Array(0, 0.04526675, 0.097634174, 0.15088917, 0.20591934, 0.38609877, 0.6534),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 5.8563204),
 "update": 0,
 "values": [Vector2(0, -133), Vector2(-32, -143), Vector2(-56, -161.00002), Vector2(-67, -141), Vector2(-76, -128), Vector2(-76, -128), Vector2(0, -133)]
@@ -207,7 +207,7 @@ tracks/1/path = NodePath("Visuals:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.068585984, 0.14793056, 0.22861995, 0.311999, 0.58499813, 0.99),
+"times": PackedFloat32Array(0, 0.04526675, 0.097634174, 0.15088917, 0.20591934, 0.38609877, 0.6534),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 5.8563204),
 "update": 0,
 "values": [0.0, -0.22265005, -0.09469068, 0.06183474, 0.0, 0.0, 0.0]
@@ -219,7 +219,7 @@ tracks/2/path = NodePath("Visuals:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.068585984, 0.14793056, 0.22861995, 0.311999, 0.58499813, 0.99),
+"times": PackedFloat32Array(0, 0.04526675, 0.097634174, 0.15088917, 0.20591934, 0.38609877, 0.6534),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 5.8563204),
 "update": 0,
 "values": [Vector2(0.7, 0.7), Vector2(0.6468147, 0.72634035), Vector2(0.6468147, 0.72634035), Vector2(0.6468147, 0.72634035), Vector2(0.7389914, 0.6760105), Vector2(0.7389914, 0.6760105), Vector2(0.7, 0.7)]
