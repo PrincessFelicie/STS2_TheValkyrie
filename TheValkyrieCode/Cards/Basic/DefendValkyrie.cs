@@ -1,9 +1,6 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using TheValkyrie.TheValkyrieCode.Cards;
-using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Basic;
 

@@ -1,12 +1,3 @@
-using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
-using TheValkyrie.TheValkyrieCode.Cards;
-using TheValkyrie.TheValkyrieCode.Powers;
-
 namespace TheValkyrie.TheValkyrieCode.Cards.Event;
 
 //kind of a boring design, and it causes a bunch of implementation questions I do not like.

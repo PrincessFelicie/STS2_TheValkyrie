@@ -1,6 +1,5 @@
 using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 
 namespace TheValkyrie.TheValkyrieCode.Enchantments;

@@ -1,14 +1,3 @@
-using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
-using TheValkyrie.TheValkyrieCode.Cards;
-using MegaCrit.Sts2.Core.ValueProps;
-using TheValkyrie.TheValkyrieCode.Powers;
-
 namespace TheValkyrie.TheValkyrieCode.Cards.Event;
 
 //Whooops! Death Waltz!! Can't make that card!!! If we want to dust it off, we need to cap the number of Overexert events it can prevent per turn, but then that's extra card text.
