@@ -56,20 +56,4 @@ public class BookOfOrnithology : TheValkyrieRelic
                || !cardSource.Tags.Contains<CardTag>(CustomEnum.Smite) ? 
             0 : DynamicVars["BonusDamage"].BaseValue;
     }
-    
-    public override Task BeforeCombatStart()
-    {
-        var combatState = this.Owner.Creature.CombatState;
-        if (combatState == null) return Task.CompletedTask;
-        if (combatState.ContainsMonster<CalcifiedCultist>() || combatState.ContainsMonster<DampCultist>() ||
-            combatState.ContainsMonster<DevotedSculptor>())
-        {
-            TalkCmd.Play(new LocString("combat_messages", "FIGHTING_CULTIST_UNSTOPPABLE"), Owner.Creature, VfxColor.Orange, VfxDuration.Standard);
-            Cmd.CustomScaledWait(0.6f, 1);
-            if (combatState.ContainsMonster<CalcifiedCultist>()) TalkCmd.Play(new LocString("combat_messages", "CALCIFIED_CULTIST_REPLY"), combatState.Enemies.First(creature => creature.Monster is CalcifiedCultist), VfxColor.Blue, VfxDuration.Standard);
-            if (combatState.ContainsMonster<DampCultist>()) TalkCmd.Play(new LocString("combat_messages", "DAMP_CULTIST_REPLY"), combatState.Enemies.First(creature => creature.Monster is DampCultist), VfxColor.Blue, VfxDuration.Standard);
-            if (combatState.ContainsMonster<DevotedSculptor>()) TalkCmd.Play(new LocString("combat_messages", "DEVOTED_SCULPTOR_REPLY"), combatState.Enemies.First(creature => creature.Monster is DevotedSculptor), VfxColor.Blue, VfxDuration.VeryLong);
-        }
-        return Task.CompletedTask;
-    }
 }
