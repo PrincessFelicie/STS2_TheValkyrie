@@ -100,7 +100,7 @@
   "THEVALKYRIE-CAW_CAW.description": "Gain {RitualPower:diff()} [gold]Ritual[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nEnd your turn.",
 
   "THEVALKYRIE-GO_FOR_THE_KILL.title": "Go for the Kill",
-  "THEVALKYRIE-GO_FOR_THE_KILL.description": "Deal {Damage:diff()} damage.\nApply [gold]Bleed[/gold] equal to damage dealt.",
+  "THEVALKYRIE-GO_FOR_THE_KILL.description": "Deal {Damage:diff()} damage.\nApply [gold]Bleed[/gold] equal to unblocked damage dealt.",
 
   "THEVALKYRIE-RUSTED_DAGGER.title": "Rusted Dagger",
   "THEVALKYRIE-RUSTED_DAGGER.description": "Deal {Damage:diff()} damage.\nIf [gold]Fatal[/gold], permanently increase this card's damage by {Increase:diff()}.",
@@ -229,8 +229,8 @@
   "THEVALKYRIE-STRENGTH_IN_HARDSHIP.description": "Whenever you [gold]Overexert[/gold], gain {StrengthInHardshipPower:diff()} [gold]Armor[/gold] this turn.",
 
   "THEVALKYRIE-PLUMED_WISH.title": "Plumed Wish",
-  "THEVALKYRIE-PLUMED_WISH.description": "Put a card from ANY of your [gold]Piles[/gold] into your [gold]Hand[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
-  "THEVALKYRIE-PLUMED_WISH.selectionScreenPrompt": "Choose a card to put into your [gold]Hand[/gold].",
+  "THEVALKYRIE-PLUMED_WISH.description": "Put a card from your [gold]Draw Pile[/gold] or your [gold]Discard Pile[/gold] into your [gold]Hand[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-PLUMED_WISH.selectionScreenPrompt": "Choose a card to put into your [gold]Hand[/gold]. (Draw Pile is sorted first)",
 
   "THEVALKYRIE-BURST_OF_POWER.title": "Burst of Power",
   "THEVALKYRIE-BURST_OF_POWER.description": "[gold]Bless[/gold] ALL cards in your hands{IfUpgraded:show: twice|}.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",

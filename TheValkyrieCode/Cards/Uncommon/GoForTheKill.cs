@@ -16,9 +16,11 @@ public class GoForTheKill : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
+        if (play.Target == null) return;
         AttackCommand attackCommand = await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target).Execute(choiceContext);
-        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, attackCommand.Results.SelectMany(r => r).Sum((r) => r.TotalDamage), Owner.Creature, this);
+        await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, 
+            attackCommand.Results.SelectMany(r => r).Sum(r => r.UnblockedDamage), 
+            Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

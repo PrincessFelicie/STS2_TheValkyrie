@@ -18,7 +18,7 @@ public class PlumedWish : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        List<CardModel> validPiles = PileType.Draw.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList().Concat(PileType.Discard.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList()).Concat(PileType.Exhaust.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList()).ToList();
+        List<CardModel> validPiles = PileType.Draw.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList().Concat(PileType.Discard.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList()).ToList();
         CardModel? card = (await CardSelectCmd.FromSimpleGrid(choiceContext, validPiles, this.Owner, prefs)).FirstOrDefault();
         if (card == null)
             return;

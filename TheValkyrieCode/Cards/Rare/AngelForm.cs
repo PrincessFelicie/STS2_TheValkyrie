@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
@@ -11,6 +12,7 @@ public class AngelForm : TheValkyrieCard
     {
         WithPower<ArmorPower>(1, 2);
         WithVar("AngelFormPower", 1);
+        WithTip(typeof(Smite));
         //rebalance option: remove on equip armor gain, move per turn gain to 2, upgrade gives retain
     }
     
