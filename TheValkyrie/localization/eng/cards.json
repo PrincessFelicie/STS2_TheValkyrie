@@ -243,7 +243,7 @@
   "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Refrain[/purple] [blue]{Bless:diff()}[/blue].",
 
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",
-  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, add a{IfUpgraded:show:n [gold]Upgraded[/gold]|} [gold]Byrd Card[/gold] into your [gold]Hand[/gold], and gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, add {IfUpgraded:show:an [gold]Upgraded[/gold]|a} [gold]Byrd Card[/gold] into your [gold]Hand[/gold], and gain 1 [gold]Byrd Strength[/gold].",
 
   "THEVALKYRIE-MUSICAL_BRIDGE.title": "Musical Bridge",
   "THEVALKYRIE-MUSICAL_BRIDGE.description": "[gold]Bless[/gold] {IfUpgraded:show:X+1|X} random cards in your hand with [purple]Refrain[/purple] 1.",

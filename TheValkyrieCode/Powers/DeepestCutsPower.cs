@@ -18,13 +18,13 @@ public sealed class DeepestCutsPower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override decimal ModifyPowerAmountGiven(
+    public override decimal ModifyPowerAmountGivenAdditive(
         PowerModel power,
         Creature giver,
         decimal amount,
         Creature? target,
         CardModel? cardSource)
     {
-        return power is BleedPower && giver == Owner ? amount + this.Amount : amount;
+        return power is BleedPower && giver == Owner ? this.Amount : 0;
     }
 }

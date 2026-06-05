@@ -36,14 +36,14 @@ public sealed class BirdFistPower : TheValkyriePower
         await PowerCmd.Remove(overexertionPower);
     }
 
-    public override decimal ModifyPowerAmountGiven(
+    public override decimal ModifyPowerAmountGivenMultiplicative(
         PowerModel power,
         Creature giver,
         decimal amount,
         Creature? target,
         CardModel? cardSource)
     {
-        return power is OverexertionPower && target == Owner ? 0 : amount;
+        return power is OverexertionPower && target == Owner ? 0 : 1;
     }
     
     public override Decimal ModifyDamageMultiplicative(

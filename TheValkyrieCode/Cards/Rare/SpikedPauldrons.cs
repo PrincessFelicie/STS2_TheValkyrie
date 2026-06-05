@@ -16,10 +16,7 @@ public class SpikedPauldrons : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        if (!this.Owner.Creature.HasPower<SpikedPauldronsPower>())
-        {
-            await PowerCmd.Apply<ThornsPower>(choiceContext, Owner.Creature, Owner.Creature.GetPowerAmount<ArmorPower>(), Owner.Creature, this);
-        }
+        await PowerCmd.Apply<ThornsPower>(choiceContext, Owner.Creature, Owner.Creature.GetPowerAmount<ArmorPower>(), Owner.Creature, this);
         await PowerCmd.Apply<SpikedPauldronsPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
         if (this.IsUpgraded)
             await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);

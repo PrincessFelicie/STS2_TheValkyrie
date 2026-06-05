@@ -20,7 +20,7 @@ public class SpikedPauldronsPower : TheValkyriePower
     }
     
     public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Single;
+    public override PowerStackType StackType => PowerStackType.Counter;
 
     public override async Task AfterPowerAmountChanged(
         PlayerChoiceContext choiceContext,
@@ -31,6 +31,6 @@ public class SpikedPauldronsPower : TheValkyriePower
     {
         if (power is not ArmorPower || power.Owner != this.Owner)
             return;
-        await PowerCmd.Apply<ThornsPower>(choiceContext, this.Owner, amount, applier, cardSource, true);
+        await PowerCmd.Apply<ThornsPower>(choiceContext, this.Owner, amount*this.Amount, applier, cardSource, true);
     }
 }

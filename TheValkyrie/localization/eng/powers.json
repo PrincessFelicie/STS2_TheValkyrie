@@ -53,7 +53,7 @@
 
   "THEVALKYRIE-SPIKED_PAULDRONS_POWER.title": "Spiked Pauldrons",
   "THEVALKYRIE-SPIKED_PAULDRONS_POWER.description": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
-  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.smartDescription": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
+  "THEVALKYRIE-SPIKED_PAULDRONS_POWER.smartDescription": "You have [gold]Thorns[/gold] equal {Amount:plural:to |to [blue]{}[/blue] times }your [gold]Armor[/gold].",
 
   "THEVALKYRIE-STRENGTH_IN_HARDSHIP_POWER.title": "Strength in Hardship",
   "THEVALKYRIE-STRENGTH_IN_HARDSHIP_POWER.description": "Whenever you [gold]Overexert[/gold], gain [gold]Armor[/gold] this turn.",

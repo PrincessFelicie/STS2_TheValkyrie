@@ -21,19 +21,16 @@ public class BalancedStrikePower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override decimal ModifyPowerAmountGiven(
+    public override decimal ModifyPowerAmountGivenMultiplicative(
         PowerModel power,
         Creature giver,
         decimal amount,
         Creature? target,
         CardModel? cardSource)
     {
-        if (power is OverexertionPower && target == Owner)
-        {
-            PowerCmd.Decrement(this);
-            return 0;
-        }
-        return amount;
+        if (power is not OverexertionPower || target != Owner) return 1;
+        PowerCmd.Decrement(this);
+        return 0;
     }
 
     public override async Task AfterModifyingPowerAmountGiven(PowerModel power)

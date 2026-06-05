@@ -22,13 +22,13 @@ public sealed class IcarusComplexPower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
     
-    public override decimal ModifyPowerAmountGiven(
+    public override decimal ModifyPowerAmountGivenMultiplicative(
         PowerModel power,
         Creature giver,
         decimal amount,
         Creature? target,
         CardModel? cardSource)
     {
-        return power is VigorPower && giver == Owner ? amount * (((decimal) Amount + 100) / 100) : amount;
+        return power is VigorPower && giver == Owner ? ((decimal) Amount + 100) / 100 : 1;
     }
 }
