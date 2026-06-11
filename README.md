@@ -22,4 +22,5 @@ This mod has been integrally built by and for humans. No LLM and no image genera
 3. Download the newest version of [BaseLib](https://github.com/Alchyr/BaseLib-StS2/releases) if you don't have it already, and unzip it in your `mods` folder.
 4. Download the latest release of [this mod](https://github.com/PrincessFelicie/STS2_TheValkyrie/releases) and unzip it in your `mods` folder.
 5. Have fun!
+
 (NB: By default, the game splits your saves across modded and unmodded. There are options available to preserve your unmodded save file for modded play if you are interested. You can find more detailed instructions on the STS Discord.)
