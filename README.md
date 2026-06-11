@@ -10,7 +10,15 @@ The Valkyrie is a character mod for Slay The Spire 2.
 
 Currently in Alpha. Art is not final. Volunteer artists are welcome!
 
-### Made for Slay the Spire 2 v.0.106.1 (Beta Branch as of May 30th 2026)
+### Made for Slay the Spire 2 v.0.107.0 (Beta Branch as of June 11th 2026)
 
 This mod is CC-BY-SA. Slay the Spire 2 is a property of Megacrit.
 This mod has been integrally built by and for humans. No LLM and no image generation software has been used in the making of this mod. We believe that to learn from and be taught by other humans is to be human.
+
+### Installation
+
+1. Switch to the beta branch if you aren't on it already.
+2. Create a `mods` folder in your game's folder (on Steam, right click on the game in your library, Manage -> Browse local files...) if there isn't one already.
+3. Download the newest version of [BaseLib](https://github.com/Alchyr/BaseLib-StS2/releases) if you don't have it already, and unzip it in your `mods` folder.
+4. Download the latest release of [this mod](https://github.com/PrincessFelicie/STS2_TheValkyrie/releases) and unzip it in your `mods` folder.
+5. Have fun!
