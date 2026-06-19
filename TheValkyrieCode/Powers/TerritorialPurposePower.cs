@@ -12,6 +12,7 @@ namespace TheValkyrie.TheValkyrieCode.Powers;
 
 public sealed class TerritorialPurposePower : TheValkyriePower
 {
+    //todo change it to transform a card for flavor
     private class Data
     {
     }

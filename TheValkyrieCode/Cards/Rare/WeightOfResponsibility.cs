@@ -7,6 +7,7 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
 public class WeightOfResponsibility : TheValkyrieCard
 {
+    //todo scale on enchantments instead of overexert cards
     public WeightOfResponsibility() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
         WithVar("DisplayExtraDamage", 2, 1);
