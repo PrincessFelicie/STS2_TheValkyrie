@@ -75,9 +75,10 @@
   "THEVALKYRIE-SECOND_WIND_POWER.description": "At the end of your turn, lose some [gold]Overexhaustion[/gold].",
   "THEVALKYRIE-SECOND_WIND_POWER.smartDescription": "At the end of your turn, lose [blue]{Amount}[/blue] [gold]Overexhaustion[/gold].",
 
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.title": "Territorial Purpose",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, add a [gold]Byrd Card[/gold] to your hand.\nGain 1 [gold]Byrd Strength[/gold] at the end of the turn.",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, add a{IsUpgraded:n Upgraded|} [gold]Byrd Card[/gold] to your hand.\nGain 1 [gold]Byrd Strength[/gold] at the end of the turn.",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.title": "Territorial Instincts",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, transform a card in your hand into a [gold]Byrd Card[/gold], then gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, transform a card in your hand into a{IsUpgraded:n Upgraded|} [gold]Byrd Card[/gold], then gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.selectionScreenPrompt": "Choose a card to Transform into a [gold]Byrd Card[/gold].",
 
   "THEVALKYRIE-BYRD_STRENGTH_POWER.title": "Byrd Strength",
   "THEVALKYRIE-BYRD_STRENGTH_POWER.description": "Your [gold]Byrd Cards[/gold] deal additional damage.",
@@ -92,8 +93,8 @@
   "THEVALKYRIE-DOMINION_POWER.smartDescription": "Whenever you [gold]Exhaust[/gold] a card, deal [blue]{Amount}[/blue] damage to a random enemy.",
 
   "THEVALKYRIE-BRIMMING_POWER.title": "Topped up!",
-  "THEVALKYRIE-BRIMMING_POWER.description": "At the start of your turn, before drawing, gain [gold]Block[/gold] for every card in your hand.",
-  "THEVALKYRIE-BRIMMING_POWER.smartDescription": "At the start of your turn, before drawing, gain [blue]{Amount}[/blue] [gold]Block[/gold] for every card in your hand.",
+  "THEVALKYRIE-BRIMMING_POWER.description": "The first time each turn you reach 10 cards in your hand, gain [gold]Block[/gold].",
+  "THEVALKYRIE-BRIMMING_POWER.smartDescription": "The first time each turn you reach 10 cards in your hand, gain [blue]{Amount}[/blue] [gold]Block[/gold].\n{IsActive:[green]Currently active![/green]|[green]Has already triggered this turn.[/green]}",
 
   "THEVALKYRIE-TEMPORARY_THORNS_POWER.title": "Temporary Thorns",
   "THEVALKYRIE-TEMPORARY_THORNS_POWER.description": "When hit by an attack, deal damage back.",

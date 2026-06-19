@@ -136,7 +136,7 @@
   "THEVALKYRIE-POLISH.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].",
 
   "THEVALKYRIE-BRIMMING.title": "Brimming",
-  "THEVALKYRIE-BRIMMING.description": "At the start of your turn, if you have 10 cards in your hand, gain {BrimmingPower:diff()} [gold]Block[/gold].",
+  "THEVALKYRIE-BRIMMING.description": "The first time each turn you reach 10 cards in your hand, gain {BrimmingPower:diff()} [gold]Block[/gold].",
 
   "THEVALKYRIE-REINFORCE.title": "Reinforce",
   "THEVALKYRIE-REINFORCE.description": "Choose a Skill in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Aegis[/purple] {Bless:diff()}.\nReplace the current enchantment if necessary.",
@@ -243,7 +243,7 @@
   "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Refrain[/purple] [blue]{Bless:diff()}[/blue].",
 
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",
-  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, add {IfUpgraded:show:an [gold]Upgraded[/gold]|a} [gold]Byrd Card[/gold] into your [gold]Hand[/gold], and gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, [gold]Transform[/gold] a non-Byrd card in your [gold]Hand[/gold] into {IfUpgraded:show:an [gold]Upgraded[/gold]|a} [gold]Byrd Card[/gold], and gain 1 [gold]Byrd Strength[/gold].",
 
   "THEVALKYRIE-MUSICAL_BRIDGE.title": "Musical Bridge",
   "THEVALKYRIE-MUSICAL_BRIDGE.description": "[gold]Bless[/gold] {IfUpgraded:show:X+1|X} random cards in your hand with [purple]Refrain[/purple] 1.",
@@ -257,8 +257,8 @@
   "THEVALKYRIE-TRUE_HEROISM.title": "True Heroism",
   "THEVALKYRIE-TRUE_HEROISM.description": "Deal {Damage:diff()} damage to ALL enemies.\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
-  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.title": "Weight of Responsibility",
-  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for all cards from your [gold]Deck[/gold] that [gold]Overexert[/gold].",
+  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.title": "Awakened Slash",
+  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for each point of enchantment on your cards (non-blessable enchantments count for 2 points).",
   
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.title": "Break the Sound Barrier",
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {Times:diff()} times.",

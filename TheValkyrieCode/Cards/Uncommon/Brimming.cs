@@ -11,7 +11,6 @@ public class Brimming : TheValkyrieCard
     {
         WithVar("BrimmingPower", 7);
         WithKeyword(CardKeyword.Innate, UpgradeType.Add);
-        //todo rework to "the first time you reach 10 cards in hand each turn, gain 7 block"
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
