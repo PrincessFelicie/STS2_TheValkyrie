@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
@@ -33,8 +34,6 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower
         if (side != Owner.Side)
             return;
         this.Flash();
-        await PowerCmd.Apply<VulnerablePower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
-        
         if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
         {
             foreach (Creature enemy in CombatState.HittableEnemies)
@@ -47,5 +46,15 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower
             if (Owner.Player == null) return;
             await PowerCmd.Apply<VulnerablePower>(new ThrowingPlayerChoiceContext(), CombatState.HittableEnemies.TakeRandom(1, Owner.Player.RunState.Rng.CombatTargets).First(), this.Amount, Owner, null);
         }
+    }
+    
+    public override decimal ModifyPowerAmountGivenMultiplicative(
+        PowerModel power,
+        Creature giver,
+        decimal amount,
+        Creature? target,
+        CardModel? cardSource)
+    {
+        return power is OverexertionPower && giver == Owner ? 2 : 1;
     }
 }

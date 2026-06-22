@@ -35,6 +35,7 @@ public sealed class ChurchHymnPower : TheValkyriePower
 
     public override async Task AfterPlayerTurnStartLate(PlayerChoiceContext choiceContext, Player player)
     {
+        if (player != this.Owner.Player) return;
         await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, Amount*3, this.Owner, null, true);
     }
 }

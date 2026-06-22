@@ -14,6 +14,7 @@ public class Overprepare : TheValkyrieCard
     {
         //put a card from your hand at the bottom of your draw pile.
         WithPower<VulnerablePower>(1, 1);
+        WithPower<VigorPower>(5, 2);
     }
 
     private IEnumerable<CardModel> _selectedCards = new List<CardModel>();
@@ -24,7 +25,7 @@ public class Overprepare : TheValkyrieCard
         CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
         if (card == null) return;
         await CardPileCmd.Add(card, PileType.Draw, CardPilePosition.Bottom);
-        _selectedCards = _selectedCards.Append(card);
+        _selectedCards = _selectedCards.Append(card); //save the card to a list of active cards
     }
     
     public override async Task AfterCardDrawn(
@@ -32,15 +33,17 @@ public class Overprepare : TheValkyrieCard
         CardModel card,
         bool fromHandDraw)
     {
-        if (!_selectedCards.Contains(card) || CombatState == null)
+        if (!_selectedCards.Contains(card) || CombatState == null) //if you draw a card from the list of active cards...
             return;
             
-        foreach (Creature enemy in CombatState.HittableEnemies)
+        foreach (Creature enemy in CombatState.HittableEnemies) //...then apply the effects...
         {
             await PowerCmd.Apply<VulnerablePower>(new ThrowingPlayerChoiceContext(), enemy, DynamicVars["VulnerablePower"].IntValue, Owner.Creature,
                 this);
         }
-        _selectedCards = _selectedCards.Except([card]);
+        await PowerCmd.Apply<VigorPower>(new ThrowingPlayerChoiceContext(), Owner.Creature, DynamicVars["VigorPower"].IntValue, Owner.Creature,
+            this);
+        _selectedCards = _selectedCards.Except([card]); //...then remove it from the list
     }
 
     protected override void OnUpgrade()

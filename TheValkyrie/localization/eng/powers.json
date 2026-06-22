@@ -105,8 +105,8 @@
   "THEVALKYRIE-CRUSH_THEIR_SPIRITS_POWER.smartDescription": "At the end of your turn, deal [blue]{Amount}[/blue] damage to all enemies for each point of [gold]Armor[/gold] you have.",
 
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.title": "Close Quarters Combat",
-  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.description": "At the start of your turn, apply [gold]Vulnerable[/gold] to yourself and enemies.",
-  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Vulnerable[/gold] to yourself and {IsUpgraded:all enemies|a random enemy}.",
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.description": "Gain double [gold]Overexert[/gold].\nAt the start of your turn, apply [gold]Vulnerable[/gold] to enemies.",
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.smartDescription": "Gain double [gold]Overexert[/gold].\nAt the start of your turn, apply [blue]{Amount}[/blue] [gold]Vulnerable[/gold] to {IsUpgraded:all enemies|a random enemy}.",
 
   "THEVALKYRIE-SHINING_STAR_POWER.title": "Shining Star",
   "THEVALKYRIE-SHINING_STAR_POWER.description": "Whenever you survive a turn without taking any damage, gain [gold]Vigor[/gold].",
