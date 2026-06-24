@@ -15,7 +15,7 @@ public class SongOfDestruction : TheValkyrieCard
         WithPower<BleedPower>(4, 2);
         WithPower<OverexertionPower>(4);
         WithVar("Quantity", 1);
-        WithVar("Sanguine", 2);
+        WithVar("Sanguine", 2, 1);
         
         WithTip(typeof(Smite));
         WithTips(c => HoverTipFactory.FromEnchantment<Sanguine>(c.DynamicVars["Sanguine"].IntValue));

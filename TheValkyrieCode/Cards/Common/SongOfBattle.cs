@@ -12,7 +12,7 @@ public class SongOfBattle : TheValkyrieCard
     public SongOfBattle() : base(2, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithVar("Quantity", 3);
-        WithVar("Sharp", 3, 1);
+        WithVar("Sharp", 3, 2);
         
         WithTip(typeof(Smite));
         WithTips(c => HoverTipFactory.FromEnchantment<Sharp>(c.DynamicVars["Sharp"].IntValue));

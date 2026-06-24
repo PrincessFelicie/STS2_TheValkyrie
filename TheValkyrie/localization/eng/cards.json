@@ -42,7 +42,7 @@
   "THEVALKYRIE-JOIN_THE_FRAY.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-JUMP_AHEAD.title": "Jump Ahead",
-  "THEVALKYRIE-JUMP_AHEAD.description": "[gold]Overexert[/gold] {OverexertionPower:diff()}.\nDraw {Cards:diff()} cards.",
+  "THEVALKYRIE-JUMP_AHEAD.description": "Draw {Cards:diff()} cards.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-CONFUSE.title": "Confuse",
   "THEVALKYRIE-CONFUSE.description": "Apply {WeakPower:diff()} [gold]Weak[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
@@ -74,7 +74,9 @@
   "THEVALKYRIE-SHARPEN.title": "Sharpen",
   "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Sanguine[/purple] {Bless:diff()}.\nReplace the current enchantment if necessary.",
   "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Sanguine[/purple] [blue]{Bless:diff()}[/blue].",
-  
+
+  "THEVALKYRIE-TAKE_RISKS.title": "Take Risks",
+  "THEVALKYRIE-TAKE_RISKS.description": "Gain {Energy:energyIcons()}.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
   
 
 
@@ -89,9 +91,6 @@
 
   "THEVALKYRIE-CHOP_UP.title": "Chop Up",
   "THEVALKYRIE-CHOP_UP.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] X times.",
-
-  "THEVALKYRIE-TAKE_RISKS.title": "Take Risks",
-  "THEVALKYRIE-TAKE_RISKS.description": "[gold]Overexert[/gold] {OverexertionPower:diff()}.\nGain {Energy:energyIcons()}.",
 
   "THEVALKYRIE-SONG_OF_PROTECTION.title": "Song of Protection",
   "THEVALKYRIE-SONG_OF_PROTECTION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nAdd a [purple]Nimble {Nimble:diff()}[/purple] [gold]Smite[/gold] into your hand.",
@@ -208,7 +207,7 @@
   "THEVALKYRIE-HAEMORRHAGE.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] to ALL enemies.",
 
   "THEVALKYRIE-PERFECT_YOUR_STANCE.title": "Perfect Your Stance",
-  "THEVALKYRIE-PERFECT_YOUR_STANCE.description": "Deal {Damage:diff()} damage.\nIf this dealt unblocked damage, gain {ArmorPower:diff()} [gold]Armor[/gold].",
+  "THEVALKYRIE-PERFECT_YOUR_STANCE.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:Gain |If this dealt unblocked damage, gain }{ArmorPower:diff()} [gold]Armor[/gold].",
 
   "THEVALKYRIE-REQUIEM.title": "Requiem",
   "THEVALKYRIE-REQUIEM.description": "Play every [gold]Smite[/gold] in your [gold]Exhaust Pile[/gold] on the enemy.{InCombat:\\n(Plays {CalculatedSmites:diff()} [gold]{CalculatedSmites:plural:Smite|Smites}[/gold], including {CalculatedEnchantedSmites:diff()} [purple]Enchanted[/purple].)|}",
@@ -258,7 +257,7 @@
   "THEVALKYRIE-TRUE_HEROISM.description": "Deal {Damage:diff()} damage to ALL enemies.\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.title": "Awakened Slash",
-  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for each point of enchantment on your cards (non-blessable enchantments count for 2 points).",
+  "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for ALL your [purple]Enchanted[/purple] cards.",
   
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.title": "Break the Sound Barrier",
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {Times:diff()} times.",

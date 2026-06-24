@@ -12,15 +12,14 @@ public class Reinforce : TheValkyrieCard
 {
     public Reinforce() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVar("Bless", 1, 1); 
+        WithVar("Bless", 2, 1); 
         WithKeyword(CardKeyword.Exhaust);
         
         WithTip(CustomEnum.Bless);
         WithTips(c => HoverTipFactory.FromEnchantment<Aegis>(c.DynamicVars["Bless"].IntValue));
     }
     
-    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(this.Owner).Cards.Any(c => c.Type == CardType.Skill);
-
+    protected override bool ShouldGlowRedInternal => PileType.Draw.GetPile(this.Owner).Cards.All(c => c.Type != CardType.Skill);
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {

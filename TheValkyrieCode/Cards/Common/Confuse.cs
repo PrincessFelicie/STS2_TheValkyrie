@@ -12,6 +12,7 @@ public class Confuse : TheValkyrieCard
     {
         WithPower<OverexertionPower>(3);
         WithPower<WeakPower>(1, 1);
+        //do I want to give it a third, tiny effect to make it better than Silent's neutralize? It's actually pretty playable as is already...
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

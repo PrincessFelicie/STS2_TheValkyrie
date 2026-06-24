@@ -11,7 +11,7 @@ public class RazorWings : TheValkyrieCard
     public RazorWings() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithBlock(11, 4);
-        WithPower<BleedPower>(2, 2);
+        WithPower<BleedPower>(2, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
