@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dmfq3l5sx4pgt"]
+[gd_scene load_steps=34 format=3 uid="uid://dmfq3l5sx4pgt"]
 
 [ext_resource type="Texture2D" uid="uid://c3bvduanvcywv" path="res://TheValkyrie/scenes/combat/creature_visuals/the_valkyrie_temp.png" id="1_q3wy6"]
 
@@ -7,7 +7,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -19,7 +19,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals:rotation")
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -31,7 +31,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals:scale")
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -43,7 +43,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Visuals:flip_h")
+tracks/3/path = NodePath("Visuals/PlaceholderSprite:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -52,6 +52,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/PlaceholderSprite:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_wh21t"]
 resource_name = "attack"
@@ -59,7 +71,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -71,7 +83,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals:rotation")
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -83,7 +95,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals:scale")
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -99,7 +111,7 @@ length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -111,7 +123,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals:rotation")
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -123,7 +135,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals:scale")
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -139,7 +151,7 @@ length = 3.0000036
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -151,7 +163,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals:rotation")
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -163,7 +175,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals:scale")
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -175,7 +187,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Visuals:flip_h")
+tracks/3/path = NodePath("Visuals/PlaceholderSprite:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -191,7 +203,7 @@ length = 0.66667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -203,7 +215,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals:rotation")
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -215,7 +227,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals:scale")
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -232,7 +244,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Visuals:position")
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -244,7 +256,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Visuals:rotation")
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -256,7 +268,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Visuals:scale")
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -266,6 +278,70 @@ tracks/2/keys = {
 "values": [Vector2(0.7, 0.7), Vector2(0.7, 0.7), Vector2(0.666, 0.72), Vector2(0.666, 0.72)]
 }
 
+[sub_resource type="Animation" id="Animation_u1pg6"]
+resource_name = "revive"
+length = 1.0000033
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/PlaceholderSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(60.64125, 43.246307), Vector2(0, -133)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/PlaceholderSprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1.5707964, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/PlaceholderSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0.46543127, 0.7), Vector2(0.7, 0.7)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/PlaceholderSprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/PlaceholderSprite:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wh21t"]
 _data = {
 &"RESET": SubResource("Animation_f18xl"),
@@ -273,7 +349,8 @@ _data = {
 &"cast": SubResource("Animation_rl4ii"),
 &"die": SubResource("Animation_ylelb"),
 &"hurt": SubResource("Animation_lj1ok"),
-&"idle_loop": SubResource("Animation_q3wy6")
+&"idle_loop": SubResource("Animation_q3wy6"),
+&"revive": SubResource("Animation_u1pg6")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q3wy6"]
@@ -307,15 +384,13 @@ graph_offset = Vector2(10, 62)
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f18xl"]
 animation = &"idle_loop"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2mx61"]
+animation = &"revive"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wh21t"]
-switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rl4ii"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lj1ok"]
 switch_mode = 2
 advance_mode = 2
 
@@ -327,30 +402,67 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m2ukj"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_862xv"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_er57v"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ofxuo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uehy1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0h1dt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_48bjj"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j7u4n"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l5xnk"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5bine"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ylelb"]
-states/End/position = Vector2(798, 100)
+states/End/position = Vector2(846, 100)
 states/attack/node = SubResource("AnimationNodeAnimation_q3wy6")
-states/attack/position = Vector2(381, 215)
+states/attack/position = Vector2(380, -47)
 states/cast/node = SubResource("AnimationNodeAnimation_ylelb")
-states/cast/position = Vector2(518, 215)
+states/cast/position = Vector2(522, -47)
 states/die/node = SubResource("AnimationNodeAnimation_wh21t")
-states/die/position = Vector2(825, 215)
+states/die/position = Vector2(669, 202)
 states/hurt/node = SubResource("AnimationNodeStateMachine_m2ukj")
-states/hurt/position = Vector2(686, 215)
+states/hurt/position = Vector2(380, 202)
 states/idle_loop/node = SubResource("AnimationNodeAnimation_f18xl")
-states/idle_loop/position = Vector2(518, 100)
-transitions = ["Start", "idle_loop", SubResource("AnimationNodeStateMachineTransition_wh21t"), "attack", "idle_loop", SubResource("AnimationNodeStateMachineTransition_rl4ii"), "idle_loop", "End", SubResource("AnimationNodeStateMachineTransition_lj1ok"), "cast", "idle_loop", SubResource("AnimationNodeStateMachineTransition_u1pg6"), "hurt", "idle_loop", SubResource("AnimationNodeStateMachineTransition_ueoqp")]
-graph_offset = Vector2(21, 27)
+states/idle_loop/position = Vector2(522, 100)
+states/revive/node = SubResource("AnimationNodeAnimation_2mx61")
+states/revive/position = Vector2(669, 100)
+transitions = ["Start", "idle_loop", SubResource("AnimationNodeStateMachineTransition_wh21t"), "attack", "idle_loop", SubResource("AnimationNodeStateMachineTransition_rl4ii"), "cast", "idle_loop", SubResource("AnimationNodeStateMachineTransition_u1pg6"), "hurt", "idle_loop", SubResource("AnimationNodeStateMachineTransition_ueoqp"), "idle_loop", "attack", SubResource("AnimationNodeStateMachineTransition_m2ukj"), "idle_loop", "cast", SubResource("AnimationNodeStateMachineTransition_862xv"), "idle_loop", "hurt", SubResource("AnimationNodeStateMachineTransition_er57v"), "idle_loop", "die", SubResource("AnimationNodeStateMachineTransition_ofxuo"), "attack", "hurt", SubResource("AnimationNodeStateMachineTransition_uehy1"), "hurt", "die", SubResource("AnimationNodeStateMachineTransition_0h1dt"), "die", "revive", SubResource("AnimationNodeStateMachineTransition_48bjj"), "revive", "idle_loop", SubResource("AnimationNodeStateMachineTransition_j7u4n"), "cast", "attack", SubResource("AnimationNodeStateMachineTransition_l5xnk"), "attack", "cast", SubResource("AnimationNodeStateMachineTransition_5bine")]
+graph_offset = Vector2(13, -108)
 
 [node name="TheValkyrieTemp" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Visuals" type="Sprite2D" parent="."]
+[node name="Visuals" type="Node2D" parent="."]
 unique_name_in_owner = true
+
+[node name="PlaceholderSprite" type="Sprite2D" parent="Visuals"]
 position = Vector2(0, -133)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_q3wy6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_wh21t")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Visuals"]
+root_node = NodePath("%Visuals/..")
+tree_root = SubResource("AnimationNodeStateMachine_ylelb")
+anim_player = NodePath("../AnimationPlayer")
 
 [node name="Bounds" type="Control" parent="."]
 unique_name_in_owner = true
@@ -369,12 +481,3 @@ position = Vector2(21, -322)
 [node name="CenterPos" type="Marker2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(10, -142)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_wh21t")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_ylelb")
-anim_player = NodePath("../AnimationPlayer")
