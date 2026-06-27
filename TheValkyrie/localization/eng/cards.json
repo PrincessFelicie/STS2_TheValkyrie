@@ -9,7 +9,7 @@
   "THEVALKYRIE-MAKE_IT_BLEED.description": "Deal {Damage:diff()} damage.\nApply {BleedPower:diff()} [gold]Bleed[/gold].",
 
   "THEVALKYRIE-SHIELD_OF_FAITH.title": "Shield of Faith",
-  "THEVALKYRIE-SHIELD_OF_FAITH.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.",
+  "THEVALKYRIE-SHIELD_OF_FAITH.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   
   
@@ -177,7 +177,7 @@
 
   "THEVALKYRIE-OVERPREPARE.title": "Overprepare",
   "THEVALKYRIE-OVERPREPARE.description": "Put a card from your [gold]Hand[/gold] at the bottom of your [gold]Draw Pile[/gold].\nWhen you draw it, apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to all enemies and gain {VigorPower:diff()} [gold]Vigor[/gold].",
-  "THEVALKYRIE-OVERPREPARE.selectionScreenPrompt": "Choose a card to put at the bottom of your Draw Pile. When you draw it, apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to all enemies and gain {VigorPower:diff()} [gold]Vigor[/gold].",
+  "THEVALKYRIE-OVERPREPARE.selectionScreenPrompt": "Choose a card to put at the bottom of your Draw Pile.",
 
   "THEVALKYRIE-ICARUS_COMPLEX.title": "Icarus Complex",
   "THEVALKYRIE-ICARUS_COMPLEX.description": "Gain {IcarusComplexPower:diff()}% more [gold]Vigor[/gold].",

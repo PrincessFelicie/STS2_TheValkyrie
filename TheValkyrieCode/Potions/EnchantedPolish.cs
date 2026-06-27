@@ -27,7 +27,7 @@ public sealed class EnchantedPolish : TheValkyriePotion
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
-        PotionModel.AssertValidForTargetedPotion(target);
+        AssertValidForTargetedPotion(target);
         //NCombatRoom instance = NCombatRoom.Instance;
         //if (instance != null)
             //instance.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(target)); //todo choose a vfx that's fun

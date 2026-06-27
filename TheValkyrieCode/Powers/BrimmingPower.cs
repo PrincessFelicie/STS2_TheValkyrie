@@ -27,8 +27,9 @@ public sealed class BrimmingPower : TheValkyriePower
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-    
-    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+
+    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants,
+        ICombatState combatState)
     {
         if (side != Owner.Side || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
             return;

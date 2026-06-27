@@ -12,8 +12,9 @@ public class ShieldOfFaith : TheValkyrieCard
 {
     public ShieldOfFaith() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
-        WithBlock(3, 2);
-        WithPower<ArmorPower>(1, 1);
+        WithBlock(6, 2);
+        WithPower<ArmorPower>(2, 1);
+        WithPower<OverexertionPower>(3);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -21,6 +22,7 @@ public class ShieldOfFaith : TheValkyrieCard
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await CommonActions.CardBlock(this, play);
         await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, this.Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

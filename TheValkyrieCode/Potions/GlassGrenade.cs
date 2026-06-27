@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Potions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using TheValkyrie.TheValkyrieCode.Extensions;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Potions;
@@ -16,6 +17,8 @@ public sealed class GlassGrenade : TheValkyriePotion
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 
     public override TargetType TargetType => TargetType.AnyEnemy;
+    
+    public override string CustomPackedImagePath => "/potions/glass_grenade.png".ImagePath();
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
@@ -25,7 +28,7 @@ public sealed class GlassGrenade : TheValkyriePotion
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
-        PotionModel.AssertValidForTargetedPotion(target);
+        AssertValidForTargetedPotion(target);
         //NCombatRoom instance = NCombatRoom.Instance;
         //if (instance != null)
             //instance.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(target)); //todo choose a vfx that's fun

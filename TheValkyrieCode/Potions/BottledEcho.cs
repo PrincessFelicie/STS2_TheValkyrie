@@ -23,13 +23,13 @@ public sealed class BottledEcho : TheValkyriePotion
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(30, ValueProp.Unpowered),
+        new DamageVar(25, ValueProp.Unpowered),
         new DynamicVar("OverexertionPower", 10)
     ];
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
-        PotionModel.AssertValidForTargetedPotion(target);
+        AssertValidForTargetedPotion(target);
         DamageVar damage = DynamicVars.Damage;
         /*NCombatRoom instance = NCombatRoom.Instance;
         if (instance != null)
