@@ -47,10 +47,10 @@ public class BlessCmd
                     enchantmentCount = amount+2;
                     break;
                 case Nimble:
-                case Sanguine:
                 case Adroit:
                     enchantmentCount = amount+1;
                     break;
+                case Sanguine:
                 case Aegis:
                     enchantmentCount = amount;
                     break;

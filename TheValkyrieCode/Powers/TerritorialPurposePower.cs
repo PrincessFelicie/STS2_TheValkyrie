@@ -39,14 +39,18 @@ public sealed class TerritorialPurposePower : TheValkyriePower
         {
             if (this.DynamicVars["TurnCounter"].BaseValue % 2 == 0)
             {
-                await CardCmd.TransformTo<ByrdSwoop>(original);
+                CardModel card = CombatState.CreateCard<ByrdSwoop>(Owner.Player);
+                if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
+                    CardCmd.Upgrade(card);
+                await CardCmd.Transform(original, card);
             }
             else
             {
-                await CardCmd.TransformTo<Peck>(original);
+                CardModel card = CombatState.CreateCard<Peck>(Owner.Player);
+                if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
+                    CardCmd.Upgrade(card);
+                await CardCmd.Transform(original, card);
             }
-            if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
-                CardCmd.Upgrade(original);
         }
         await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, this.Owner, 1, Owner, null);
         this.DynamicVars["TurnCounter"].BaseValue++;

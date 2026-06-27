@@ -142,7 +142,7 @@
   "THEVALKYRIE-REINFORCE.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Aegis[/purple] [blue]{Bless:diff()}[/blue].",
 
   "THEVALKYRIE-BUCKLER_FEINT.title": "Buckler Feint",
-  "THEVALKYRIE-BUCKLER_FEINT.description": "Deal {Damage:diff()} damage.\nGain {TemporaryThornsPower:diff()} [gold]Thorns[/gold] until next turn.",
+  "THEVALKYRIE-BUCKLER_FEINT.description": "Deal {Damage:diff()} damage.\nGain {TemporaryThornsPower:diff()} [gold]Thorns[/gold] this turn.",
 
   "THEVALKYRIE-CRUSH_THEIR_SPIRITS.title": "Crush Their Spirits",
   "THEVALKYRIE-CRUSH_THEIR_SPIRITS.description": "{IfUpgraded:show: Apply 1 [gold]Weak[/gold] to ALL enemies.\n|}At the end of your turn, deal damage to ALL enemies equal to your amount of [gold]Armor[/gold].",

@@ -11,7 +11,7 @@ public class PerfectYourStance : TheValkyrieCard
 {
     public PerfectYourStance() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
-        WithDamage(12, 3);
+        WithDamage(10, 3);
         WithPower<ArmorPower>(1);
     }
 

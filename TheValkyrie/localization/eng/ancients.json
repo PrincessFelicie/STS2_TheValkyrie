@@ -1,19 +1,21 @@
 {
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]..young... ..one...\n..you... ..have... ..questions...?[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]...young... ..one...\n....you... have... questions...?[/sine]",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Ask",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "We can't live on like this! We have no food, no housing, no guidance! Who is responsible for the state of the Spire!?",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "[sine]..you... ..will... ..find... ..answers...\n..at... ..the... ..[red][jitter]top[/jitter][/red]...[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "[sine]....you... will... find... ..answers...\nat... the... ...[red][jitter]top[/jitter][/red]...[/sine]",
 
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-0.char": "I'm... I'm alive...? [blue]Mazaleth[/blue] be praised!",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Continue",
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "[sine]...............\n..the... ..bird... ..did... ..nothing... ....go.... ..again....[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "[sine]...............\n..the... ...bird... did... nothing... ....go.... again....[/sine]",
 
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "..The... ..Architect... ..yet... ..lives...",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[sine]...the... Architect... ....yet... lives...[/sine]",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Reply",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "I'm... doing my best. I promise. Things will change. They must...",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "[sine]..stubborn... ..means... ..useful...[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "[sine]..stubborn... means... useful...[/sine]",
+
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.3-0r.ancient": "[sine]...use... those... feathers... ...take... flight...[/sine]",
   
   
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0.char": "Are you the Architect? [blue]Mazaleth[/blue]'s people need help! They suffer down in the docks--",
@@ -26,19 +28,19 @@
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-attack": "Both",
   
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.char": "Architect, we are in need, if you could just assist us...!",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Continue",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "You again? Haven't I made it clear this isn't [red]my[/red] problem?",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-1.next": "Retort",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-2.char": "Such... egocentrism! How dare you!",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-2.next": "Attack",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.next": "Continue",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-1r.ancient": "You again? Haven't I made it clear this isn't [red]my[/red] problem?",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-1r.next": "Retort",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-2r.char": "Such... egocentrism! How dare you!",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-2r.next": "Attack",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.1-attack": "Both",
 
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.char": "Architect! You betray your duty to the people of the Spire!",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Continue",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-1.ancient": "I have no such duty. Leave, now.",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Shout",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-2.char": "[jitter]Your reign ends now![/jitter]",
-  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-2.next": "Attack",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.next": "Continue",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-1r.ancient": "I have no such duty. Leave, now.",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-1r.next": "Shout",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-2r.char": "[jitter]Your reign ends now![/jitter]",
+  "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-2r.next": "Attack",
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-attack": "Both",
   
   
@@ -46,7 +48,7 @@
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Reply",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "I never asked for them! I meant to save my people, not join them in madness!",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "The path to a better you isn't always charted, my dear.\nMay my gift help you connect with your self!",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "The path to a better you isn't always charted, my dear.\nMay my gift help you connect with your inner self!",
 
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient": "Welcome back, little birdling. Might you regale us with a song today before you depart? A gift for a gift!",
 

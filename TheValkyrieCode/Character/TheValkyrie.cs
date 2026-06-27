@@ -24,8 +24,7 @@ public class TheValkyrie : PlaceholderCharacterModel
 
     public override Color NameColor => Color;
     public override Color MapDrawingColor => Color;
-    
-    public override Color DialogueColor => new Color("590700");
+    public override Color DialogueColor => Color;
     public override VfxColor SpeechBubbleColor => VfxColor.Orange;
     public override CharacterGender Gender => CharacterGender.Feminine;
     public override int StartingHp => 68;

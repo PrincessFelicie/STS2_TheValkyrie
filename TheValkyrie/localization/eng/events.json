@@ -1,4 +1,8 @@
 {
   "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.CARD_POOL∴THEVALKYRIE-THE_VALKYRIE_CARD_POOL.description": "Obtain [blue]{Cards}[/blue] Valkyrie {Cards:plural:card|cards}.",
-  "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.CARD_POOL∴THEVALKYRIE-THE_VALKYRIE_CARD_POOL.title": "Auburn"
+  "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.CARD_POOL∴THEVALKYRIE-THE_VALKYRIE_CARD_POOL.title": "Auburn",
+  
+  "BYRDONIS_NEST.pages.INITIAL.valkyrieDescription": "You spot an enormous [jitter][red]Shambling Beast[/red][/jitter] chase off an injured [green][sine]Green Byrd[/sine][/green].\n\nIn the alcove the byrd fled from, a [gold]single unguarded egg[/gold] lies abandoned.\n\n[jitter][blue]You feel an urge claw at the edges of your mind...[/blue][/jitter]",
+  "BYRDONIS_NEST.pages.TAKE.valkyrieDescription": "You gently scoop up the egg and hold it close.\n\n[sine][blue]This is normal. This is what you were meant to do. You shall bring it back to your nest.[/blue][/sine]",
+  "BYRDONIS_NEST.pages.EAT.valkyrieDescription": "You push past the [jitter][color=#ec9894]invasive thoughts[/color][/jitter], crack the egg open and gobble it up.\n\nYou feel your body fight back against this sacrilege with all that it can muster, but after gagging a few times, you swallow down your breakfast.\n[blue]It weighs on your conscience like a stone.[/blue]"
 }
