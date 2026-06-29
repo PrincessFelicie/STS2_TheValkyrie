@@ -8,9 +8,6 @@
   "THEVALKYRIE-ARMOR.title": "Armor",
   "THEVALKYRIE-ARMOR.description": "Armor lowers damage taken from all attacks, before Block.",
 
-  "THEVALKYRIE-BLESS.title": "Bless",
-  "THEVALKYRIE-BLESS.description": "Blessing makes most [purple]Enchantments[/purple] stronger. If not specified, Blessing an unenchanted card gives it a random blessable enchantment.",
-
   "THEVALKYRIE-HATCH_FROM_NEST.title": "Hatch from the Nest",
   "THEVALKYRIE-HATCH_FROM_NEST.description": "On the first hatch, gain the card [gold]Byrd Swoop[/gold].\n\nOn the second hatch, gain the card [gold]Peck[/gold], and you start each combat with [blue]2[/blue] [gold]Byrd Strength[/gold].\n\nOn the third hatch, start every fight with an Upgraded [gold]Abnormal Instincts[/gold] in your hand, and your [gold]Abnormal Instincts[/gold] cards cost 1 less."
 }

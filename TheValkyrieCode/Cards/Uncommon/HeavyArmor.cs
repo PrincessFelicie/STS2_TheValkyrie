@@ -10,7 +10,7 @@ public class HeavyArmor : TheValkyrieCard
     public HeavyArmor() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<ArmorPower>(7, 2);
-        WithPower<OverexertionPower>(5);
+        WithPower<OverexertionPower>(3, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

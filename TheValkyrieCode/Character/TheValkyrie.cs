@@ -77,7 +77,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     public override string CustomIconTexturePath => "character_icon_valkyrie.png".CharacterUiPath();
     public override string CustomIconOutlineTexturePath => "character_icon_valkyrie_outline.png".CharacterUiPath();
     
-    //public override string CustomCharacterSelectBg => "char_select_valkyrie_background.tscn".CharacterUiPath(); todo
+    public override string CustomCharacterSelectBg => "/CharSelect/char_select_bg_valkyrie.tscn".ScenesPath();
     public override string CustomCharacterSelectIconPath => "char_select_valkyrie.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_valkyrie_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_valkyrie.png".CharacterUiPath();

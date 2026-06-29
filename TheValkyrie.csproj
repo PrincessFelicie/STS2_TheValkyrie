@@ -28,7 +28,8 @@
     </ItemGroup>
 
     <ItemGroup Condition="True"> <!--Allows access to originally private/protected members but may (unlikely to) cause errors.-->
-        <Publicize Include="sts2" IncludeVirtualMembers="false" IncludeCompilerGeneratedMembers="false"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.Description"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.L10NLookup"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -69,6 +70,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Include="CREDITS.md" />
       <Content Include="README.md" />
       <Content Include="TheValkyrieCode\Cards\missing.txt" />
     </ItemGroup>

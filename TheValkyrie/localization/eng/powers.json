@@ -1,7 +1,7 @@
 {
   "THEVALKYRIE-BLEED_POWER.title": "Bleed",
-  "THEVALKYRIE-BLEED_POWER.description": "Bleeding creatures lose HP every time Bleed is applied. Each turn, Bleed is reduced by 1.",
-  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount. Lowers by 1 each turn.",
+  "THEVALKYRIE-BLEED_POWER.description": "Bleeding creatures lose HP every time Bleed is applied. At the end of the turn, Bleed decays by 1 for every time Bleed was applied this turn.",
+  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.\n{Decay:Will decay by [blue]{}[/blue] this turn.|No decay: Bleed has not been applied this turn.} ",
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
   "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you take unblocked damage this turn.",

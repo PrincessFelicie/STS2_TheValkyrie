@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=3 uid="uid://dl0ywq4y4epi1"]
+
+[ext_resource type="Texture2D" uid="uid://w8rs6vqm8oeu" path="res://TheValkyrie/images/charui/char_select_screen_assets/background.png" id="1_ujv2k"]
+[ext_resource type="Texture2D" uid="uid://d4n2581kw24qw" path="res://TheValkyrie/images/charui/char_select_screen_assets/valkyrie_ultra_placeholder.png" id="2_n2en3"]
+[ext_resource type="Texture2D" uid="uid://djul5ql3j7bho" path="res://TheValkyrie/images/charui/char_select_screen_assets/particle_placeholder.png" id="3_patf8"]
+
+[sub_resource type="Animation" id="Animation_u0swe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(988, 622.00006)]
+}
+
+[sub_resource type="Animation" id="Animation_2otcq"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2, 3, 4.0333333, 4.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1488, 625), Vector2(1664.15, 675), Vector2(1750, 650), Vector2(1583.333, 625), Vector2(1250, 675), Vector2(1369, 625), Vector2(1427.492, 675)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gvp5s"]
+_data = {
+&"RESET": SubResource("Animation_u0swe"),
+&"idle": SubResource("Animation_2otcq")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ujv2k"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n2en3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_patf8"]
+states/End/position = Vector2(588, 100)
+states/Start/position = Vector2(223, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_ujv2k")
+states/idle/position = Vector2(407, 100)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_n2en3")]
+
+[node name="CharSelectBgValkyrie" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Node2D"]
+position = Vector2(942, 599)
+texture = ExtResource("1_ujv2k")
+
+[node name="Valkyrie" type="Sprite2D" parent="Node2D"]
+position = Vector2(988, 622.00006)
+texture = ExtResource("2_n2en3")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/Valkyrie"]
+show_behind_parent = true
+position = Vector2(66.01117, 220.32281)
+rotation = -0.45155233
+scale = Vector2(0.9995971, 0.999597)
+skew = -0.13264501
+amount = 10
+texture = ExtResource("3_patf8")
+lifetime = 2.0
+preprocess = 2.0
+speed_scale = 0.35
+emission_shape = 3
+emission_rect_extents = Vector2(700, 200)
+direction = Vector2(1, 0.5)
+spread = 22.5
+gravity = Vector2(1500, 500)
+initial_velocity_min = 1000.0
+initial_velocity_max = 1500.0
+angular_velocity_min = -180.0
+angle_min = 235.0
+angle_max = 305.0
+scale_amount_min = 0.1
+scale_amount_max = 0.4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Valkyrie"]
+libraries = {
+&"": SubResource("AnimationLibrary_gvp5s")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Node2D/Valkyrie"]
+tree_root = SubResource("AnimationNodeStateMachine_patf8")
+anim_player = NodePath("../AnimationPlayer")

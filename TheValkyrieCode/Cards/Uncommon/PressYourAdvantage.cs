@@ -15,13 +15,17 @@ public class PressYourAdvantage : TheValkyrieCard
     public PressYourAdvantage() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithPower<WeakPower>(2);
-        WithCalculatedBlock(0, 3, (card, target) => target != null ? target.Powers.Count(ShouldCountPower) : 0,
+        WithCalculatedBlock(0, 1,
+            (card, _) =>
+            {
+                decimal count = PileType.Hand.GetPile(card.Owner).Cards.Count;
+                CardPile? pile = card.Pile;
+                if (pile is { Type: PileType.Hand })
+                    --count;
+                return count;
+            },
             ValueProp.Move, 0, 1);
-        WithVar("DisplayBlockPerDebuff", 3, 1);
-        WithCalculatedVar("DisplayBlock",3,3, 
-            (card, target) => target != null ? target.Powers.Count(ShouldCountPower) + AccountForArtifactAndWeak(target) : 0,
-            1, 1); //adds the extra 3(4) of the weak. AccountForAAW removes 3(4) if the creature has artifact or already has Weak.
-        //sadly this causes issues with Frail, Dexterity, etc... probably need to rethink how the displayed number is implemented
+        WithVar("DisplayBlockPerCard", 1, 1);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -33,15 +37,5 @@ public class PressYourAdvantage : TheValkyrieCard
 
     protected override void OnUpgrade()
     {
-    }
-    
-    private static bool ShouldCountPower(PowerModel power)
-    {
-        return power.TypeForCurrentAmount == PowerType.Debuff && power is not ITemporaryPower;
-    }
-
-    private static int AccountForArtifactAndWeak(Creature target)
-    {
-        return target.HasPower<ArtifactPower>() || target.HasPower<WeakPower>() ? -1 : 0;
     }
 }

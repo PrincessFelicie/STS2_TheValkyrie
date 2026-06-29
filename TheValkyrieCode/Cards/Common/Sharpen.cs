@@ -13,7 +13,7 @@ public class Sharpen : TheValkyrieCard
 {
     public Sharpen() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithVar("Bless", 2, 2); 
+        WithVar("Bless", 3, 2);
         WithKeyword(CardKeyword.Exhaust);
 
         WithTip(typeof(BleedPower));

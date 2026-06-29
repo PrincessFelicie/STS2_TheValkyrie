@@ -1,4 +1,4 @@
 {
   "THEVALKYRIE-BLESS.title": "Bless",
-  "THEVALKYRIE-BLESS.description": "Blessing makes most [purple]Enchantments[/purple] stronger.\nIf not specified, Blessing an unenchanted card gives it a random blessable enchantment."
+  "THEVALKYRIE-BLESS.description": "Blessing improves numerical [purple]Enchantments[/purple] by 1.\nIf not specified, Blessing an unenchanted card gives it one of the following enchantments at random: [purple]Sharp 3[/purple], [purple]Nimble 2[/purple], [purple]Adroit 2[/purple], [purple]Sanguine 1[/purple], or [purple]Aegis 1[/purple]."
 }

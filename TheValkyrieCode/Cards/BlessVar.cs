@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace TheValkyrie.TheValkyrieCode.Cards;
 
+//unused, couldn't get it working
 public class BlessVar : DynamicVar
 {
     public const string Key = "Bless";

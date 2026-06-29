@@ -157,7 +157,7 @@
   "THEVALKYRIE-HOPE_IN_DESPAIR.description": "If you have {OverexertionThreshold:diff()} or more [gold]Overexertion[/gold],\ngain {Block:diff()} [gold]Block[/gold], and your next card is played an extra time.",
 
   "THEVALKYRIE-PRESS_YOUR_ADVANTAGE.title": "Press Your Advantage",
-  "THEVALKYRIE-PRESS_YOUR_ADVANTAGE.description": "Apply {WeakPower:diff()} [gold]Weak[/gold].\nGain {DisplayBlockPerDebuff:diff()} [gold]Block[/gold] for each unique debuff on the enemy.{InCombat:\\n(Gain {DisplayBlock:diff()} [gold]Block[/gold])|}",
+  "THEVALKYRIE-PRESS_YOUR_ADVANTAGE.description": "Apply {WeakPower:diff()} [gold]Weak[/gold].\nGain {DisplayBlockPerCard:diff()} [gold]Block[/gold] for each other card in your [gold]Hand[/gold].{InCombat:\\n(Gain {CalculatedBlock:diff()} [gold]Block[/gold])|}",
 
   "THEVALKYRIE-WARNING_STRIKE.title": "Warning Strike",
   "THEVALKYRIE-WARNING_STRIKE.description": "Deal {Damage:diff()} damage.\nGain {VigorPower:diff()} [gold]Vigor[/gold].",
@@ -192,7 +192,7 @@
 
   
   "THEVALKYRIE-ANGEL_FORM.title": "Angel Form",
-  "THEVALKYRIE-ANGEL_FORM.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].\nAt the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold]'s [gold]Retain[/gold] is replaced with [gold]Ethereal[/gold].",
+  "THEVALKYRIE-ANGEL_FORM.description": "At the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold]'s [gold]Retain[/gold] is replaced with [gold]Ethereal[/gold].",
   
   "THEVALKYRIE-DEEPEST_CUTS.title": "Deepest Cuts",
   "THEVALKYRIE-DEEPEST_CUTS.description": "Your [gold]Bleeds[/gold] apply {DeepestCutsPower:diff()} more [gold]Bleed[/gold].",

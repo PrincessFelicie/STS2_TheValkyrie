@@ -10,7 +10,7 @@ public class JoinTheFray : TheValkyrieCard
 {
     public JoinTheFray() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
-        WithPower<OverexertionPower>(4);
+        WithPower<OverexertionPower>(3);
         WithDamage(10, 4);
     }
 

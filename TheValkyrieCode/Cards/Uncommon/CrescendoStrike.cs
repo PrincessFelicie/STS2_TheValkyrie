@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
+//This card does not compare nicely to Kingly Punch... Option A is to raise its bless-per-draw amount, option B is to change how blessings stack...
 public class CrescendoStrike : TheValkyrieCard
 {
     public CrescendoStrike() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)

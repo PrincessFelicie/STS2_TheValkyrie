@@ -12,7 +12,7 @@ public class Bullrush : TheValkyrieCard
     public Bullrush() : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(26, 6);
-        WithPower<OverexertionPower>(10);
+        WithPower<OverexertionPower>(5);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
