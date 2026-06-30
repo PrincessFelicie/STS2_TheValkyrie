@@ -3,6 +3,7 @@
   "CAW_CAW": "[jitter]CAW CAW![/jitter]",
   "ALREADY_TOOK_DAMAGE_THIS_FIGHT": "I already took damage!",
   "ENCHANT_NO_TARGET": "There's no valid target for this enchantment!",
+  "CANT_ENCHANT_HAND": "I can't enchant anything...",
   "FIGHTING_CULTIST": "Wait! [jitter]This isn't necessary...![/jitter]",
   "FIGHTING_CULTIST_UNSTOPPABLE": "[jitter]GET OUT OF MY WAY, [blue]C-CAW!!![/blue][/jitter]",
   "CALCIFIED_CULTIST_REPLY": "Pay the tithe, sister!",
