@@ -11,6 +11,7 @@ public class EagleDive : TheValkyrieCard
     public EagleDive() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
         WithDamage(14, 6);
+        WithTip(typeof(OverexertionPower));
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

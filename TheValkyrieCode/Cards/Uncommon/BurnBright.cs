@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -12,9 +13,10 @@ public class BurnBright : TheValkyrieCard
     {
         WithPower<StrengthPower>(1);
         WithPower<DexterityPower>(1);
-        WithPower<BurnBrightPower>(1);
+        WithVar("BurnBrightPower",1);
+        WithEnergyTip();
     }
-    
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, -DynamicVars["StrengthPower"].IntValue, Owner.Creature, this);

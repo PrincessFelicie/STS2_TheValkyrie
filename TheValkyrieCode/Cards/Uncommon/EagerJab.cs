@@ -11,6 +11,7 @@ public class EagerJab : TheValkyrieCard
     public EagerJab() : base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(3, 2);
+        WithTip(typeof(VigorPower));
     }
     
     protected override bool ShouldGlowGoldInternal => Owner.HasPower<VigorPower>();

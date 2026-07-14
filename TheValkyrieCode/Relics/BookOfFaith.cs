@@ -17,11 +17,8 @@ public class BookOfFaith : TheValkyrieRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Smites", 3)];
-    
-    protected override IEnumerable<IHoverTip> ExtraHoverTips
-    {
-        get => HoverTipFactory.FromCardWithCardHoverTips<Smite>();
-    }
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Smite>()];
 
     public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {

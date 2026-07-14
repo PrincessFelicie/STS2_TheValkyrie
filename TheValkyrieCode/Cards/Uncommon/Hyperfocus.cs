@@ -12,6 +12,7 @@ public class Hyperfocus : TheValkyrieCard
     {
         WithKeyword(CardKeyword.Exhaust);
         WithKeyword(CardKeyword.Retain, UpgradeType.Add);
+        WithTip(CardKeyword.Retain);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

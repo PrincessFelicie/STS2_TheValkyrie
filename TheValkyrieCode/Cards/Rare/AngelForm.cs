@@ -13,6 +13,9 @@ public class AngelForm : TheValkyrieCard
         WithKeyword(CardKeyword.Retain, UpgradeType.Add);
         WithVar("AngelFormPower", 1);
         WithTip(typeof(Smite));
+        WithTip(typeof(ArmorPower));
+        WithTip(CardKeyword.Retain);
+        WithTip(CardKeyword.Ethereal);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

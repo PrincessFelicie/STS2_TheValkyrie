@@ -12,6 +12,7 @@ public class DeepBreath : TheValkyrieCard
     {
         WithBlock(7, 3);
         WithVar("OverexertionRemove",10, 5);
+        WithTip(typeof(OverexertionPower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

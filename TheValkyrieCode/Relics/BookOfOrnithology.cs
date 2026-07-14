@@ -24,10 +24,7 @@ public class BookOfOrnithology : TheValkyrieRelic
         new DynamicVar("BonusDamage", 2)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips
-    {
-        get => HoverTipFactory.FromCardWithCardHoverTips<Smite>();
-    }
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Smite>()];
 
     public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {

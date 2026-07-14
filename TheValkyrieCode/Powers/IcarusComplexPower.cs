@@ -12,12 +12,13 @@ public sealed class IcarusComplexPower : TheValkyriePower
     {
     }
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VigorPower>()];
-
     protected override object InitInternalData()
     {
         return new Data();
     }
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VigorPower>()];
+
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

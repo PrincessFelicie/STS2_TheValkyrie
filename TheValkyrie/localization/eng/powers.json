@@ -37,12 +37,12 @@
 
 
   "THEVALKYRIE-INQUISITION_UPGRADE_POWER.title": "Inquisition",
-  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.description": "Your [gold]Smites[/gold] are created Upgraded.",
-  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.smartDescription": "Your [gold]Smites[/gold] are created Upgraded.",
+  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.description": "Whenever you create a [gold]Smite[/gold], [gold]Upgrade[/gold] it.",
+  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.smartDescription": "Whenever you create a [gold]Smite[/gold], [gold]Upgrade[/gold] it.",
 
   "THEVALKYRIE-INQUISITION_ENCHANT_POWER.title": "Inquisitest",
-  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.description": "Your [gold]Smites[/gold] are created [purple]Enchanted[/purple].",
-  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.smartDescription": "Your [gold]Smites[/gold] are created [purple]Enchanted[/purple]. Your already [purple]Enchanted[/purple] Smites are stronger by [blue]{Amount}[/blue].",
+  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.description": "Whenever you create a [gold]Smite[/gold], [gold]Bless[/gold] it.",
+  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.smartDescription": "Whenever you create a [gold]Smite[/gold], [gold]Bless[/gold] it{Amount:plural:| [blue]{}[/blue] times}.",
 
   "THEVALKYRIE-CHURCH_HYMN_POWER.title": "Church Hymn",
   "THEVALKYRIE-CHURCH_HYMN_POWER.description": "At the start of your turn, add a [gold]Smite[/gold] into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue].",
@@ -102,8 +102,8 @@
   "THEVALKYRIE-BRIMMING_POWER.smartDescription": "The first time each turn you reach 10 cards in your hand, gain [blue]{Amount}[/blue] [gold]Block[/gold].\n{IsActive:[green]Currently active![/green]|[green]Has already triggered this turn.[/green]}",
 
   "THEVALKYRIE-TEMPORARY_THORNS_POWER.title": "Temporary Thorns",
-  "THEVALKYRIE-TEMPORARY_THORNS_POWER.description": "When hit by an attack, deal damage back.",
-  "THEVALKYRIE-TEMPORARY_THORNS_POWER.smartDescription": "When hit by an attack, deal [blue]{Amount}[/blue] damage back until the end of this turn.",
+  "THEVALKYRIE-TEMPORARY_THORNS_POWER.description": "Gain [gold]Thorns[/gold] until the end of this turn.",
+  "THEVALKYRIE-TEMPORARY_THORNS_POWER.smartDescription": "Gain {Amount} [gold]Thorns[/gold] until the end of this turn.",
 
   "THEVALKYRIE-CRUSH_THEIR_SPIRITS_POWER.title": "Crushing Spirits",
   "THEVALKYRIE-CRUSH_THEIR_SPIRITS_POWER.description": "At the end of your turn, deal damage to all enemies for each point of [gold]Armor[/gold] you have.",

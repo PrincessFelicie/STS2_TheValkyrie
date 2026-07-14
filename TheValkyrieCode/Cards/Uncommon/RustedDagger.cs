@@ -46,7 +46,6 @@ public class RustedDagger : TheValkyrieCard
         WithDamage(CurrentDamage);
         WithVar("Increase", 3, 1);
         WithKeyword(CardKeyword.Exhaust);
-        WithTip(StaticHoverTip.Fatal);
         WithVar("Active", 1);
     }
 

@@ -12,6 +12,7 @@ public class CrushTheirSpirits : TheValkyrieCard
     public CrushTheirSpirits() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
         WithVar("CrushTheirSpiritsPower", 1);
+        WithTip(typeof(ArmorPower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

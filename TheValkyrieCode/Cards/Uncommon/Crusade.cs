@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -13,6 +14,7 @@ public class Crusade : TheValkyrieCard
         WithVar("CrusadeAttackPower", 1, 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
         WithVar("CrusadeBlockPower", 1);
         WithTip(typeof(Smite));
+        WithTip(StaticHoverTip.Block);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

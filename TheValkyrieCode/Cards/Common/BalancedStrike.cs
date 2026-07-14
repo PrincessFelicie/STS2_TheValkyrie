@@ -13,6 +13,7 @@ public class BalancedStrike : TheValkyrieCard
         WithDamage(8, 3);
         WithTags(CardTag.Strike);
         WithVar("BalancedStrikePower",2, 1);
+        WithTip(typeof(OverexertionPower));
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

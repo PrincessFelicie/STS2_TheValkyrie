@@ -10,6 +10,7 @@ public class Dominion : TheValkyrieCard
     public Dominion() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithVar("DominionPower", 2, 1);
+        WithTip(CardKeyword.Exhaust);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

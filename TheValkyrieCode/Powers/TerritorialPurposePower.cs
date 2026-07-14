@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
@@ -25,6 +26,12 @@ public sealed class TerritorialPurposePower : TheValkyriePower
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("TurnCounter", 0),
         new BoolVar("IsUpgraded", false),
+    ];
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromCard<ByrdSwoop>(),
+        HoverTipFactory.FromCard<Peck>(),
+        HoverTipFactory.FromPower<ByrdStrengthPower>()
     ];
     
     public override PowerType Type => PowerType.Buff;

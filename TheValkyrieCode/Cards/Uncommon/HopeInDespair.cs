@@ -13,6 +13,7 @@ public class HopeInDespair : TheValkyrieCard
         WithBlock(10, 4);
         WithVar("HopeInDespairPower", 1);
         WithVar("OverexertionThreshold", 20);
+        WithTip(typeof(OverexertionPower));
     }
     
     protected override bool ShouldGlowGoldInternal => IsActive;
