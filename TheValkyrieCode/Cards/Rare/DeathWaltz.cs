@@ -31,10 +31,10 @@ public class DeathWaltz : TheValkyrieCard
         }
     }
     
-    protected override PileType GetResultPileTypeForCardPlay()
+    protected override (PileType, CardPilePosition) GetResultPileTypeAndPositionForCardPlay()
     {
-        PileType resultPileType = base.GetResultPileTypeForCardPlay();
-        return resultPileType != PileType.Discard ? resultPileType : PileType.Hand;
+        (PileType pileType, CardPilePosition cardPilePosition) = base.GetResultPileTypeAndPositionForCardPlay();
+        return pileType == PileType.Discard ? (PileType.Hand, CardPilePosition.Bottom) : (pileType, cardPilePosition);
     }
 
     protected override void OnUpgrade()

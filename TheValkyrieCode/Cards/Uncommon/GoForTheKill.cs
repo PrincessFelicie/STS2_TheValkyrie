@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -17,7 +18,7 @@ public class GoForTheKill : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (play.Target == null) return;
-        AttackCommand attackCommand = await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(play.Target).Execute(choiceContext);
+        AttackCommand attackCommand = await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, 
             attackCommand.Results.SelectMany(r => r).Sum(r => r.UnblockedDamage), 
             Owner.Creature, this);

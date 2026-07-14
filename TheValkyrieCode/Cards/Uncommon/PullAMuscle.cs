@@ -8,7 +8,7 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
 public class PullAMuscle : TheValkyrieCard
 {
-    public PullAMuscle() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public PullAMuscle() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithBlock(20, 7);
         WithPower<OverexertionPower>(10);

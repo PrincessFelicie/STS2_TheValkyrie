@@ -10,7 +10,7 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
 public class CawCaw : TheValkyrieCard
 {
-    public CawCaw() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    public CawCaw() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<RitualPower>(1);
         WithPower<OverexertionPower>(15);

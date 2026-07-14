@@ -17,7 +17,7 @@ public class PerfectYourStance : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        AttackCommand attackCommand = await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (attackCommand.Results.SelectMany(r => r).Sum(r => r.UnblockedDamage) > 0 || this.IsUpgraded)
         {
             await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);

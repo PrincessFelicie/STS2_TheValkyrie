@@ -8,8 +8,8 @@ public class Study : TheValkyrieCard
 {
     public Study() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(9, 4);
-        WithCards(3);
+        WithBlock(9, 3);
+        WithCards(3, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

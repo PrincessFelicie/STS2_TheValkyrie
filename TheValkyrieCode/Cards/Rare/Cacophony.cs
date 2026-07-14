@@ -19,7 +19,7 @@ public class Cacophony : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await PowerCmd.Remove(Owner.Creature.GetPower<OverexertionPower>());
     }
 

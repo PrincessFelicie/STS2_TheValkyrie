@@ -34,7 +34,7 @@ public sealed class BottledEcho : TheValkyriePotion
         /*NCombatRoom instance = NCombatRoom.Instance;
         if (instance != null)
             instance.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(target));*/ //todo choose a vfx that's fun
-        await CreatureCmd.Damage(choiceContext, target, damage.BaseValue, damage.Props, Owner.Creature, null);
+        await CreatureCmd.Damage(choiceContext, target, damage.BaseValue, damage.Props, Owner.Creature,  null, null);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].BaseValue, Owner.Creature, null);
     }
 }

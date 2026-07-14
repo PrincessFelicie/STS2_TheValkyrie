@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
-public class CrusadePower : TheValkyriePower
+public class CrusadeAttackPower : TheValkyriePower
 {
     private class Data
     {
@@ -21,23 +21,14 @@ public class CrusadePower : TheValkyriePower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override Decimal ModifyDamageAdditive(
+    public override decimal ModifyDamageAdditive(
         Creature? target,
-        Decimal amount,
+        decimal amount,
         ValueProp props,
         Creature? dealer,
-        CardModel? card)
-    {
-        return this.Owner != dealer || !props.IsPoweredAttack() || card == null || !card.Tags.Contains<CardTag>(CustomEnum.Smite) ? 0 : this.Amount;
-    }
-    
-    public override Decimal ModifyBlockAdditive(
-        Creature target,
-        Decimal block,
-        ValueProp props,
         CardModel? card,
         CardPlay? cardPlay)
     {
-        return this.Owner != target || !props.IsPoweredAttack() || card == null || !card.Tags.Contains<CardTag>(CustomEnum.Smite) ? 0 : this.Amount;
+        return Owner != dealer || !props.IsPoweredAttack() || card == null || !card.Tags.Contains(CustomEnum.Smite) ? 0 : Amount;
     }
 }

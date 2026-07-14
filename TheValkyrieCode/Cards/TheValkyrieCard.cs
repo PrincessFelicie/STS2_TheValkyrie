@@ -15,6 +15,8 @@ public abstract class TheValkyrieCard(int cost, CardType type, CardRarity rarity
     //Image size:
     //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
     //Full art: 606x852
+    
+    //uses card_portraits/big/card_name.png as image path
     public override string CustomPortraitPath
     {
         get
@@ -38,6 +40,8 @@ public abstract class TheValkyrieCard(int cost, CardType type, CardRarity rarity
         }
     }
     
+    
+    //uses card_portraits/beta/card_name.png as image path
     public override string BetaPortraitPath
     {
         get

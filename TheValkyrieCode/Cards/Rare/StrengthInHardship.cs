@@ -10,7 +10,9 @@ public class StrengthInHardship : TheValkyrieCard
     public StrengthInHardship() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithVar("StrengthInHardshipPower", 1); //no tooltip needed
+        WithKeyword(CardKeyword.Ethereal, UpgradeType.Remove);
         WithTip(typeof(OverexertionPower));
+        WithTip(typeof(ArmorPower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -21,6 +23,5 @@ public class StrengthInHardship : TheValkyrieCard
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1); //can we find more interesting?
     }
 }

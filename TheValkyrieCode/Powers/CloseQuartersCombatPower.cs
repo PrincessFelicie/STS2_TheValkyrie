@@ -55,6 +55,6 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower
         Creature? target,
         CardModel? cardSource)
     {
-        return power is OverexertionPower && giver == Owner ? 2 : 1;
+        return power is OverexertionPower && giver == Owner && amount > 0 ? 2 : 1;
     }
 }

@@ -19,7 +19,7 @@ public class Prelude : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         foreach (CardModel card2 in PileType.Draw.GetPile(Owner).Cards.Where(c => c.IsUpgradable).TakeRandom(DynamicVars.Cards.IntValue, Owner.RunState.Rng.CombatCardSelection))
         {
             CardCmd.Upgrade(card2);

@@ -1,4 +1,5 @@
 using BaseLib.Extensions;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Models;
@@ -21,7 +22,7 @@ public sealed class ArmorPower : TheValkyriePower
     public override PowerStackType StackType => PowerStackType.Counter;
 
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props, Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource, CardPlay? cardPlay)
     {
         if (Owner == dealer || dealer == null || target != Owner) return 0;
         if (props.IsPoweredAttack_() && dealer.Side != target.Side)

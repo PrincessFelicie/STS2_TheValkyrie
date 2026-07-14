@@ -10,7 +10,7 @@ public class DigYourHeelsIn : TheValkyrieCard
     public DigYourHeelsIn() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<ArmorPower>(1, 1);
-        WithPower<OverexertionPower>(11);
+        WithPower<OverexertionPower>(8, 4);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

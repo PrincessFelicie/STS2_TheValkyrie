@@ -1,3 +1,4 @@
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -31,7 +32,8 @@ public sealed class ByrdStrengthPower : TheValkyriePower
         Decimal amount,
         ValueProp props,
         Creature? dealer,
-        CardModel? card)
+        CardModel? card,
+        CardPlay? cardPlay)
     {
         return this.Owner != dealer || !props.IsPoweredAttack() || card is not (Peck or ByrdSwoop) ? 0 : this.Amount;
     }

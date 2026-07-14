@@ -77,5 +77,22 @@
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-2.next": "Respond",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-3.char": "It's a deal.",
 
-  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.ancient": "Wouldn't have half of my collection without the Flock. Take somethin', it might as well be yours anyway!"
+  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.ancient": "Wouldn't have half of my collection without the Flock. Take somethin', it might as well be yours anyway!",
+
+
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[i][font_size=22]Vakuu lets out an amused chuckle.[/font_size][/i]\nIf it isn't the hubris of youth, in the flesh!",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Stare",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "...",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "Countless like you have bargained for more than they could handle.",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-2.next": "Continue",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-3.ancient": "Sign this contract, and let us see if you will be an exception...",
+
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient": "You remind me of my favorite puppet. Too bad Neow found you first...",
+
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "That 'Angel' form of yours... Isn't it more like a Harpy?",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Deny",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "I am not here to listen to your nonsensical babbling, [i]demon[/i].",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "Sensitive, are we?"
 }

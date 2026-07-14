@@ -20,13 +20,13 @@ public class Sanctify : TheValkyrieCard
         WithTips(c => HoverTipFactory.FromEnchantment<Refrain>(c.DynamicVars["Bless"].IntValue));
     }
     
-    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(this.Owner).Cards.Any(c => c.Type is not (CardType.Curse or CardType.Quest or CardType.Status));
+    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(Owner).Cards.Any(c => BlessCmd.CanBless(c) && c.Type != CardType.Power);
 
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(this.Owner).Cards.Where(c => c.Type is not (CardType.Curse or CardType.Quest or CardType.Status)).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), this.Owner, prefs)).ToList())
+        CardSelectorPrefs prefs = new (SelectionScreenPrompt, 1);
+        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(Owner).Cards.Where(c => BlessCmd.CanBless(c) && c.Type != CardType.Power).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), Owner, prefs)).ToList())
         {
             if (card.Enchantment is not Refrain)
                 CardCmd.ClearEnchantment(card); //returns and does nothing if there's no enchantment, so no filter necessary

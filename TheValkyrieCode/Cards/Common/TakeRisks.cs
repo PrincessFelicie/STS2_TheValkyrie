@@ -10,7 +10,7 @@ public class TakeRisks : TheValkyrieCard
     public TakeRisks() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithPower<OverexertionPower>(6);
-        WithEnergy(2, 1);
+        WithEnergy(1, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

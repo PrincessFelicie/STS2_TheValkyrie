@@ -24,7 +24,7 @@ public class MakeItBleed : TheValkyrieCard, ITranscendenceCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (play.Target != null)
         {
             await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);

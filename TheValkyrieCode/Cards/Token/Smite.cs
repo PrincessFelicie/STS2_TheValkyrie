@@ -24,7 +24,7 @@ public class Smite : TheValkyrieCard
     
     public static async Task<CardModel?> CreateInHand(Player owner, ICombatState combatState)
     {
-        return (await CreateInHand(owner, 1, combatState)).FirstOrDefault<CardModel>();
+        return (await CreateInHand(owner, 1, combatState)).FirstOrDefault();
     }
     
     public static async Task<IEnumerable<CardModel>> CreateInHand(
@@ -32,15 +32,13 @@ public class Smite : TheValkyrieCard
         int count,
         ICombatState combatState)
     {
-        if (count == 0)
-            return (IEnumerable<CardModel>) Array.Empty<CardModel>();
-        if (CombatManager.Instance.IsOverOrEnding)
-            return (IEnumerable<CardModel>) Array.Empty<CardModel>();
-        List<CardModel> smites = new List<CardModel>();
+        if (count == 0 || CombatManager.Instance.IsOverOrEnding)
+            return [];
+        List<CardModel> smites = [];
         for (int index = 0; index < count; ++index)
-            smites.Add((CardModel) combatState.CreateCard<Smite>(owner));
-        IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, owner);
-        return (IEnumerable<CardModel>) smites;
+            smites.Add(combatState.CreateCard<Smite>(owner));
+        await CardPileCmd.AddGeneratedCardsToCombat(smites, PileType.Hand, owner);
+        return smites;
     }
 
     public static async Task<IEnumerable<CardModel>> CreateInHandWithEnchantment<T>(
@@ -49,7 +47,7 @@ public class Smite : TheValkyrieCard
         int enchantmentCount,
         ICombatState combatState) where T : EnchantmentModel
     {
-        return (await CreateInHandWithEnchantment(owner, count, ModelDb.Enchantment<T>(), enchantmentCount, combatState));
+        return await CreateInHandWithEnchantment(owner, count, ModelDb.Enchantment<T>(), enchantmentCount, combatState);
     }
 
     public static async Task<IEnumerable<CardModel>> CreateInHandWithEnchantment(
@@ -59,20 +57,17 @@ public class Smite : TheValkyrieCard
         int enchantmentCount,
         ICombatState combatState)
     {
-        if (count == 0)
-            return (IEnumerable<CardModel>) Array.Empty<CardModel>();
-        if (CombatManager.Instance.IsOverOrEnding)
-            return (IEnumerable<CardModel>) Array.Empty<CardModel>();
-        List<CardModel> smites = new List<CardModel>();
+        if (count == 0 || CombatManager.Instance.IsOverOrEnding)
+            return [];
+        List<CardModel> smites = [];
         for (int index = 0; index < count; ++index)
         {
             CardModel c = combatState.CreateCard<Smite>(owner);
             smites.Add(c);
             CardCmd.Enchant(enchantment.ToMutable(), c, enchantmentCount);
         }
-
-        IReadOnlyList<CardPileAddResult> combat = await CardPileCmd.AddGeneratedCardsToCombat((IEnumerable<CardModel>) smites, PileType.Hand, owner);
-        return (IEnumerable<CardModel>) smites;
+        await CardPileCmd.AddGeneratedCardsToCombat(smites, PileType.Hand, owner);
+        return smites;
     }
     
     public static async Task<IEnumerable<CardModel>> CreateInHandBlessed(
@@ -81,11 +76,9 @@ public class Smite : TheValkyrieCard
         int enchantmentCount,
         ICombatState combatState)
     {
-        if (smiteCount == 0)
-            return Array.Empty<CardModel>();
-        if (CombatManager.Instance.IsOverOrEnding)
-            return Array.Empty<CardModel>();
-        List<CardModel> smites = new List<CardModel>();
+        if (smiteCount == 0 || CombatManager.Instance.IsOverOrEnding)
+            return [];
+        List<CardModel> smites = [];
         for (int index = 0; index < smiteCount; ++index)
         {
             CardModel c = combatState.CreateCard<Smite>(owner);
@@ -99,7 +92,7 @@ public class Smite : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await CommonActions.CardBlock(this, play);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }

@@ -17,7 +17,7 @@ public class Bullrush : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        AttackCommand attackCommand = await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (!attackCommand.Results.SelectMany(r => r).Any(r => r.WasTargetKilled))
             await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }

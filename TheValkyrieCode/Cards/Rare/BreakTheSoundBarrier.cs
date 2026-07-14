@@ -9,12 +9,12 @@ public class BreakTheSoundBarrier : TheValkyrieCard
     public BreakTheSoundBarrier() : base(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
         WithDamage(5);
-        WithVar("Times", 5, 2);
+        WithVar("Times", 5, 1);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target, DynamicVars["Times"].IntValue).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play, DynamicVars["Times"].IntValue).Execute(choiceContext);
     }
 
     protected override void OnUpgrade()

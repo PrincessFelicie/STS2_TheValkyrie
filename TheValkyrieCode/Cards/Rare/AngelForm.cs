@@ -11,7 +11,7 @@ public class AngelForm : TheValkyrieCard
     public AngelForm() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithKeyword(CardKeyword.Retain, UpgradeType.Add);
-        WithVar("AngelFormPower", 2);
+        WithVar("AngelFormPower", 1);
         WithTip(typeof(Smite));
     }
     

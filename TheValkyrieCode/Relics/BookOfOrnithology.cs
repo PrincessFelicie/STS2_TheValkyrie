@@ -48,7 +48,8 @@ public class BookOfOrnithology : TheValkyrieRelic
         decimal amount, 
         ValueProp props, 
         Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource,
+        CardPlay? cardPlay)
     {
         return Owner.Creature != dealer 
                || !props.IsPoweredAttack() 

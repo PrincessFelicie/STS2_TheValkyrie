@@ -12,9 +12,9 @@ public class ShieldOfFaith : TheValkyrieCard
 {
     public ShieldOfFaith() : base(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
     {
-        WithBlock(6, 2);
+        WithBlock(5, 2);
         WithPower<ArmorPower>(2, 1);
-        WithPower<OverexertionPower>(3);
+        WithPower<OverexertionPower>(2);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

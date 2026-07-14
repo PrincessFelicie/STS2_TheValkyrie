@@ -10,13 +10,15 @@ public class Crusade : TheValkyrieCard
 {
     public Crusade() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVar("CrusadePower", 1, 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
+        WithVar("CrusadeAttackPower", 1, 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
+        WithVar("CrusadeBlockPower", 1);
         WithTip(typeof(Smite));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<CrusadePower>(choiceContext, Owner.Creature, DynamicVars["CrusadePower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<CrusadeAttackPower>(choiceContext, Owner.Creature, DynamicVars["CrusadeAttackPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<CrusadeBlockPower>(choiceContext, Owner.Creature, DynamicVars["CrusadeBlockPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

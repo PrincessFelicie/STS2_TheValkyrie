@@ -17,7 +17,7 @@ public class BalancedStrike : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await PowerCmd.Apply<BalancedStrikePower>(choiceContext, Owner.Creature, DynamicVars["BalancedStrikePower"].IntValue, Owner.Creature, this);
     }
 

@@ -13,9 +13,9 @@ public class SongOfSafety : TheValkyrieCard
     public SongOfSafety() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<OverexertionPower>(3);
-        WithPower<ArmorPower>(2, 2);
+        WithPower<ArmorPower>(4);
         WithVar("Quantity", 2);
-        WithVar("Aegis", 1);
+        WithVar("Aegis", 1,1);
         
         WithTip(typeof(Smite));
         WithTips(c => HoverTipFactory.FromEnchantment<Aegis>(c.DynamicVars["Aegis"].IntValue));

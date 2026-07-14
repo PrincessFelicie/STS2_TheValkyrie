@@ -11,7 +11,7 @@ public class MysticMatchbox : TheValkyrieRelic
 {
     public override RelicRarity Rarity => RelicRarity.Uncommon;
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(3, ValueProp.Unpowered),
+        new DamageVar(2, ValueProp.Unpowered),
         new BlockVar(1, ValueProp.Unpowered)
     ];
 
@@ -20,7 +20,8 @@ public class MysticMatchbox : TheValkyrieRelic
         Decimal amount,
         ValueProp props,
         Creature? dealer,
-        CardModel? cardSource)
+        CardModel? cardSource,
+        CardPlay? cardPlay)
     {
         return !props.IsPoweredAttack() || cardSource?.Enchantment == null || cardSource.Owner != this.Owner ? 0 : (Decimal) this.DynamicVars.Damage.IntValue;
     }

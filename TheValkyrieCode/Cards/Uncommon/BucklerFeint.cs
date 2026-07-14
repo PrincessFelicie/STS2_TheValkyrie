@@ -16,7 +16,7 @@ public class BucklerFeint : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await PowerCmd.Apply<TemporaryThornsPower>(choiceContext, Owner.Creature, DynamicVars["TemporaryThornsPower"].IntValue, Owner.Creature, this);
     }
 

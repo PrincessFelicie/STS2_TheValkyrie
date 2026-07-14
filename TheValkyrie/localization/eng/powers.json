@@ -27,9 +27,14 @@
   "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Prevent the next time you would gain [gold]Overexertion[/gold] this turn.",
   "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Prevent the next {Amount:plural:time|[blue]{}[/blue] times} you would gain [gold]Overexertion[/gold] this turn.",
 
-  "THEVALKYRIE-CRUSADE_POWER.title": "Crusade",
-  "THEVALKYRIE-CRUSADE_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold] and deal additional damage.",
-  "THEVALKYRIE-CRUSADE_POWER.smartDescription": "Your [gold]Smites[/gold] grant [blue]{Amount}[/blue] extra [gold]Block[/gold] and deal [blue]{Amount}[/blue] additional damage.",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.title": "Crusade Strength",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.description": "Your [gold]Smites[/gold] deal additional damage.",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage.",
+
+  "THEVALKYRIE-CRUSADE_BLOCK_POWER.title": "Crusade Defense",
+  "THEVALKYRIE-CRUSADE_BLOCK_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_BLOCK_POWER.smartDescription": "Your [gold]Smites[/gold] grant [blue]{Amount}[/blue] extra [gold]Block[/gold].",
+
 
   "THEVALKYRIE-INQUISITION_UPGRADE_POWER.title": "Inquisition",
   "THEVALKYRIE-INQUISITION_UPGRADE_POWER.description": "Your [gold]Smites[/gold] are created Upgraded.",
@@ -120,11 +125,17 @@
   "THEVALKYRIE-TUNE_UP_POWER.description": "The next [gold]Retain card[/gold] you play costs [blue]0[/blue].",
   "THEVALKYRIE-TUNE_UP_POWER.smartDescription": "The next [blue]{Amount}[/blue] [gold]Retain[/gold] {Amount:plural:card|cards} you play {Amount:plural:costs|cost} [blue]0[/blue].",
 
-  "THEVALKYRIE-BIRD_FIST_POWER.title": "Bird Fist",
-  "THEVALKYRIE-BIRD_FIST_POWER.description": "You take half damage and no longer [gold]Overexert[/gold].",
-  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold].",
-
   "THEVALKYRIE-ICARUS_COMPLEX_POWER.title": "Icarus Complex",
   "THEVALKYRIE-ICARUS_COMPLEX_POWER.description": "Your [gold]Vigor[/gold] gains are increased.",
-  "THEVALKYRIE-ICARUS_COMPLEX_POWER.smartDescription": "Gain [blue]{Amount}[/blue]% more [gold]Vigor[/gold]."
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.smartDescription": "Gain [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
+
+  "THEVALKYRIE-BLUNDERBUSS_POWER.title": "Blunderbuss",
+  "THEVALKYRIE-BLUNDERBUSS_POWER.description": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
+  "THEVALKYRIE-BLUNDERBUSS_POWER.smartDescription": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
+
+  
+  
+  "THEVALKYRIE-BIRD_FIST_POWER.title": "Bird Fist (deprecated)",
+  "THEVALKYRIE-BIRD_FIST_POWER.description": "You take half damage and no longer [gold]Overexert[/gold].",
+  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold]."
 }

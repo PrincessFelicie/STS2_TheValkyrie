@@ -20,14 +20,11 @@ public class Requiem : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        Requiem requiem = this;
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        IEnumerable<CardModel> list = PileType.Exhaust.GetPile(requiem.Owner).Cards.Where((Func<CardModel, bool>) (c => c.Tags.Contains(CustomEnum.Smite))).ToList();
-        bool flag = true;
+        IEnumerable<CardModel> list = PileType.Exhaust.GetPile(Owner).Cards.Where(c => c.Tags.Contains(CustomEnum.Smite)).ToList();
         foreach (CardModel card in list)
         {
-            await CardCmd.AutoPlay(choiceContext, card, play.Target, skipCardPileVisuals: !flag);
-            flag = false;
+            await CardCmd.AutoPlay(choiceContext, card, play.Target, skipCardPileVisuals: true);
         }
     }
 }

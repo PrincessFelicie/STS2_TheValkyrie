@@ -15,11 +15,8 @@ public class RousingSolo : TheValkyrieCard
         WithEnergy(1);
     }
     
-    public override CardMultiplayerConstraint MultiplayerConstraint
-    {
-        get => CardMultiplayerConstraint.MultiplayerOnly;
-    }
-    
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (CombatState == null) return;

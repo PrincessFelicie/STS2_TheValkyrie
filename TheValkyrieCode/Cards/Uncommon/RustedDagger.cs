@@ -11,7 +11,7 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 //Fatal is really weak in multiplayer. I could remove its condition and lower the damage gain, if I don't mind losing the flavor and increasing the overlap with The Scythe... Pretty big downsides, but the alternative is a card that's just non-viable outside of act 1.
 public class RustedDagger : TheValkyrieCard
 {
-    private const string _increaseKey = "Increase";
+    private const string _increaseKey = "Increase"; //from code for TheScythe... is this unused?
     private const int _baseDamage = 6;
     private int _currentDamage = 6;
     private int _increasedDamage;
@@ -21,42 +21,40 @@ public class RustedDagger : TheValkyrieCard
     [SavedProperty]
     public int CurrentDamage
     {
-        get => this._currentDamage;
+        get => _currentDamage;
         set
         {
-            this.AssertMutable();
-            this._currentDamage = value;
-            this.DynamicVars.Damage.BaseValue = this._currentDamage;
+            AssertMutable();
+            _currentDamage = value;
+            DynamicVars.Damage.BaseValue = _currentDamage;
         }
     }
 
     [SavedProperty]
     public int IncreasedDamage
     {
-        get => this._increasedDamage;
+        get => _increasedDamage;
         set
         {
-            this.AssertMutable();
-            this._increasedDamage = value;
+            AssertMutable();
+            _increasedDamage = value;
         }
     }
     
     public RustedDagger() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(this.CurrentDamage);
-        WithVar("Increase", 3, 2);
+        WithDamage(CurrentDamage);
+        WithVar("Increase", 3, 1);
         WithKeyword(CardKeyword.Exhaust);
         WithTip(StaticHoverTip.Fatal);
+        WithVar("Active", 1);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         
-        bool shouldTriggerFatal = play.Target != null && play.Target.Powers.All( p => p.ShouldOwnerDeathTriggerFatal());
-        
-        AttackCommand attackCommand = await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
-        
-        if (!shouldTriggerFatal || !attackCommand.Results.SelectMany(r => r).Any(r => r.WasTargetKilled))
+        if (DynamicVars["Active"].BaseValue == 0)
             return;
         
         int intValue = DynamicVars["Increase"].IntValue;
@@ -65,17 +63,19 @@ public class RustedDagger : TheValkyrieCard
             return;
         deckVersion.BuffFromPlay(intValue);
         CardCmd.Preview(deckVersion);
+        
+        DynamicVars["Active"].BaseValue = 0;
     }
     
     private void BuffFromPlay(int extraDamage)
     {
-        this.IncreasedDamage += extraDamage;
-        this.UpdateDamage();
+        IncreasedDamage += extraDamage;
+        UpdateDamage();
     }
     
-    private void UpdateDamage() => this.CurrentDamage = 6 + this.IncreasedDamage;
+    private void UpdateDamage() => CurrentDamage = _baseDamage + IncreasedDamage;
 
     protected override void OnUpgrade() {}
     
-    protected override void AfterDowngraded() => this.UpdateDamage();
+    protected override void AfterDowngraded() => UpdateDamage();
 }

@@ -18,7 +18,7 @@ public class EagerJab : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         int hitCount = Owner.HasPower<VigorPower>() ? 2 : 1;
-        await CommonActions.CardAttack(this, play.Target, hitCount).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play, hitCount).Execute(choiceContext);
     }
 
     protected override void OnUpgrade()

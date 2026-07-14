@@ -33,6 +33,6 @@ public sealed class DominionPower : TheValkyriePower
         Creature? target = Owner.Player?.RunState.Rng.CombatTargets.NextItem(hittableEnemies);
         if (target == null) return;
         this.Flash();
-        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), target, this.Amount, ValueProp.Unpowered, Owner, null);
+        await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), target, this.Amount, ValueProp.Unpowered, Owner, null, null);
     }
 }

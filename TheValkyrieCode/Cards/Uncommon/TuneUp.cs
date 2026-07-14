@@ -16,7 +16,7 @@ public class TuneUp : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play.Target).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await PowerCmd.Apply<TuneUpPower>(choiceContext, Owner.Creature, DynamicVars["TuneUpPower"].IntValue, Owner.Creature, this);
     }
 

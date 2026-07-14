@@ -10,7 +10,7 @@ public class ChargingTarge : TheValkyrieCard
 {
     public ChargingTarge() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
-        WithDamage(5, 2);
+        WithDamage(5, 1);
         WithPower<ArmorPower>(3, 1);
     }
 

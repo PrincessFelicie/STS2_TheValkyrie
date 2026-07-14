@@ -22,7 +22,7 @@ public sealed class WrittenInBloodPower : TheValkyriePower
     }
     
     public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Counter;
+    public override PowerStackType StackType => PowerStackType.Single;
     
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
