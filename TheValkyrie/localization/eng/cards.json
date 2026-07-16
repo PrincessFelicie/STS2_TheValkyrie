@@ -180,7 +180,7 @@
   "THEVALKYRIE-OVERPREPARE.selectionScreenPrompt": "Choose a card to put at the bottom of your Draw Pile.",
 
   "THEVALKYRIE-ICARUS_COMPLEX.title": "Icarus Complex",
-  "THEVALKYRIE-ICARUS_COMPLEX.description": "Gain {IcarusComplexPower:diff()}% more [gold]Vigor[/gold].",
+  "THEVALKYRIE-ICARUS_COMPLEX.description": "Your effects gain and give {IcarusComplexPower:diff()}% more [gold]Vigor[/gold].",
 
   "THEVALKYRIE-TELEGRAPHED_SMASH.title": "Telegraphed Smash",
   "THEVALKYRIE-TELEGRAPHED_SMASH.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {PerCardDamage:diff()} additional damage for each other card in your [gold]Hand[/gold].",
@@ -195,7 +195,7 @@
   "THEVALKYRIE-ANGEL_FORM.description": "At the start of your turn, gain {AngelFormPower:diff()} [gold]Armor[/gold].\nYour [gold]Smites[/gold]'s [gold]Retain[/gold] is replaced with [gold]Ethereal[/gold].",
   
   "THEVALKYRIE-DEEPEST_CUTS.title": "Deepest Cuts",
-  "THEVALKYRIE-DEEPEST_CUTS.description": "Whenever you would apply [gold]Bleed[/gold], raise it by {DeepestCutsPower:diff()}.",
+  "THEVALKYRIE-DEEPEST_CUTS.description": "Whenever you apply [gold]Bleed[/gold], apply an additional {DeepestCutsPower:diff()} [gold]Bleed[/gold].",
 
   "THEVALKYRIE-SONG_OF_DIVINITY.title": "Song of Divinity",
   "THEVALKYRIE-SONG_OF_DIVINITY.description": "Add {Quantity:diff()} [purple]Refrain {Replay:diff()}[/purple] [gold]Smites[/gold] into your [gold]Hand[/gold].",

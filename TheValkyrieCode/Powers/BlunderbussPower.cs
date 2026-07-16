@@ -26,7 +26,9 @@ public sealed class BlunderbussPower : TheValkyriePower
     
     public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (cardPlay.Card.Owner.Creature == Owner || cardPlay.Card.Type != CardType.Attack || Owner.Player == null)
+        if (cardPlay.Card.Owner.Creature == Owner || cardPlay.Card.Type != CardType.Attack || Owner.Player == null 
+            || cardPlay.IsAutoPlay //do not trigger off autoplay cards, otherwise 2 players with blunderbuss is an infinite
+            )
             return;
         this.Flash();
         CardModel card = CombatState.CreateCard<Smite>(Owner.Player);

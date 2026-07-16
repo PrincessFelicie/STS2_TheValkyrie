@@ -11,7 +11,7 @@ public class Inquisition : TheValkyrieCard
     public Inquisition() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithTip(typeof(Smite));
-        WithTip(CustomEnum.Bless); //idk how to make the tip show up only when the card is upgraded.
+        WithTip(CustomEnum.Bless); //idk how to make the tip show up only when the card is upgraded. I believe I already tried using if IsUpgraded and it doesn't work in the base function.
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

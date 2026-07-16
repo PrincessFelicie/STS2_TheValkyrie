@@ -10,7 +10,6 @@ public class Requiem : TheValkyrieCard
 {
     public Requiem() : base(3, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
     {
-        CardModel card = this;
         WithCalculatedVar("CalculatedSmites",0, (card, _) => PileType.Exhaust.GetPile(card.Owner).Cards.Count(c => c.Tags.Contains(CustomEnum.Smite)));
         WithCalculatedVar("CalculatedEnchantedSmites",0, (card, _) => PileType.Exhaust.GetPile(card.Owner).Cards.Count(c => c.Tags.Contains(CustomEnum.Smite) && c.Enchantment != null));
         WithTip(typeof(Smite));
@@ -20,7 +19,7 @@ public class Requiem : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
+        if (play.Target == null) return;
         IEnumerable<CardModel> list = PileType.Exhaust.GetPile(Owner).Cards.Where(c => c.Tags.Contains(CustomEnum.Smite)).ToList();
         foreach (CardModel card in list)
         {

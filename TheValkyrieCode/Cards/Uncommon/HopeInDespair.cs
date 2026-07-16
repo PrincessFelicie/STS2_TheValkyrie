@@ -10,9 +10,9 @@ public class HopeInDespair : TheValkyrieCard
 {
     public HopeInDespair() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(10, 4);
+        WithBlock(10);
         WithVar("HopeInDespairPower", 1);
-        WithVar("OverexertionThreshold", 20);
+        WithVar("OverexertionThreshold", 20, -4);
         WithTip(typeof(OverexertionPower));
     }
     

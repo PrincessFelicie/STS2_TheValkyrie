@@ -126,8 +126,9 @@
   "THEVALKYRIE-TUNE_UP_POWER.smartDescription": "The next [blue]{Amount}[/blue] [gold]Retain[/gold] {Amount:plural:card|cards} you play {Amount:plural:costs|cost} [blue]0[/blue].",
 
   "THEVALKYRIE-ICARUS_COMPLEX_POWER.title": "Icarus Complex",
-  "THEVALKYRIE-ICARUS_COMPLEX_POWER.description": "Your [gold]Vigor[/gold] gains are increased.",
-  "THEVALKYRIE-ICARUS_COMPLEX_POWER.smartDescription": "Gain [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.description": "Your [gold]Vigor[/gold] effects are increased.",
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.smartDescription": "Your effects gain and give [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.remoteDescription": "This player's effects gain and give [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
 
   "THEVALKYRIE-BLUNDERBUSS_POWER.title": "Blunderbuss",
   "THEVALKYRIE-BLUNDERBUSS_POWER.description": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",

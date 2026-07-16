@@ -23,7 +23,7 @@ public class EagleDive : TheValkyrieCard
     {
         modifiedCost = originalCost;
         if (card != this) return false;
-        modifiedCost = originalCost - Owner.Creature.GetPowerAmount<OverexertionPower>()/5;
+        modifiedCost = originalCost - Math.Floor((decimal) Owner.Creature.GetPowerAmount<OverexertionPower>()/5); //the math.Floor & (decimal) aren't necessary, but they avoid the IDE whining about fraction loss
         return true;
     }
 

@@ -19,7 +19,7 @@ public class Guidance : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (play.Target == null) return;
-        await PowerCmd.Apply<VigorPower>(choiceContext, play.Target, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<VigorPower>(choiceContext, play.Target, DynamicVars["VigorPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

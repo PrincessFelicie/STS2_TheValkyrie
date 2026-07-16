@@ -9,7 +9,7 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
 public class WeightOfResponsibility : TheValkyrieCard
 {
-    //wait, doesn't the new version go crazy with Smites in the exhaust pile?
+    //wait, doesn't the new version go crazy with Smites in the exhaust pile? After testing, it *is* a lot of investment since you still need to play the song cards to generate the Smites.
     public WeightOfResponsibility() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
         WithVar("DisplayExtraDamage", 2, 1);
@@ -22,7 +22,6 @@ public class WeightOfResponsibility : TheValkyrieCard
                 return 0;
             },
             ValueProp.Move,0, 1);
-        //Honestly, that creates a monstrous card text. Maybe just give 2 damage for each enchanted card and leave it at that.
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

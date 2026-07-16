@@ -17,7 +17,7 @@ public class Confuse : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
+        if (play.Target == null) return;
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, DynamicVars["WeakPower"].IntValue, Owner.Creature, this);
     }

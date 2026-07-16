@@ -22,7 +22,7 @@ public sealed class WrittenInBloodPower : TheValkyriePower
         return new Data();
     }
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [CustomEnum.GetStaticHoverTip("Bless")];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CustomEnum.Bless)];
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Single;

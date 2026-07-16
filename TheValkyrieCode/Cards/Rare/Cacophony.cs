@@ -11,10 +11,9 @@ public class Cacophony : TheValkyrieCard
 {
     public Cacophony() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
-        CardModel card = this;
         WithCalculatedDamage(0, ( card, _) => card.Owner.Creature.GetPowerAmount<OverexertionPower>());
         WithKeyword(CardKeyword.Exhaust, UpgradeType.Remove);
-        WithTip(typeof(OverexertionPower)); //We do want the tooltip for the Bleed mechanic though
+        WithTip(typeof(OverexertionPower)); //We do want the tooltip for the Overexert mechanic though
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

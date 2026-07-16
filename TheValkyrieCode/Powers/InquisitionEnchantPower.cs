@@ -18,7 +18,7 @@ public class InquisitionEnchantPower : TheValkyriePower
         return new Data();
     }
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Smite>(), CustomEnum.GetStaticHoverTip("Bless")];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Smite>(), HoverTipFactory.FromKeyword(CustomEnum.Bless)];
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

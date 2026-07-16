@@ -17,12 +17,12 @@ public class PlumedWish : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        List<CardModel> validPiles = PileType.Draw.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList().Concat(PileType.Discard.GetPile(this.Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList()).ToList();
-        CardModel? card = (await CardSelectCmd.FromSimpleGrid(choiceContext, validPiles, this.Owner, prefs)).FirstOrDefault();
+        CardSelectorPrefs prefs = new (SelectionScreenPrompt, 1);
+        List<CardModel> validPiles = PileType.Draw.GetPile(Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList().Concat(PileType.Discard.GetPile(Owner).Cards.OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList()).ToList(); //I'm not 100% happy with this because you can't intuit that it's the draw followed by the discard. I wish it was possible to make it clearer where one pile ends and the other begins.
+        CardModel? card = (await CardSelectCmd.FromSimpleGrid(choiceContext, validPiles, Owner, prefs)).FirstOrDefault();
         if (card == null)
             return;
-        CardPileAddResult cardPileAddResult = await CardPileCmd.Add(card, PileType.Hand);
+        await CardPileCmd.Add(card, PileType.Hand);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].BaseValue, Owner.Creature, this);
     }
 
