@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Events;
 using TheValkyrie.TheValkyrieCode.Character;
 
-namespace TheValkyrie.TheValkyrieCode;
+namespace TheValkyrie.TheValkyrieCode.Patches;
 
 [HarmonyPatch]
 public class ValkyrieEventPatches

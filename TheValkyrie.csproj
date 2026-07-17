@@ -30,14 +30,16 @@
     <ItemGroup Condition="True"> <!--Allows access to originally private/protected members but may (unlikely to) cause errors.-->
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.Description"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.L10NLookup"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.Bestiary.NBestiary.AddFilter"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.3.5" PrivateAssets="All" />
+        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.3.6" PrivateAssets="All" />
         <PackageReference Include="Krafs.Publicizer" Version="2.3.0" PrivateAssets="All"/>
         <!-- Generates a .pck file when building if only using simple assets. May not work on all setups. Uncomment to test. -->
         <!-- <PackageReference Include="BSchneppe.StS2.PckPacker" Version="0.1.1" PrivateAssets="All" /> -->
         <AdditionalFiles Include="TheValkyrie/localization/**/*.json"/> <!-- Used by analyzer -->
+        <PackageReference Update="GodotSharp" Version="4.7.1" />
     </ItemGroup>
 
     <ItemGroup>
