@@ -31,6 +31,7 @@
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.Description"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.L10NLookup"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.Bestiary.NBestiary.AddFilter"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.StatsScreen.NGeneralStatsGrid.CreateCharacterSection"/>
     </ItemGroup>
 
     <ItemGroup>

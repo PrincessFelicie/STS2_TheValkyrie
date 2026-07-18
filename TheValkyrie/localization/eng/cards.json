@@ -239,7 +239,7 @@
   
   "THEVALKYRIE-SANCTIFY.title": "Sanctify",
   "THEVALKYRIE-SANCTIFY.description": "Choose a non-Power card in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Refrain {Bless:diff()}[/purple].\nReplace the current enchantment if necessary.",
-  "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose a non-Power card to [gold]Bless[/gold] with [purple]Refrain[/purple] {Bless:diff()}[/purple].",
+  "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose a non-Power card to [gold]Bless[/gold] with [purple]Refrain {Bless:diff()}[/purple].",
 
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, [gold]Transform[/gold] a non-Byrd card in your [gold]Hand[/gold] into {IfUpgraded:show:an [gold]Upgraded[/gold]|a} [gold]Byrd Card[/gold], and gain 1 [gold]Byrd Strength[/gold].",

@@ -36,7 +36,7 @@ public sealed class BleedPower : TheValkyriePower, IHasSecondAmount
 
     public override IEnumerable<HealthBarForecastSegment> GetHealthBarForecastSegments(HealthBarForecastContext context)
     {
-        return [new HealthBarForecastSegment(Amount, Color.FromHtml("#890000"), HealthBarForecastDirection.FromRight)];
+        return [new HealthBarForecastSegment(Amount, Color.FromHtml("#890000"), HealthBarForecastDirection.FromRight, 0, null, AffectsHpLabel:false)];
     }
     
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)

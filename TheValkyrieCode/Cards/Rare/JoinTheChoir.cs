@@ -32,7 +32,7 @@ public class JoinTheChoir : TheValkyrieCard
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         
         EnchantmentModel enchantment = ModelDb.Enchantment<Refrain>();
-        foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature).Where(c => c.IsAlive && c.IsPlayer))
+        foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature).Where(c => c.IsAlive && c.IsPlayer && c!= Owner.Creature))
         {
             Player teammate = creature.Player ?? throw new InvalidOperationException();
             if (!PileType.Hand.GetPile(teammate).Cards.Where(enchantment.CanEnchant).Any())
