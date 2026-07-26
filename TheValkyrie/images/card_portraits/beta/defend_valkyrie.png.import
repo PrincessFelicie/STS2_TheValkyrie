@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brnthse36efto"
-path="res://.godot/imported/smite.png-890f895eb49a5af5ce30557687c1b5a7.ctex"
+uid="uid://dg4qarhdnq3jt"
+path="res://.godot/imported/defend_valkyrie.png-f5b4167dc635cf9aef58f49c92b7e0a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheValkyrie/images/card_portraits/big/smite.png"
-dest_files=["res://.godot/imported/smite.png-890f895eb49a5af5ce30557687c1b5a7.ctex"]
+source_file="res://TheValkyrie/images/card_portraits/beta/defend_valkyrie.png"
+dest_files=["res://.godot/imported/defend_valkyrie.png-f5b4167dc635cf9aef58f49c92b7e0a9.ctex"]
 
 [params]
 
