@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using TheValkyrie.TheValkyrieCode.Powers;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Token;
 

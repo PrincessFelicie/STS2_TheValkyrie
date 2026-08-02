@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 
 namespace TheValkyrie.TheValkyrieCode.Powers;

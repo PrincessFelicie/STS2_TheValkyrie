@@ -6,4 +6,6 @@ namespace TheValkyrie.TheValkyrieCode.ModConfiguration;
 public class ValkyrieModConfig : SimpleModConfig
 {
     public static bool MysticLighterNerf { get; set; } = true;
+    
+    public static bool FunnyContent { get; set; } = true;
 }

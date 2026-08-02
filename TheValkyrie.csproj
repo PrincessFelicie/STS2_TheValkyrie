@@ -32,10 +32,11 @@
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Models.EventModel.L10NLookup"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.Bestiary.NBestiary.AddFilter"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.StatsScreen.NGeneralStatsGrid.CreateCharacterSection"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Relics.NRelic.Reload"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.3.8" PrivateAssets="All" />
+        <PackageReference Include="Alchyr.Sts2.BaseLib" Version="3.4.0" PrivateAssets="All" />
         <PackageReference Include="Krafs.Publicizer" Version="2.3.1" PrivateAssets="All" />
         <!-- Generates a .pck file when building if only using simple assets. May not work on all setups. Uncomment to test. -->
         <!-- <PackageReference Include="BSchneppe.StS2.PckPacker" Version="0.1.1" PrivateAssets="All" /> -->
@@ -66,6 +67,7 @@
         <Folder Include="TheValkyrie\images\card_portraits\big\"/>
         <Folder Include="TheValkyrie\images\character\" />
         <Folder Include="TheValkyrie\images\enchantments\" />
+        <Folder Include="TheValkyrie\images\events\" />
         <Folder Include="TheValkyrie\images\potions\" />
         <Folder Include="TheValkyrie\images\relics\big\"/>
         <Folder Include="TheValkyrie\images\ui\rest_site\" />

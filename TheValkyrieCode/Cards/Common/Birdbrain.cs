@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Cards;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Common;
 
@@ -12,20 +13,23 @@ public class Birdbrain : TheValkyrieCard
     public Birdbrain() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithTip(CardKeyword.Exhaust);
+        WithUpgradingCardTip<ByrdSwoop>();
     }
+    
+    protected override bool ShouldGlowRedInternal => !PileType.Hand.GetPile(Owner).Cards.Except([this]).Any();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new (CardSelectorPrefs.ExhaustSelectionPrompt, 1);
-        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
-        if (card == null) return;
-        await CardCmd.Exhaust(choiceContext, card);
-        CardModel? card2 = CardFactory.GetDistinctForCombat(Owner, Owner.Character.CardPool.GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint), 1, Owner.RunState.Rng.CombatCardGeneration).FirstOrDefault();
-        if (card2 == null) return;
+        CardModel? exhaustedCard = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
+        if (exhaustedCard == null) return;
+        await CardCmd.Exhaust(choiceContext, exhaustedCard);
+        if (CombatState == null) return;
+        CardModel createdCard = CombatState.CreateCard<ByrdSwoop>(Owner);
         if (this.IsUpgraded)
-            CardCmd.Upgrade(card2);
-        card2.EnergyCost.AddThisTurnOrUntilPlayed(-1, true);
-        await CardPileCmd.AddGeneratedCardToCombat(card2, PileType.Hand, Owner);
+            CardCmd.Upgrade(createdCard);
+        await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Discard, Owner);
+        CardCmd.Preview(createdCard);
     }
 
     protected override void OnUpgrade()

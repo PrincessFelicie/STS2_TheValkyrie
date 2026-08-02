@@ -12,8 +12,8 @@ public class TerritorialInstincts : TheValkyrieCard
     public TerritorialInstincts() : base(3, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithVar("TerritorialPurposePower", 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
-        WithTip(typeof(Peck));
-        WithTip(typeof(ByrdSwoop));
+        WithUpgradingCardTip<Peck>();
+        WithUpgradingCardTip<ByrdSwoop>();
         WithTip(typeof(ByrdStrengthPower));
     }
     

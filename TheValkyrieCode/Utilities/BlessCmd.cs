@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
 using TheValkyrie.TheValkyrieCode.Enchantments;
 
-namespace TheValkyrie.TheValkyrieCode;
+namespace TheValkyrie.TheValkyrieCode.Utilities;
 
 public class BlessCmd
 {
@@ -68,5 +68,11 @@ public class BlessCmd
         CardModel card)
     {
         return (card.Enchantment == null || card.Enchantment.ShowAmount) && card.Type is not (CardType.Curse or CardType.Status or CardType.Quest);
+    }
+    
+    public static bool CanBlessOrReplaceEnchantment(
+        CardModel card)
+    {
+        return card.Type is not (CardType.Curse or CardType.Status or CardType.Quest);
     }
 }

@@ -66,7 +66,7 @@
   "THEVALKYRIE-DEEP_BREATH.description": "Gain {Block:diff()} [gold]Block[/gold].\nRemove up to {OverexertionRemove:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-BIRDBRAIN.title": "Birdbrain",
-  "THEVALKYRIE-BIRDBRAIN.description": "[gold]Exhaust[/gold] 1 card.\nAdd a random {IfUpgraded:show:[gold]Upgraded[/gold] }card into your [gold]Hand[/gold]. It costs 1 {energyPrefix:energyIcons(1)} less this turn.",
+  "THEVALKYRIE-BIRDBRAIN.description": "[gold]Exhaust[/gold] 1 card to add a [gold]{IfUpgraded:show:Byrd Swoop+|Byrd Swoop}[/gold] into your [gold]Discard Pile[/gold].",
 
   "THEVALKYRIE-PREPARE_SERMON.title": "Prepare Sermon",
   "THEVALKYRIE-PREPARE_SERMON.description": "If you have no [gold]Smites[/gold] in your [gold]Hand[/gold], add {Quantity:diff()} [gold]Smites[/gold] into your hand.",
@@ -129,7 +129,7 @@
   "THEVALKYRIE-CRESCENDO_STRIKE.description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, [gold]Bless[/gold] it{IfUpgraded:show: twice|}.",
 
   "THEVALKYRIE-LOSE_YOURSELF.title": "Lose Yourself",
-  "THEVALKYRIE-LOSE_YOURSELF.description": "If you have 10 or more [gold]Overexertion[/gold], Apply {BleedPower:diff()} [gold]Bleed[/gold].\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-LOSE_YOURSELF.description": "If you have 10 or more [gold]Overexertion[/gold], [gold]Exhaust[/gold] this card, gain {ByrdStrengthPower:diff()} [gold]Byrd Strength[/gold] and add a [gold]{IfUpgraded:show:Peck+|Peck}[/gold] into your [gold]Hand[/gold].\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-POLISH.title": "Polish",
   "THEVALKYRIE-POLISH.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].",
@@ -186,7 +186,7 @@
   "THEVALKYRIE-TELEGRAPHED_SMASH.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {PerCardDamage:diff()} additional damage for each other card in your [gold]Hand[/gold].",
 
   "THEVALKYRIE-EAGER_JAB.title": "Eager Jab",
-  "THEVALKYRIE-EAGER_JAB.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Vigor[/gold], hits twice.",
+  "THEVALKYRIE-EAGER_JAB.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Vigor[/gold], hits {Times:diff()} times.",
 
 
 

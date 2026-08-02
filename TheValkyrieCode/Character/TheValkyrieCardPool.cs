@@ -28,7 +28,7 @@ public class TheValkyrieCardPool : CustomCardPoolModel
     }*/
 
     //Color of small card icons
-    public override Color DeckEntryCardColor => new("ffffff");
+    public override Color DeckEntryCardColor => new("923c00");
 
     public override bool IsColorless => false;
 }

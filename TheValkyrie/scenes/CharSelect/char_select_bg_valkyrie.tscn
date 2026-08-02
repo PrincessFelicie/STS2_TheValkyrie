@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dl0ywq4y4epi1"]
+[gd_scene load_steps=12 format=3 uid="uid://dl0ywq4y4epi1"]
 
 [ext_resource type="Texture2D" uid="uid://w8rs6vqm8oeu" path="res://TheValkyrie/images/charui/char_select_screen_assets/background.png" id="1_ujv2k"]
 [ext_resource type="Texture2D" uid="uid://d4n2581kw24qw" path="res://TheValkyrie/images/charui/char_select_screen_assets/valkyrie_ultra_placeholder.png" id="2_n2en3"]
 [ext_resource type="Texture2D" uid="uid://djul5ql3j7bho" path="res://TheValkyrie/images/charui/char_select_screen_assets/particle_placeholder.png" id="3_patf8"]
+[ext_resource type="Texture2D" uid="uid://cknlifm7xg7gy" path="res://TheValkyrie/images/charui/char_select_screen_assets/valkyrie_arm.png" id="4_patf8"]
+[ext_resource type="Texture2D" uid="uid://bhsb7mce41052" path="res://TheValkyrie/images/charui/char_select_screen_assets/valkyrie_pauldron.png" id="5_2otcq"]
 
 [sub_resource type="Animation" id="Animation_u0swe"]
 length = 0.001
@@ -17,6 +19,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(988, 622.00006)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arm:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_2otcq"]
@@ -35,6 +61,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1488, 625), Vector2(1664.15, 675), Vector2(1750, 650), Vector2(1583.333, 625), Vector2(1250, 675), Vector2(1369, 625), Vector2(1427.492, 675)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arm:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 2.181661564992912, -0.17453292519943295, 2.181661564992912, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arm:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gvp5s"]
 _data = {
@@ -49,7 +99,7 @@ animation = &"idle"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_patf8"]
-states/End/position = Vector2(588, 100)
+states/End/position = Vector2(589, 100)
 states/Start/position = Vector2(223, 100)
 states/idle/node = SubResource("AnimationNodeAnimation_ujv2k")
 states/idle/position = Vector2(407, 100)
@@ -103,6 +153,7 @@ angle_min = 235.0
 angle_max = 305.0
 scale_amount_min = 0.1
 scale_amount_max = 0.4
+color = Color(0, 0.1882353, 0.57254905, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D/Valkyrie"]
 libraries = {
@@ -112,3 +163,12 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="Node2D/Valkyrie"]
 tree_root = SubResource("AnimationNodeStateMachine_patf8")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="Arm" type="Sprite2D" parent="Node2D/Valkyrie"]
+position = Vector2(274, -74.00006)
+texture = ExtResource("4_patf8")
+offset = Vector2(200, 50)
+
+[node name="Pauldron" type="Sprite2D" parent="Node2D/Valkyrie"]
+position = Vector2(220, -107.00006)
+texture = ExtResource("5_2otcq")

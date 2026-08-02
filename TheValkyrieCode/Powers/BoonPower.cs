@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 
 namespace TheValkyrie.TheValkyrieCode.Powers;

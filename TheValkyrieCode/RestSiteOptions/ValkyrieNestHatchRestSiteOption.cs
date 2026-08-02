@@ -52,6 +52,7 @@ public class ValkyrieNestHatchRestSiteOption(Player owner): CustomRestSiteOption
         {
             await RelicCmd.Obtain<BlueByrdpip>(Owner);
         }
+        relic.Flash();
         return await Task.FromResult(true);
     }
     

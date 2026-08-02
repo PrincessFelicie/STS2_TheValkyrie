@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Enchantments;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
@@ -26,7 +27,7 @@ public class Sanctify : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new (SelectionScreenPrompt, 1);
-        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(Owner).Cards.Where(c => BlessCmd.CanBless(c) && c.Type != CardType.Power).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), Owner, prefs)).ToList())
+        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(Owner).Cards.Where(c => BlessCmd.CanBlessOrReplaceEnchantment(c) && c.Type != CardType.Power).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), Owner, prefs)).ToList())
         {
             if (card.Enchantment is not Refrain)
                 CardCmd.ClearEnchantment(card); //returns and does nothing if there's no enchantment, so no filter necessary

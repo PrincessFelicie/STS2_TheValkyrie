@@ -1,6 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://dmfq3l5sx4pgt"]
+[gd_scene load_steps=34 format=3 uid="uid://cev5pc41gjh5m"]
 
-[ext_resource type="Texture2D" uid="uid://c3bvduanvcywv" path="res://TheValkyrie/scenes/combat/creature_visuals/the_valkyrie_temp.png" id="1_q3wy6"]
+[ext_resource type="Texture2D" uid="uid://c3bvduanvcywv" path="res://TheValkyrie/scenes/combat/creature_visuals/the_valkyrie_temp.png" id="1_7vfqv"]
 
 [sub_resource type="Animation" id="Animation_f18xl"]
 length = 0.001
@@ -451,7 +451,7 @@ unique_name_in_owner = true
 [node name="PlaceholderSprite" type="Sprite2D" parent="Visuals"]
 position = Vector2(0, -133)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("1_q3wy6")
+texture = ExtResource("1_7vfqv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals"]
 root_node = NodePath("../..")

@@ -10,7 +10,8 @@ public class EagerJab : TheValkyrieCard
 {
     public EagerJab() : base(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(3, 2);
+        WithDamage(4);
+        WithVar("Times", 2, 1);
         WithTip(typeof(VigorPower));
     }
     
@@ -18,7 +19,7 @@ public class EagerJab : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        int hitCount = Owner.HasPower<VigorPower>() ? 2 : 1;
+        int hitCount = Owner.HasPower<VigorPower>() ? DynamicVars["Times"].IntValue : 1;
         await CommonActions.CardAttack(this, play, hitCount).Execute(choiceContext);
     }
 
