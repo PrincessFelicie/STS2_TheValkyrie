@@ -14,7 +14,7 @@ using TheValkyrie.TheValkyrieCode.ModConfiguration;
 
 namespace TheValkyrie.TheValkyrieCode.Events;
 
-public class ManEggTree: CustomEventModel
+public class ManEggTree() : CustomEventModel
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new HealVar(10)
@@ -28,7 +28,8 @@ public class ManEggTree: CustomEventModel
 
     public override bool IsAllowed(IRunState runState)
     {
-        return ValkyrieModConfig.FunnyContent && this.Rng.NextInt(0, 100) == 66;
+        if (!ValkyrieModConfig.FunnyContent) return false;
+        return runState.Rng.Niche.NextInt(0, 100) == 66;
     }
 
     public override ActModel[] Acts =>
