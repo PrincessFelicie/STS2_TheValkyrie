@@ -1,0 +1,11 @@
+{
+  "THEVALKYRIE.mod_title": "La Valkyrie",
+  
+  "THEVALKYRIE-MYSTIC_LIGHTER_NERF.title": "Nerf du Briquet Mystique (+9 dégâts -> +6 dégâts) [red](Redémarrage nécessaire)[/red]",
+  "THEVALKYRIE-MYSTIC_LIGHTER_NERF.hover.title": "Nerf du Briquet Mystique",
+  "THEVALKYRIE-MYSTIC_LIGHTER_NERF.hover.desc": "Le Briquet Mystique est une relique du jeu de base qui augmente les dégâts de toutes les attaques envoûtées par 9.\nÀ cause du nombre conséquent de sources d'envoûtements apportées par ce personnage, le Briquet Mystique est nerfé par défaut. Décochez pour remettre sa valeur de base en place.\n[red]En Multijoueur, tous les joueurs doivent avoir ce paramètre synchronisé pour éviter les divergences de jeu.[/red]",
+
+  "THEVALKYRIE-FUNNY_CONTENT.title": "Tour Dévastée",
+  "THEVALKYRIE-FUNNY_CONTENT.hover.title": "Tour Dévasté",
+  "THEVALKYRIE-FUNNY_CONTENT.hover.desc": "Déchaîne du contenu étrange et loufoque. Pas pour les faibles d'âme ni les sérieux d'esprit.\n(N'ajoute actuellement qu'un seul événement.)\n[red]En Multijoueur, tous les joueurs doivent avoir ce paramètre synchronisé pour éviter les divergences de jeu.[/red]"
+}

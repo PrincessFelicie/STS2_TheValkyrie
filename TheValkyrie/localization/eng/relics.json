@@ -1,14 +1,14 @@
 {
   "THEVALKYRIE-BOOK_OF_FAITH.title": "Book of Faith",
-  "THEVALKYRIE-BOOK_OF_FAITH.description": "At the start of each combat, add 3 [gold]Smites[/gold] into your [gold]Hand[/gold].",
+  "THEVALKYRIE-BOOK_OF_FAITH.description": "At the start of each combat, add [blue]3[/blue] [gold]Smites[/gold] into your [gold]Hand[/gold].",
   "THEVALKYRIE-BOOK_OF_FAITH.flavor": "It hums with latent energy.",
 
   "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.title": "Book of Ornithology",
-  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.description": "At the start of each combat, add 3 [gold]Upgraded Smites[/gold] into your [gold]Hand[/gold].\nYour [gold]Smites[/gold] deal +2 damage.",
+  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.description": "At the start of each combat, add [blue]3[/blue] [gold]Upgraded Smites[/gold] into your [gold]Hand[/gold].\nYour [gold]Smites[/gold] deal [blue]2[/blue] additional damage.",
   "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.flavor": "Its true visage has been revealed!",
 
   "THEVALKYRIE-FEATHERED_HELMET.title": "Feathered Helmet",
-  "THEVALKYRIE-FEATHERED_HELMET.description": "Start each combat with 1 [gold]Armor[/gold].",
+  "THEVALKYRIE-FEATHERED_HELMET.description": "Start each combat with [blue]1[/blue] [gold]Armor[/gold].",
   "THEVALKYRIE-FEATHERED_HELMET.flavor": "Mazaleth's cultists typically aren't warriors, but there are always exceptions. Though you're not a cultist, are you...?",
 
   "THEVALKYRIE-MYSTIC_MATCHBOX.title": "Mystic Matchbox",
@@ -32,7 +32,7 @@
   "THEVALKYRIE-A_LYRICS_SHEET.flavor": "Inspiration struck!",
 
   "THEVALKYRIE-BYRD_NEST.title": "Byrd Nest",
-  "THEVALKYRIE-BYRD_NEST.description": "You may [gold]Hatch from the Nest[/gold] at Rest Sites. ([blue]3[/blue] times max)",
+  "THEVALKYRIE-BYRD_NEST.description": "You may [gold]Hatch from the Nest[/gold] at [gold]Rest Sites[/gold]. ([blue]3[/blue] times max)",
   "THEVALKYRIE-BYRD_NEST.flavor": "You are overcome with the will to protect.",
 
   "THEVALKYRIE-YELLOW_BYRDPIP.title": "Yellow Byrdpip",
@@ -40,12 +40,12 @@
   "THEVALKYRIE-YELLOW_BYRDPIP.flavor": "He is fiercely defensive of his shinies. He feels like a Leslio.",
 
   "THEVALKYRIE-RED_BYRDPIP.title": "Red Byrdpip",
-  "THEVALKYRIE-RED_BYRDPIP.description": "Upon pickup, gain the card [gold]Peck[/gold]. Start every fight with 2 [gold]Byrd Strength[/gold]. Another [gold]Byrdpip[/gold] will accompany you in battles.",
+  "THEVALKYRIE-RED_BYRDPIP.description": "Upon pickup, gain the card [gold]Peck[/gold]. Start every fight with [blue]2[/blue] [gold]Byrd Strength[/gold]. Another [gold]Byrdpip[/gold] will accompany you in battles.",
   "THEVALKYRIE-RED_BYRDPIP.flavor": "He has taken the role of leader of the group. He's giving you Hecry vibes.",
 
   "THEVALKYRIE-BLUE_BYRDPIP.title": "Blue Byrdpip",
-  "THEVALKYRIE-BLUE_BYRDPIP.description": "Start every fight with an Upgraded [gold]Abnormal Instincts[/gold] in your hand. Your [gold]Abnormal Instincts[/gold] cards cost 1 less. A third [gold]Byrdpip[/gold] will accompany you in battles.",
-  "THEVALKYRIE-BLUE_BYRDPIP.flavor": "This one is particularly chipper! He's obviously named Dimien.",
+  "THEVALKYRIE-BLUE_BYRDPIP.description": "At the start of each combat, add an Upgraded [gold]Abnormal Instincts[/gold] into your [gold]Hand[/gold]. Your [gold]Abnormal Instincts[/gold] cards cost 1 less. A third [gold]Byrdpip[/gold] will accompany you in battles.",
+  "THEVALKYRIE-BLUE_BYRDPIP.flavor": "That one craves attention! He's obviously named Dimien.",
 
   "THEVALKYRIE-ARIA_OF_WIND.title": "Aria of Wind",
   "THEVALKYRIE-ARIA_OF_WIND.description": "At the start of each combat, [gold]Bless[/gold] your starting hand.",

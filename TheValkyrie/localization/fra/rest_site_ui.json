@@ -1,0 +1,4 @@
+{
+  "OPTION_VALKYRIE_NEST_HATCH.description": "Fait éclore l'oeuf numéro {EggNumber} du nid. ({HatchesLeft} restant)",
+  "OPTION_VALKYRIE_NEST_HATCH.name": "Éclosion du nid"
+}
