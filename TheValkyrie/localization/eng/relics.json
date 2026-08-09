@@ -16,7 +16,7 @@
   "THEVALKYRIE-MYSTIC_MATCHBOX.flavor": "Proper lighters are rare down there.",
 
   "THEVALKYRIE-BLOODIED_TITHE.title": "Bloodied Tithe",
-  "THEVALKYRIE-BLOODIED_TITHE.description": "Whenever you apply [gold]Bleed[/gold] on an enemy with no [gold]Bleed[/gold], apply an additional [blue]{BleedPower}[/blue] [gold]Bleed[/gold].",
+  "THEVALKYRIE-BLOODIED_TITHE.description": "Whenever you apply [gold]Gash[/gold] on an enemy with no [gold]Gash[/gold], apply an additional [blue]{BleedPower}[/blue] [gold]Gash[/gold].",
   "THEVALKYRIE-BLOODIED_TITHE.flavor": "All must pay the price.",
 
   "THEVALKYRIE-FISHING_HOOK.title": "Fishing Hook",

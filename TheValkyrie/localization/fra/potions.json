@@ -1,0 +1,10 @@
+{
+  "THEVALKYRIE-BOTTLED_ECHO.title": "Écho en bouteille",
+  "THEVALKYRIE-BOTTLED_ECHO.description": "Infligez [blue]{Damage}[/blue] dégâts. [gold]Fatigue[/gold] [blue]{OverexertionPower}[/blue].",
+  
+  "THEVALKYRIE-ENCHANTED_POLISH.title": "Cire enchantée",
+  "THEVALKYRIE-ENCHANTED_POLISH.description": "Gagnez [blue]{ArmorPower}[/blue] de [gold]Protection[/gold].",
+
+  "THEVALKYRIE-GLASS_GRENADE.title": "Grenade en verre",
+  "THEVALKYRIE-GLASS_GRENADE.description": "Appliquez [blue]{BleedPower}[/blue] de [gold]Saignée[/gold] [blue]{Times}[/blue] fois."
+}

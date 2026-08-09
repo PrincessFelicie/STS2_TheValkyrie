@@ -1,0 +1,12 @@
+{
+  "THEVALKYRIE-REFRAIN.title": "Refrain",
+  "THEVALKYRIE-REFRAIN.description": "Cette carte reçoit [gold]Écho[/gold] [blue]{Amount}[/blue].",
+
+  "THEVALKYRIE-SANGUINE.title": "Sanglant",
+  "THEVALKYRIE-SANGUINE.description": "Appliquez [blue]{Amount}[/blue] de [gold]Saignée[/gold].",
+  "THEVALKYRIE-SANGUINE.extraCardText": "Appliquez {Amount} de [gold]Saignée[/gold]{TargetType:choose(AllEnemies): à TOUS les ennemis|}{TargetType:choose(RandomEnemy): à un ennemi aléatoire|}.",
+
+  "THEVALKYRIE-AEGIS.title": "Égide",
+  "THEVALKYRIE-AEGIS.description": "Gagnez [blue]{Amount}[/blue] de [gold]Protection[/gold] ce tour ci.",
+  "THEVALKYRIE-AEGIS.extraCardText": "Gagnez {Amount} de [gold]Protection[/gold] ce tour ci."
+}

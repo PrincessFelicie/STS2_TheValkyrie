@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Potions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -24,7 +25,12 @@ public sealed class BottledEcho : TheValkyriePotion
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(25, ValueProp.Unpowered),
-        new DynamicVar("OverexertionPower", 10)
+        new PowerVar<OverexertionPower>(10)
+    ];
+    
+    public override IEnumerable<IHoverTip> ExtraHoverTips => 
+    [
+        HoverTipFactory.FromPower<OverexertionPower>(10)
     ];
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)

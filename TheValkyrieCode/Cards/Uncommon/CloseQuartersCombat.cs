@@ -1,3 +1,4 @@
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
@@ -8,19 +9,18 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
 public class CloseQuartersCombat : TheValkyrieCard
 {
-    public CloseQuartersCombat() : base(0, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+    public CloseQuartersCombat() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVar("CloseQuartersCombatPower", 1);
+        WithVar("CloseQuartersCombatPower", 25, 15);
         WithTip(typeof(OverexertionPower));
-        WithTip(typeof(VulnerablePower));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CloseQuartersCombatPower? power = await PowerCmd.Apply<CloseQuartersCombatPower>(choiceContext, Owner.Creature, DynamicVars["CloseQuartersCombatPower"].IntValue, Owner.Creature, this);
         if (power == null) return;
-        if (this.IsUpgraded)
-            power.DynamicVars["IsUpgraded"].BaseValue = 1;
+        power.DynamicVars["OverexertMult"].BaseValue *= 2;
+        power.InvokeSecondAmountChanged();
     }
 
     protected override void OnUpgrade()

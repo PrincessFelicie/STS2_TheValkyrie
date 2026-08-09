@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Potions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Extensions;
@@ -20,9 +21,11 @@ public sealed class EnchantedPolish : TheValkyriePotion
     
     public override string CustomPackedImagePath => "/potions/enchanted_polish.png".ImagePath();
 
-    protected override IEnumerable<DynamicVar> CanonicalVars =>
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ArmorPower>(3)];
+    
+    public override IEnumerable<IHoverTip> ExtraHoverTips => 
     [
-        new DynamicVar("ArmorPower", 3)
+        HoverTipFactory.FromPower<ArmorPower>(3)
     ];
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)

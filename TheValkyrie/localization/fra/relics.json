@@ -1,49 +1,49 @@
 {
-  "THEVALKYRIE-BOOK_OF_FAITH.title": "Tome Religieux",
+  "THEVALKYRIE-BOOK_OF_FAITH.title": "Tome religieux",
   "THEVALKYRIE-BOOK_OF_FAITH.description": "Au début de chaque combat, ajoutez 3 [gold]Rossées[/gold] à votre [gold]Main[/gold].",
   "THEVALKYRIE-BOOK_OF_FAITH.flavor": "Il résonne d'énergie latente.",
 
-  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.title": "Tome d'Ornithologie",
+  "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.title": "Tome d'ornithologie",
   "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.description": "Au début de chaque combat, ajoutez 3 [gold]Rossées Améliorés[/gold] à votre [gold]Main[/gold].\nVos [gold]Rossées[/gold] infligent [blue]2[/blue] dégâts supplémentaires.",
   "THEVALKYRIE-BOOK_OF_ORNITHOLOGY.flavor": "Son vrai visage, enfin révélé!",
 
-  "THEVALKYRIE-FEATHERED_HELMET.title": "Casque Plumé",
+  "THEVALKYRIE-FEATHERED_HELMET.title": "Casque plumé",
   "THEVALKYRIE-FEATHERED_HELMET.description": "Démarrez chaque combat avec [blue]1[/blue] de [gold]Protection[/gold].",
   "THEVALKYRIE-FEATHERED_HELMET.flavor": "Les cultistes de Mazaleth ne sont généralement pas des guerriers, mais il y a toujours des exceptions. Mais vous n'êtes certainement pas une cultiste, de toute manière...?",
 
-  "THEVALKYRIE-MYSTIC_MATCHBOX.title": "Boîte d'Allumettes Mystique",
+  "THEVALKYRIE-MYSTIC_MATCHBOX.title": "Boîte d'allumettes mystique",
   "THEVALKYRIE-MYSTIC_MATCHBOX.description": "Les Attaques [purple]Envoûtées[/purple] infligent [blue]{Damage}[/blue] dégâts supplémentaires.\nLes cartes [purple]Envoûtées[/purple] confèrent [blue]{Block}[/blue] d'[gold]Armure[/gold] supplémentaire.",
   "THEVALKYRIE-MYSTIC_MATCHBOX.flavor": "Les briquets se font rare ici bas.",
 
-  "THEVALKYRIE-BLOODIED_TITHE.title": "Dîme Ensanglantée",
+  "THEVALKYRIE-BLOODIED_TITHE.title": "Dîme ensanglantée",
   "THEVALKYRIE-BLOODIED_TITHE.description": "Lorsque vous appliquez de la [gold]Saignée[/gold] sur un ennemi sans [gold]Saignée[/gold], appliquez [blue]{BleedPower}[/blue] de [gold]Saignée[/gold] en plus.",
   "THEVALKYRIE-BLOODIED_TITHE.flavor": "Tous doivent payer le prix.",
 
   "THEVALKYRIE-FISHING_HOOK.title": "Hameçon",
-  "THEVALKYRIE-FISHING_HOOK.description": "Lorsque vous obtenez cette relique, [gold]Envoûtez[/gold] jusqu'à [blue]{Cards}[/blue] Attaques avec [purple]Saignant[/purple] [blue]{SanguineAmount:diff()}[/blue].",
+  "THEVALKYRIE-FISHING_HOOK.description": "Lorsque vous obtenez cette relique, [gold]Envoûtez[/gold] jusqu'à [blue]{Cards}[/blue] Attaques avec [purple]Sanglant[/purple] [blue]{SanguineAmount:diff()}[/blue].",
   "THEVALKYRIE-FISHING_HOOK.flavor": "Cela vous rappelle des souvenirs d'algues séchées.",
 
-  "THEVALKYRIE-CRUDE_IDOL.title": "Idole Rudimentaire",
-  "THEVALKYRIE-CRUDE_IDOL.description": "À la fin de votre tour, perdez la moitié de votre [gold]Exténuation[/gold], arrondi au chiffre supérieur.",
-  "THEVALKYRIE-CRUDE_IDOL.flavor": "An handmade effigy of Mazaleth, encouraging its believers to reach for the sky.",
+  "THEVALKYRIE-CRUDE_IDOL.title": "Idole rudimentaire",
+  "THEVALKYRIE-CRUDE_IDOL.description": "À la fin de votre tour, perdez la moitié de votre [gold]Fatigue[/gold], arrondi au chiffre supérieur.",
+  "THEVALKYRIE-CRUDE_IDOL.flavor": "Une statuette de Mazaleth, un symbole encourageant ses disciples de s'envoler haut.",
 
-  "THEVALKYRIE-A_LYRICS_SHEET.title": "Manuscript de Chœur",
+  "THEVALKYRIE-A_LYRICS_SHEET.title": "Manuscript de chœur",
   "THEVALKYRIE-A_LYRICS_SHEET.description": "Lorsque vous obtenez cette relique, [gold]Bénissez[/gold] une carte.",
   "THEVALKYRIE-A_LYRICS_SHEET.flavor": "L'inspiration a frappé!",
 
-  "THEVALKYRIE-BYRD_NEST.title": "Nid d'Oizo",
+  "THEVALKYRIE-BYRD_NEST.title": "Nid d'oizo",
   "THEVALKYRIE-BYRD_NEST.description": "Vous pouvez faire [gold]Éclore du nid[/gold] aux [gold]Sites de repos[/gold]. ([blue]3[/blue] fois maximum)",
   "THEVALKYRIE-BYRD_NEST.flavor": "Vous vous sentez happé par le désir de le protéger.",
 
-  "THEVALKYRIE-YELLOW_BYRDPIP.title": "Oizillon Jaune",
+  "THEVALKYRIE-YELLOW_BYRDPIP.title": "Oizillon jaune",
   "THEVALKYRIE-YELLOW_BYRDPIP.description": "Lorsque vous obtenez cette relique, obtenez la carte [gold]Piqué d'Oizo[/gold]. Un [gold]Oizillon[/gold] vous accompagnera en combat.",
   "THEVALKYRIE-YELLOW_BYRDPIP.flavor": "Il protège férocement ses trucs qui brillent. Vous désirez l'appeler Leslio.",
 
-  "THEVALKYRIE-RED_BYRDPIP.title": "Oizillon Rouge",
+  "THEVALKYRIE-RED_BYRDPIP.title": "Oizillon rouge",
   "THEVALKYRIE-RED_BYRDPIP.description": "Lorsque vous obtenez cette relique, obtenez la carte [gold]Picpic[/gold]. Démarrez chaque combat avec [blue]2[/blue] de [gold]Force d'Oizo[/gold]. Un autre [gold]Oizillon[/gold] vous accompagnera en combat.",
   "THEVALKYRIE-RED_BYRDPIP.flavor": "Il a pris le rôle de meneur de troupe. Il vous fait ressentir... Hecry.",
 
-  "THEVALKYRIE-BLUE_BYRDPIP.title": "Oizillon Bleu",
+  "THEVALKYRIE-BLUE_BYRDPIP.title": "Oizillon bleu",
   "THEVALKYRIE-BLUE_BYRDPIP.description": "Au début de chaque combat, ajoutez un [gold]Instincts Anormaux Amélioré[/gold] à votre [gold]Main[/gold]. Vos cartes [gold]Instincts anormaux[/gold] coûtent 1 Énergie de moins. Un troisième [gold]Oizillon[/gold] vous accompagnera en combat.",
   "THEVALKYRIE-BLUE_BYRDPIP.flavor": "Celui là veut de l'attention! Clairement un Dimien.",
 

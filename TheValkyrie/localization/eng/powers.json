@@ -1,7 +1,7 @@
 {
-  "THEVALKYRIE-BLEED_POWER.title": "Bleed",
-  "THEVALKYRIE-BLEED_POWER.description": "Bleeding creatures lose HP every time Bleed is applied. At the end of the turn, Bleed decays by 1 for every time Bleed was applied this turn.",
-  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Bleed is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.\n{Decay:Will decay by [blue]{}[/blue] this turn.|No decay: Bleed has not been applied this turn.} ",
+  "THEVALKYRIE-BLEED_POWER.title": "Gash",
+  "THEVALKYRIE-BLEED_POWER.description": "Affected creatures lose HP every time Gash is applied. At the end of the turn, Gash decays by 1 for every time Gash was applied this turn.",
+  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Gash is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.\n{Decay:Will decay by [blue]{}[/blue] this turn.|No decay: Gash has not been applied this turn.} ",
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
   "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you take unblocked damage this turn.",
@@ -20,8 +20,8 @@
   "THEVALKYRIE-BURN_BRIGHT_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
 
   "THEVALKYRIE-DEEPEST_CUTS_POWER.title": "Deepest Cuts",
-  "THEVALKYRIE-DEEPEST_CUTS_POWER.description": "Apply more [gold]Bleed[/gold] with every [gold]Bleed[/gold].",
-  "THEVALKYRIE-DEEPEST_CUTS_POWER.smartDescription": "Whenever you apply [gold]Bleed[/gold], apply an additional [blue]{Amount}[/blue] [gold]Bleed[/gold].",
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.description": "Apply more [gold]Gash[/gold] with every [gold]Gash[/gold].",
+  "THEVALKYRIE-DEEPEST_CUTS_POWER.smartDescription": "Whenever you apply [gold]Gash[/gold], apply an additional [blue]{Amount}[/blue] [gold]Gash[/gold].",
 
   "THEVALKYRIE-BALANCED_STRIKE_POWER.title": "Balanced Advance",
   "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Prevent the next time you would gain [gold]Overexertion[/gold] this turn.",
@@ -49,12 +49,12 @@
   "THEVALKYRIE-CHURCH_HYMN_POWER.smartDescription": "At the start of your turn, add {Amount:plural:a [gold]Smite[/gold]|[blue]{}[/blue] [gold]Smites[/gold]} into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue] for each.",
 
   "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.title": "Exsanguinating Force",
-  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.description": "At the start of your turn, apply [gold]Bleed[/gold] to all enemies.",
-  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.smartDescription": "At the start of your turn, apply [gold]Bleed[/gold] [blue]{Amount}[/blue] to all enemies.",
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.description": "At the start of your turn, apply [gold]Gash[/gold] to all enemies.",
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.smartDescription": "At the start of your turn, apply [gold]Gash[/gold] [blue]{Amount}[/blue] to all enemies.",
 
   "THEVALKYRIE-RAZOR_WINGS_POWER.title": "Razor Wings",
-  "THEVALKYRIE-RAZOR_WINGS_POWER.description": "When hit by an attack, apply [gold]Bleed[/gold] to the attacker.",
-  "THEVALKYRIE-RAZOR_WINGS_POWER.smartDescription": "When hit by an attack, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] back.",
+  "THEVALKYRIE-RAZOR_WINGS_POWER.description": "When hit by an attack, apply [gold]Gash[/gold] to the attacker.",
+  "THEVALKYRIE-RAZOR_WINGS_POWER.smartDescription": "When hit by an attack, apply [blue]{Amount}[/blue] [gold]Gash[/gold] back.",
 
   "THEVALKYRIE-SPIKED_PAULDRONS_POWER.title": "Spiked Pauldrons",
   "THEVALKYRIE-SPIKED_PAULDRONS_POWER.description": "You have [gold]Thorns[/gold] equal to your [gold]Armor[/gold].",
@@ -99,7 +99,7 @@
 
   "THEVALKYRIE-BRIMMING_POWER.title": "Topped up!",
   "THEVALKYRIE-BRIMMING_POWER.description": "The first time each turn you reach 10 cards in your hand, gain [gold]Block[/gold].",
-  "THEVALKYRIE-BRIMMING_POWER.smartDescription": "The first time each turn you reach 10 cards in your hand, gain [blue]{Amount}[/blue] [gold]Block[/gold].\n{IsActive:[green]Currently active![/green]|[green]Has already triggered this turn.[/green]}",
+  "THEVALKYRIE-BRIMMING_POWER.smartDescription": "The first time each turn you reach 10 cards in your hand, gain [blue]{Amount}[/blue] [gold]Block[/gold].\n{IsActive:[green]Currently active![/green]|[blue]Has already triggered this turn.[/blue]}",
 
   "THEVALKYRIE-TEMPORARY_THORNS_POWER.title": "Temporary Thorns",
   "THEVALKYRIE-TEMPORARY_THORNS_POWER.description": "Gain [gold]Thorns[/gold] until the end of this turn.",
@@ -111,7 +111,7 @@
 
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.title": "Close Quarters Combat",
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.description": "Gain double [gold]Overexert[/gold].\nAt the start of your turn, apply [gold]Vulnerable[/gold] to enemies.",
-  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.smartDescription": "Gain double [gold]Overexert[/gold].\nAt the start of your turn, apply [blue]{Amount}[/blue] [gold]Vulnerable[/gold] to {IsUpgraded:all enemies|a random enemy}.",
+  "THEVALKYRIE-CLOSE_QUARTERS_COMBAT_POWER.smartDescription": "Gain [blue]{OverexertMult}[/blue] times as much [gold]Overexert[/gold].\nYou deal {Amount}% more damage.",
 
   "THEVALKYRIE-SHINING_STAR_POWER.title": "Shining Star",
   "THEVALKYRIE-SHINING_STAR_POWER.description": "Whenever you survive a turn without taking any damage, gain [gold]Vigor[/gold].",

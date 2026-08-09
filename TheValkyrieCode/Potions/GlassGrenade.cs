@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Potions;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Extensions;
@@ -22,8 +23,13 @@ public sealed class GlassGrenade : TheValkyriePotion
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("BleedPower", 5),
-        new DynamicVar("Times", 2)
+        new PowerVar<BleedPower>(5),
+        new ("Times", 2)
+    ];
+    
+    public override IEnumerable<IHoverTip> ExtraHoverTips => 
+    [
+        HoverTipFactory.FromPower<BleedPower>(5)
     ];
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
