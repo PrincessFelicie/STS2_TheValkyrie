@@ -27,9 +27,9 @@
   "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Prevent the next time you would gain [gold]Overexertion[/gold] this turn.",
   "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Prevent the next {Amount:plural:time|[blue]{}[/blue] times} you would gain [gold]Overexertion[/gold] this turn.",
 
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.title": "Crusade Strength",
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.description": "Your [gold]Smites[/gold] deal additional damage.",
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage.",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.title": "Crusade",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.description": "Your [gold]Smites[/gold] deal additional damage and grant extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage and [blue]{BlockUpgrade:diff()}[/blue] extra [gold]Block[/gold].",
 
   "THEVALKYRIE-CRUSADE_BLOCK_POWER.title": "Crusade Defense",
   "THEVALKYRIE-CRUSADE_BLOCK_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold].",
@@ -81,9 +81,9 @@
   "THEVALKYRIE-SECOND_WIND_POWER.smartDescription": "At the end of your turn, lose [blue]{Amount}[/blue] [gold]Overexhaustion[/gold].",
 
   "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.title": "Territorial Instincts",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, transform a card in your hand into a [gold]Byrd Card[/gold], then gain 1 [gold]Byrd Strength[/gold].",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, transform a card in your hand into a{IsUpgraded:n Upgraded|} [gold]Byrd Card[/gold], then gain 1 [gold]Byrd Strength[/gold].",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.selectionScreenPrompt": "Choose a card to Transform into a [gold]Byrd Card[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, [gold]Transform[/gold] {Amount:plural:a card|[blue]{}[/blue] cards} in your hand into a [gold]Byrd Card[/gold], then gain [blue]{Amount}[/blue] [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, [gold]Transform[/gold] a card in your hand into a [gold]Byrd Card[/gold], then gain [blue]{Amount}[/blue] [gold]Byrd Strength[/gold].\n[blue]{PlayedUpgraded:diff()}[/blue] of them will be [gold]Upgraded[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.selectionScreenPrompt": "Choose {Amount:plural:a card|[blue]{}[/blue] cards} to [gold]Transform[/gold] into {Amount:plural:a [gold]Byrd Card[/gold]|[blue]{}[/blue] [gold]Byrd Cards[/gold]}.",
 
   "THEVALKYRIE-BYRD_STRENGTH_POWER.title": "Byrd Strength",
   "THEVALKYRIE-BYRD_STRENGTH_POWER.description": "Your [gold]Byrd Cards[/gold] deal additional damage.",

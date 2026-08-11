@@ -66,7 +66,7 @@
   "THEVALKYRIE-DEEP_BREATH.description": "Gain {Block:diff()} [gold]Block[/gold].\nRemove up to {OverexertionRemove:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-BIRDBRAIN.title": "Birdbrain",
-  "THEVALKYRIE-BIRDBRAIN.description": "[gold]Exhaust[/gold] 1 card to add a [gold]{IfUpgraded:show:Byrd Swoop+|Byrd Swoop}[/gold] into your [gold]Discard Pile[/gold].",
+  "THEVALKYRIE-BIRDBRAIN.description": "Add a [gold]{IfUpgraded:show:Byrd Swoop+|Byrd Swoop}[/gold] into your [gold]Discard Pile[/gold].",
 
   "THEVALKYRIE-PREPARE_SERMON.title": "Prepare Sermon",
   "THEVALKYRIE-PREPARE_SERMON.description": "If you have no [gold]Smites[/gold] in your [gold]Hand[/gold], add {Quantity:diff()} [gold]Smites[/gold] into your hand.",
@@ -129,10 +129,10 @@
   "THEVALKYRIE-CRESCENDO_STRIKE.description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, [gold]Bless[/gold] it{IfUpgraded:show: twice|}.",
 
   "THEVALKYRIE-LOSE_YOURSELF.title": "Lose Yourself",
-  "THEVALKYRIE-LOSE_YOURSELF.description": "If you have 10 or more [gold]Overexertion[/gold], [gold]Exhaust[/gold] this card, gain {ByrdStrengthPower:diff()} [gold]Byrd Strength[/gold] and add a [gold]{IfUpgraded:show:Peck+|Peck}[/gold] into your [gold]Hand[/gold].\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-LOSE_YOURSELF.description": "If you have 10 or more [gold]Overexertion[/gold],\nGain {ByrdStrengthPower:diff()} [gold]Byrd Strength[/gold],\nadd a [gold]{IfUpgraded:show:Peck+|Peck}[/gold] into your [gold]Hand[/gold],\n[gold]Exhaust[/gold].\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-POLISH.title": "Polish",
-  "THEVALKYRIE-POLISH.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold].",
+  "THEVALKYRIE-POLISH.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold]{IfUpgraded:show:, and {ArmorPower:diff()} more this turn|}.",
 
   "THEVALKYRIE-BRIMMING.title": "Brimming",
   "THEVALKYRIE-BRIMMING.description": "The first time each turn you reach 10 cards in your [gold]Hand[/gold], gain {BrimmingPower:diff()} [gold]Block[/gold].",

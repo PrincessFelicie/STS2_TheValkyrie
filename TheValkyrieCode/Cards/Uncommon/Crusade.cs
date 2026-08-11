@@ -1,7 +1,9 @@
+using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -19,8 +21,10 @@ public class Crusade : TheValkyrieCard
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<CrusadeAttackPower>(choiceContext, Owner.Creature, DynamicVars["CrusadeAttackPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<CrusadeBlockPower>(choiceContext, Owner.Creature, DynamicVars["CrusadeBlockPower"].IntValue, Owner.Creature, this);
+        CrusadeAttackPower? power = await PowerCmd.Apply<CrusadeAttackPower>(choiceContext, Owner.Creature, DynamicVars["CrusadeAttackPower"].IntValue, Owner.Creature, this);
+        if (power == null) return;
+        power.DynamicVars["BlockUpgrade"].BaseValue += DynamicVars["CrusadeBlockPower"].IntValue;
+        power.InvokeSecondAmountChanged();
     }
 
     protected override void OnUpgrade()

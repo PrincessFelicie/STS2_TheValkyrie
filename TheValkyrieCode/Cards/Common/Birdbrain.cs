@@ -12,18 +12,20 @@ public class Birdbrain : TheValkyrieCard
 {
     public Birdbrain() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithTip(CardKeyword.Exhaust);
+        WithKeyword(CardKeyword.Exhaust);
         WithUpgradingCardTip<ByrdSwoop>();
     }
     
-    protected override bool ShouldGlowRedInternal => !PileType.Hand.GetPile(Owner).Cards.Except([this]).Any();
+    //protected override bool ShouldGlowRedInternal => !PileType.Hand.GetPile(Owner).Cards.Except([this]).Any();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        CardSelectorPrefs prefs = new (CardSelectorPrefs.ExhaustSelectionPrompt, 1);
+        //remains from a previous version, in case I want to roll it back.
+        /*CardSelectorPrefs prefs = new (CardSelectorPrefs.ExhaustSelectionPrompt, 1);
         CardModel? exhaustedCard = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
         if (exhaustedCard == null) return;
-        await CardCmd.Exhaust(choiceContext, exhaustedCard);
+        await CardCmd.Exhaust(choiceContext, exhaustedCard);*/
+        
         if (CombatState == null) return;
         CardModel createdCard = CombatState.CreateCard<ByrdSwoop>(Owner);
         if (this.IsUpgraded)

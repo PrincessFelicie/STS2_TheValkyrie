@@ -7,6 +7,12 @@
   "BYRDONIS_NEST.pages.TAKE.valkyrieDescription": "You gently scoop up the egg and hold it close.\n\n[sine][blue]This is normal. This is what you were meant to do. You shall bring it back to your nest.[/blue][/sine]",
   "BYRDONIS_NEST.pages.EAT.valkyrieDescription": "You push past the [jitter][color=#ec9894]invasive thoughts[/color][/jitter], crack the egg open and gobble it up.\n\nYou feel your body fight back against this sacrilege with all that it can muster, but after gagging a few times, you swallow down your breakfast.\n[blue]It weighs on your conscience like a stone.[/blue]",
 
+  "SELF_HELP_BOOK.pages.INITIAL.valkyrieDescription": "On the floor lies a copy of\n“Top 3 Ways to Conquer the Spire”\n\nThe book is [red]encrusted with blood[/red]... Could it be yours...? When did you lose it?\n\nYou don't have room to carry it, but you can skim it now.",
+  "SELF_HELP_BOOK.pages.NO_OPTIONS.valkyrieDescription": "It's unfortunate all this blood got on it. You may find another copy elsewhere. Bye, old book!",
+  "SELF_HELP_BOOK.pages.READ_ENTIRE_BOOK.valkyrieDescription": "Still as insightful as the first time! Some choice quotes remain fresh in your mind:\n“Avoid big monsters.”\n“Take every card.”\n“Blocking is for cowards.”\n\nMaybe this is how you can still win.",
+  "SELF_HELP_BOOK.pages.READ_PASSAGE.valkyrieDescription": "You flip to a random page:\n“Defense 101: Don't get hit!”\n\nNot that you needed that refresher, but you're more self-assured in the strategy you employ.",
+  "SELF_HELP_BOOK.pages.READ_THE_BACK.valkyrieDescription": "You flip the book over and read the summary:\n[blue]“Critics and Cultists agree that sharp and pointy weapons are the best way to inflict damage!”[/blue]\n\nYou agree too.",
+
   
   "THEVALKYRIE-MAN_EGG_TREE.title": "",
   "THEVALKYRIE-MAN_EGG_TREE.pages.INITIAL.description": "After hours of trudging through insect territory, [sine]the deafening buzzing of wings abruptly stops[/sine]. As you regain your bearings, you feel a stillness in the air -- as if no life exists here safe for a mighty tree of unusual coloration. And yet...\n\n\n[gold]He[/gold] is behind the tree.",

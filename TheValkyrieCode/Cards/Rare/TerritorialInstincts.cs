@@ -21,7 +21,7 @@ public class TerritorialInstincts : TheValkyrieCard
     {
         PowerModel? power = await PowerCmd.Apply<TerritorialPurposePower>(choiceContext, Owner.Creature, DynamicVars["TerritorialPurposePower"].IntValue, Owner.Creature, this);
         if (this.IsUpgraded && power != null)
-            power.DynamicVars["IsUpgraded"].BaseValue = 1;
+            power.DynamicVars["PlayedUpgraded"].BaseValue++;
     }
 
     protected override void OnUpgrade()

@@ -9,12 +9,14 @@ public class Polish : TheValkyrieCard
 {
     public Polish() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<ArmorPower>(2, 1);
+        WithPower<ArmorPower>(2);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
+        if (IsUpgraded)
+            await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

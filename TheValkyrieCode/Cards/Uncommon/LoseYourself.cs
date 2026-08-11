@@ -26,12 +26,12 @@ public class LoseYourself : TheValkyrieCard
         if (this.Owner.Creature.GetPowerAmount<OverexertionPower>() >= 10)
         {
             await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, Owner.Creature, DynamicVars["ByrdStrengthPower"].IntValue, Owner.Creature, this);
-            await CardCmd.Exhaust(choiceContext, this);
             if (CombatState == null) return;
             CardModel createdCard = CombatState.CreateCard<Peck>(Owner);
             if (this.IsUpgraded)
                 CardCmd.Upgrade(createdCard);
             await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Hand, Owner);
+            await CardCmd.Exhaust(choiceContext, this);
         }
         else
         {

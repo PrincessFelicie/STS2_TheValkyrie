@@ -10,8 +10,8 @@ public class StrenuousParry : TheValkyrieCard
 {
     public StrenuousParry() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(10, 4);
-        WithPower<OverexertionPower>(2, 2);
+        WithBlock(10, 3);
+        WithPower<OverexertionPower>(3, 2);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

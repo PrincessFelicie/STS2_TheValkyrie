@@ -13,7 +13,7 @@ public class CawCaw : TheValkyrieCard
     public CawCaw() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<RitualPower>(1);
-        WithPower<OverexertionPower>(15);
+        WithPower<OverexertionPower>(15, -5);
         WithKeyword(CardKeyword.Exhaust);
     }
 
@@ -28,6 +28,5 @@ public class CawCaw : TheValkyrieCard
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
     }
 }

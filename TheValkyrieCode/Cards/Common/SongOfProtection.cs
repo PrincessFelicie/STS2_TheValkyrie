@@ -13,7 +13,7 @@ public class SongOfProtection : TheValkyrieCard
 {
     public SongOfProtection() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(6, 2);
+        WithBlock(4, 2);
         WithPower<OverexertionPower>(2);
         WithVar("Quantity", 1);
         WithVar("Nimble", 2, 1);

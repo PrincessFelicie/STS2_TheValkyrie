@@ -10,7 +10,7 @@ public class DeepBreath : TheValkyrieCard
 {
     public DeepBreath() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(7, 3);
+        WithBlock(5, 2);
         WithVar("OverexertionRemove",10, 5);
         WithTip(typeof(OverexertionPower));
     }

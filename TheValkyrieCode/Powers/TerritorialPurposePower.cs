@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.Entities.Rngs;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -25,7 +26,8 @@ public sealed class TerritorialPurposePower : TheValkyriePower
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("TurnCounter", 0),
-        new BoolVar("IsUpgraded", false),
+        new DynamicVar("PlayedUpgraded", 0),
+        new DynamicVar("HasUpgradedThisTurn", 0),
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -35,31 +37,38 @@ public sealed class TerritorialPurposePower : TheValkyriePower
     ];
     
     public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Single;
-    public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
+    public override PowerStackType StackType => PowerStackType.Counter;
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
         if (player != Owner.Player)
             return;
+        this.DynamicVars["HasUpgradedThisTurn"].BaseValue = 0;
         this.Flash();
-        foreach (CardModel original in (await CardSelectCmd.FromHand(choiceContext, player, new CardSelectorPrefs(SelectionScreenPrompt, 1), c => c is not (ByrdSwoop or Peck), this)).ToList())
+        
+        foreach (CardModel original in (await CardSelectCmd.FromHand(choiceContext, player, new CardSelectorPrefs(SelectionScreenPrompt, this.Amount), c => c is not (ByrdSwoop or Peck), this)).ToList())
         {
-            if (this.DynamicVars["TurnCounter"].BaseValue % 2 == 0)
+            if (Owner.Player.PlayerRng.GetRng(PlayerRngType.Transformations).NextBool())
             {
-                CardModel card = CombatState.CreateCard<ByrdSwoop>(Owner.Player);
-                if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
-                    CardCmd.Upgrade(card);
-                await CardCmd.Transform(original, card);
+                CardModel replacement = CombatState.CreateCard<ByrdSwoop>(Owner.Player);
+                if (this.DynamicVars["HasUpgradedThisTurn"].BaseValue < this.DynamicVars["PlayedUpgraded"].BaseValue)
+                {
+                    CardCmd.Upgrade(replacement);
+                    this.DynamicVars["HasUpgradedThisTurn"].BaseValue++;
+                }
+                await CardCmd.Transform(original, replacement);
             }
             else
             {
-                CardModel card = CombatState.CreateCard<Peck>(Owner.Player);
-                if (this.DynamicVars["IsUpgraded"].BaseValue == 1)
-                    CardCmd.Upgrade(card);
-                await CardCmd.Transform(original, card);
+                CardModel replacement = CombatState.CreateCard<Peck>(Owner.Player);
+                if (this.DynamicVars["HasUpgradedThisTurn"].BaseValue < this.DynamicVars["PlayedUpgraded"].BaseValue)
+                {
+                    CardCmd.Upgrade(replacement);
+                    this.DynamicVars["HasUpgradedThisTurn"].BaseValue++;
+                }
+                await CardCmd.Transform(original, replacement);
             }
+            this.DynamicVars["TurnCounter"].BaseValue++;
         }
-        await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, this.Owner, 1, Owner, null);
-        this.DynamicVars["TurnCounter"].BaseValue++;
+        await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, this.Owner, this.Amount, Owner, null);
     }
 }
