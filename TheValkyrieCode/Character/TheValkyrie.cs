@@ -64,8 +64,8 @@ public class TheValkyrie : PlaceholderCharacterModel
     }
     
     public override string CustomVisualPath => "/combat/creature_visuals/the_valkyrie_temp.tscn".ScenesPath();
-    //public override string CustomRestSiteAnimPath => "/character/the_valkyrie_rest_site.png".ImagePath(); todo
-    //public override string CustomMerchantAnimPath => "/character/the_valkyrie_merchant.png".ImagePath(); todo
+    public override string CustomRestSiteAnimPath => "/rest_site/characters/valkyrie_rest_site.tscn".ScenesPath();
+    public override string CustomMerchantAnimPath => "/merchant/characters/valkyrie_merchant.tscn".ScenesPath();
     
     public override string CustomArmPointingTexturePath => "/ui/hands/the_valkyrie_arm_point.png".ImagePath();
     public override string CustomArmRockTexturePath => "/ui/hands/the_valkyrie_arm_rock.png".ImagePath();

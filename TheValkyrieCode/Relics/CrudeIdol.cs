@@ -11,15 +11,15 @@ namespace TheValkyrie.TheValkyrieCode.Relics;
 public class CrudeIdol : TheValkyrieRelic
 {
     public override RelicRarity Rarity => RelicRarity.Rare;
-    
-    protected override IEnumerable<IHoverTip> ExtraHoverTips
-    {
-        get => HoverTipFactory.FromPowerWithPowerHoverTips<OverexertionPower>();
-    }
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => 
+        [
+            HoverTipFactory.FromPower<OverexertionPower>()
+        ];
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side != Owner.Creature.Side || Owner.Creature.GetPowerAmount<OverexertionPower>() == 0)
+        if (!participants.Contains(Owner.Creature) || Owner.Creature.GetPowerAmount<OverexertionPower>() == 0)
             return;
         this.Flash();
         await Cmd.Wait(0.1f);

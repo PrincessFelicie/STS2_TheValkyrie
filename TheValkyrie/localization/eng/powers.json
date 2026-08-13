@@ -5,7 +5,7 @@
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
   "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you take unblocked damage this turn.",
-  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time you take [gold]unblocked[/gold] damage this turn, lose [blue]{Amount}[/blue] HP.",
+  "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time {OnPlayer:you take|[gold]{OwnerName}[/gold] takes} unblocked damage this turn, {OnPlayer:lose|it loses} [blue]{Amount}[/blue] HP.",
 
   "THEVALKYRIE-ARMOR_POWER.title": "Armor",
   "THEVALKYRIE-ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
@@ -134,6 +134,10 @@
   "THEVALKYRIE-BLUNDERBUSS_POWER.description": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
   "THEVALKYRIE-BLUNDERBUSS_POWER.smartDescription": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
 
+  "THEVALKYRIE-BRAIN_STUN_POWER.title": "Blurred Vision",
+  "THEVALKYRIE-BRAIN_STUN_POWER.description": "Whenever you [gold]Overexert[/gold] this turn, this enemy [gold]Overexerts[/gold] for the same amount.",
+  "THEVALKYRIE-BRAIN_STUN_POWER.remoteDescription": "Whenever [gold]{ApplierName}[/gold] [gold]Overexerts[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
+  "THEVALKYRIE-BRAIN_STUN_POWER.smartDescription": "Whenever you [gold]Overexert[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
   
   
   "THEVALKYRIE-BIRD_FIST_POWER.title": "Bird Fist (deprecated)",

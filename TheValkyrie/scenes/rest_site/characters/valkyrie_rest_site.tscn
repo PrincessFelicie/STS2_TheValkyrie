@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://8yperga0kem"]
+
+[ext_resource type="Texture2D" uid="uid://dmhrai0unlfcb" path="res://TheValkyrie/scenes/rest_site/characters/the_valkyrie_temp.png" id="1_4xteq"]
+
+[node name="ValkyrieRestSite" type="Node2D"]
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -226.0
+offset_top = -100.0
+offset_right = -226.0
+offset_bottom = -100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ControlRoot"]
+texture = ExtResource("1_4xteq")
+
+[node name="SelectionReticle" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_left = -286.0
+offset_top = -231.0
+offset_right = 333.0
+offset_bottom = 337.0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_left = -286.0
+offset_top = -231.0
+offset_right = 333.0
+offset_bottom = 337.0
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_left = -301.0
+offset_top = -80.0
+offset_right = -301.0
+offset_bottom = -80.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+anchors_preset = 0
+offset_left = -69.0
+offset_top = -80.0
+offset_right = -69.0
+offset_bottom = -80.0

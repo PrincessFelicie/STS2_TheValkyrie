@@ -50,7 +50,7 @@ public sealed class ShiningStarPower : TheValkyriePower
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side == Owner.Side || this.DynamicVars["IsActive"].BaseValue == 0) //at the end of the enemy turn, check if we had a perfect turn...
+        if (participants.Contains(Owner) || this.DynamicVars["IsActive"].BaseValue == 0) //at the end of the enemy turn, check if we had a perfect turn...
             return;
         await Cmd.CustomScaledWait(0.2f, 0.6f);
         this.Flash();

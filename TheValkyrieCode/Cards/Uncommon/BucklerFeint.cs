@@ -11,15 +11,15 @@ public class BucklerFeint : TheValkyrieCard
 {
     public BucklerFeint() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(6, 2);
-        WithVar("TemporaryThornsPower",4, 1);
-        WithTip(typeof(ThornsPower));
+        WithDamage(6);
+        WithVar("BrainStunPower",2, 1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await PowerCmd.Apply<TemporaryThornsPower>(choiceContext, Owner.Creature, DynamicVars["TemporaryThornsPower"].IntValue, Owner.Creature, this);
+        if (play.Target == null) return;
+        await PowerCmd.Apply<BrainStunPower>(choiceContext, play.Target, DynamicVars["BrainStunPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

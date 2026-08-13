@@ -5,10 +5,11 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Events;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
-public class BalancedStrikePower : TheValkyriePower
+public class BrainStunPower : TheValkyriePower
 {
     private class Data
     {
@@ -22,32 +23,28 @@ public class BalancedStrikePower : TheValkyriePower
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<OverexertionPower>()];
     
     public override PowerType Type => PowerType.Buff;
+    
     public override PowerStackType StackType => PowerStackType.Counter;
+    
+    public override PowerInstanceType InstanceType => PowerInstanceType.InstancedPerApplier;
 
-    public override decimal ModifyPowerAmountGivenMultiplicative(
-        PowerModel power,
-        Creature giver,
-        decimal amount,
-        Creature? target,
-        CardModel? cardSource)
+    public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
-        if (power is not OverexertionPower || target != Owner) return 1;
-        PowerCmd.Decrement(this);
-        return 0;
+        this.Target = applier;
     }
-
-    public override async Task AfterModifyingPowerAmountGiven(PowerModel power)
+    
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
-        if (power is OverexertionPower && power.Owner == this.Owner)
+        if (power is OverexertionPower && applier == this.Target && power.Owner == this.Target)
         {
-            await PowerCmd.Decrement(this);
+            await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, amount, applier, null);
         }
     }
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (!participants.Contains(Owner))
+        if (participants.Contains(Owner))
             return;
-        await PowerCmd.Remove(this);
+        await PowerCmd.Decrement(this);
     }
 }

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg6q2yq7rr76f"]
+
+[ext_resource type="Texture2D" uid="uid://crqeotlea7y8e" path="res://TheValkyrie/scenes/merchant/characters/the_valkyrie_temp.png" id="1_w7tci"]
+
+[node name="ValkyrieMerchant" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -204.00002)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_w7tci")

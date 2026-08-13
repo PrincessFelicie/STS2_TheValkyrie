@@ -39,7 +39,7 @@ public sealed class TemporaryThornsPower : TheValkyriePower
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side == Owner.Side)
+        if (participants.Contains(Owner))
             return;
         this.Flash();
         await PowerCmd.Apply<ThornsPower>(choiceContext, this.Owner, -this.Amount, null, null, true);

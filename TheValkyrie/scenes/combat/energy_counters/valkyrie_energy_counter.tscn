@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhktcquo38fnh"]
+[gd_scene load_steps=7 format=3 uid="uid://bhktcquo38fnh"]
 
-[ext_resource type="Texture2D" uid="uid://ddph06vcvlsc5" path="res://TheValkyrie/images/charui/big_energy.png" id="1_6we7r"]
+[ext_resource type="Texture2D" uid="uid://c70yabsq0op6x" path="res://TheValkyrie/images/charui/energy_counter/valkyrie/layer_back.png" id="1_78fx6"]
+[ext_resource type="Texture2D" uid="uid://duhe0ak48yf3j" path="res://TheValkyrie/images/charui/energy_counter/valkyrie/layer_rotation_back.png" id="2_ujw1b"]
+[ext_resource type="Texture2D" uid="uid://d185m82ltqj0i" path="res://TheValkyrie/images/charui/energy_counter/valkyrie/layer_rotation_front.png" id="3_5io46"]
+[ext_resource type="Texture2D" uid="uid://7xpaxqfg888h" path="res://TheValkyrie/images/charui/energy_counter/valkyrie/layer_gem_relief_back.png" id="4_2u1my"]
+[ext_resource type="Texture2D" uid="uid://b1adkkcpgib4r" path="res://TheValkyrie/images/charui/energy_counter/valkyrie/layer_gem_relief_front.png" id="5_fglbk"]
+[ext_resource type="Texture2D" uid="uid://dahgfk2pyoqyu" path="res://TheValkyrie/images/charui/energy_counter/valkyrie/layer_feathers.png" id="6_eym8v"]
 
 [node name="EnergyControlNode" type="Control"]
 layout_mode = 3
@@ -22,6 +27,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="LayerBack" type="TextureRect" parent="Layers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_78fx6")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="RotationLayers" type="Control" parent="Layers"]
 layout_mode = 1
 anchors_preset = 15
@@ -32,14 +48,60 @@ grow_vertical = 2
 pivot_offset = Vector2(64, 64)
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="Layers"]
+[node name="LayerRotationBack" type="TextureRect" parent="Layers/RotationLayers"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_6we7r")
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("2_ujw1b")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LayerRotationFront" type="TextureRect" parent="Layers/RotationLayers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("3_5io46")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LayerFrontTransparent" type="TextureRect" parent="Layers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_2u1my")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LayerFrontHard" type="TextureRect" parent="Layers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_fglbk")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LayerFrontDetail" type="TextureRect" parent="Layers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_eym8v")
 expand_mode = 1
 stretch_mode = 4
 

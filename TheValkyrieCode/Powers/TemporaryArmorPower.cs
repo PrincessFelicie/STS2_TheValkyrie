@@ -38,7 +38,7 @@ public sealed class TemporaryArmorPower : TheValkyriePower
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side == Owner.Side)
+        if (participants.Contains(Owner))
             return;
         this.Flash();
         await PowerCmd.Apply<ArmorPower>(choiceContext, this.Owner, -this.Amount, null, null, true);
