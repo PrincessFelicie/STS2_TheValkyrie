@@ -55,7 +55,7 @@ public sealed class ShiningStarPower : TheValkyriePower
         await Cmd.CustomScaledWait(0.2f, 0.6f);
         this.Flash();
         //A fun vfx for this would be a mini grand-finale where a spotlight shines on the Valkyrie, then clapping sounds play
-        NDebugAudioManager.Instance?.Play("hey.mp3"); //placeholder sound
+        NDebugAudioManager.Instance?.Play("hey.mp3", 1F, PitchVariance.Medium); //placeholder sound
         await PowerCmd.Apply<VigorPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
     }
 }

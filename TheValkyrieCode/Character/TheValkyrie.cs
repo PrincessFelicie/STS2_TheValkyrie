@@ -21,6 +21,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     public override string CustomCastSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_war_chant";
     public override string CustomDeathSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_die";
     
+    public override string CharacterSelectSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_war_chant";
 
     public override Color NameColor => Color;
     public override Color MapDrawingColor => Color;
@@ -82,8 +83,8 @@ public class TheValkyrie : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_valkyrie_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_valkyrie.png".CharacterUiPath();
     
-    public override RelicIconData? CustomYummyCookie => 
-        new RelicIconData(
+    public override RelicIconData CustomYummyCookie => 
+        new (
             "yummy_cookie_valkyrie.png".BigRelicImagePath(),
             "yummy_cookie_valkyrie.png".RelicImagePath(),
             "yummy_cookie_valkyrie_outline.png".BigRelicImagePath()
