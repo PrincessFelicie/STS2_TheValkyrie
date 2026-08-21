@@ -64,6 +64,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Folder Include="TheValkyrieCode\Vfx\" />
         <Folder Include="TheValkyrie\images\card_portraits\big\"/>
         <Folder Include="TheValkyrie\images\character\" />
         <Folder Include="TheValkyrie\images\charui\energy_counter\valkyrie\" />
@@ -72,6 +73,7 @@
         <Folder Include="TheValkyrie\images\potions\" />
         <Folder Include="TheValkyrie\images\relics\big\"/>
         <Folder Include="TheValkyrie\images\ui\rest_site\" />
+        <Folder Include="TheValkyrie\images\vfx\common\" />
         <Folder Include="TheValkyrie\scenes\combat\energy_counters\" />
         <Folder Include="TheValkyrie\scenes\merchant\" />
         <Folder Include="TheValkyrie\scenes\rest_site\characters\" />

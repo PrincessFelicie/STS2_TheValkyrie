@@ -102,7 +102,7 @@
   "THEVALKYRIE-GO_FOR_THE_KILL.description": "Deal {Damage:diff()} damage.\nApply [gold]Gash[/gold] equal to unblocked damage dealt.",
 
   "THEVALKYRIE-RUSTED_DAGGER.title": "Rusted Dagger",
-  "THEVALKYRIE-RUSTED_DAGGER.description": "Deal {Damage:diff()} damage.\nOnce per fight, permanently increase this card's damage by {Increase:diff()}.",
+  "THEVALKYRIE-RUSTED_DAGGER.description": "Deal {Damage:diff()} damage.\nOnce per fight, if the enemy has 5 or more [gold]Gash[/gold], permanently increase this card's damage by {Increase:diff()}.",
 
   "THEVALKYRIE-HEAVY_ARMOR.title": "Heavy Armor",
   "THEVALKYRIE-HEAVY_ARMOR.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold] this turn.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",

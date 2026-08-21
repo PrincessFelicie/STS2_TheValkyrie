@@ -9,7 +9,7 @@ public class HeavyArmor : TheValkyrieCard
 {
     public HeavyArmor() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<ArmorPower>(7, 3);
+        WithPower<ArmorPower>(7, 2);
         WithPower<OverexertionPower>(3, 1);
     }
     

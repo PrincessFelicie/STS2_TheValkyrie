@@ -10,7 +10,7 @@ public class BalancedStrike : TheValkyrieCard
 {
     public BalancedStrike() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(8, 3);
+        WithDamage(8, 2);
         WithTags(CardTag.Strike);
         WithVar("BalancedStrikePower",2, 1);
         WithTip(typeof(OverexertionPower));

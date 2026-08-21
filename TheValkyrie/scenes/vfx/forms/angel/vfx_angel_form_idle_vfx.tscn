@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtqug7ls7g2d1"]
+
+[ext_resource type="Shader" uid="uid://cwp1o4u6xmloj" path="res://TheValkyrie/scenes/vfx/forms/angel/rotation_time.gdshader" id="1_4kv8k"]
+[ext_resource type="Texture2D" uid="uid://extnqgk8ptmm" path="res://TheValkyrie/images/vfx/angel_form/ring_custom.png" id="2_5u4e2"]
+[ext_resource type="Texture2D" uid="uid://plossqa2c7yv" path="res://TheValkyrie/images/vfx/angel_form/glow_custom.png" id="2_fqryq"]
+[ext_resource type="Texture2D" uid="uid://djul5ql3j7bho" path="res://TheValkyrie/images/charui/char_select_screen_assets/particle_placeholder.png" id="3_4kv8k"]
+[ext_resource type="Shader" uid="uid://bvlrwi85n688f" path="res://TheValkyrie/scenes/vfx/forms/angel/alpha_sin_time.tres" id="3_shcgn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lf4nf"]
+shader = ExtResource("1_4kv8k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f6508"]
+shader = ExtResource("3_shcgn")
+
+[sub_resource type="Curve" id="Curve_5u4e2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.25136614, 1), 0.0, 0.0, 0, 0, Vector2(0.7486339, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_shcgn"]
+curve = SubResource("Curve_5u4e2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fqryq"]
+lifetime_randomness = 0.8
+particle_flag_disable_z = true
+particle_flag_damping_as_friction = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 10, 1)
+angle_min = -179.99998
+angle_max = 180.00002
+spread = 180.0
+flatness = 1.0
+angular_velocity_min = -260.63
+angular_velocity_max = 260.62997
+gravity = Vector3(0, 100, 0)
+tangential_accel_min = -50.0
+tangential_accel_max = 49.999996
+scale_min = 0.03
+scale_max = 0.099999994
+alpha_curve = SubResource("CurveTexture_shcgn")
+
+[node name="VfxAngelFormIdleVfx" type="Node2D"]
+
+[node name="CenterPivot" type="Node2D" parent="."]
+position = Vector2(0, -182)
+
+[node name="ring" type="Sprite2D" parent="CenterPivot"]
+self_modulate = Color(1, 1, 0.16078432, 0.14117648)
+material = SubResource("ShaderMaterial_lf4nf")
+scale = Vector2(3, 3)
+texture = ExtResource("2_5u4e2")
+
+[node name="glow" type="Sprite2D" parent="CenterPivot"]
+self_modulate = Color(1, 1, 0.16078432, 0.06666667)
+material = SubResource("ShaderMaterial_f6508")
+scale = Vector2(3, 3)
+texture = ExtResource("2_fqryq")
+
+[node name="feathers" type="GPUParticles2D" parent="CenterPivot"]
+amount = 5
+texture = ExtResource("3_4kv8k")
+lifetime = 3.0
+explosiveness = 0.25
+randomness = 0.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_fqryq")

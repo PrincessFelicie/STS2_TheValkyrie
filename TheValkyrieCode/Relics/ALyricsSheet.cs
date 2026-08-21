@@ -21,6 +21,9 @@ public class ALyricsSheet : TheValkyrieRelic
     
     public override bool IsStackable => true;
     
+    public override int DisplayAmount => this.StackCount;
+    public override bool ShowCounter => this.StackCount > 1; //unused, gotta wait for basegame to stack isStackable relics.
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CustomEnum.Bless)];
 
     public override async Task AfterObtained()

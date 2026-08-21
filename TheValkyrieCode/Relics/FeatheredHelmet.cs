@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Rooms;
 using TheValkyrie.TheValkyrieCode.Powers;
@@ -11,6 +12,11 @@ public class FeatheredHelmet : TheValkyrieRelic
 {
     public override RelicRarity Rarity => RelicRarity.Common;
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ArmorPower>(1)];
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => 
+    [
+        HoverTipFactory.FromPower<ArmorPower>(1)
+    ];
 
     public override async Task AfterRoomEntered(AbstractRoom room)
     {

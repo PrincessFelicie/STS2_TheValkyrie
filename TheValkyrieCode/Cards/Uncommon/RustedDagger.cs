@@ -1,14 +1,17 @@
+using System.Diagnostics;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Nodes.Cards;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Saves.Runs;
+using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
-//Fatal is really weak in multiplayer. I could remove its condition and lower the damage gain, if I don't mind losing the flavor and increasing the overlap with The Scythe... Pretty big downsides, but the alternative is a card that's just non-viable outside of act 1.
 public class RustedDagger : TheValkyrieCard
 {
     private const string _increaseKey = "Increase"; //from code for TheScythe... is this unused?
@@ -41,6 +44,10 @@ public class RustedDagger : TheValkyrieCard
         }
     }
     
+    protected override bool ShouldGlowGoldInternal => 
+        DynamicVars["Active"].BaseValue == 1 &&
+        CombatState.HittableEnemies.Any(c => c.GetPowerAmount<BleedPower>() >= 5);
+
     public RustedDagger() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(CurrentDamage);
@@ -51,9 +58,11 @@ public class RustedDagger : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).Execute(choiceContext);
+        bool conditionMet =  play.Target?.GetPowerAmount<BleedPower>() >= 5;
         
-        if (DynamicVars["Active"].BaseValue == 0)
+        await CommonActions.CardAttack(this, play).WithAttackerFx(sfx: "event:/sfx/enemy/enemy_attacks/gremlin_merc/gremlin_merc_attack_buff").WithHitFx("vfx/vfx_dramatic_stab").Execute(choiceContext); // BaseLib is seemingly overwriting all my sfx with the placeholder one...
+        
+        if (DynamicVars["Active"].BaseValue == 0 || !conditionMet)
             return;
         
         int intValue = DynamicVars["Increase"].IntValue;

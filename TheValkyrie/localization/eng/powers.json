@@ -1,6 +1,6 @@
 {
   "THEVALKYRIE-BLEED_POWER.title": "Gash",
-  "THEVALKYRIE-BLEED_POWER.description": "Affected creatures lose HP every time Gash is applied. At the end of the turn, Gash decays by 1 for every time Gash was applied this turn.",
+  "THEVALKYRIE-BLEED_POWER.description": "Affected creatures lose HP every time Gash is applied.\n\nAt the end of the turn, Gash decays by 1 for every time Gash was applied this turn.",
   "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Gash is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.\n{Decay:Will decay by [blue]{}[/blue] this turn.|No decay: Gash has not been applied this turn.} ",
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",

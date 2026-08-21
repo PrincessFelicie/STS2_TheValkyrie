@@ -1,0 +1,51 @@
+[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://bvlrwi85n688f"]
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_nsbh6"]
+output_port_for_preview = 0
+function = 0
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_g5cev"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeMultiplyAdd" id="VisualShaderNodeMultiplyAdd_61f4j"]
+output_port_for_preview = 0
+default_input_values = [0, 0.0, 1, 0.05, 2, 0.15]
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+
+void vertex() {
+// Input:3
+	float n_out3p0 = TIME;
+
+
+// FloatFunc:2
+	float n_out2p0 = sin(n_out3p0);
+
+
+// MultiplyAdd:4
+	float n_in4p1 = 0.05000;
+	float n_in4p2 = 0.15000;
+	float n_out4p0 = fma(n_out2p0, n_in4p1, n_in4p2);
+
+
+// Output:0
+	COLOR.a = n_out4p0;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/vertex/0/position = Vector2(580, 20)
+nodes/vertex/2/node = SubResource("VisualShaderNodeFloatFunc_nsbh6")
+nodes/vertex/2/position = Vector2(60, 120)
+nodes/vertex/3/node = SubResource("VisualShaderNodeInput_g5cev")
+nodes/vertex/3/position = Vector2(-260, 120)
+nodes/vertex/4/node = SubResource("VisualShaderNodeMultiplyAdd_61f4j")
+nodes/vertex/4/position = Vector2(320, 80)
+nodes/vertex/connections = PackedInt32Array(3, 0, 2, 0, 2, 0, 4, 0, 4, 0, 0, 3)

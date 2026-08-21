@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckw2x14lp7txu"
-path="res://.godot/imported/buckler_feint.png-7aeadd83c8b08d2d8f72a3f03aeeb1c5.ctex"
+uid="uid://c4r7vy6ia5yr7"
+path="res://.godot/imported/guidance.png-52df63af756a4eacabf2b579e9826ed0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheValkyrie/images/card_portraits/big/buckler_feint.png"
-dest_files=["res://.godot/imported/buckler_feint.png-7aeadd83c8b08d2d8f72a3f03aeeb1c5.ctex"]
+source_file="res://TheValkyrie/images/card_portraits/big/guidance.png"
+dest_files=["res://.godot/imported/guidance.png-52df63af756a4eacabf2b579e9826ed0.ctex"]
 
 [params]
 

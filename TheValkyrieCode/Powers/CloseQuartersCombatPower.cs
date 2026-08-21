@@ -121,6 +121,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         
         NCreature? ownerCreature = instance.GetCreatureNode(this.Owner);
         NCreature? targetCreature = null;
+        
         foreach (Creature creature in CombatState.GetOpponentsOf(Owner)) //Find the left-most enemy...
         {
             if (creature.IsDead) continue;
