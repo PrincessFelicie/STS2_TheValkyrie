@@ -1,6 +1,8 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
@@ -9,16 +11,14 @@ public class DigYourHeelsIn : TheValkyrieCard
 {
     public DigYourHeelsIn() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<ArmorPower>(2);
-        WithPower<OverexertionPower>(12);
-        WithKeyword(CardKeyword.Exhaust, UpgradeType.Remove);
+        WithBlock(4,2);
+        WithPower<VigorPower>(6,1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].IntValue, Owner.Creature, this);
-        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await CommonActions.CardBlock(this, play);
+        await PowerCmd.Apply<VigorPower>(choiceContext, Owner.Creature, DynamicVars["VigorPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

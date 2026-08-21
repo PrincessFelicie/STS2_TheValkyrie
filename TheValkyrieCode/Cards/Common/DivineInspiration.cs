@@ -1,6 +1,8 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Common;
@@ -9,7 +11,8 @@ public class DivineInspiration : TheValkyrieCard
 {
     public DivineInspiration() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(2,3);
+        WithBlock(2,2);
+        WithPower<VigorPower>(2,1);
         WithVar("Quantity", 2);
         WithTip(typeof(Smite));
     }
@@ -17,7 +20,8 @@ public class DivineInspiration : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
-        if (CombatState == null) return; //solves a warning
+        await PowerCmd.Apply<VigorPower>(choiceContext, Owner.Creature, DynamicVars["VigorPower"].IntValue, Owner.Creature, this);
+        if (CombatState == null) return;
         await Smite.CreateInHand(Owner, DynamicVars["Quantity"].IntValue, CombatState);
     }
 

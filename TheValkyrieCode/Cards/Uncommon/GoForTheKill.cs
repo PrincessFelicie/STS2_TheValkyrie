@@ -12,6 +12,7 @@ public class GoForTheKill : TheValkyrieCard
     public GoForTheKill() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
         WithDamage(5, 2);
+        WithKeyword(CardKeyword.Exhaust);
         WithTip(typeof(BleedPower));
     }
 

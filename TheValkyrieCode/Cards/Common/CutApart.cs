@@ -9,7 +9,7 @@ public class CutApart : TheValkyrieCard
 {
     public CutApart() : base(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithPower<BleedPower>(6, 2);
+        WithPower<BleedPower>(4, 2);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

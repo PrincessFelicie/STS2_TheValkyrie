@@ -19,7 +19,7 @@ public class TelegraphedSmash : TheValkyrieCard
                     --count;
                 return count;
             },
-        ValueProp.Move, 4);
+        ValueProp.Move, 3);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

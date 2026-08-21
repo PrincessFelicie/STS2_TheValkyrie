@@ -24,8 +24,8 @@ public class PressYourAdvantage : TheValkyrieCard
                     --count;
                 return count;
             },
-            ValueProp.Move, 0, 1);
-        WithVar("DisplayBlockPerCard", 1, 1);
+            ValueProp.Move, 3, 0);
+        WithVar("DisplayBlockPerCard", 1, 0);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

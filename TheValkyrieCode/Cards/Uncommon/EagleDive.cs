@@ -10,7 +10,7 @@ public class EagleDive : TheValkyrieCard
 {
     public EagleDive() : base(3, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
     {
-        WithDamage(14, 6);
+        WithDamage(14, 3);
         WithTip(typeof(OverexertionPower));
     }
 

@@ -6,18 +6,17 @@ using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Common;
 
-public class JumpAhead : TheValkyrieCard
+public class EmergencyCorrection : TheValkyrieCard
 {
-    public JumpAhead() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public EmergencyCorrection() : base(2, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithPower<OverexertionPower>(6);
-        WithCards(2, 1);
+        WithBlock(11, 3);
+        WithKeyword(CardKeyword.Retain);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.Draw(this, choiceContext);
-        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+        await CommonActions.CardBlock(this, play);
     }
 
     protected override void OnUpgrade()

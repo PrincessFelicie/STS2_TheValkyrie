@@ -28,8 +28,8 @@
   "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Prevent the next {Amount:plural:time|[blue]{}[/blue] times} you would gain [gold]Overexertion[/gold] this turn.",
 
   "THEVALKYRIE-CRUSADE_ATTACK_POWER.title": "Crusade",
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.description": "Your [gold]Smites[/gold] deal additional damage and grant extra [gold]Block[/gold].",
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage and [blue]{BlockUpgrade:diff()}[/blue] extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.description": "Your [gold]Smites[/gold] deal additional damage and give extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_ATTACK_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage and give [blue]{BlockUpgrade:diff()}[/blue] extra [gold]Block[/gold].",
 
   "THEVALKYRIE-CRUSADE_BLOCK_POWER.title": "Crusade Defense",
   "THEVALKYRIE-CRUSADE_BLOCK_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold].",

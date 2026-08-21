@@ -1,22 +1,23 @@
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Common;
 
-public class TakeRisks : TheValkyrieCard
+public class RisingPunch : TheValkyrieCard
 {
-    public TakeRisks() : base(0, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public RisingPunch() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithPower<OverexertionPower>(6);
-        WithEnergy(1, 1);
+        WithDamage(4, 5);
+        WithVar("Times", 3);
+        WithPower<OverexertionPower>(3);
     }
-    
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
+        await CommonActions.CardAttack(this, play, DynamicVars["Times"].IntValue).Execute(choiceContext);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
     }
 

@@ -13,7 +13,8 @@ public class MusicalBridge : TheValkyrieCard
 {
     public MusicalBridge() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithVar("Bless", 1); 
+        WithVar("Bless", 1);
+        WithKeyword(CardKeyword.Exhaust);
         
         WithTip(CustomEnum.Bless);
         WithTips(c => HoverTipFactory.FromEnchantment<Refrain>(c.DynamicVars["Bless"].IntValue));

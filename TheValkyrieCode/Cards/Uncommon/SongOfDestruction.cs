@@ -12,7 +12,7 @@ public class SongOfDestruction : TheValkyrieCard
 {
     public SongOfDestruction() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithPower<BleedPower>(3, 2);
+        WithPower<BleedPower>(3, 1);
         WithPower<OverexertionPower>(4);
         WithVar("Quantity", 1);
         WithVar("Sanguine", 1, 1);

@@ -10,7 +10,7 @@ public class ShiningStar : TheValkyrieCard
 {
     public ShiningStar() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVar("ShiningStarPower", 6, 2);
+        WithVar("ShiningStarPower", 5, 2);
         WithTip(typeof(VigorPower));
     }
     

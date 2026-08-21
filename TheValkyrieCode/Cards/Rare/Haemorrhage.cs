@@ -9,7 +9,7 @@ public class Haemorrhage : TheValkyrieCard
 {
     public Haemorrhage() : base(2, CardType.Skill, CardRarity.Rare, TargetType.AllEnemies)
     {
-        WithPower<BleedPower>(11, 4);
+        WithPower<BleedPower>(7, 2);
         WithKeyword(CardKeyword.Exhaust);
     }
 

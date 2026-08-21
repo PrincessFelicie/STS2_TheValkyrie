@@ -11,7 +11,7 @@ public class ChargingTarge : TheValkyrieCard
     public ChargingTarge() : base(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
     {
         WithDamage(5, 1);
-        WithPower<ArmorPower>(3, 1);
+        WithPower<ArmorPower>(2, 1);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
