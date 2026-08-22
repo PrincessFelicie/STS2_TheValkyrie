@@ -24,11 +24,11 @@ public class MusicalBridge : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        int energySpent = ResolveEnergyXValue();
+        var energySpent = ResolveEnergyXValue();
         if (this.IsUpgraded) 
             energySpent++;
         EnchantmentModel enchantment = ModelDb.Enchantment<Refrain>();
-        for (int i = 0; i < energySpent; ++i)
+        for (var i = 0; i < energySpent; ++i)
         {
             if (!PileType.Hand.GetPile(this.Owner).Cards.Where(enchantment.CanEnchant).Any())
             {

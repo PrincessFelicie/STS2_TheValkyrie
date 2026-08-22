@@ -11,15 +11,15 @@ public class DivineInspiration : TheValkyrieCard
 {
     public DivineInspiration() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(2,2);
-        WithPower<VigorPower>(2,1);
+        //WithBlock(2,2);
+        WithPower<VigorPower>(2,2);
         WithVar("Quantity", 2);
         WithTip(typeof(Smite));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardBlock(this, play);
+        //await CommonActions.CardBlock(this, play);
         await PowerCmd.Apply<VigorPower>(choiceContext, Owner.Creature, DynamicVars["VigorPower"].IntValue, Owner.Creature, this);
         if (CombatState == null) return;
         await Smite.CreateInHand(Owner, DynamicVars["Quantity"].IntValue, CombatState);

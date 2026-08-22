@@ -10,7 +10,7 @@ public class EmergencyCorrection : TheValkyrieCard
 {
     public EmergencyCorrection() : base(2, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithBlock(11, 3);
+        WithBlock(11, 4);
         WithKeyword(CardKeyword.Retain);
     }
     

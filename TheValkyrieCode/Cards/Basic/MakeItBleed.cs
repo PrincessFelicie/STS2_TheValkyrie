@@ -13,8 +13,8 @@ public class MakeItBleed : TheValkyrieCard, ITranscendenceCard
 {
     public MakeItBleed() : base(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
     {
-        WithDamage(3);
-        WithPower<BleedPower>(3, 2);
+        WithDamage(3, 1);
+        WithPower<BleedPower>(3, 1);
     }
 
     public CardModel GetTranscendenceTransformedCard()

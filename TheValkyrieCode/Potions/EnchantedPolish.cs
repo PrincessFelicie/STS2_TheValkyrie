@@ -13,7 +13,7 @@ namespace TheValkyrie.TheValkyrieCode.Potions;
 
 public sealed class EnchantedPolish : TheValkyriePotion
 {
-    public override PotionRarity Rarity => PotionRarity.Uncommon;
+    public override PotionRarity Rarity => PotionRarity.Rare;
 
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 
@@ -25,7 +25,7 @@ public sealed class EnchantedPolish : TheValkyriePotion
     
     public override IEnumerable<IHoverTip> ExtraHoverTips => 
     [
-        HoverTipFactory.FromPower<ArmorPower>(3)
+        HoverTipFactory.FromPower<ArmorPower>(2)
     ];
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)

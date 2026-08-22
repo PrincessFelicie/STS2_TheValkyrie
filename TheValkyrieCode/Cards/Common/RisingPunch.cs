@@ -10,7 +10,7 @@ public class RisingPunch : TheValkyrieCard
 {
     public RisingPunch() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(4, 5);
+        WithDamage(4, 1);
         WithVar("Times", 3);
         WithPower<OverexertionPower>(3);
     }

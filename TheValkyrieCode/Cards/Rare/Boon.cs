@@ -7,7 +7,7 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
 public class Boon : TheValkyrieCard
 {
-    public Boon() : base(1, CardType.Power, CardRarity.Rare, TargetType.Self)
+    public Boon() : base(2, CardType.Power, CardRarity.Rare, TargetType.Self)
     {
         WithVar("BoonPower",2, 1); //no need for tooltip on that
         WithTip(CustomEnum.Bless);

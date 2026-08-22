@@ -110,7 +110,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         Creature? target,
         CardModel? cardSource)
     {
-        return power is OverexertionPower && giver == Owner && amount > 0 ? DynamicVars["OverexertMult"].BaseValue : 1;
+        return power is OverexertionPower && giver == Owner && target == Owner && amount > 0 ? DynamicVars["OverexertMult"].BaseValue : 1;
     }
 
     private async Task VisualsMoveToLeftMostEnemy()
@@ -135,6 +135,6 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         if (targetCreature == null) return; //if there's no more creatures alive do nothing
         
         Tween tween = instance.CreateTween().SetParallel().SetEase(Tween.EaseType.Out).SetTrans(Tween.TransitionType.Cubic);
-        tween.TweenProperty(ownerCreature, (NodePath) "global_position:x",targetCreature.GlobalPosition.X - Math.Max(targetCreature.Hitbox.Size.X * 0.75, 300) - (_offsetDistanceFromFirstPlayerX * 0.5), 0.75); //place the CQC user at the left edge of the leftmost creature's hitbox, plus an extra 50% of the creature's size for padding. In multiplayer, add half the offset as padding 
+        tween.TweenProperty(ownerCreature, (NodePath) "global_position:x",targetCreature.GlobalPosition.X - Math.Max(targetCreature.Hitbox.Size.X * 1, 300) - (_offsetDistanceFromFirstPlayerX * 0.5), 0.75); //place the CQC user at the left edge of the leftmost creature's hitbox, plus an extra 75% of the creature's size for padding. In multiplayer, add half the offset as padding 
     }
 }

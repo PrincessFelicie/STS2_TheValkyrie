@@ -18,7 +18,7 @@
   "THEVALKYRIE-CUT_APART.description": "Apply {BleedPower:diff()} [gold]Gash[/gold].",
 
   "THEVALKYRIE-DIVINE_INSPIRATION.title": "Divine Inspiration",
-  "THEVALKYRIE-DIVINE_INSPIRATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {VigorPower:diff()} [gold]Vigor[/gold].\nAdd {Quantity:diff()} [gold]Smites[/gold] into your [gold]Hand[/gold].",
+  "THEVALKYRIE-DIVINE_INSPIRATION.description": "Gain {VigorPower:diff()} [gold]Vigor[/gold].\nAdd {Quantity:diff()} [gold]Smites[/gold] into your [gold]Hand[/gold].",
 
   "THEVALKYRIE-STRENUOUS_PARRY.title": "Strenuous Parry",
   "THEVALKYRIE-STRENUOUS_PARRY.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
@@ -144,8 +144,8 @@
   "THEVALKYRIE-BUCKLER_FEINT.title": "Buckler Feint",
   "THEVALKYRIE-BUCKLER_FEINT.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:For the next {BrainStunPower:diff()} turns|This turn}, whenever you [gold]Overexert[/gold], the enemy [gold]Overexerts[/gold] for the same amount.",
 
-  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.title": "Crush Their Spirits",
-  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.description": "{IfUpgraded:show: Apply 1 [gold]Weak[/gold] to ALL enemies.\n|}At the end of your turn, deal damage to ALL enemies equal to your [gold]Armor[/gold].",
+  "THEVALKYRIE-EBB_AND_FLOW.title": "Tempo Storm",
+  "THEVALKYRIE-EBB_AND_FLOW.description": "If you reach 15 or more [gold]Overexertion[/gold] during a turn, draw {Cards:diff()} cards at the start of your next turn.",
 
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.title": "Close and Personal",
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.description": "Whenever you [gold]Overexert[/gold], double the amount received.\nYou deal {CloseQuartersCombatPower:diff()}% more damage.",
@@ -271,13 +271,13 @@
 
 
   "THEVALKYRIE-SMITE.title": "Smite",
-  "THEVALKYRIE-SMITE.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-SMITE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-MAKE_IT_DIE.title": "Make it Die",
   "THEVALKYRIE-MAKE_IT_DIE.description": "Deal {Damage:diff()} damage.\nApply {BleedPower:diff()} [gold]Gash[/gold] {Hits:diff()} times.",
 
-  "THEVALKYRIE-EXSANGUINATING_FORCE.title": "Exsanguinating Force",
-  "THEVALKYRIE-EXSANGUINATING_FORCE.description": "At the start of your turn, apply {BleedPower:diff()} [gold]Gash[/gold] to ALL enemies.",
+  "THEVALKYRIE-DANCING_PLAGUE.title": "Dancing Plague",
+  "THEVALKYRIE-DANCING_PLAGUE.description": "Whenever you [gold]Overexert[/gold], a random enemy [gold]Overexerts[/gold] for the same amount.",
 
   
   
@@ -313,5 +313,11 @@
   "THEVALKYRIE-BIRD_FIST.description": "[gold]Exhaust[/gold] ALL of your Skills.\nYou take half damage and no longer [gold]Overexert[/gold].",
 
   "THEVALKYRIE-TUNE_UP.title": "Tune Up (deprecated)",
-  "THEVALKYRIE-TUNE_UP.description": "Deal {Damage:diff()} damage.\nThe next [gold]Retain[/gold] card you play costs 0 {energyPrefix:energyIcons(1)}."
+  "THEVALKYRIE-TUNE_UP.description": "Deal {Damage:diff()} damage.\nThe next [gold]Retain[/gold] card you play costs 0 {energyPrefix:energyIcons(1)}.",
+
+  "THEVALKYRIE-EXSANGUINATING_FORCE.title": "Exsanguinating Force (deprecated)",
+  "THEVALKYRIE-EXSANGUINATING_FORCE.description": "At the start of your turn, apply {BleedPower:diff()} [gold]Gash[/gold] to ALL enemies.",
+
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.title": "Crush Their Spirits (deprecated)",
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.description": "{IfUpgraded:show: Apply 1 [gold]Weak[/gold] to ALL enemies.\n|}At the end of your turn, deal damage to ALL enemies equal to your [gold]Armor[/gold]."
 }

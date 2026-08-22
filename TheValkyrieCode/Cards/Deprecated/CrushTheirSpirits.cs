@@ -5,9 +5,9 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Powers;
 
-namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
+namespace TheValkyrie.TheValkyrieCode.Cards.Deprecated;
 
-public class CrushTheirSpirits : TheValkyrieCard
+/*public class CrushTheirSpirits : TheValkyrieCard
 {
     public CrushTheirSpirits() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
@@ -30,4 +30,4 @@ public class CrushTheirSpirits : TheValkyrieCard
     protected override void OnUpgrade()
     {
     }
-}
+}*/

@@ -10,7 +10,7 @@ public class QuickPunch : TheValkyrieCard
 {
     public QuickPunch() : base(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
-        WithDamage(7, 3);
+        WithDamage(8, 3);
         WithPower<OverexertionPower>(2);
     }
 

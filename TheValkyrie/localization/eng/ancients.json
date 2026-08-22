@@ -94,5 +94,33 @@
   "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Deny",
   "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "I am not here to listen to your nonsensical babbling, [i]demon[/i].",
   "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
-  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "Sensitive, are we?"
+  "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "Sensitive, are we?",
+  
+
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.ancient": "YOU WIELD A MIGHTY WEAPON!! HAVE ANOTHER!!",
+
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient": "WHY HAVE A SHIELD WHEN YOU CAN USE ANOTHER WEAPON!!",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Ponder",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-1.char": "[i][font_size=22]The Valkyrie considers this sage wisdom for a moment.[/font_size][/i]",
+
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "FIGHT ME, VALKYRIE!!",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Fight",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "[i][font_size=22]The Valkyrie recklessly charges at the beast and the two clash.[/font_size][/i]",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "YESSSS!!! YOU UNDERSTAND PERFECTLY!!! HAVE ALL OF THE WEAPONS!!!",
+
+  
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.ancient": "[thinky_dots]I dreamt I was flying... Do you do too...?[/thinky_dots]",
+
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient": "[thinky_dots]Why do you believe murder will improve things...?[/thinky_dots]",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Respond",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-1.char": "Why would the death of a tyrant not?",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-1.next": "Continue",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-2.ancient": "[thinky_dots]Father wishes you no harm... You assume so much...[/thinky_dots]",
+  
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[thinky_dots]You should rest...[/thinky_dots]",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Respond",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "No. I feel like if I ever stop moving, I will never get back up again.",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "[thinky_dots]You should REALLY rest...[/thinky_dots]"
 }

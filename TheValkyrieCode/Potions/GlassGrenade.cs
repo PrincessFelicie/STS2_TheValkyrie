@@ -13,7 +13,7 @@ namespace TheValkyrie.TheValkyrieCode.Potions;
 
 public sealed class GlassGrenade : TheValkyriePotion
 {
-    public override PotionRarity Rarity => PotionRarity.Rare;
+    public override PotionRarity Rarity => PotionRarity.Uncommon;
 
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 

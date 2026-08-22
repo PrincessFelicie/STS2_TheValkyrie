@@ -10,7 +10,7 @@ public class RazorWings : TheValkyrieCard
 {
     public RazorWings() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(11, 4);
+        WithBlock(10, 3);
         WithPower<BleedPower>(2, 1);
     }
     

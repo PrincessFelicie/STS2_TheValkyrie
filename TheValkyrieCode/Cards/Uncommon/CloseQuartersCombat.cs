@@ -10,7 +10,7 @@ public class CloseQuartersCombat : TheValkyrieCard
 {
     public CloseQuartersCombat() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVar("CloseQuartersCombatPower", 25, 15);
+        WithVar("CloseQuartersCombatPower", 34, 16);
         WithTip(typeof(OverexertionPower));
     }
     

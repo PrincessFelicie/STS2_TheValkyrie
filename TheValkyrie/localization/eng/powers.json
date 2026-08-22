@@ -48,9 +48,9 @@
   "THEVALKYRIE-CHURCH_HYMN_POWER.description": "At the start of your turn, add a [gold]Smite[/gold] into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue].",
   "THEVALKYRIE-CHURCH_HYMN_POWER.smartDescription": "At the start of your turn, add {Amount:plural:a [gold]Smite[/gold]|[blue]{}[/blue] [gold]Smites[/gold]} into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue] for each.",
 
-  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.title": "Exsanguinating Force",
-  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.description": "At the start of your turn, apply [gold]Gash[/gold] to all enemies.",
-  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.smartDescription": "At the start of your turn, apply [gold]Gash[/gold] [blue]{Amount}[/blue] to all enemies.",
+  "THEVALKYRIE-DANCING_PLAGUE_POWER.title": "Dancing Plague",
+  "THEVALKYRIE-DANCING_PLAGUE_POWER.description": "Whenever you [gold]Overexert[/gold], a random enemy [gold]Overexerts[/gold] for the same amount.",
+  "THEVALKYRIE-DANCING_PLAGUE_POWER.smartDescription": "Whenever you [gold]Overexert[/gold], a random enemy [gold]Overexerts[/gold] for the same amount{Amount:plural:| [blue]{}[/blue] [gold]times[/gold]}.",
 
   "THEVALKYRIE-RAZOR_WINGS_POWER.title": "Razor Wings",
   "THEVALKYRIE-RAZOR_WINGS_POWER.description": "When hit by an attack, apply [gold]Gash[/gold] to the attacker.",
@@ -138,9 +138,17 @@
   "THEVALKYRIE-BRAIN_STUN_POWER.description": "Whenever you [gold]Overexert[/gold] this turn, this enemy [gold]Overexerts[/gold] for the same amount.",
   "THEVALKYRIE-BRAIN_STUN_POWER.remoteDescription": "Whenever [gold]{ApplierName}[/gold] [gold]Overexerts[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
   "THEVALKYRIE-BRAIN_STUN_POWER.smartDescription": "Whenever you [gold]Overexert[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
+
+  "THEVALKYRIE-EBB_AND_FLOW_POWER.title": "Tempo Storm",
+  "THEVALKYRIE-EBB_AND_FLOW_POWER.description": "If you reach [blue]15[/blue] or more [gold]Overexertion[/gold] during a turn, draw cards at the start of your next turn.",
+  "THEVALKYRIE-EBB_AND_FLOW_POWER.smartDescription": "If you reach [blue]15[/blue] or more [gold]Overexertion[/gold] during a turn, draw [blue]{Amount}[/blue] cards at the start of your next turn.\n{IsActive:[red]Hasn't triggered this turn.[/red]|[green]Already triggered this turn.[/green]}",
   
   
   "THEVALKYRIE-BIRD_FIST_POWER.title": "Bird Fist (deprecated)",
   "THEVALKYRIE-BIRD_FIST_POWER.description": "You take half damage and no longer [gold]Overexert[/gold].",
-  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold]."
+  "THEVALKYRIE-BIRD_FIST_POWER.smartDescription": "You take half damage and no longer [gold]Overexert[/gold].",
+
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.title": "Exsanguinating Force (deprecated)",
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.description": "At the start of your turn, apply [gold]Gash[/gold] to all enemies.",
+  "THEVALKYRIE-EXSANGUINATING_FORCE_POWER.smartDescription": "At the start of your turn, apply [gold]Gash[/gold] [blue]{Amount}[/blue] to all enemies."
 }

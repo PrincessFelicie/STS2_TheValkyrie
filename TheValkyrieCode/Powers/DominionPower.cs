@@ -32,10 +32,10 @@ public sealed class DominionPower : TheValkyriePower
     {
         if (card.Owner.Creature != Owner)
             return;
-        IReadOnlyList<Creature> hittableEnemies = CombatState.HittableEnemies;
         
-        Creature? target = Owner.Player?.RunState.Rng.CombatTargets.NextItem(hittableEnemies);
+        Creature? target = Owner.Player?.RunState.Rng.CombatTargets.NextItem(CombatState.HittableEnemies);
         if (target == null) return;
+        
         this.Flash();
         await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), target, this.Amount, ValueProp.Unpowered, Owner, null, null);
     }

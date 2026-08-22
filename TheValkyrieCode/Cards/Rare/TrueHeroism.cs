@@ -10,9 +10,9 @@ public class TrueHeroism : TheValkyrieCard
 {
     public TrueHeroism() : base(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
     {
-        WithDamage(6, 2);
-        WithPower<ArmorPower>(6, 2);
-        WithPower<OverexertionPower>(6, 2);
+        WithDamage(5, 2);
+        WithPower<ArmorPower>(5, 2);
+        WithPower<OverexertionPower>(5, 2);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

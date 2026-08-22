@@ -31,7 +31,7 @@ public class WrittenInBlood : TheValkyrieCard
     
     protected override bool ShouldGlowGoldInternal => this.Active;
 
-    public WrittenInBlood() : base(1, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
+    public WrittenInBlood() : base(2, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
     {
         WithPower<BleedPower>(4, 2);
         WithKeyword(CardKeyword.Exhaust);
