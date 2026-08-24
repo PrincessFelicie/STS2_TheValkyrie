@@ -33,6 +33,8 @@
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.Bestiary.NBestiary.AddFilter"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Screens.StatsScreen.NGeneralStatsGrid.CreateCharacterSection"/>
         <Publicize Include="sts2:MegaCrit.Sts2.Core.Nodes.Relics.NRelic.Reload"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Runs.Metrics.MetricUtilities.ShouldUploadMetrics"/>
+        <Publicize Include="sts2:MegaCrit.Sts2.Core.Runs.Metrics.MetricsSerializerContext"/>
     </ItemGroup>
 
     <ItemGroup>

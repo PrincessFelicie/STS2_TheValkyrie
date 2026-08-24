@@ -1,0 +1,10 @@
+{
+  "VALKYRIE_METRICS_FTUE_POPUP.body": "Hi there, and thank you for downloading the Valkyrie!\n\nBefore we start, do you consent to your run data being sent to the mod creator?",
+  "VALKYRIE_METRICS_FTUE_POPUP.header": "Valkyrie Data Share",
+
+  "VALKYRIE_METRICS_FTUE_THANK_YOU.body": "If you change your mind, you can always toggle it off in the mods configuration menu.\n\nHave fun! ~ Félicie",
+  "VALKYRIE_METRICS_FTUE_THANK_YOU.header": "Thank You!",
+
+  "VALKYRIE_METRICS_FTUE_NO_WORRIES.body": "If you change your mind, you can always toggle it on in the mods configuration menu.\n\nHave fun! ~ Félicie",
+  "VALKYRIE_METRICS_FTUE_NO_WORRIES.header": "No Worries!"
+}

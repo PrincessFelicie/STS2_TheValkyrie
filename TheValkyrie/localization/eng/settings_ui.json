@@ -7,5 +7,9 @@
 
   "THEVALKYRIE-FUNNY_CONTENT.title": "Wild Spire",
   "THEVALKYRIE-FUNNY_CONTENT.hover.title": "Wild Spire",
-  "THEVALKYRIE-FUNNY_CONTENT.hover.desc": "Unleashes bizarre and silly elements. Not for the faint of heart or the serious of temperament.\n(Currently only toggles one event.)\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]"
+  "THEVALKYRIE-FUNNY_CONTENT.hover.desc": "Unleashes bizarre and silly elements. Not for the faint of heart or the serious of temperament.\n(Currently only toggles one event.)\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]",
+
+  "THEVALKYRIE-METRICS_DATA_SHARE.title": "Share run data with mod creator (Opt-in only)",
+  "THEVALKYRIE-METRICS_DATA_SHARE.hover.title": "Metrics Upload",
+  "THEVALKYRIE-METRICS_DATA_SHARE.hover.desc": "Gameplay data is sent to this mod's creator after completing a run to help with balance decisions.\nThis uses the same system as the base game, so no personal information is collected!"
 }

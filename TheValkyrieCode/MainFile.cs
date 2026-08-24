@@ -2,6 +2,7 @@ using BaseLib.Config;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
+using TheValkyrie.TheValkyrieCode.MetricsUpload;
 using TheValkyrie.TheValkyrieCode.ModConfiguration;
 
 namespace TheValkyrie.TheValkyrieCode;
@@ -17,9 +18,17 @@ public partial class MainFile : Node
 
     public static void Initialize()
     {
-        ModConfigRegistry.Register(ModId, new ValkyrieModConfig());
         Harmony harmony = new(ModId);
-
         harmony.PatchAll();
+
+        ModManager.OnMetricsUpload += ValkyrieMetrics.OnMetricsUpload;
+        ModConfigRegistry.Register(ModId, new ValkyrieModConfig());
+    }
+    
+    public static string GetModVersion()
+    {
+        var mod = ModManager.GetLoadedMods().FirstOrDefault(m => m.manifest?.id == "TheValkyrie");
+
+        return mod?.manifest?.version ?? "unknown";
     }
 }
