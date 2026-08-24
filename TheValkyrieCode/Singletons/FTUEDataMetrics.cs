@@ -1,18 +1,11 @@
 using BaseLib.Abstracts;
 using BaseLib.Config;
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Creatures;
-using MegaCrit.Sts2.Core.Entities.Players;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
-using MegaCrit.Sts2.Core.Models.Monsters;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Multiplayer;
-using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Runs;
 using TheValkyrie.TheValkyrieCode.ModConfiguration;
-using TheValkyrie.TheValkyrieCode.Relics;
 
 namespace TheValkyrie.TheValkyrieCode.Singletons;
 

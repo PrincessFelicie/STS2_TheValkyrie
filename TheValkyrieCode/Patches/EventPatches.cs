@@ -1,5 +1,3 @@
-using System.Reflection;
-using System.Reflection.Emit;
 using BaseLib.Utils.Patching;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Localization;

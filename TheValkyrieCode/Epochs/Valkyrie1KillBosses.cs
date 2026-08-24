@@ -1,9 +1,6 @@
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Screens.Timeline;
 using MegaCrit.Sts2.Core.Timeline;
-using TheValkyrie.TheValkyrieCode.Cards.Common;
-using TheValkyrie.TheValkyrieCode.Cards.Rare;
-using TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 using TheValkyrie.TheValkyrieCode.Relics;
 
 namespace TheValkyrie.TheValkyrieCode.Epochs;

@@ -1,11 +1,8 @@
-using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Screens.Timeline;
 using MegaCrit.Sts2.Core.Timeline;
-using TheValkyrie.TheValkyrieCode.Cards.Common;
 using TheValkyrie.TheValkyrieCode.Cards.Rare;
 using TheValkyrie.TheValkyrieCode.Cards.Uncommon;
-using TheValkyrie.TheValkyrieCode.Potions;
 
 namespace TheValkyrie.TheValkyrieCode.Epochs;
 
