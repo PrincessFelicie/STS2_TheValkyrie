@@ -29,6 +29,8 @@ public static class ValkyrieMetrics
                 typeof(CharacterModel).Assembly,
             },
             Logger = MainFile.Logger,
+            WrapPayload = (data, version, modName, hasForeign) =>
+                $"{{\"mod_version\":{JsonSerializer.Serialize(version)},\"has_foreign_content\":{JsonSerializer.Serialize(hasForeign)},\"data\":{data}}}"
         },
         buildPayload: GetRunMetrics,
         serialize: m => JsonSerializer.Serialize(m, MetricsSerializerContext.Default.RunMetrics));

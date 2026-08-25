@@ -44,7 +44,7 @@ public sealed class BleedPower : TheValkyriePower, IHasSecondAmount
         if (power == this && amount > 0)
         {
             await Cmd.Wait(0.1f);
-            await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), power.Owner, power.Amount, ValueProp.Unblockable | ValueProp.Unpowered, null, null);
+            await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), power.Owner, power.Amount, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.SkipHurtAnim, applier, cardSource, null);
             DynamicVars["Decay"].BaseValue++;
         }
         this.InvokeSecondAmountChanged();

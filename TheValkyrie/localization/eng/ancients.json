@@ -1,5 +1,6 @@
 {
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]...young... ..one...\n....you... have... questions...?[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient.sfx": "event:/sfx/npcs/neow/neow_welcome",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Ask",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "We can't live on like this! We have no food, no housing, no guidance! Who is responsible for the state of the Spire!?",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
@@ -7,15 +8,19 @@
 
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-0.char": "I'm... I'm alive...? [blue]Mazaleth[/blue] be praised!",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Continue",
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "[sine]...............\n..the... ...bird... did... nothing... ....go.... again....[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "[sine]...............\n..the... ...byrd... did... nothing... ....go.... again....[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient.sfx": "event:/sfx/npcs/neow/neow_sleepy",
 
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[sine]...the... Architect... ....yet... lives...[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient.sfx": "event:/sfx/npcs/neow/neow_sleepy",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Reply",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "I'm... doing my best. I promise. Things will change. They must...",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "[sine]..stubborn... means... useful...[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient.sfx": "event:/sfx/npcs/neow/neow_curious",
 
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.3-0r.ancient": "[sine]...use... those... feathers... ...take... flight...[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.3-0r.ancient.sfx": "event:/sfx/npcs/neow/neow_welcome",
   
   
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.0-0.char": "Are you the Architect? [blue]Mazaleth[/blue]'s people need help! They suffer down in the docks--",
@@ -44,40 +49,51 @@
   "THE_ARCHITECT.talk.THEVALKYRIE-THE_VALKYRIE.2-attack": "Both",
   
   
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]Little birdling[/sine], what lovely feathers you bear! Why do you fear them so?",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[sine]Little byrdling[/sine], what lovely feathers you bear! Why do you fear them so?",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_welcome",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Reply",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "I never asked for them! I meant to save my people, not join them in madness!",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "The path to a better you isn't always charted, my dear.\nMay my gift help you connect with your inner self!",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_giggle",
 
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient": "Welcome back, little birdling. Might you regale us with a song today before you depart? A gift for a gift!",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient": "Welcome back, little byrdling. Might you regale us with a song today before you depart? A gift for a gift!",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_welcome",
 
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[sine]Little birdling[/sine]! My favorite of Neow's puppets. What can I offer you this time...",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[sine]Little byrdling[/sine]! My favorite of Neow's puppets. What can I offer you this time...",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_welcome",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Request",
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "Could you... not call me that anymore? Please? I'm not a bird. And I don't want to be one.",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "Could you... not call me that anymore? Please? I'm not a byrd. And I don't want to be one.",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "And yet I find you at your happiest when in avian company.",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "And yet it seems to make you don a smile every time.",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_giggle",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-2.next": "Stammer",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-3.char": "I-I-- That's not--\n[i][font_size=22]The Valkyrie looks away, self-conscious.[/font_size][/i]",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-3.next": "Continue",
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-4.ancient": "Now, now, no need to make a face. Take one of these and dry your tears, little birdling.",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-4.ancient": "Now, now, no need to make a face. Take one of these and dry your tears, little byrdling.",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-4.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_giggle",
   
   
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "A new face! Bit young t'be doin' what you're doin', aintcha?",
+  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient.sfx": "event:/sfx/npcs/darv/darv_introduction",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Question",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "What is this place? Are you a merchant?",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "In a way! But these coins you've been collectin' will be no good here! How about you take somethin' now and we discuss payment later?",
+  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient.sfx": "event:/sfx/npcs/darv/darv_excited",
 
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient": "Ah, you're back! Now, I'm lookin' for trinkets. You got anythin' that could make our partnership worth my while?",
+  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient.sfx": "event:/sfx/npcs/darv/darv_excited",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Pay up",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-1.char": "[i][font_size=22]The Valkyrie pulls out a worn-looking dagger.[/font_size][/i]\nWill this do?",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-1.next": "Continue",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-2.ancient": "Ah, you're one of those people... Tell you what, I already owe you lot a favor. Let's say I keep helpin' you and that makes us even!",
+  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-2.ancient.sfx": "event:/sfx/npcs/darv/darv_endeared",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-2.next": "Respond",
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.1-3.char": "It's a deal.",
 
   "DARV.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.ancient": "Wouldn't have half of my collection without the Flock. Take somethin', it might as well be yours anyway!",
+  "DARV.talk.THEVALKYRIE-THE_VALKYRIE.2-0r.ancient.sfx": "event:/sfx/npcs/darv/darv_endeared",
 
 
   "VAKUU.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "[i][font_size=22]Vakuu lets out an amused chuckle.[/font_size][/i]\nIf it isn't the hubris of youth, in the flesh!",
@@ -98,19 +114,23 @@
   
 
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.ancient": "YOU WIELD A MIGHTY WEAPON!! HAVE ANOTHER!!",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.ancient.sfx": "event:/sfx/npcs/tanx/tanx_laugh",
 
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient": "WHY HAVE A SHIELD WHEN YOU CAN USE ANOTHER WEAPON!!",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient.sfx": "event:/sfx/npcs/tanx/tanx_laugh",
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Ponder",
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.1-1.char": "[i][font_size=22]The Valkyrie considers this sage wisdom for a moment.[/font_size][/i]",
 
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "FIGHT ME, VALKYRIE!!",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient.sfx": "event:/sfx/npcs/tanx/tanx_roar",
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Fight",
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "[i][font_size=22]The Valkyrie recklessly charges at the beast and the two clash.[/font_size][/i]",
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
   "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "YESSSS!!! YOU UNDERSTAND PERFECTLY!!! HAVE ALL OF THE WEAPONS!!!",
+  "TANX.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient.sfx": "event:/sfx/npcs/tanx/tanx_laugh",
 
   
-  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.ancient": "[thinky_dots]I dreamt I was flying... Do you do too...?[/thinky_dots]",
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.0-0r.ancient": "[thinky_dots]I dreamt I was flying... Do you do, too...?[/thinky_dots]",
 
   "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-0.ancient": "[thinky_dots]Why do you believe murder will improve things...?[/thinky_dots]",
   "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Respond",
@@ -122,5 +142,35 @@
   "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Respond",
   "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "No. I feel like if I ever stop moving, I will never get back up again.",
   "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
-  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "[thinky_dots]You should REALLY rest...[/thinky_dots]"
+  "PAEL.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "[thinky_dots]You should REALLY rest...[/thinky_dots]",
+
+  
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "Byrd! Not byrd?! Half-byrd!!",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Flinch",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "[i][font_size=22]The Valkyrie looks very uncomfortable.[/font_size][/i]",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "More than half-byrd!! More byrd every second!!!",
+  
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient": "Fly! Fly with me!!!",
+
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "Byrd lady!! Why here anyway?",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Respond",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "I must find a way to make the Spire worth living in again.",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
+  "OROBAS.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "Architect help? Can make big things!! Talking with him! Okay!?",
+
+  
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.0-0.ancient": "Who might be visiting me this time?",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.0-0.next": "Introduce self",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.0-1.char": "I am a... fighter. ...formerly... of the Flock.",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.0-1.next": "Continue",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.0-2.ancient": "Welcome in. Let me teach you how [jitter][b]family[/b][/jitter] can be your strength.",
+
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.1-0r.ancient": "Let's take that [jitter][b]hotheadedness[/b][/jitter] of yours and give it direction.",
+
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "Do you really think you will stay mad at them forever?",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Respond",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "I can't forgive them. But that doesn't mean I won't help them.",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
+  "TEZCATARA.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "Good. Home is where the [jitter][b]hearth[/b][/jitter] is."
 }

@@ -12,7 +12,7 @@ public class Crusade : TheValkyrieCard
 {
     public Crusade() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithVar("CrusadeAttackPower", 1, 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
+        WithVar("CrusadeAttackPower", 1, 2); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
         WithVar("CrusadeBlockPower", 1);
         WithTip(typeof(Smite));
         WithTip(StaticHoverTip.Block);
