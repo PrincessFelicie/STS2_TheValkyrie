@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
-
+//unused 
 public sealed class BirdFistPower : TheValkyriePower
 {
     private class Data

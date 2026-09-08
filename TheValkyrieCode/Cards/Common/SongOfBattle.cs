@@ -2,8 +2,10 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Common;
 
@@ -14,7 +16,10 @@ public class SongOfBattle : TheValkyrieCard
         WithVar("Quantity", 3);
         WithVar("Sharp", 3, 1);
         
-        WithTip(typeof(Smite));
+        WithTips(c => c.IsInCombat ? 
+            [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner, ModelDb.Enchantment<Sharp>(), c.DynamicVars["Sharp"].IntValue)] : 
+            [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<Sharp>(), c.DynamicVars["Sharp"].IntValue)]
+        );
         WithTips(c => HoverTipFactory.FromEnchantment<Sharp>(c.DynamicVars["Sharp"].IntValue));
     }
     

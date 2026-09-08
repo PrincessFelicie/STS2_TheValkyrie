@@ -69,8 +69,8 @@
   "THEVALKYRIE-PREPARE_SERMON.description": "If you have no [gold]Smites[/gold] in your [gold]Hand[/gold], add {Quantity:diff()} [gold]Smites[/gold] into your hand.",
 
   "THEVALKYRIE-SHARPEN.title": "Sharpen",
-  "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Flay {Bless:diff()}[/purple].\nReplace the current enchantment if necessary.",
-  "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Flay {Bless:diff()}[/purple].",
+  "THEVALKYRIE-SHARPEN.description": "Choose an Attack in your [gold]Draw Pile[/gold] to [gold]Bless[/gold]\nwith [purple]Flay {Bless:diff()}[/purple].",
+  "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose an Attack to [gold]Bless[/gold] with [purple]Flay {Bless:diff()}[/purple].",
 
   "THEVALKYRIE-RISING_PUNCH.title": "Rising Punch",
   "THEVALKYRIE-RISING_PUNCH.description": "Deal {Damage:diff()} damage {Times:diff()} times.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
@@ -138,14 +138,14 @@
   "THEVALKYRIE-BRIMMING.description": "The first time each turn you reach 10 cards in your [gold]Hand[/gold], gain {BrimmingPower:diff()} [gold]Block[/gold].",
 
   "THEVALKYRIE-REINFORCE.title": "Reinforce",
-  "THEVALKYRIE-REINFORCE.description": "Choose a Skill in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Aegis {Bless:diff()}[/purple].\nReplace the current enchantment if necessary.",
-  "THEVALKYRIE-REINFORCE.selectionScreenPrompt": "Choose an attack to add, improve or replace the enchantment with [purple]Aegis {Bless:diff()}[/purple].",
+  "THEVALKYRIE-REINFORCE.description": "Choose a Skill in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Aegis {Bless:diff()}[/purple].",
+  "THEVALKYRIE-REINFORCE.selectionScreenPrompt": "Choose a Skill to [gold]Bless[/gold] with [purple]Aegis {Bless:diff()}[/purple].",
 
   "THEVALKYRIE-BUCKLER_FEINT.title": "Buckler Feint",
   "THEVALKYRIE-BUCKLER_FEINT.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:For the next {BrainStunPower:diff()} turns|This turn}, whenever you [gold]Overexert[/gold], the enemy [gold]Overexerts[/gold] for the same amount.",
 
   "THEVALKYRIE-EBB_AND_FLOW.title": "Tempo Storm",
-  "THEVALKYRIE-EBB_AND_FLOW.description": "If you reach 15 or more [gold]Overexertion[/gold] during a turn, draw {Cards:diff()} cards at the start of your next turn.",
+  "THEVALKYRIE-EBB_AND_FLOW.description": "If you reach 15 or more [gold]Overexertion[/gold] during a turn, draw {Cards:diff()} {Cards:plural:card|cards} at the start of your next turn.",
 
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.title": "Close and Personal",
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.description": "Whenever you [gold]Overexert[/gold], double the amount received.\nYou deal {CloseQuartersCombatPower:diff()}% more damage.",
@@ -237,7 +237,7 @@
   "THEVALKYRIE-WRITTEN_IN_BLOOD.description": "Apply {BleedPower:diff()} [gold]Gash[/gold].\nIf you win this fight without taking any damage, permanently [gold]Bless[/gold] a card in your deck.",
   
   "THEVALKYRIE-SANCTIFY.title": "Sanctify",
-  "THEVALKYRIE-SANCTIFY.description": "Choose a non-Power card in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Refrain {Bless:diff()}[/purple].\nReplace the current enchantment if necessary.",
+  "THEVALKYRIE-SANCTIFY.description": "Choose a non-Power card in your [gold]Draw Pile[/gold] to [gold]Bless[/gold] with [purple]Refrain {Bless:diff()}[/purple].",
   "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose a non-Power card to [gold]Bless[/gold] with [purple]Refrain {Bless:diff()}[/purple].",
 
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",

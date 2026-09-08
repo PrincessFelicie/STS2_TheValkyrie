@@ -49,11 +49,11 @@ public sealed class BleedPower : TheValkyriePower, IHasSecondAmount
         }
         this.InvokeSecondAmountChanged();
     }
-    
-    public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side != Owner.Side)
-            return;
+        if (!participants.Contains(Owner) || DynamicVars["Decay"].BaseValue == 0) return;
+        
         if (Owner.IsAlive)
         {
             await PowerCmd.Apply<BleedPower>(new ThrowingPlayerChoiceContext(), Owner, -DynamicVars["Decay"].IntValue,

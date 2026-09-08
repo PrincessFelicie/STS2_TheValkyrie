@@ -2,9 +2,11 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Enchantments;
 using TheValkyrie.TheValkyrieCode.Powers;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
@@ -17,7 +19,10 @@ public class SongOfSafety : TheValkyrieCard
         WithVar("Quantity", 2);
         WithVar("Aegis", 1,1);
         
-        WithTip(typeof(Smite));
+        WithTips(c => c.IsInCombat ? 
+            [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner, ModelDb.Enchantment<Aegis>(), c.DynamicVars["Aegis"].IntValue)] : 
+            [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<Aegis>(), c.DynamicVars["Aegis"].IntValue)]
+        );
         WithTips(c => HoverTipFactory.FromEnchantment<Aegis>(c.DynamicVars["Aegis"].IntValue));
     }
     

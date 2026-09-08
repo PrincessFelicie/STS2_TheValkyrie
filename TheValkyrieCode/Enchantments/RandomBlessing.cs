@@ -1,0 +1,30 @@
+using BaseLib.Abstracts;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
+using TheValkyrie.TheValkyrieCode.Powers;
+
+namespace TheValkyrie.TheValkyrieCode.Enchantments;
+
+// do not use as an actual enchant! This exists purely for hoverTips.
+public class RandomBlessing: CustomEnchantmentModel
+{
+    protected override string CustomIconPath => "TheValkyrie/images/powers/power.png";
+    
+    public override bool CanEnchant(CardModel c)
+    {
+        return base.CanEnchant(c);
+    }
+
+    public override bool IsStackable => true;
+    
+    public override bool HasExtraCardText => true;
+    
+    public override bool ShowAmount => true;
+    
+    public override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay? cardPlay)
+    {
+    }
+}

@@ -2,14 +2,17 @@ using BaseLib.Abstracts;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
-public class CrusadeAttackPower : TheValkyriePower, IHasSecondAmount
+public class CrusadePower : TheValkyriePower, IHasSecondAmount
 {
     private class Data
     {
@@ -18,6 +21,15 @@ public class CrusadeAttackPower : TheValkyriePower, IHasSecondAmount
     protected override object InitInternalData()
     {
         return new Data();
+    }
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips
+    {
+        get
+        {
+            if (Owner.Player != null) return [CustomHoverTipFactory.FromCombatSmiteWithEnchant(Owner.Player)];
+            return [HoverTipFactory.FromCard<Smite>()];
+        }
     }
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [

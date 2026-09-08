@@ -34,7 +34,7 @@ public sealed class BrimmingPower : TheValkyriePower
     public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
-        if (side != Owner.Side || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
+        if (!participants.Contains(Owner) || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
             return;
         this.DynamicVars["IsActive"].BaseValue = 1;
         this.Flash();
@@ -43,7 +43,7 @@ public sealed class BrimmingPower : TheValkyriePower
     public override async Task AfterSideTurnStartLate(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         // check for a fully retained hand (pyramid, stable serum)
-        if (this.DynamicVars["IsActive"].BaseValue == 0) //If the power has already activated this turn, ignore.
+        if (this.DynamicVars["IsActive"].BaseValue == 0) //If the power has already activated this turn, ignore. We don't need to do a participants check because starting enemy turn with 10 cards in hand will have isActive at 0 in all circumstances anyway
             return;
         if (Owner.Player == null) return;
         IReadOnlyList<CardModel> cards = PileType.Hand.GetPile(Owner.Player).Cards;

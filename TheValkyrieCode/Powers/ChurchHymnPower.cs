@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
@@ -19,8 +20,15 @@ public sealed class ChurchHymnPower : TheValkyriePower
         return new Data();
     }
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Smite>()];
-    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips
+    {
+        get
+        {
+            if (Owner.Player != null) return [CustomHoverTipFactory.FromCombatSmiteWithEnchant(Owner.Player)];
+            return [HoverTipFactory.FromCard<Smite>()];
+        }
+    }
+
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
 
@@ -33,12 +41,6 @@ public sealed class ChurchHymnPower : TheValkyriePower
             return;
         this.Flash();
         await Smite.CreateInHand(Owner.Player, this.Amount, combatState);
-        
-    }
-
-    public override async Task AfterPlayerTurnStartLate(PlayerChoiceContext choiceContext, Player player)
-    {
-        if (player != this.Owner.Player) return;
         await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, Amount*3, this.Owner, null, true);
     }
 }

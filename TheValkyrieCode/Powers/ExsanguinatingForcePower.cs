@@ -6,6 +6,8 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
+
+//deprecated
 public sealed class ExsanguinatingForcePower : TheValkyriePower
 {
     private class Data
@@ -24,16 +26,10 @@ public sealed class ExsanguinatingForcePower : TheValkyriePower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side != Owner.Side)
-            return;
+        if (!participants.Contains(Owner)) return;
+        
         this.Flash();
-        //await Cmd.CustomScaledWait(0.2f, 0.4f);
-        /*foreach (Creature hittableEnemy in (IEnumerable<Creature>) CombatState.HittableEnemies)
-        {
-            NCreature creatureNode = NCombatRoom.Instance?.GetCreatureNode(hittableEnemy);
-            if (creatureNode != null)
-                NCombatRoom.Instance.CombatVfxContainer.AddChildSafely((Node) NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("83eb85")));
-        }*/
+        
         await PowerCmd.Apply<BleedPower>(new ThrowingPlayerChoiceContext(), CombatState.HittableEnemies, this.Amount, this.Owner, null);
     }
 }

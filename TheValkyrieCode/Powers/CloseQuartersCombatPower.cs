@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -79,11 +80,11 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         await this.VisualsMoveToLeftMostEnemy(); //if a creature dies, recalculate where to move in case it was the leftmost one
     }
 
-    public override async Task AfterCurrentHpChanged(Creature creature, Decimal delta)
+    /* public override async Task AfterCurrentHpChanged(Creature creature, Decimal delta)
     {
         if (creature.Side != Owner.Side && delta >= 0)
-            await this.VisualsMoveToLeftMostEnemy(); //this last check is for enemy creatures reviving, like illusions or decamillipede... there's no on revive hook, so we'll just run anytime a creature on the opponent side is healed for any reason, since revives are secretly a normal heal
-    }
+            await this.VisualsMoveToLeftMostEnemy(); //likely deprecated. todo remove this if no bugs appear from its removal.
+    } */
 
     public override Decimal ModifyDamageMultiplicative(
         Creature? target,
@@ -117,7 +118,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         
         foreach (Creature creature in CombatState.GetOpponentsOf(Owner)) //Find the left-most enemy...
         {
-            if (creature.IsDead) continue;
+            if (creature.IsDead && Hook.ShouldCreatureBeRemovedFromCombatAfterDeath(CombatState, creature)) continue; //ignore dead creatures that fade, but dead creatures that linger, like illusions and decimilipede segments, should still count
             targetCreature ??= instance.GetCreatureNode(creature);
             if (instance.GetCreatureNode(creature)?.GlobalPosition.X < targetCreature?.GlobalPosition.X)
             {

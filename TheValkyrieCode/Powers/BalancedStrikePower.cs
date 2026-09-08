@@ -46,8 +46,8 @@ public class BalancedStrikePower : TheValkyriePower
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (!participants.Contains(Owner))
-            return;
+        if (!participants.Contains(Owner)) return;
+        
         await PowerCmd.Remove(this);
     }
 }

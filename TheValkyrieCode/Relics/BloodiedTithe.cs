@@ -32,7 +32,7 @@ public class BloodiedTithe : TheValkyrieRelic
     
     public override Task AfterModifyingPowerAmountGiven(PowerModel power)
     {
-        this.Flash();
+        this.Flash([power.Owner]);
         return Task.CompletedTask;
     }
 }

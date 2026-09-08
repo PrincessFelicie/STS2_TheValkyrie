@@ -32,7 +32,7 @@ public sealed class OverexertionPower : TheValkyriePower
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-            if (target != this.Owner || result.UnblockedDamage <= 0)
+        if (target != this.Owner || result.UnblockedDamage <= 0)
         {
             return;
         }

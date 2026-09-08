@@ -41,6 +41,7 @@ public class RustedDagger : TheValkyrieCard
     
     protected override bool ShouldGlowGoldInternal => 
         DynamicVars["Active"].BaseValue == 1 &&
+        CombatState != null &&
         CombatState.HittableEnemies.Any(c => c.GetPowerAmount<BleedPower>() >= 5);
 
     public RustedDagger() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)

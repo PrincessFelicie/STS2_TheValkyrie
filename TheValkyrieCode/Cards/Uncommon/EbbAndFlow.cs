@@ -7,9 +7,9 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
 public class EbbAndFlow : TheValkyrieCard
 {
-    public EbbAndFlow() : base(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+    public EbbAndFlow() : base(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
     {
-        WithCards(2);
+        WithCards(1, 1);
         WithTip(typeof(OverexertionPower));
     }
 
@@ -20,6 +20,5 @@ public class EbbAndFlow : TheValkyrieCard
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
     }
 }

@@ -10,7 +10,7 @@ public class DigYourHeelsIn : TheValkyrieCard
 {
     public DigYourHeelsIn() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithBlock(4,2);
+        WithBlock(5,2);
         WithPower<VigorPower>(6,1);
     }
     

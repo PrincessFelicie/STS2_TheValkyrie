@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
+//deprecated 
 public sealed class CrushTheirSpiritsPower : TheValkyriePower
 {
     private class Data
@@ -29,8 +30,8 @@ public sealed class CrushTheirSpiritsPower : TheValkyriePower
 
     public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (side != Owner.Side || Owner.GetPowerAmount<ArmorPower>() < 1)
-            return;
+        if (!participants.Contains(Owner) || Owner.GetPowerAmount<ArmorPower>() < 1) return;
+        
         this.Flash();
         await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Owner.GetPowerAmount<ArmorPower>() * this.Amount, ValueProp.Unpowered, this.Owner);
     }

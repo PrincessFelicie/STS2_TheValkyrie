@@ -14,6 +14,8 @@ public class BlessCmd
         CardModel card,
         int amount = 1)
     {
+        if (amount == 0) return; //safety net check
+        
         if (!CanBless(card)) //if we can't bless the card, return early
         {
             if (card.Enchantment != null) //if there is an enchantment but it's of a kind we can't bless, let the character have a thought bubble about it
@@ -68,11 +70,5 @@ public class BlessCmd
         CardModel card)
     {
         return (card.Enchantment == null || card.Enchantment.ShowAmount) && card.Type is not (CardType.Curse or CardType.Status or CardType.Quest);
-    }
-    
-    public static bool CanBlessOrReplaceEnchantment(
-        CardModel card)
-    {
-        return card.Type is not (CardType.Curse or CardType.Status or CardType.Quest);
     }
 }

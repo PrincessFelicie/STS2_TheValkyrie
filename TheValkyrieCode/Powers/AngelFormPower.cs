@@ -52,8 +52,8 @@ public sealed class AngelFormPower : TheValkyriePower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side != Owner.Side)
-            return;
+        if (!participants.Contains(Owner)) return;
+        
         this.Flash();
         await PowerCmd.Apply<ArmorPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
     }

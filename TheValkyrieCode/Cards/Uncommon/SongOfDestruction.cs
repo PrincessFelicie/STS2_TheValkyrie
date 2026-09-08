@@ -2,9 +2,12 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Enchantments;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Enchantments;
 using TheValkyrie.TheValkyrieCode.Powers;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
@@ -17,7 +20,10 @@ public class SongOfDestruction : TheValkyrieCard
         WithVar("Quantity", 1);
         WithVar("Sanguine", 1, 1);
         
-        WithTip(typeof(Smite));
+        WithTips(c => c.IsInCombat ? 
+            [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner, ModelDb.Enchantment<Sanguine>(), c.DynamicVars["Sanguine"].IntValue)] : 
+            [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<Sanguine>(), c.DynamicVars["Sanguine"].IntValue)]
+        );
         WithTips(c => HoverTipFactory.FromEnchantment<Sanguine>(c.DynamicVars["Sanguine"].IntValue));
     }
     

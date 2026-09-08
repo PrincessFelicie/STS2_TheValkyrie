@@ -24,7 +24,7 @@ public sealed class PullAMusclePower : TheValkyriePower
 
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side != Owner.Side)
+        if (!participants.Contains(Owner))
             return;
         this.Flash();
         await PowerCmd.Apply<OverexertionPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);

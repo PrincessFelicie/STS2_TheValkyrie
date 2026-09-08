@@ -42,7 +42,7 @@ public sealed class ShiningStarPower : TheValkyriePower
     
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (side != Owner.Side || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
+        if (!participants.Contains(Owner) || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
             return;
         this.DynamicVars["IsActive"].BaseValue = 1;
         this.Flash();

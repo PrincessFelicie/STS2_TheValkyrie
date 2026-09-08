@@ -2,8 +2,10 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Enchantments;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
@@ -15,7 +17,10 @@ public class SongOfDivinity : TheValkyrieCard
         WithVar("Replay", 1);
         WithKeyword(CardKeyword.Exhaust);
         
-        WithTip(typeof(Smite));
+        WithTips(c => c.IsInCombat ? 
+            [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner, ModelDb.Enchantment<Refrain>(), c.DynamicVars["Replay"].IntValue)] : 
+            [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<Refrain>(), c.DynamicVars["Replay"].IntValue)]
+        );
         WithTips(c => HoverTipFactory.FromEnchantment<Refrain>(c.DynamicVars["Replay"].IntValue));
     }
     

@@ -21,16 +21,17 @@ public class Sanctify : TheValkyrieCard
         WithTips(c => HoverTipFactory.FromEnchantment<Refrain>(c.DynamicVars["Bless"].IntValue));
     }
     
-    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(Owner).Cards.Any(c => BlessCmd.CanBless(c) && c.Type != CardType.Power);
+    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(Owner).Cards.Any(c => ModelDb.Enchantment<Refrain>().CanEnchant(c) && c.Type != CardType.Power);
 
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new (SelectionScreenPrompt, 1);
-        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Draw.GetPile(Owner).Cards.Where(c => BlessCmd.CanBlessOrReplaceEnchantment(c) && c.Type != CardType.Power).OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), Owner, prefs)).ToList())
+        foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, 
+                     PileType.Draw.GetPile(Owner).Cards
+                         .Where(c => ModelDb.Enchantment<Refrain>().CanEnchant(c) && c.Type != CardType.Power)
+                         .OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), Owner, prefs)).ToList())
         {
-            if (card.Enchantment is not Refrain)
-                CardCmd.ClearEnchantment(card); //returns and does nothing if there's no enchantment, so no filter necessary
             CardCmd.Enchant<Refrain>(card, DynamicVars["Bless"].BaseValue); //Because Refrain is flagged as stackable, CardCmd.Enchant handles either creating the new enchantment or incrementing the enchantment.amount
             CardCmd.Preview(card);
         }

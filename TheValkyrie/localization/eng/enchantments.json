@@ -8,5 +8,9 @@
 
   "THEVALKYRIE-AEGIS.title": "Aegis",
   "THEVALKYRIE-AEGIS.description": "Gain [blue]{Amount}[/blue] [gold]Armor[/gold] this turn.",
-  "THEVALKYRIE-AEGIS.extraCardText": "Gain {Amount} [gold]Armor[/gold] this turn."
+  "THEVALKYRIE-AEGIS.extraCardText": "Gain {Amount} [gold]Armor[/gold] this turn.",
+
+  "THEVALKYRIE-RANDOM_BLESSING.title": "Random Blessing (Preview)",
+  "THEVALKYRIE-RANDOM_BLESSING.description": "If you're reading this, something went wrong!",
+  "THEVALKYRIE-RANDOM_BLESSING.extraCardText": "+ Random Blessing!"
 }

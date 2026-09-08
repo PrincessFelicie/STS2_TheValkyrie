@@ -1,7 +1,7 @@
 {
   "THEVALKYRIE-BLEED_POWER.title": "Gash",
-  "THEVALKYRIE-BLEED_POWER.description": "Affected creatures lose HP every time Gash is applied.\n\nAt the end of the turn, Gash decays by 1 for every time Gash was applied this turn.",
-  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Gash is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.\n{Decay:Will decay by [blue]{}[/blue] this turn.|No decay: Gash has not been applied this turn.} ",
+  "THEVALKYRIE-BLEED_POWER.description": "Affected creatures lose HP every time Gash is applied.\n\nAt the end of their turn, Gash decays by [blue]1[/blue] for every time it was applied this turn.",
+  "THEVALKYRIE-BLEED_POWER.smartDescription": "Next time Gash is applied, this creature will take [blue]{Amount}[/blue] damage, plus the new amount.\n{Decay:Will decay by [blue]{}[/blue] at the end of this turn.|No decay: Gash has not been applied this turn.} ",
 
   "THEVALKYRIE-OVEREXERTION_POWER.title": "Overexertion",
   "THEVALKYRIE-OVEREXERTION_POWER.description": "Overexertion deals damage to you if you take unblocked damage this turn.",
@@ -27,22 +27,13 @@
   "THEVALKYRIE-BALANCED_STRIKE_POWER.description": "Prevent the next time you would gain [gold]Overexertion[/gold] this turn.",
   "THEVALKYRIE-BALANCED_STRIKE_POWER.smartDescription": "Prevent the next {Amount:plural:time|[blue]{}[/blue] times} you would gain [gold]Overexertion[/gold] this turn.",
 
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.title": "Crusade",
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.description": "Your [gold]Smites[/gold] deal additional damage and give extra [gold]Block[/gold].",
-  "THEVALKYRIE-CRUSADE_ATTACK_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage and give [blue]{BlockUpgrade:diff()}[/blue] extra [gold]Block[/gold].",
-
-  "THEVALKYRIE-CRUSADE_BLOCK_POWER.title": "Crusade Defense",
-  "THEVALKYRIE-CRUSADE_BLOCK_POWER.description": "Your [gold]Smites[/gold] grant extra [gold]Block[/gold].",
-  "THEVALKYRIE-CRUSADE_BLOCK_POWER.smartDescription": "Your [gold]Smites[/gold] grant [blue]{Amount}[/blue] extra [gold]Block[/gold].",
-
-
-  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.title": "Inquisition",
-  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.description": "Whenever you create a [gold]Smite[/gold], [gold]Upgrade[/gold] it.",
-  "THEVALKYRIE-INQUISITION_UPGRADE_POWER.smartDescription": "Whenever you create a [gold]Smite[/gold], [gold]Upgrade[/gold] it.",
-
-  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.title": "Inquisitest",
-  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.description": "Whenever you create a [gold]Smite[/gold], [gold]Bless[/gold] it.",
-  "THEVALKYRIE-INQUISITION_ENCHANT_POWER.smartDescription": "Whenever you create a [gold]Smite[/gold], [gold]Bless[/gold] it{Amount:plural:| [blue]{}[/blue] times}.",
+  "THEVALKYRIE-CRUSADE_POWER.title": "Crusade",
+  "THEVALKYRIE-CRUSADE_POWER.description": "Your [gold]Smites[/gold] deal additional damage and give extra [gold]Block[/gold].",
+  "THEVALKYRIE-CRUSADE_POWER.smartDescription": "Your [gold]Smites[/gold] deal [blue]{Amount}[/blue] additional damage and give [blue]{BlockUpgrade:diff()}[/blue] extra [gold]Block[/gold].",
+  
+  "THEVALKYRIE-INQUISITION_POWER.title": "Inquisition",
+  "THEVALKYRIE-INQUISITION_POWER.description": "Whenever you create a [gold]Smite[/gold], [gold]Upgrade[/gold] it.",
+  "THEVALKYRIE-INQUISITION_POWER.smartDescription": "Whenever you create a [gold]Smite[/gold], [gold]Upgrade[/gold] it{Bless:cond:==0?|==1? and [gold]Bless[/gold] it|>1? and [gold]Bless[/gold] it [blue]{}[/blue] times}.",
 
   "THEVALKYRIE-CHURCH_HYMN_POWER.title": "Church Hymn",
   "THEVALKYRIE-CHURCH_HYMN_POWER.description": "At the start of your turn, add a [gold]Smite[/gold] into your [gold]Hand[/gold] and [gold]Overexert[/gold] [blue]3[/blue].",

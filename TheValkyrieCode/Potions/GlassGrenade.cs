@@ -22,7 +22,7 @@ public sealed class GlassGrenade : TheValkyriePotion
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new PowerVar<BleedPower>(5),
+        new PowerVar<BleedPower>(3),
         new ("Times", 2)
     ];
     
