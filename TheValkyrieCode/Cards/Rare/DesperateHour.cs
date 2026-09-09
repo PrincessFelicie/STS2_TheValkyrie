@@ -3,6 +3,8 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
+using TheValkyrie.TheValkyrieCode.Enchantments;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 
@@ -11,8 +13,8 @@ public class DesperateHour : TheValkyrieCard
     public DesperateHour() : base(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
         WithKeyword(CardKeyword.Exhaust);
-        WithTip(typeof(Smite));
         WithVar("Bless", 1); WithTip(CustomEnum.Bless);
+        WithTips(c => c.IsInCombat ? [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner)] : [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<RandomBlessing>(), c.DynamicVars["Bless"].IntValue)]);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

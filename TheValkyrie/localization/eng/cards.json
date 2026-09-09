@@ -199,7 +199,7 @@
   "THEVALKYRIE-SONG_OF_DIVINITY.title": "Song of Divinity",
   "THEVALKYRIE-SONG_OF_DIVINITY.description": "Add {Quantity:diff()} [purple]Refrain {Replay:diff()}[/purple] [gold]Smites[/gold] into your [gold]Hand[/gold].",
 
-  "THEVALKYRIE-CACOPHONY.title": "Cacophony",
+  "THEVALKYRIE-CACOPHONY.title": "Racket",
   "THEVALKYRIE-CACOPHONY.description": "Deal damage equal to your [gold]Overexertion[/gold] to ALL enemies, then lose all your [gold]Overexertion[/gold].{InCombat:\\n(Deals {CalculatedDamage:diff()} damage)|}",
 
   "THEVALKYRIE-HAEMORRHAGE.title": "Haemorrhage",
@@ -262,7 +262,7 @@
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {Times:diff()} times.",
 
   "THEVALKYRIE-HEAVY_FLAIL.title": "Heavy Flail",
-  "THEVALKYRIE-HEAVY_FLAIL.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for each [gold]Armor[/gold] on yourself.",
+  "THEVALKYRIE-HEAVY_FLAIL.description": "Deal {Damage:diff()} damage.\nGain [gold]Vigor[/gold] equal to damage dealt.",
 
   "THEVALKYRIE-DOMINION.title": "Dominion",
   "THEVALKYRIE-DOMINION.description": "Whenever you [gold]Exhaust[/gold] a card, deal {DominionPower:diff()} damage to a random enemy.",

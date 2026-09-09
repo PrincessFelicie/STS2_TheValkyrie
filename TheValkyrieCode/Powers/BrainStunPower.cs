@@ -34,7 +34,7 @@ public class BrainStunPower : TheValkyriePower
     
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
-        if (power is OverexertionPower && applier == this.Target && power.Owner == this.Target)
+        if (power is OverexertionPower && applier == this.Target && power.Owner == this.Target && amount > 0)
         {
             await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, amount, applier, null);
         }

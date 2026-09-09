@@ -8,11 +8,11 @@
   "THEVALKYRIE-OVEREXERTION_POWER.smartDescription": "Next time {OnPlayer:you take|[gold]{OwnerName}[/gold] takes} unblocked damage this turn, {OnPlayer:lose|it loses} [blue]{Amount}[/blue] HP.",
 
   "THEVALKYRIE-ARMOR_POWER.title": "Armor",
-  "THEVALKYRIE-ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
-  "THEVALKYRIE-ARMOR_POWER.smartDescription": "All enemy attacks deal [blue]{Amount}[/blue] less.",
+  "THEVALKYRIE-ARMOR_POWER.description": "[gold]Armor[/gold] reduces incoming attack damage, before [gold]Block[/gold].",
+  "THEVALKYRIE-ARMOR_POWER.smartDescription": "All enemy deal [blue]{Amount}[/blue] less attack damage.",
 
   "THEVALKYRIE-TEMPORARY_ARMOR_POWER.title": "Temporary Armor",
-  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.description": "[gold]Armor[/gold] lowers damage taken from all attacks, before Block.",
+  "THEVALKYRIE-TEMPORARY_ARMOR_POWER.description": "[gold]Armor[/gold] reduces incoming attack damage, before [gold]Block[/gold].",
   "THEVALKYRIE-TEMPORARY_ARMOR_POWER.smartDescription": "Gain [blue]{Amount}[/blue] [gold]Armor[/gold] until the end of this turn.",
 
   "THEVALKYRIE-BURN_BRIGHT_POWER.title": "Burning Brightly",

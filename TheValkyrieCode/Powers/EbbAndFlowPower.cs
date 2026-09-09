@@ -29,16 +29,16 @@ public sealed class EbbAndFlowPower : TheValkyriePower
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-    
+
+    public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
+    {
+        await this.CheckForActivation();
+    }
+
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power is not OverexertionPower) return;
-        if (Owner.GetPowerAmount<OverexertionPower>() >= 15 && this.DynamicVars["IsActive"].BaseValue == 1)
-        {
-            this.Flash();
-            this.DynamicVars["IsActive"].BaseValue = 0;
-            await PowerCmd.Apply<DrawCardsNextTurnPower>(choiceContext, Owner, Amount, Owner, null);
-        }
+        await this.CheckForActivation();
     }
     
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
@@ -47,5 +47,15 @@ public sealed class EbbAndFlowPower : TheValkyriePower
             return;
         this.DynamicVars["IsActive"].BaseValue = 1;
         this.Flash();
+    }
+
+    private async Task CheckForActivation()
+    {
+        if (Owner.GetPowerAmount<OverexertionPower>() >= 15 && this.DynamicVars["IsActive"].BaseValue == 1)
+        {
+            this.Flash();
+            this.DynamicVars["IsActive"].BaseValue = 0;
+            await PowerCmd.Apply<DrawCardsNextTurnPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, Owner, null);
+        }
     }
 }
