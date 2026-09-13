@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://8yperga0kem"]
+[gd_scene load_steps=5 format=3 uid="uid://8yperga0kem"]
 
 [ext_resource type="Texture2D" uid="uid://dmhrai0unlfcb" path="res://TheValkyrie/scenes/rest_site/characters/the_valkyrie_temp.png" id="1_4xteq"]
+[ext_resource type="Texture2D" uid="uid://n72ti5vbh362" path="res://TheValkyrie/scenes/rest_site/characters/scale_compare.png" id="1_kuw5d"]
+[ext_resource type="Texture2D" uid="uid://oa3l82wibcxs" path="res://TheValkyrie/scenes/rest_site/characters/torso.png" id="2_omfnm"]
+[ext_resource type="Texture2D" uid="uid://clcbomta6ojqa" path="res://TheValkyrie/scenes/rest_site/characters/legs.png" id="3_jnceb"]
 
 [node name="ValkyrieRestSite" type="Node2D"]
 
@@ -12,7 +15,25 @@ offset_top = -100.0
 offset_right = -226.0
 offset_bottom = -100.0
 
-[node name="Sprite2D" type="Sprite2D" parent="ControlRoot"]
+[node name="Comparison (Keep Invisible)" type="Sprite2D" parent="ControlRoot"]
+visible = false
+position = Vector2(-57, 74)
+scale = Vector2(1.8844407, 1.8950846)
+texture = ExtResource("1_kuw5d")
+
+[node name="New Torso Alone" type="Sprite2D" parent="ControlRoot"]
+visible = false
+position = Vector2(69, -45.000004)
+scale = Vector2(0.8446746, 0.8446746)
+texture = ExtResource("2_omfnm")
+
+[node name="New Legs" type="Sprite2D" parent="ControlRoot"]
+visible = false
+position = Vector2(-6, -25)
+scale = Vector2(1.2100592, 1.2100592)
+texture = ExtResource("3_jnceb")
+
+[node name="Old Sprite (old proportions)" type="Sprite2D" parent="ControlRoot"]
 texture = ExtResource("1_4xteq")
 
 [node name="SelectionReticle" type="Control" parent="ControlRoot"]

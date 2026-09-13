@@ -2,6 +2,7 @@ PrincessFelicie - Main designer and developer. Most of the code, beta card art, 
 
 WyrdAutumn - Byrdonis Nest event patch code. Go check out The Sorceress!  
 JohnnyBazooka89 - Relic bar icon patch code. Go check out Hades Ancients!  
+Cany0udance - Hatch rest site multiple eggs patch code.  
 The Downfall team - Metrics uploading related code. Do you even need to be told about Downfall?  
 Blizzare - Related thanks. Go check out the Runesmith 2!
 

@@ -21,7 +21,7 @@ public class BrainStunPower : TheValkyriePower
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<OverexertionPower>()];
     
-    public override PowerType Type => PowerType.Buff;
+    public override PowerType Type => PowerType.Debuff;
     
     public override PowerStackType StackType => PowerStackType.Counter;
     

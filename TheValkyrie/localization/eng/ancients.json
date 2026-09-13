@@ -8,7 +8,7 @@
 
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-0.char": "I'm... I'm alive...? [blue]Mazaleth[/blue] be praised!",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-0.next": "Continue",
-  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "[sine]...............\n..the... ...byrd... did... nothing... ....go.... again....[/sine]",
+  "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient": "[sine]...............\n..the... ...bird... did... nothing... ....go.... again....[/sine]",
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.1-1.ancient.sfx": "event:/sfx/npcs/neow/neow_sleepy",
 
   "NEOW.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[sine]...the... Architect... ....yet... lives...[/sine]",
@@ -63,7 +63,7 @@
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient": "[sine]Little byrdling[/sine]! My favorite of Neow's puppets. What can I offer you this time...",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_welcome",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-0.next": "Request",
-  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "Could you... not call me that anymore? Please? I'm not a byrd. And I don't want to be one.",
+  "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-1.char": "Could you... not call me that anymore? Please? I'm not a bird. And I don't want to be one.",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-1.next": "Continue",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient": "And yet it seems to make you don a smile every time.",
   "NONUPEIPE.talk.THEVALKYRIE-THE_VALKYRIE.2-2.ancient.sfx": "event:/sfx/npcs/nonupeipe/nonupeipe_giggle",
