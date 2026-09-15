@@ -26,13 +26,13 @@ public class BloodiedTithe : TheValkyrieRelic
         Creature? target,
         CardModel? cardSource)
     {
-        if (target == null) return 0;
-        return power is not BleedPower || giver != this.Owner.Creature || target.GetPowerAmount<BleedPower>() != 0 ? 0 : DynamicVars["BleedPower"].BaseValue;
+        return power is not BleedPower || giver != this.Owner.Creature || target == null || target.GetPowerAmount<BleedPower>() != 0 ? 0 : DynamicVars["BleedPower"].BaseValue;
     }
     
     public override Task AfterModifyingPowerAmountGiven(PowerModel power)
     {
-        this.Flash([power.Owner]);
+        if (power.Owner != null) //this check necessary because, despite being *supposedly* non-nullable, Owner can still be null if artifact blocked the application of the power
+            this.Flash([power.Owner]);
         return Task.CompletedTask;
     }
 }

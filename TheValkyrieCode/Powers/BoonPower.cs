@@ -46,6 +46,7 @@ public class BoonPower : TheValkyriePower
         {
             CardModel card = PileType.Hand.GetPile(player).Cards.Where(BlessCmd.CanBless).TakeRandom(1, player.RunState.Rng.CombatCardSelection).First();
             await BlessCmd.EnchantOrUpgradeEnchant(card);
+            await Cmd.CustomScaledWait(0.025f, 0.05f);
         }
     }
 }

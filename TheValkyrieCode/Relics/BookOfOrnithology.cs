@@ -25,7 +25,7 @@ public class BookOfOrnithology : TheValkyrieRelic
 
     public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
-        if (player != Owner || combatState.RoundNumber > 1)
+        if (player != Owner || Owner.PlayerCombatState == null || Owner.PlayerCombatState.TurnNumber > 1)
             return;
         
         this.Flash();

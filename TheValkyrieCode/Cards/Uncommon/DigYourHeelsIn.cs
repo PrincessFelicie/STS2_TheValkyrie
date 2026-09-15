@@ -11,7 +11,7 @@ public class DigYourHeelsIn : TheValkyrieCard
     public DigYourHeelsIn() : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithBlock(5,2);
-        WithPower<VigorPower>(6,1);
+        WithPower<VigorPower>(4,1);
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

@@ -1,3 +1,4 @@
+using Godot;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -8,7 +9,9 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Nodes.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
+using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 public sealed class BrimmingPower : TheValkyriePower
@@ -43,14 +46,7 @@ public sealed class BrimmingPower : TheValkyriePower
     public override async Task AfterSideTurnStartLate(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
         // check for a fully retained hand (pyramid, stable serum)
-        if (this.DynamicVars["IsActive"].BaseValue == 0) //If the power has already activated this turn, ignore. We don't need to do a participants check because starting enemy turn with 10 cards in hand will have isActive at 0 in all circumstances anyway
-            return;
-        if (Owner.Player == null) return;
-        IReadOnlyList<CardModel> cards = PileType.Hand.GetPile(Owner.Player).Cards;
-        if (cards.Count <= 9) return;
-        this.Flash();
-        await CreatureCmd.GainBlock(Owner, this.Amount, ValueProp.Unpowered, null);
-        this.DynamicVars["IsActive"].BaseValue = 0;
+        await this.CheckForTrigger();
     }
     
     public override async Task AfterCardDrawn(
@@ -58,26 +54,44 @@ public sealed class BrimmingPower : TheValkyriePower
         CardModel card,
         bool fromHandDraw)
     {
-        // check after drawing a card
-        if (this.DynamicVars["IsActive"].BaseValue == 0) //If the power has already activated this turn, ignore.
-            return;
-        if (Owner.Player == null) return;
-        IReadOnlyList<CardModel> cards = PileType.Hand.GetPile(Owner.Player).Cards;
-        if (cards.Count <= 9) return;
-        this.Flash();
-        await CreatureCmd.GainBlock(Owner, this.Amount, ValueProp.Unpowered, null);
-        this.DynamicVars["IsActive"].BaseValue = 0;
+        // check on draw
+        await this.CheckForTrigger();
     }
     
     public override async Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
-        // check after creating a card
-        if (this.DynamicVars["IsActive"].BaseValue == 0) //If the power has already activated this turn, ignore.
+        // check on card gen
+        await this.CheckForTrigger();
+    }
+
+    public override async Task AfterCardChangedPiles(CardModel card, PileType oldPileType, AbstractModel? clonedBy)
+    {
+        // check on card moved to hand (eg neow's fury)
+        await this.CheckForTrigger();
+    }
+
+    public override async Task AfterCardEnteredCombat(CardModel card)
+    {
+        await this.CheckForTrigger();
+    }
+
+    private async Task CheckForTrigger()
+    {
+        if (this.DynamicVars["IsActive"].BaseValue == 0) //If the power has already activated this turn, ignore. We don't need to do a participants check because starting enemy turn with 10 cards in hand will have isActive at 0 in all circumstances anyway
             return;
         if (Owner.Player == null) return;
         IReadOnlyList<CardModel> cards = PileType.Hand.GetPile(Owner.Player).Cards;
         if (cards.Count <= 9) return;
         this.Flash();
+        SfxCmd.Play("event:/sfx/ui/deck_open");
+        foreach (CardModel card in cards)
+        {
+            NCard? nCard = NCard.FindOnTable(card);
+            if (nCard == null) break;
+            
+            await Cmd.CustomScaledWait(0.025f, 0.05f);
+            await CustomCardAnimCmd.GrowAndShrink(nCard);
+        }
         await CreatureCmd.GainBlock(Owner, this.Amount, ValueProp.Unpowered, null);
         this.DynamicVars["IsActive"].BaseValue = 0;
     }

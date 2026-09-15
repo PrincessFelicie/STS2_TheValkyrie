@@ -10,8 +10,8 @@ public class WarningStrike : TheValkyrieCard
 {
     public WarningStrike() : base(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(3, 2);
-        WithPower<VigorPower>(4, 1);
+        WithDamage(3, 1);
+        WithPower<VigorPower>(6, 2);
         WithTags(CardTag.Strike);
     }
 

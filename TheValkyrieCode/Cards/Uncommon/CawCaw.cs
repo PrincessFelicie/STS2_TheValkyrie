@@ -12,7 +12,7 @@ public class CawCaw : TheValkyrieCard
 {
     public CawCaw() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
-        WithPower<RitualPower>(2);
+        WithPower<RitualPower>(1);
         WithPower<OverexertionPower>(10, -5);
         WithKeyword(CardKeyword.Exhaust);
     }

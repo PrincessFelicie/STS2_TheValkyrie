@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
+using MegaCrit.Sts2.Core.Nodes.Cards;
 using TheValkyrie.TheValkyrieCode.Enchantments;
 
 namespace TheValkyrie.TheValkyrieCode.Utilities;
@@ -64,6 +65,11 @@ public class BlessCmd
             card.Enchantment.Amount+=amount;
             card.Enchantment.RecalculateValues(); //do this otherwise Adroit causes multiplayer state divergences
         }
+        
+        NCard? nCard = NCard.FindOnTable(card);
+        if (nCard == null || card.Enchantment == null) return;
+        SfxCmd.Play("event:/sfx/enemy/enemy_attacks/devoted_sculptor/devoted_sculptor_attack",Math.Min(1.2f, (float)0.5f+(0.1f*card.Enchantment.Amount)));
+        await CustomCardAnimCmd.GrowAndShrink(nCard, Math.Min(2.0f, (float)1.0f+(0.1f*card.Enchantment.Amount)));
     }
 
     public static bool CanBless(
