@@ -38,7 +38,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
     
     public string GetSecondAmount() => DynamicVars["OverexertMult"].IntValue.ToString();
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<OverexertionPower>(), HoverTipFactory.FromPower<VulnerablePower>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<OverexertionPower>()];
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

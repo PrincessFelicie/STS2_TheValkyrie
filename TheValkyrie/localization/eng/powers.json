@@ -119,7 +119,7 @@
   "THEVALKYRIE-ICARUS_COMPLEX_POWER.title": "Icarus Complex",
   "THEVALKYRIE-ICARUS_COMPLEX_POWER.description": "Your [gold]Vigor[/gold] effects are increased.",
   "THEVALKYRIE-ICARUS_COMPLEX_POWER.smartDescription": "Your effects gain and give [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
-  "THEVALKYRIE-ICARUS_COMPLEX_POWER.remoteDescription": "This player's effects gain and give [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
+  "THEVALKYRIE-ICARUS_COMPLEX_POWER.remoteDescription": "[gold]{ApplierName}[/gold]'s effects gain and give [blue]{Amount}[/blue]% more [gold]Vigor[/gold].",
 
   "THEVALKYRIE-BLUNDERBUSS_POWER.title": "Blunderbuss",
   "THEVALKYRIE-BLUNDERBUSS_POWER.description": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
@@ -127,8 +127,8 @@
 
   "THEVALKYRIE-BRAIN_STUN_POWER.title": "Blurred Vision",
   "THEVALKYRIE-BRAIN_STUN_POWER.description": "Whenever you [gold]Overexert[/gold] this turn, this enemy [gold]Overexerts[/gold] for the same amount.",
-  "THEVALKYRIE-BRAIN_STUN_POWER.remoteDescription": "Whenever [gold]{ApplierName}[/gold] [gold]Overexerts[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
   "THEVALKYRIE-BRAIN_STUN_POWER.smartDescription": "Whenever you [gold]Overexert[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
+  "THEVALKYRIE-BRAIN_STUN_POWER.remoteDescription": "Whenever [gold]{ApplierName}[/gold] [gold]Overexerts[/gold] {Amount:plural:this turn|for the next [blue]{}[/blue] turns}, this enemy [gold]Overexerts[/gold] for the same amount.",
 
   "THEVALKYRIE-EBB_AND_FLOW_POWER.title": "Tempo Storm",
   "THEVALKYRIE-EBB_AND_FLOW_POWER.description": "If you reach [blue]15[/blue] or more [gold]Overexertion[/gold] during a turn, draw cards at the start of your next turn.",

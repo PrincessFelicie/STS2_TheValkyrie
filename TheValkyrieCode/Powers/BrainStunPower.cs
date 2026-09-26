@@ -26,15 +26,10 @@ public class BrainStunPower : TheValkyriePower
     public override PowerStackType StackType => PowerStackType.Counter;
     
     public override PowerInstanceType InstanceType => PowerInstanceType.InstancedPerApplier;
-
-    public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
-    {
-        this.Target = applier;
-    }
     
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
-        if (power is OverexertionPower && applier == this.Target && power.Owner == this.Target && amount > 0)
+        if (power is OverexertionPower && applier == this.Applier && power.Owner == this.Applier && amount > 0)
         {
             await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, amount, applier, null);
         }

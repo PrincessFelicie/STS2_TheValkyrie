@@ -24,8 +24,6 @@ public class DancingPlaguePower : TheValkyriePower
     
     public override PowerStackType StackType => PowerStackType.Counter;
     
-    public override PowerInstanceType InstanceType => PowerInstanceType.InstancedPerApplier;
-    
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power is OverexertionPower && applier == Owner && power.Owner == Owner && amount > 0)

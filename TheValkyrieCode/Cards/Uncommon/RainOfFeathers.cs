@@ -17,12 +17,11 @@ public class RainOfFeathers : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        for (int i = 0; i < this.DynamicVars["Hits"].BaseValue; ++i)
+        await CommonActions.CardAttack(this, play).WithHitCount(this.DynamicVars["Hits"].IntValue).BeforeDamage((Func<Task>) (async () =>
         {
-            await CommonActions.CardAttack(this, play).Execute(choiceContext);
             if (CombatState == null) return;
-            await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, DynamicVars["BleedPower"].BaseValue, Owner.Creature, null);
-        }
+            await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, DynamicVars["BleedPower"].BaseValue, Owner.Creature,this);
+        })).Execute(choiceContext);
     }
 
     protected override void OnUpgrade()
