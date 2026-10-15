@@ -2,8 +2,11 @@ using BaseLib.Config;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Models;
+using TheValkyrie.TheValkyrieCode.Cards.ModCompat.AncientsAwakened;
 using TheValkyrie.TheValkyrieCode.MetricsUpload;
 using TheValkyrie.TheValkyrieCode.ModConfiguration;
+using TheValkyrie.TheValkyrieCode.Patches.ModCompatPatches.AncientsAwakened;
 
 namespace TheValkyrie.TheValkyrieCode;
 
@@ -18,16 +21,17 @@ public partial class MainFile : Node
 
     public static void Initialize()
     {
+        ModConfigRegistry.Register(ModId, new ValkyrieModConfig());
+        
         Harmony harmony = new(ModId);
         harmony.PatchAll();
 
         ModManager.OnMetricsUpload += ValkyrieMetrics.OnMetricsUpload;
-        ModConfigRegistry.Register(ModId, new ValkyrieModConfig());
     }
     
     public static string GetModVersion()
     {
-        var mod = ModManager.GetLoadedMods().FirstOrDefault(m => m.manifest?.id == "TheValkyrie");
+        var mod = ModManager.GetLoadedMods().FirstOrDefault(m => m.manifest?.id == ModId);
 
         return mod?.manifest?.version ?? "unknown";
     }

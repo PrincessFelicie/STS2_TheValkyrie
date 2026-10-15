@@ -11,5 +11,11 @@
 
   "THEVALKYRIE-METRICS_DATA_SHARE.title": "Share run data with mod creator (Opt-in only)",
   "THEVALKYRIE-METRICS_DATA_SHARE.hover.title": "Metrics Upload",
-  "THEVALKYRIE-METRICS_DATA_SHARE.hover.desc": "Gameplay data is sent to this mod's creator after completing a run to help with balance decisions.\nThis uses the same system as the base game, so no personal information is collected!"
+  "THEVALKYRIE-METRICS_DATA_SHARE.hover.desc": "Gameplay data is sent to this mod's creator after completing a run to help with balance decisions.\nThis uses the same system as the base game, so no personal information is collected!",
+
+  "THEVALKYRIE-CROSS_MOD_CONTENT.title": "Cross Mod Content",
+
+  "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.title": "Ancients Awakened custom cards",
+  "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.hover.title": "Ancients Awakened custom cards",
+  "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.hover.desc": "If Ancients Awakened is loaded, toggling this off will replace Valkyrie's custom ancient cards with the generic \"Surpass Limits\", \"Perfect Strike\", and \"Perfect Defend\".\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]"
 }

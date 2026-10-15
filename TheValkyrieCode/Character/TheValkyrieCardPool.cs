@@ -1,6 +1,14 @@
 ﻿using BaseLib.Abstracts;
 using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
+using HarmonyLib;
+using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Unlocks;
+using TheValkyrie.TheValkyrieCode.Cards.ModCompat;
+using TheValkyrie.TheValkyrieCode.Cards.ModCompat.AncientsAwakened;
+using TheValkyrie.TheValkyrieCode.ModConfiguration;
+using TheValkyrie.TheValkyrieCode.Patches.ModCompatPatches.AncientsAwakened;
 
 namespace TheValkyrie.TheValkyrieCode.Character;
 
@@ -31,4 +39,44 @@ public class TheValkyrieCardPool : CustomCardPoolModel
     public override Color DeckEntryCardColor => new("923c00");
 
     public override bool IsColorless => false;
+
+    private CardModel[]? _allCards;
+    public override IEnumerable<CardModel> AllCards
+    {
+        get
+        {
+            if (this._allCards == null)
+            {
+                this._allCards = this.GenerateAllCards();
+                this._allCards = [.. ModHelper.ConcatModelsFromMods(this, this._allCards)];
+            }
+            
+            if (ValkyrieModConfig.AncientsAwakenedCustomCards && AncientsAwakenedCardRegisterPatch.IsLoaded)
+            {
+                AncientsAwakenedCardRegisterPatch.RegisterPerfectedDefendForValkyrie(ModelDb.Card<UnchosenDefend>());
+                AncientsAwakenedCardRegisterPatch.RegisterPerfectedStrikeForValkyrie(ModelDb.Card<UnchosenStrike>());
+                AncientsAwakenedCardRegisterPatch.RegisterExperimentalSerumCardForValkyrie(ModelDb.Card<Contredanse>());
+            }
+            else
+            {
+                _allCards = _allCards.Where(c => c is not TheValkyrieAncientsAwakenedCard).ToArray();
+            }
+            
+            return this._allCards;
+        }
+    }
+    
+    protected override IEnumerable<CardModel> FilterThroughEpochs(UnlockState unlockState, IEnumerable<CardModel> cards)
+    {
+        var list = cards.ToList();
+        
+        var ancientsAwakenedType =
+            AccessTools.TypeByName("AncientsAwakened.AncientsAwakenedCode.Pools.Mithrix.PerfectedPool");
+        if (ancientsAwakenedType == null)
+        {
+            list.RemoveAll(c => c is TheValkyrieAncientsAwakenedCard);
+        }
+
+        return list;
+    }
 }

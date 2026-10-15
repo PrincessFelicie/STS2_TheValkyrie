@@ -8,7 +8,7 @@ public class ValkyrieModConfig : SimpleModConfig
 {
     public override void SetupConfigUI(Godot.Control optionContainer)
     {
-        BaseLibMain.Logger.Info("Setting up SimpleModConfig " + this.GetType().FullName);
+        BaseLibMain.Logger.Info("Setting up Customized ModConfig " + this.GetType().FullName);
         this.GenerateOptionsForAllProperties(optionContainer);
         this.AddRestoreDefaultsButton(optionContainer);
         SimpleModConfig.SetupFocusNeighbors(optionContainer);
@@ -23,4 +23,7 @@ public class ValkyrieModConfig : SimpleModConfig
     public static bool MysticLighterNerf { get; set; } = true;
     
     public static bool FunnyContent { get; set; } = true;
+    
+    [ConfigSection("CrossModContent", CollapsedByDefault = true)]
+    public static bool AncientsAwakenedCustomCards { get; set; } = true;
 }

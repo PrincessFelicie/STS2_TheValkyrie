@@ -200,7 +200,7 @@
   "THEVALKYRIE-SONG_OF_DIVINITY.description": "Add {Quantity:diff()} [purple]Refrain {Replay:diff()}[/purple] [gold]Smites[/gold] into your [gold]Hand[/gold].",
 
   "THEVALKYRIE-CACOPHONY.title": "Racket",
-  "THEVALKYRIE-CACOPHONY.description": "Deal damage equal to your [gold]Overexertion[/gold] to ALL enemies, then lose all your [gold]Overexertion[/gold].{InCombat:\\n(Deals {CalculatedDamage:diff()} damage)|}",
+  "THEVALKYRIE-CACOPHONY.description": "Deal damage equal to your [gold]Overexertion[/gold] to ALL enemies, then remove all your [gold]Overexertion[/gold].{InCombat:\\n(Deals {CalculatedDamage:diff()} damage)|}",
 
   "THEVALKYRIE-HAEMORRHAGE.title": "Haemorrhage",
   "THEVALKYRIE-HAEMORRHAGE.description": "Apply {BleedPower:diff()} [gold]Gash[/gold] to ALL enemies.",
@@ -292,19 +292,31 @@
   "THEVALKYRIE-ROUSING_SOLO.description": "All your allies draw {Cards:diff()} {Cards:plural:card|cards} and gain {Energy:energyIcons()}.\nYou [gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-BLUNDERBUSS.title": "Blunderbuss",
-  "THEVALKYRIE-BLUNDERBUSS.description": "Whenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
+  "THEVALKYRIE-BLUNDERBUSS.description": "You are [gold]Frail[/gold].\nWhenever another player attacks an enemy, play a [gold]Smite[/gold] against the same target.",
 
   "THEVALKYRIE-GUIDANCE.title": "Guidance",
   "THEVALKYRIE-GUIDANCE.description": "Give another player {VigorPower:diff()} [gold]Vigor[/gold].",
 
+  
+  
+
+  "THEVALKYRIE-UNCHOSEN_STRIKE.title": "Unchosen Strike",
+  "THEVALKYRIE-UNCHOSEN_STRIKE.description": "Deal {Damage:diff()} damage.\nApply {BleedPower:diff()} [gold]Gash[/gold].",
+
+  "THEVALKYRIE-UNCHOSEN_DEFEND.title": "Unchosen Defend",
+  "THEVALKYRIE-UNCHOSEN_DEFEND.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {ArmorPower:diff()} [gold]Armor[/gold] this turn.",
+
+  "THEVALKYRIE-CONTREDANSE.title": "Contredanse",
+  "THEVALKYRIE-CONTREDANSE.description": "Gain {energyPrefix:energyIcons(1)} and draw 1 card.\nRepeat this effect for every 10 [gold]Overexertion[/gold] you have, up to 30.{InCombat: ({CardsAndEnergyDisplay:diff()})|}\nRemove all your [gold]Overexertion[/gold].",
 
 
+  
 
   "THEVALKYRIE-MAESTRO_SLICE.title": "Maestro Slice (deprecated)",
   "THEVALKYRIE-MAESTRO_SLICE.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold].\nGain [gold]Block[/gold] equal to the [gold]Bleed[/gold] on this enemy.",
 
   "THEVALKYRIE-SECOND_WIND.title": "Second Wind (deprecated)",
-  "THEVALKYRIE-SECOND_WIND.description": "At the end of your turn, lose {SecondWindPower:diff()} [gold]Overexertion[/gold].",
+  "THEVALKYRIE-SECOND_WIND.description": "At the end of your turn, remove {SecondWindPower:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-SWOOP.title": "Swoop (deprecated)",
   "THEVALKYRIE-SWOOP.description": "Deal {Damage:diff()} damage.\nTransform this card into [gold]{IfUpgraded:show: Byrd Swoop+|Byrd Swoop}[/gold]. It keeps its current enchantment.",
