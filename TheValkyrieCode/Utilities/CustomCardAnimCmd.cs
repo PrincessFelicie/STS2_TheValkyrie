@@ -10,6 +10,6 @@ public class CustomCardAnimCmd
         Tween tween = card.CreateTween();
         Vector2 savedSize = card.Scale;
         tween.TweenProperty(card, "scale", savedSize*mult, 0.25f);
-        tween.TweenProperty(card, "scale", savedSize, 0.25f);
+        tween.TweenProperty(card, "scale", Vector2.One, 0.25f);
     }
 }

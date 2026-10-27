@@ -15,7 +15,7 @@
 
   "THEVALKYRIE-CROSS_MOD_CONTENT.title": "Cross Mod Content",
 
-  "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.title": "Ancients Awakened custom cards",
+  "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.title": "Ancients Awakened custom cards [red](Requires Restart)[/red]",
   "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.hover.title": "Ancients Awakened custom cards",
   "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.hover.desc": "If Ancients Awakened is loaded, toggling this off will replace Valkyrie's custom ancient cards with the generic \"Surpass Limits\", \"Perfect Strike\", and \"Perfect Defend\".\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]"
 }
