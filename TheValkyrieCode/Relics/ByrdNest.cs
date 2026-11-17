@@ -21,10 +21,12 @@ public class ByrdNest : TheValkyrieRelic
     private const int MaxHatches = 3;
     
     public override RelicRarity Rarity => RelicRarity.Rare;
-    
-    public override bool IsAllowed(IRunState runState)
+
+    public override bool SpawnsPets => _timesHatched > 0; 
+
+    protected override bool IsAllowedInternal(IRunState runState)
     {
-        return RelicModel.IsBeforeAct3TreasureChest(runState);
+        return !RelicModel.IsLateInAct3(runState) && runState.GameMode != GameMode.Blitz;
     }
     
     public override string PackedIconPath

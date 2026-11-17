@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Enchantments;
 
-namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
+namespace TheValkyrie.TheValkyrieCode.Cards.Multiplayer;
 
 public class JoinTheChoir : TheValkyrieCard
 {

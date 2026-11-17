@@ -1,13 +1,7 @@
-using BaseLib.Extensions;
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
-using TheValkyrie.TheValkyrieCode.Cards;
-using TheValkyrie.TheValkyrieCode.ModConfiguration;
-using TheValkyrie.TheValkyrieCode.Patches.ModCompatPatches.AncientsAwakened;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.ModCompat.AncientsAwakened;

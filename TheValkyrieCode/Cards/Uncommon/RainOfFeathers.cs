@@ -3,8 +3,8 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -16,12 +16,12 @@ public class RainOfFeathers : TheValkyrieCard
     {
         WithPower<BleedPower>(1, 1);
         WithDamage(1, 1);
-        WithVar("Hits", 2);
+        WithVar(new HitCountVar(2));
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).WithHitCount(this.DynamicVars["Hits"].IntValue).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).WithHitCount(this.DynamicVars.HitCount.IntValue).Execute(choiceContext);
     }
 
     public override async Task AfterDamageGiven(

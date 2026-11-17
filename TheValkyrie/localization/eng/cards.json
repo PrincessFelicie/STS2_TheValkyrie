@@ -73,7 +73,7 @@
   "THEVALKYRIE-SHARPEN.selectionScreenPrompt": "Choose an Attack to [gold]Bless[/gold] with [purple]Flay {Bless:diff()}[/purple].",
 
   "THEVALKYRIE-RISING_PUNCH.title": "Rising Punch",
-  "THEVALKYRIE-RISING_PUNCH.description": "Deal {Damage:diff()} damage {Times:diff()} times.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-RISING_PUNCH.description": "Deal {Damage:diff()} damage {HitCount:diff()} times.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-EMERGENCY_CORRECTION.title": "Emergency Correction",
   "THEVALKYRIE-EMERGENCY_CORRECTION.description": "Gain {Block:diff()} [gold]Block[/gold].",
@@ -84,7 +84,7 @@
   "THEVALKYRIE-BURN_BRIGHT.description": "Lose {StrengthPower:diff()} [gold]Strength[/gold].\nLose {DexterityPower:diff()} [gold]Dexterity[/gold].\nGain {energyPrefix:energyIcons(1)} at the start of each turn.",
   
   "THEVALKYRIE-RAIN_OF_FEATHERS.title": "Rain of Feathers",
-  "THEVALKYRIE-RAIN_OF_FEATHERS.description": "Apply {BleedPower:diff()} [gold]Gash[/gold] and deal {Damage:diff()} damage to all enemies {Hits:diff()} times.",
+  "THEVALKYRIE-RAIN_OF_FEATHERS.description": "Apply {BleedPower:diff()} [gold]Gash[/gold] and deal {Damage:diff()} damage to all enemies {HitCount:diff()} times.",
 
   "THEVALKYRIE-CRUSADE.title": "Crusade",
   "THEVALKYRIE-CRUSADE.description": "Your [gold]Smites[/gold] deal {CrusadeAttackPower:diff()} additional damage and give {CrusadeBlockPower:diff()} additional [gold]Block[/gold].",
@@ -180,7 +180,7 @@
   "THEVALKYRIE-TELEGRAPHED_SMASH.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {PerCardDamage:diff()} additional damage for each other card in your [gold]Hand[/gold].",
 
   "THEVALKYRIE-EAGER_JAB.title": "Eager Jab",
-  "THEVALKYRIE-EAGER_JAB.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Vigor[/gold], hits {Times:diff()} times.",
+  "THEVALKYRIE-EAGER_JAB.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Vigor[/gold], hits {HitCount:diff()} times.",
 
   "THEVALKYRIE-JUMP_AHEAD.title": "Jump Ahead",
   "THEVALKYRIE-JUMP_AHEAD.description": "Draw {Cards:diff()} cards.\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
@@ -259,7 +259,7 @@
   "THEVALKYRIE-WEIGHT_OF_RESPONSIBILITY.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {DisplayExtraDamage:diff()} additional damage for ALL your [purple]Enchanted[/purple] cards.",
   
   "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.title": "Break the Sound Barrier",
-  "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {Times:diff()} times.",
+  "THEVALKYRIE-BREAK_THE_SOUND_BARRIER.description": "Deal {Damage:diff()} damage {HitCount:diff()} times.",
 
   "THEVALKYRIE-HEAVY_FLAIL.title": "Heavy Flail",
   "THEVALKYRIE-HEAVY_FLAIL.description": "Deal {Damage:diff()} damage.\nGain [gold]Vigor[/gold] equal to damage dealt.",
@@ -297,6 +297,8 @@
   "THEVALKYRIE-GUIDANCE.title": "Guidance",
   "THEVALKYRIE-GUIDANCE.description": "Give another player {VigorPower:diff()} [gold]Vigor[/gold].",
 
+  "THEVALKYRIE-CRUEL_METAMORPHOSIS.title": "Cruel Metamorphosis",
+  "THEVALKYRIE-CRUEL_METAMORPHOSIS.description": "Choose an ally.\nTransform all cards in their hand into {IfUpgraded:show:[gold]God Byrd+[/gold]|[gold]God Byrd[/gold]}.",
   
   
 

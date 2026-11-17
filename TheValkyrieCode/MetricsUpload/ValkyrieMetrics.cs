@@ -101,6 +101,7 @@ public static class ValkyrieMetrics
             BuildId = ReleaseInfoManager.Instance.ReleaseInfo?.Version ?? "NON-RELEASE-VERSION",
             BuildType = PlatformUtil.GetPlatformBranch().ToName(),
             PlayerId = progress.UniqueId,
+            GameMode = run.GameMode.ToString(),
             Character = localPlayer.CharacterId ?? ModelId.none,
             NumPlayers = run.Players.Count,
             Team = run.Players.Count > 1

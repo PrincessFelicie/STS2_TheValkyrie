@@ -6,7 +6,6 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Enchantments;
 using TheValkyrie.TheValkyrieCode.Powers;
-using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Common;
 

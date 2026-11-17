@@ -4,7 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using TheValkyrie.TheValkyrieCode.Powers;
 
-namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
+namespace TheValkyrie.TheValkyrieCode.Cards.Multiplayer;
 
 public class HallowedAura : TheValkyrieCard
 {

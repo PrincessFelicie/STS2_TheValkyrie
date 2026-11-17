@@ -43,7 +43,7 @@ public sealed class TerritorialPurposePower : TheValkyriePower
         this.DynamicVars["HasUpgradedThisTurn"].BaseValue = 0;
         this.Flash();
         
-        foreach (CardModel original in (await CardSelectCmd.FromHand(choiceContext, player, new CardSelectorPrefs(SelectionScreenPrompt, this.Amount), c => c is not (ByrdSwoop or Peck), this)).ToList())
+        foreach (CardModel original in (await CardSelectCmd.FromHand(choiceContext, player, new CardSelectorPrefs(SelectionScreenPrompt, this.Amount), c => c is not (ByrdSwoop or Peck or GodByrd), this)).ToList())
         {
             if (Owner.Player.PlayerRng.GetRng(PlayerRngType.Transformations).NextBool())
             {

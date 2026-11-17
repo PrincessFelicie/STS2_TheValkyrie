@@ -3,7 +3,6 @@ using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Localization;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Nodes.Multiplayer;
 using MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect;
@@ -16,9 +15,9 @@ namespace TheValkyrie.TheValkyrieCode.Patches;
 internal static class NCharacterSelectScreenSelectCharacterPatch
 {
     [HarmonyPostfix]
-    internal static void Postfix(CharacterModel characterModel)
+    internal static void Postfix(NCharacterSelectButton charSelectButton)
     {
-        if (characterModel is Character.TheValkyrie && !ValkyrieModConfig.MetricsDataSharePopupSeen)
+        if (charSelectButton.Character is Character.TheValkyrie && !ValkyrieModConfig.MetricsDataSharePopupSeen)
             FtueMetricsSelector.CreateAndShowDataCollectionForm();
     }
 }

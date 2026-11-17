@@ -13,7 +13,7 @@ public sealed class YellowByrdpipPet : MonsterModel
 
     public override int MaxInitialHp => 9999;
 
-    public override bool IsHealthBarVisible => false;
+    public override bool IsInteractable => false;
     
     protected override string VisualsPath => SceneHelper.GetScenePath("creature_visuals/byrdpip"); //placeholder
 

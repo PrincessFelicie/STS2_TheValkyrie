@@ -1,5 +1,5 @@
 {
-  "THEVALKYRIE-THE_VALKYRIE.aromaPrinciple": "It can't go on like this! I must save them from this horrid life!",
+  "THEVALKYRIE-THE_VALKYRIE.aromaPrinciple": "Push yourself, try harder.",
   "THEVALKYRIE-THE_VALKYRIE.banter.alive.endTurnPing": "[jitter]CAW[/jitter]-- Urgh, push it down...",
   "THEVALKYRIE-THE_VALKYRIE.banter.dead.endTurnPing": "Get... back... up...",
   "THEVALKYRIE-THE_VALKYRIE.cardsModifierDescription": "Valkyrie cards will now appear in rewards and shops.",
@@ -11,6 +11,7 @@
   "THEVALKYRIE-THE_VALKYRIE.pronounObject": "her",
   "THEVALKYRIE-THE_VALKYRIE.pronounPossessive": "hers",
   "THEVALKYRIE-THE_VALKYRIE.pronounSubject": "she",
+  "THEVALKYRIE-THE_VALKYRIE.shortTitle": "Valkyrie",
   "THEVALKYRIE-THE_VALKYRIE.title": "The Valkyrie",
   "THEVALKYRIE-THE_VALKYRIE.titleObject": "The Valkyrie",
 

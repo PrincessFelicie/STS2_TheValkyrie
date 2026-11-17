@@ -3,7 +3,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models.Powers;
 
-namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
+namespace TheValkyrie.TheValkyrieCode.Cards.Multiplayer;
 
 public class Guidance : TheValkyrieCard
 {

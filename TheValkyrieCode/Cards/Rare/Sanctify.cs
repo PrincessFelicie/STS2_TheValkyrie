@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Enchantments;
-using TheValkyrie.TheValkyrieCode.Utilities;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
 

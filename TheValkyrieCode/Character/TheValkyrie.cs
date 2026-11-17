@@ -15,6 +15,7 @@ public class TheValkyrie : PlaceholderCharacterModel
     public const string CharacterId = "TheValkyrie";
 
     public static readonly Color Color = new("923c00");
+    public override Color DreadNameColor => new Color("b85c23c0");
     public override Color EnergyLabelOutlineColor => Color;
     
     public override string CustomAttackSfx => "event:/sfx/enemy/enemy_attacks/flail_knight/flail_knight_ram";

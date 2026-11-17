@@ -35,6 +35,6 @@ public sealed class ByrdStrengthPower : TheValkyriePower
         CardModel? card,
         CardPlay? cardPlay)
     {
-        return this.Owner != dealer || !props.IsPoweredAttack() || card is not (Peck or ByrdSwoop) ? 0 : this.Amount;
+        return this.Owner != dealer || card is not (Peck or ByrdSwoop or GodByrd) ? 0 : this.Amount;
     }
 }

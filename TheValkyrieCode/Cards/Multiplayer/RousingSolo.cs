@@ -1,10 +1,10 @@
-using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using TheValkyrie.TheValkyrieCode.Powers;
 
-namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
+namespace TheValkyrie.TheValkyrieCode.Cards.Multiplayer;
 
 public class RousingSolo : TheValkyrieCard
 {

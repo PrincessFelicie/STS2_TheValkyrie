@@ -2,11 +2,8 @@ using BaseLib.Config;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
-using MegaCrit.Sts2.Core.Models;
-using TheValkyrie.TheValkyrieCode.Cards.ModCompat.AncientsAwakened;
 using TheValkyrie.TheValkyrieCode.MetricsUpload;
 using TheValkyrie.TheValkyrieCode.ModConfiguration;
-using TheValkyrie.TheValkyrieCode.Patches.ModCompatPatches.AncientsAwakened;
 
 namespace TheValkyrie.TheValkyrieCode;
 

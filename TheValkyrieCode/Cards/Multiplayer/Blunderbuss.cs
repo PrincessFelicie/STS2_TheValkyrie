@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
 
-namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
+namespace TheValkyrie.TheValkyrieCode.Cards.Multiplayer;
 
 public class Blunderbuss : TheValkyrieCard
 {
