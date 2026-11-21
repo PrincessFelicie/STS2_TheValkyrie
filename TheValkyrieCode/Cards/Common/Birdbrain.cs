@@ -10,7 +10,6 @@ public class Birdbrain : TheValkyrieCard
 {
     public Birdbrain() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithKeyword(CardKeyword.Exhaust);
         WithUpgradingCardTip<ByrdSwoop>();
     }
     
@@ -18,7 +17,7 @@ public class Birdbrain : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        //remains from a previous version, in case I want to roll it back.
+        //remains from a previous version, in case I want to roll it back. Exhausted another card to turn into a random card
         /*CardSelectorPrefs prefs = new (CardSelectorPrefs.ExhaustSelectionPrompt, 1);
         CardModel? exhaustedCard = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
         if (exhaustedCard == null) return;
@@ -28,8 +27,14 @@ public class Birdbrain : TheValkyrieCard
         CardModel createdCard = CombatState.CreateCard<ByrdSwoop>(Owner);
         if (this.IsUpgraded)
             CardCmd.Upgrade(createdCard);
-        await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Discard, Owner);
-        CardCmd.Preview(createdCard);
+        if (this.Enchantment != null)
+        {
+            EnchantmentModel enchantment = this.Enchantment.CanonicalInstance;
+            CardCmd.Enchant(enchantment.ToMutable(), createdCard, this.Enchantment.Amount);
+        }
+        if (!play.IsLastInSeries)
+            return;
+        this.TransformIntoAfterPlay = createdCard;
     }
 
     protected override void OnUpgrade()

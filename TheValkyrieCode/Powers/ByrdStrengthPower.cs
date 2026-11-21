@@ -25,6 +25,7 @@ public sealed class ByrdStrengthPower : TheValkyriePower
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromCard<ByrdSwoop>(),
         HoverTipFactory.FromCard<Peck>(),
+        HoverTipFactory.FromCard<GodByrd>(),
     ];
 
     public override Decimal ModifyDamageAdditive(

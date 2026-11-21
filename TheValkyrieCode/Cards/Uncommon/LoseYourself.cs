@@ -9,33 +9,40 @@ namespace TheValkyrie.TheValkyrieCode.Cards.Uncommon;
 
 public class LoseYourself : TheValkyrieCard
 {
-    protected override bool ShouldGlowGoldInternal => this.Owner.Creature.GetPowerAmount<OverexertionPower>() >= 10;
-
     public LoseYourself() : base(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
     {
         WithPower<ByrdStrengthPower>(2);
-        WithPower<OverexertionPower>(10);
+        WithPower<OverexertionPower>(5);
 
         WithUpgradingCardTip<Peck>();
-        WithTip(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        if (this.Owner.Creature.GetPowerAmount<OverexertionPower>() >= 10)
+        await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, Owner.Creature, DynamicVars["ByrdStrengthPower"].IntValue, Owner.Creature, this);
+        
+        if (CombatState == null) return;
+        CardModel createdCard = CombatState.CreateCard<Peck>(Owner);
+        if (this.IsUpgraded)
+            CardCmd.Upgrade(createdCard);
+        if (this.Enchantment != null)
         {
-            await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, Owner.Creature, DynamicVars["ByrdStrengthPower"].IntValue, Owner.Creature, this);
-            if (CombatState == null) return;
-            CardModel createdCard = CombatState.CreateCard<Peck>(Owner);
-            if (this.IsUpgraded)
-                CardCmd.Upgrade(createdCard);
-            await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Hand, Owner);
-            await CardCmd.Exhaust(choiceContext, this);
+            EnchantmentModel enchantment = this.Enchantment.CanonicalInstance;
+            CardCmd.Enchant(enchantment.ToMutable(), createdCard, this.Enchantment.Amount);
         }
-        else
-        {
-            await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
-        }
+        if (!play.IsLastInSeries)
+            return;
+        this.TransformIntoAfterPlay = createdCard;
+        
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
+    }
+    
+    protected override CardLocation GetResultLocationForCardPlay()
+    {
+        CardLocation locationForCardPlay = base.GetResultLocationForCardPlay();
+        if (locationForCardPlay.pileType == PileType.Discard) //note to self: result location is determined *before* card effects trigger. not that it matters after the rework of this card
+            locationForCardPlay.pileType = PileType.Hand;
+        return locationForCardPlay;
     }
 
     protected override void OnUpgrade()

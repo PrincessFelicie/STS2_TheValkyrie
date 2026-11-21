@@ -51,7 +51,7 @@ public sealed class EbbAndFlowPower : TheValkyriePower
 
     private async Task CheckForActivation()
     {
-        if (Owner.GetPowerAmount<OverexertionPower>() >= 15 && this.DynamicVars["IsActive"].BaseValue == 1)
+        if (Owner.GetPowerAmount<OverexertionPower>() >= 10 && this.DynamicVars["IsActive"].BaseValue == 1)
         {
             this.Flash();
             this.DynamicVars["IsActive"].BaseValue = 0;

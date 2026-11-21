@@ -9,8 +9,8 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 namespace TheValkyrie.TheValkyrieCode.Cards;
 
 [Pool(typeof(TheValkyrieCardPool))]
-public abstract class TheValkyrieCard(int cost, CardType type, CardRarity rarity, TargetType target) :
-    ConstructedCardModel(cost, type, rarity, target)
+public abstract class TheValkyrieCard(int cost, CardType type, CardRarity rarity, TargetType target, bool shouldShowInCardLibrary = true) :
+    ConstructedCardModel(cost, type, rarity, target, shouldShowInCardLibrary)
 {
     //Image size:
     //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)

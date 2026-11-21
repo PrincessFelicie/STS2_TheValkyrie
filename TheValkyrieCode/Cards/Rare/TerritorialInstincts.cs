@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
+using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Cards.Rare;
@@ -14,6 +15,7 @@ public class TerritorialInstincts : TheValkyrieCard
         WithVar("TerritorialPurposePower", 1); // WithVar instead of WithPower because we don't need a tooltip on the card, the card text says it all
         WithUpgradingCardTip<Peck>();
         WithUpgradingCardTip<ByrdSwoop>();
+        WithUpgradingCardTip<GodByrdBlurredPreview>();
         WithTip(typeof(ByrdStrengthPower));
     }
     

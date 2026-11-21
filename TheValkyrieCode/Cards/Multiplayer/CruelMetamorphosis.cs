@@ -13,6 +13,8 @@ public class CruelMetamorphosis : TheValkyrieCard
         WithUpgradingCardTip<GodByrd>();
     }
     
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);

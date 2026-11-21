@@ -63,7 +63,7 @@
   "THEVALKYRIE-DEEP_BREATH.description": "Gain {Block:diff()} [gold]Block[/gold].\nRemove up to {OverexertionRemove:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-BIRDBRAIN.title": "Birdbrain",
-  "THEVALKYRIE-BIRDBRAIN.description": "Add a [gold]{IfUpgraded:show:Byrd Swoop+|Byrd Swoop}[/gold] into your [gold]Discard Pile[/gold].",
+  "THEVALKYRIE-BIRDBRAIN.description": "[gold]Transform[/gold] this into [gold]{IfUpgraded:show:Byrd Swoop+|Byrd Swoop}[/gold]. It keeps any [purple]Enchantment[/purple].",
 
   "THEVALKYRIE-PREPARE_SERMON.title": "Prepare Sermon",
   "THEVALKYRIE-PREPARE_SERMON.description": "If you have no [gold]Smites[/gold] in your [gold]Hand[/gold], add {Quantity:diff()} [gold]Smites[/gold] into your hand.",
@@ -129,7 +129,7 @@
   "THEVALKYRIE-CRESCENDO_STRIKE.description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, [gold]Bless[/gold] it{IfUpgraded:show: twice|}.",
 
   "THEVALKYRIE-LOSE_YOURSELF.title": "Lose Yourself",
-  "THEVALKYRIE-LOSE_YOURSELF.description": "If you have 10 or more [gold]Overexertion[/gold],\nGain {ByrdStrengthPower:diff()} [gold]Byrd Strength[/gold],\nadd a [gold]{IfUpgraded:show:Peck+|Peck}[/gold] into your [gold]Hand[/gold],\n and [gold]Exhaust[/gold] this card.\nOtherwise, [gold]Overexert[/gold] {OverexertionPower:diff()}.",
+  "THEVALKYRIE-LOSE_YOURSELF.description": "Gain {ByrdStrengthPower:diff()} [gold]Byrd Strength[/gold].\n[gold]Transform[/gold] this into [gold]{IfUpgraded:show:Peck+|Peck}[/gold], and return it to your [gold]Hand[/gold]. It keeps any [purple]Enchantment[/purple].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.",
 
   "THEVALKYRIE-POLISH.title": "Polish",
   "THEVALKYRIE-POLISH.description": "Gain {ArmorPower:diff()} [gold]Armor[/gold]{IfUpgraded:show:, and {ArmorPower:diff()} more this turn|}.",
@@ -145,7 +145,7 @@
   "THEVALKYRIE-BUCKLER_FEINT.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:For the next {BrainStunPower:diff()} turns|This turn}, whenever you [gold]Overexert[/gold], the enemy [gold]Overexerts[/gold] for the same amount.",
 
   "THEVALKYRIE-EBB_AND_FLOW.title": "Tempo Storm",
-  "THEVALKYRIE-EBB_AND_FLOW.description": "If you reach 15 or more [gold]Overexertion[/gold] during a turn, draw {Cards:diff()} {Cards:plural:card|cards} at the start of your next turn.",
+  "THEVALKYRIE-EBB_AND_FLOW.description": "If you reach 10 or more [gold]Overexertion[/gold] during a turn, draw {Cards:diff()} {Cards:plural:card|cards} at the start of your next turn.",
 
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.title": "Close and Personal",
   "THEVALKYRIE-CLOSE_QUARTERS_COMBAT.description": "Whenever you [gold]Overexert[/gold], double the amount received.\nYou deal {CloseQuartersCombatPower:diff()}% more damage.",
@@ -241,7 +241,7 @@
   "THEVALKYRIE-SANCTIFY.selectionScreenPrompt": "Choose a non-Power card to [gold]Bless[/gold] with [purple]Refrain {Bless:diff()}[/purple].",
 
   "THEVALKYRIE-TERRITORIAL_INSTINCTS.title": "Abnormal Instincts",
-  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, [gold]Transform[/gold] a non-Byrd card in your [gold]Hand[/gold] into {IfUpgraded:show:an [gold]Upgraded[/gold]|a} [gold]Byrd Card[/gold], and gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_INSTINCTS.description": "At the start of your turn, [gold]Transform[/gold] a non-Byrd card in your [gold]Hand[/gold] into a random {IfUpgraded:show:[gold]Byrd Card[/gold]+|[gold]Byrd Card[/gold]}, it keeps any [purple]Enchantment[/purple], and gain 1 [gold]Byrd Strength[/gold].",
 
   "THEVALKYRIE-MUSICAL_BRIDGE.title": "Musical Bridge",
   "THEVALKYRIE-MUSICAL_BRIDGE.description": "[gold]Bless[/gold] {IfUpgraded:show:X+1|X} random cards in your [gold]Hand[/gold] with [purple]Refrain 1[/purple].",
@@ -298,7 +298,7 @@
   "THEVALKYRIE-GUIDANCE.description": "Give another player {VigorPower:diff()} [gold]Vigor[/gold].",
 
   "THEVALKYRIE-CRUEL_METAMORPHOSIS.title": "Cruel Metamorphosis",
-  "THEVALKYRIE-CRUEL_METAMORPHOSIS.description": "Choose an ally.\nTransform all cards in their hand into {IfUpgraded:show:[gold]God Byrd+[/gold]|[gold]God Byrd[/gold]}.",
+  "THEVALKYRIE-CRUEL_METAMORPHOSIS.description": "Choose an ally.\n[gold]Transform[/gold] all cards in their hand into {IfUpgraded:show:[gold]God Byrd+[/gold]|[gold]God Byrd[/gold]}.",
   
   
 
@@ -313,7 +313,6 @@
 
 
   
-
   "THEVALKYRIE-MAESTRO_SLICE.title": "Maestro Slice (deprecated)",
   "THEVALKYRIE-MAESTRO_SLICE.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold].\nGain [gold]Block[/gold] equal to the [gold]Bleed[/gold] on this enemy.",
 
@@ -321,7 +320,7 @@
   "THEVALKYRIE-SECOND_WIND.description": "At the end of your turn, remove {SecondWindPower:diff()} [gold]Overexertion[/gold].",
 
   "THEVALKYRIE-SWOOP.title": "Swoop (deprecated)",
-  "THEVALKYRIE-SWOOP.description": "Deal {Damage:diff()} damage.\nTransform this card into [gold]{IfUpgraded:show: Byrd Swoop+|Byrd Swoop}[/gold]. It keeps its current enchantment.",
+  "THEVALKYRIE-SWOOP.description": "Deal {Damage:diff()} damage.\n[gold]Transform[/gold]this card into [gold]{IfUpgraded:show: Byrd Swoop+|Byrd Swoop}[/gold]. It keeps its current enchantment.",
 
   "THEVALKYRIE-BIRD_FIST.title": "Bird Fist (deprecated)",
   "THEVALKYRIE-BIRD_FIST.description": "[gold]Exhaust[/gold] ALL of your Skills.\nYou take half damage and no longer [gold]Overexert[/gold].",
@@ -333,5 +332,10 @@
   "THEVALKYRIE-EXSANGUINATING_FORCE.description": "At the start of your turn, apply {BleedPower:diff()} [gold]Gash[/gold] to ALL enemies.",
 
   "THEVALKYRIE-CRUSH_THEIR_SPIRITS.title": "Crush Their Spirits (deprecated)",
-  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.description": "{IfUpgraded:show: Apply 1 [gold]Weak[/gold] to ALL enemies.\n|}At the end of your turn, deal damage to ALL enemies equal to your [gold]Armor[/gold]."
+  "THEVALKYRIE-CRUSH_THEIR_SPIRITS.description": "{IfUpgraded:show: Apply 1 [gold]Weak[/gold] to ALL enemies.\n|}At the end of your turn, deal damage to ALL enemies equal to your [gold]Armor[/gold].",
+
+
+
+  "THEVALKYRIE-GOD_BYRD_BLURRED_PREVIEW.title": "And Sometimes...",
+  "THEVALKYRIE-GOD_BYRD_BLURRED_PREVIEW.description": "Rarely appears."
 }
