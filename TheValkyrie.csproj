@@ -76,6 +76,7 @@
         <Folder Include="TheValkyrie\images\relics\big\"/>
         <Folder Include="TheValkyrie\images\ui\rest_site\" />
         <Folder Include="TheValkyrie\images\vfx\common\" />
+        <Folder Include="TheValkyrie\scenes\combat\creature_visuals\Byrdpips\" />
         <Folder Include="TheValkyrie\scenes\combat\energy_counters\" />
         <Folder Include="TheValkyrie\scenes\merchant\" />
         <Folder Include="TheValkyrie\scenes\rest_site\characters\" />

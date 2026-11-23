@@ -1,3 +1,4 @@
+using Godot;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -5,6 +6,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models.Cards;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using TheValkyrie.TheValkyrieCode.Extensions;
@@ -38,11 +40,11 @@ public class YellowByrdpip : TheValkyrieRelic
     [SavedProperty]
     public string Skin
     {
-        get => this._skin;
+        get => _skin;
         set
         {
-            this.AssertMutable();
-            this._skin = value;
+            AssertMutable();
+            _skin = value;
         }
     }
     
@@ -57,13 +59,15 @@ public class YellowByrdpip : TheValkyrieRelic
         CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(Owner.RunState.CreateCard<ByrdSwoop>(Owner), PileType.Deck), 1f);
         if (!CombatManager.Instance.IsInProgress)
             return;
-        await this.SummonPet();
+        await SummonPet();
     }
 
-    public override async Task BeforeCombatStart() => await this.SummonPet();
+    public override async Task BeforeCombatStart() => await SummonPet();
 
     private async Task SummonPet()
     {
-        Creature creature = await PlayerCmd.AddPet<YellowByrdpipPet>(this.Owner);
+        Creature creature = await PlayerCmd.AddPet<YellowByrdpipPet>(Owner);
+        NCreature? cNode = creature.GetCreatureNode();
+        cNode?.SetModulate(new Color(1.652f, 0.827f, 0.855f));
     }
 }

@@ -13,12 +13,12 @@ public class Valkyrie6Unlock : EpochModel
     {
         return
         [
-            EpochModel.Get(EpochModel.GetId<Valkyrie1KillBosses>()),
-            EpochModel.Get(EpochModel.GetId<Valkyrie2BeatAct1>()),
-            EpochModel.Get(EpochModel.GetId<Valkyrie3BeatAct3>()),
-            EpochModel.Get(EpochModel.GetId<Valkyrie4KillElites>()),
-            EpochModel.Get(EpochModel.GetId<Valkyrie5Ascension1>()),
-            EpochModel.Get(EpochModel.GetId<Valkyrie7BeatAct2>())
+            Get(GetId<Valkyrie1KillBosses>()),
+            Get(GetId<Valkyrie2BeatAct1>()),
+            Get(GetId<Valkyrie3BeatAct3>()),
+            Get(GetId<Valkyrie4KillElites>()),
+            Get(GetId<Valkyrie5Ascension1>()),
+            Get(GetId<Valkyrie7BeatAct2>())
         ];
     }
     

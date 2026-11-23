@@ -10,7 +10,6 @@ using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Utilities;
 
-
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
 public class BoonPower : TheValkyriePower
@@ -33,16 +32,16 @@ public class BoonPower : TheValkyriePower
     {
         if (!participants.Contains(Owner)) return;
         
-        Player? player = this.Owner.Player;
+        Player? player = Owner.Player;
         if (player == null) return;
         
-        this.Flash();
+        Flash();
         if (!PileType.Hand.GetPile(player).Cards.Where(BlessCmd.CanBless).Any())
         {
             ThinkCmd.Play(new LocString("combat_messages", "CANT_ENCHANT_HAND"), player.Creature, 2.0);
             return;
         }
-        for (int i = 0; i < this.Amount; ++i)
+        for (int i = 0; i < Amount; ++i)
         {
             CardModel card = PileType.Hand.GetPile(player).Cards.Where(BlessCmd.CanBless).TakeRandom(1, player.RunState.Rng.CombatCardSelection).First();
             await BlessCmd.EnchantOrUpgradeEnchant(card);

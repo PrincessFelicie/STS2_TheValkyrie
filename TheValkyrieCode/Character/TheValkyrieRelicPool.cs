@@ -1,6 +1,6 @@
 ﻿using BaseLib.Abstracts;
-using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
+using TheValkyrie.TheValkyrieCode.Extensions;
 
 namespace TheValkyrie.TheValkyrieCode.Character;
 

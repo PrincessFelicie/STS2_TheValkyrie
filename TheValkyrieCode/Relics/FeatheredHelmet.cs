@@ -20,9 +20,8 @@ public class FeatheredHelmet : TheValkyrieRelic
 
     public override async Task AfterRoomEntered(AbstractRoom room)
     {
-        if (!(room is CombatRoom))
-            return;
-        this.Flash();
-        await PowerCmd.Apply<ArmorPower>((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, null);
+        if (room is not CombatRoom) return;
+        Flash();
+        await PowerCmd.Apply<ArmorPower>(new ThrowingPlayerChoiceContext(), Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, null);
     }
 }

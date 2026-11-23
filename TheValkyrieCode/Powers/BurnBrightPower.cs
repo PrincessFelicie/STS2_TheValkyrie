@@ -22,6 +22,6 @@ public sealed class BurnBrightPower : TheValkyriePower
 
     public override decimal ModifyMaxEnergy(Player player, decimal amount)
     {
-        return player != this.Owner.Player ? amount : amount + this.Amount;
+        return player != Owner.Player ? amount : amount + Amount;
     }
 }

@@ -25,17 +25,17 @@ public class MusicalBridge : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         var energySpent = ResolveEnergyXValue();
-        if (this.IsUpgraded) 
+        if (IsUpgraded) 
             energySpent++;
         EnchantmentModel enchantment = ModelDb.Enchantment<Refrain>();
         for (var i = 0; i < energySpent; ++i)
         {
-            if (!PileType.Hand.GetPile(this.Owner).Cards.Where(enchantment.CanEnchant).Any())
+            if (!PileType.Hand.GetPile(Owner).Cards.Where(enchantment.CanEnchant).Any())
             {
                 ThinkCmd.Play(new LocString("combat_messages", "ENCHANT_NO_TARGET"), Owner.Creature, 2.0);
                 break;
             }
-            CardModel card = PileType.Hand.GetPile(this.Owner).Cards.Where(enchantment.CanEnchant).TakeRandom(1, Owner.RunState.Rng.CombatCardSelection).First();
+            CardModel card = PileType.Hand.GetPile(Owner).Cards.Where(enchantment.CanEnchant).TakeRandom(1, Owner.RunState.Rng.CombatCardSelection).First();
             CardCmd.Enchant<Refrain>(card, DynamicVars["Bless"].BaseValue); //Because Refrain is flagged as stackable, CardCmd.Enchant handles either creating the new enchantment or incrementing the enchantment.amount
         }
     }

@@ -1,17 +1,18 @@
 using BaseLib;
 using BaseLib.Config;
+using Godot;
 
 namespace TheValkyrie.TheValkyrieCode.ModConfiguration;
 
 [ConfigHoverTipsByDefault]
 public class ValkyrieModConfig : SimpleModConfig
 {
-    public override void SetupConfigUI(Godot.Control optionContainer)
+    public override void SetupConfigUI(Control optionContainer)
     {
-        BaseLibMain.Logger.Info("Setting up Customized ModConfig " + this.GetType().FullName);
-        this.GenerateOptionsForAllProperties(optionContainer);
-        this.AddRestoreDefaultsButton(optionContainer);
-        SimpleModConfig.SetupFocusNeighbors(optionContainer);
+        BaseLibMain.Logger.Info("Setting up Customized ModConfig " + GetType().FullName);
+        GenerateOptionsForAllProperties(optionContainer);
+        AddRestoreDefaultsButton(optionContainer);
+        SetupFocusNeighbors(optionContainer);
     }
     
     public static bool MetricsDataShare { get; set; } = false;

@@ -1,6 +1,6 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Enchantments;
@@ -20,7 +20,7 @@ public class DesperateHour : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        List<CardModel> list1 = PileType.Hand.GetPile(this.Owner).Cards.ToList();
+        List<CardModel> list1 = PileType.Hand.GetPile(Owner).Cards.ToList();
         int exhaustCount = list1.Count;
         foreach (CardModel card in list1)
             await CardCmd.Exhaust(choiceContext, card);

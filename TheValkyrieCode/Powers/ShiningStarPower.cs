@@ -35,27 +35,27 @@ public sealed class ShiningStarPower : TheValkyriePower
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (target != this.Owner || result.UnblockedDamage <= 0) 
+        if (target != Owner || result.UnblockedDamage <= 0) 
             return;
-        this.DynamicVars["IsActive"].BaseValue = 0;
+        DynamicVars["IsActive"].BaseValue = 0;
     }
     
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (!participants.Contains(Owner) || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
+        if (!participants.Contains(Owner) || DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
             return;
-        this.DynamicVars["IsActive"].BaseValue = 1;
-        this.Flash();
+        DynamicVars["IsActive"].BaseValue = 1;
+        Flash();
     }
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (participants.Contains(Owner) || this.DynamicVars["IsActive"].BaseValue == 0) //at the end of the enemy turn, check if we had a perfect turn...
+        if (participants.Contains(Owner) || DynamicVars["IsActive"].BaseValue == 0) //at the end of the enemy turn, check if we had a perfect turn...
             return;
         await Cmd.CustomScaledWait(0.2f, 0.6f);
-        this.Flash();
+        Flash();
         //A fun vfx for this would be a mini grand-finale where a spotlight shines on the Valkyrie, then clapping sounds play
         NDebugAudioManager.Instance?.Play("hey.mp3", 1F, PitchVariance.Medium); //placeholder sound
-        await PowerCmd.Apply<VigorPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
+        await PowerCmd.Apply<VigorPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, Owner, null);
     }
 }

@@ -38,12 +38,12 @@ public sealed class AngelFormPower : TheValkyriePower
             //We could consider stealing the visual of Hexed from Spectral Knight -- but not the affliction itself, since cards can only have one affliction at a time. It'd have gameplay implications.
         }
 
-        await this.ApplyFlyTweenToOwner();
+        await ApplyFlyTweenToOwner();
     }
     
     public override Task AfterCardEnteredCombat(CardModel card)
     {
-        if (!card.Tags.Contains(CustomEnum.Smite) || card.Owner != this.Owner.Player)
+        if (!card.Tags.Contains(CustomEnum.Smite) || card.Owner != Owner.Player)
             return Task.CompletedTask;
         CardCmd.ApplyKeyword(card, CardKeyword.Ethereal);
         CardCmd.RemoveKeyword(card, CardKeyword.Retain);
@@ -54,8 +54,8 @@ public sealed class AngelFormPower : TheValkyriePower
     {
         if (!participants.Contains(Owner)) return;
         
-        this.Flash();
-        await PowerCmd.Apply<ArmorPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
+        Flash();
+        await PowerCmd.Apply<ArmorPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, Owner, null);
     }
 
     private Task ApplyFlyTweenToOwner()
@@ -63,7 +63,7 @@ public sealed class AngelFormPower : TheValkyriePower
         NCombatRoom? instance = NCombatRoom.Instance;
         if (TestMode.IsOn || instance == null ) return Task.CompletedTask;
         
-        NCreature? ownerCreature = instance.GetCreatureNode(this.Owner);
+        NCreature? ownerCreature = instance.GetCreatureNode(Owner);
         if (ownerCreature == null) return Task.CompletedTask;
         
         Tween tweenLiftOff = instance.CreateTween().SetParallel().SetEase(Tween.EaseType.InOut).SetTrans(Tween.TransitionType.Cubic);

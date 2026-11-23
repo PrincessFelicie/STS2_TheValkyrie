@@ -38,7 +38,7 @@ public class BalancedStrikePower : TheValkyriePower
 
     public override async Task AfterModifyingPowerAmountGiven(PowerModel power)
     {
-        if (power is OverexertionPower && power.Owner == this.Owner)
+        if (power is OverexertionPower && power.Owner == Owner)
         {
             await PowerCmd.Decrement(this);
         }

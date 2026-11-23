@@ -21,6 +21,6 @@ public class Refrain : CustomEnchantmentModel
     
     public override int EnchantPlayCount(int originalPlayCount)
     {
-        return originalPlayCount + this.Amount;
+        return originalPlayCount + Amount;
     }
 }

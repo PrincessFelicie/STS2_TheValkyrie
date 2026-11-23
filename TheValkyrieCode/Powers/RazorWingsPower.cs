@@ -32,9 +32,9 @@ public sealed class RazorWingsPower : TheValkyriePower
         Creature? dealer,
         CardModel? __)
     {
-        if (target != this.Owner || dealer == null || !props.IsPoweredAttack())
+        if (target != Owner || dealer == null || !props.IsPoweredAttack())
             return;
-        await PowerCmd.Apply<BleedPower>(choiceContext, dealer, this.Amount, this.Owner, null);
+        await PowerCmd.Apply<BleedPower>(choiceContext, dealer, Amount, Owner, null);
     }
     
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)

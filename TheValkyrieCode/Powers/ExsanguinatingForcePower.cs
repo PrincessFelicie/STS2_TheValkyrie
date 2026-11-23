@@ -28,8 +28,8 @@ public sealed class ExsanguinatingForcePower : TheValkyriePower
     {
         if (!participants.Contains(Owner)) return;
         
-        this.Flash();
+        Flash();
         
-        await PowerCmd.Apply<BleedPower>(new ThrowingPlayerChoiceContext(), CombatState.HittableEnemies, this.Amount, this.Owner, null);
+        await PowerCmd.Apply<BleedPower>(new ThrowingPlayerChoiceContext(), CombatState.HittableEnemies, Amount, Owner, null);
     }
 }

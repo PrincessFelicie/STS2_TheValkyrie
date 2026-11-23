@@ -21,7 +21,7 @@ public class RainOfFeathers : TheValkyrieCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).WithHitCount(this.DynamicVars.HitCount.IntValue).Execute(choiceContext);
+        await CommonActions.CardAttack(this, play).WithHitCount(DynamicVars.HitCount.IntValue).Execute(choiceContext);
     }
 
     public override async Task AfterDamageGiven(

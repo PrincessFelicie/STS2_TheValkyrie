@@ -111,7 +111,7 @@
   "THEVALKYRIE-RAZOR_WINGS.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhenever you are attacked this turn, apply {BleedPower:diff()} [gold]Gash[/gold] back.",
 
   "THEVALKYRIE-SONG_OF_DESTRUCTION.title": "Song of Destruction",
-  "THEVALKYRIE-SONG_OF_DESTRUCTION.description": "Apply {BleedPower:diff()} [gold]Gash[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nAdd a [purple]Flay {Sanguine:diff()}[/purple] [gold]Smite[/gold] into your [gold]Hand[/gold].",
+  "THEVALKYRIE-SONG_OF_DESTRUCTION.description": "Apply {BleedPower:diff()} [gold]Gash[/gold].\n[gold]Overexert[/gold] {OverexertionPower:diff()}.\nAdd a [purple]Flay {Flay:diff()}[/purple] [gold]Smite[/gold] into your [gold]Hand[/gold].",
 
   "THEVALKYRIE-DIG_YOUR_HEELS_IN.title": "Dig Your Heels In",
   "THEVALKYRIE-DIG_YOUR_HEELS_IN.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {VigorPower:diff()} [gold]Vigor[/gold].",

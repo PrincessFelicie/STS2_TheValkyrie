@@ -23,7 +23,7 @@ public sealed class CrushTheirSpiritsPower : TheValkyriePower
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<ArmorPower>()];
     
-    public override int DisplayAmount => Math.Max(Owner.GetPowerAmount<ArmorPower>(),0) * this.Amount;
+    public override int DisplayAmount => Math.Max(Owner.GetPowerAmount<ArmorPower>(),0) * Amount;
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
@@ -32,8 +32,8 @@ public sealed class CrushTheirSpiritsPower : TheValkyriePower
     {
         if (!participants.Contains(Owner) || Owner.GetPowerAmount<ArmorPower>() < 1) return;
         
-        this.Flash();
-        await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Owner.GetPowerAmount<ArmorPower>() * this.Amount, ValueProp.Unpowered, this.Owner);
+        Flash();
+        await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Owner.GetPowerAmount<ArmorPower>() * Amount, ValueProp.Unpowered, Owner);
     }
     
     public override async Task AfterPowerAmountChanged(
@@ -43,8 +43,8 @@ public sealed class CrushTheirSpiritsPower : TheValkyriePower
         Creature? applier,
         CardModel? cardSource)
     {
-        if (power.Owner != this.Owner && power is not ArmorPower)
+        if (power.Owner != Owner && power is not ArmorPower)
             return;
-        this.InvokeDisplayAmountChanged();
+        InvokeDisplayAmountChanged();
     }
 }

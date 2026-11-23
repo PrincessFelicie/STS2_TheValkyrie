@@ -1,6 +1,6 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
@@ -22,7 +22,7 @@ public class TerritorialInstincts : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         PowerModel? power = await PowerCmd.Apply<TerritorialPurposePower>(choiceContext, Owner.Creature, DynamicVars["TerritorialPurposePower"].IntValue, Owner.Creature, this);
-        if (this.IsUpgraded && power != null)
+        if (IsUpgraded && power != null)
             power.DynamicVars["PlayedUpgraded"].BaseValue++;
     }
 

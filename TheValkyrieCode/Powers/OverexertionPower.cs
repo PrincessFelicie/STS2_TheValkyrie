@@ -32,13 +32,13 @@ public sealed class OverexertionPower : TheValkyriePower
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (target != this.Owner || result.UnblockedDamage <= 0)
+        if (target != Owner || result.UnblockedDamage <= 0)
         {
             return;
         }
         await Cmd.Wait(0.1f); // add these timers to make it easier to read the damage + understand what happened...
         int damage = Amount;
-        this.Flash();
+        Flash();
         await PowerCmd.Remove(this);
         await CreatureCmd.Damage(new ThrowingPlayerChoiceContext(), Owner, damage, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.SkipHurtAnim, dealer, cardSource, null);
     }

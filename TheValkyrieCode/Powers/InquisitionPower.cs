@@ -8,7 +8,6 @@ using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Utilities;
 
-
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
 public class InquisitionPower : TheValkyriePower, IHasSecondAmount
@@ -49,9 +48,9 @@ public class InquisitionPower : TheValkyriePower, IHasSecondAmount
 
     public override async Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
-        if (creator == null || !card.Tags.Contains(CustomEnum.Smite) || card.Owner.Creature != this.Owner || Owner.Player == null)
+        if (creator == null || !card.Tags.Contains(CustomEnum.Smite) || card.Owner.Creature != Owner || Owner.Player == null)
             return;
-        this.Flash();
+        Flash();
         
         CardCmd.Upgrade(card);
 

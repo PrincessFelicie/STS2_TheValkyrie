@@ -37,7 +37,7 @@ public sealed class ByrdStrengthPower : TheValkyriePower
         CardModel? card,
         CardPlay? cardPlay)
     {
-        return this.Owner == dealer && card is Peck or ByrdSwoop or GodByrd ? this.Amount : 0;
+        return Owner == dealer && card is Peck or ByrdSwoop or GodByrd ? Amount : 0;
     }
     
     public override decimal ModifyPowerAmountGivenAdditive(
@@ -47,6 +47,6 @@ public sealed class ByrdStrengthPower : TheValkyriePower
         Creature? target,
         CardModel? cardSource)
     {
-        return power is GodByrdPower && giver == Owner ? this.Amount : 0;
+        return power is GodByrdPower && giver == Owner ? Amount : 0;
     }
 }

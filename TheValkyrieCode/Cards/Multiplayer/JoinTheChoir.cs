@@ -1,9 +1,9 @@
-using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Extensions;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Enchantments;
@@ -42,7 +42,7 @@ public class JoinTheChoir : TheValkyrieCard
             CardCmd.Enchant<Refrain>(card, DynamicVars["Bless"].BaseValue);
         }
         
-        this.EnergyCost.AddThisCombat(1);
+        EnergyCost.AddThisCombat(1);
     }
 
     protected override void OnUpgrade()

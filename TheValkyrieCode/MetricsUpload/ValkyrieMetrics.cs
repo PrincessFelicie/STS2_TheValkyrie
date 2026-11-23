@@ -10,7 +10,6 @@ using MegaCrit.Sts2.Core.Runs.Metrics;
 using MegaCrit.Sts2.Core.Saves;
 using MegaCrit.Sts2.Core.Saves.Runs;
 
-
 namespace TheValkyrie.TheValkyrieCode.MetricsUpload;
 
 public static class ValkyrieMetrics

@@ -23,7 +23,7 @@ public class MysticMatchbox : TheValkyrieRelic
         CardModel? cardSource,
         CardPlay? cardPlay)
     {
-        return !props.IsPoweredAttack() || cardSource?.Enchantment == null || cardSource.Owner != this.Owner ? 0 : (Decimal) this.DynamicVars.Damage.IntValue;
+        return !props.IsPoweredAttack() || cardSource?.Enchantment == null || cardSource.Owner != Owner ? 0 : (Decimal) DynamicVars.Damage.IntValue;
     }
     
     public override Decimal ModifyBlockAdditive(
@@ -33,6 +33,6 @@ public class MysticMatchbox : TheValkyrieRelic
         CardModel? cardSource,
         CardPlay? cardPlay)
     {
-        return this.Owner.Creature != target || cardSource?.Enchantment == null || cardSource.Owner != this.Owner ? 0 : (Decimal) this.DynamicVars.Block.IntValue;
+        return Owner.Creature != target || cardSource?.Enchantment == null || cardSource.Owner != Owner ? 0 : (Decimal) DynamicVars.Block.IntValue;
     }
 }

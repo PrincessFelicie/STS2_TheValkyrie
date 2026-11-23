@@ -1,7 +1,7 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
-using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
+using TheValkyrie.TheValkyrieCode.Extensions;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
 

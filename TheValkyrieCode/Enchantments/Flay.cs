@@ -32,14 +32,14 @@ public class Flay : CustomEnchantmentModel
         switch (Card.TargetType)
         {
             case TargetType.AllEnemies:
-                await PowerCmd.Apply<BleedPower>(choiceContext, Card.CombatState.HittableEnemies, this.Amount, Card.Owner.Creature, Card);
+                await PowerCmd.Apply<BleedPower>(choiceContext, Card.CombatState.HittableEnemies, Amount, Card.Owner.Creature, Card);
                 break;
             case TargetType.AnyEnemy:
                 if (cardPlay?.Target == null) return; //solves a warning
-                await PowerCmd.Apply<BleedPower>(choiceContext, cardPlay.Target, this.Amount, Card.Owner.Creature, Card);
+                await PowerCmd.Apply<BleedPower>(choiceContext, cardPlay.Target, Amount, Card.Owner.Creature, Card);
                 break;
             case TargetType.RandomEnemy:
-                await PowerCmd.Apply<BleedPower>(choiceContext, Card.CombatState.HittableEnemies.TakeRandom(1, Card.Owner.RunState.Rng.CombatTargets).First(), this.Amount, Card.Owner.Creature, Card);
+                await PowerCmd.Apply<BleedPower>(choiceContext, Card.CombatState.HittableEnemies.TakeRandom(1, Card.Owner.RunState.Rng.CombatTargets).First(), Amount, Card.Owner.Creature, Card);
                 break;
         }
     }

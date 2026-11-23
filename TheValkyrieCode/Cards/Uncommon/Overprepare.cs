@@ -24,7 +24,7 @@ public class Overprepare : TheValkyrieCard
         CardSelectorPrefs prefs = new (SelectionScreenPrompt, 1);
         CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
         if (card == null) return;
-        await CardPileCmd.Add(card, PileType.Draw, CardPilePosition.Bottom);
+        await CardPileCmd.Add(card, PileType.Draw);
         _selectedCards = _selectedCards.Append(card); //save the card to a list of active cards
     }
     

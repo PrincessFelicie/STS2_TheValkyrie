@@ -30,8 +30,8 @@ public sealed class StrengthInHardshipPower : TheValkyriePower
         Creature? applier,
         CardModel? cardSource)
     {
-        if (power is not OverexertionPower || power.Owner != this.Owner || amount <= 0)
+        if (power is not OverexertionPower || power.Owner != Owner || amount <= 0)
             return;
-        await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, this.Owner, this.Amount, applier, cardSource, true);
+        await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, Owner, Amount, applier, cardSource, true);
     }
 }

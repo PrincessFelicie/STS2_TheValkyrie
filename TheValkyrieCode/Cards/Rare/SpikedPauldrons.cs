@@ -1,6 +1,6 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models.Powers;
 using TheValkyrie.TheValkyrieCode.Powers;
 
@@ -18,7 +18,7 @@ public class SpikedPauldrons : TheValkyrieCard
     {
         await PowerCmd.Apply<SpikedPauldronsPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
         await PowerCmd.Apply<ThornsPower>(choiceContext, Owner.Creature, Owner.Creature.GetPowerAmount<ArmorPower>(), Owner.Creature, this);
-        if (this.IsUpgraded)
+        if (IsUpgraded)
             await PowerCmd.Apply<ArmorPower>(choiceContext, Owner.Creature, DynamicVars["ArmorPower"].BaseValue, Owner.Creature, this);
     }
 

@@ -25,16 +25,16 @@ public class Birdbrain : TheValkyrieCard
         
         if (CombatState == null) return;
         CardModel createdCard = CombatState.CreateCard<ByrdSwoop>(Owner);
-        if (this.IsUpgraded)
+        if (IsUpgraded)
             CardCmd.Upgrade(createdCard);
-        if (this.Enchantment != null)
+        if (Enchantment != null)
         {
-            EnchantmentModel enchantment = this.Enchantment.CanonicalInstance;
-            CardCmd.Enchant(enchantment.ToMutable(), createdCard, this.Enchantment.Amount);
+            EnchantmentModel enchantment = Enchantment.CanonicalInstance;
+            CardCmd.Enchant(enchantment.ToMutable(), createdCard, Enchantment.Amount);
         }
         if (!play.IsLastInSeries)
             return;
-        this.TransformIntoAfterPlay = createdCard;
+        TransformIntoAfterPlay = createdCard;
     }
 
     protected override void OnUpgrade()

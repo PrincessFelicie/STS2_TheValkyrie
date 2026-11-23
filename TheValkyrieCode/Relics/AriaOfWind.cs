@@ -23,6 +23,6 @@ public class AriaOfWind : TheValkyrieRelic
             return;
         foreach (CardModel card in PileType.Hand.GetPile(Owner).Cards)
             await BlessCmd.EnchantOrUpgradeEnchant(card, DynamicVars["Bless"].IntValue);
-        this.Flash();
+        Flash();
     }
 }

@@ -19,17 +19,17 @@ public class WrittenInBlood : TheValkyrieCard
     [SavedProperty]
     public bool Active
     {
-        get => this._active;
+        get => _active;
         set
         {
-            this.AssertMutable();
-            this._active = value;
+            AssertMutable();
+            _active = value;
         }
     }
     
     public override bool CanBeGeneratedInCombat => false;
     
-    protected override bool ShouldGlowGoldInternal => this.Active;
+    protected override bool ShouldGlowGoldInternal => Active;
 
     public WrittenInBlood() : base(2, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
     {
@@ -41,7 +41,7 @@ public class WrittenInBlood : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         ArgumentNullException.ThrowIfNull(play.Target, "cardPlay.Target");
-        if (this.Active)
+        if (Active)
         {
             //apply the power first, otherwise the extra reward gets lost if the bleed kills the last creature of the fight
             await PowerCmd.Apply<WrittenInBloodPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
@@ -57,17 +57,17 @@ public class WrittenInBlood : TheValkyrieCard
     {
         if (player != Owner || combatState.RoundNumber > 1)
             return;
-        this.Active = true;
+        Active = true;
     }
     
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (target != this.Owner.Creature || result.UnblockedDamage <= 0)
+        if (target != Owner.Creature || result.UnblockedDamage <= 0)
         {
             return;
         }
-        this.Active = false;
+        Active = false;
     }
 
     protected override void OnUpgrade()

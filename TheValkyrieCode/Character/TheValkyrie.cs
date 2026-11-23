@@ -1,12 +1,12 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Patches.UI;
 using BaseLib.Utils.NodeFactories;
-using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using TheValkyrie.TheValkyrieCode.Cards.Basic;
+using TheValkyrie.TheValkyrieCode.Extensions;
 using TheValkyrie.TheValkyrieCode.Relics;
 
 namespace TheValkyrie.TheValkyrieCode.Character;

@@ -21,8 +21,8 @@ public class ALyricsSheet : TheValkyrieRelic
     
     public override bool IsStackable => true;
     
-    public override int DisplayAmount => this.StackCount;
-    public override bool ShowCounter => this.StackCount > 1; //unused, gotta wait for basegame to stack isStackable relics.
+    public override int DisplayAmount => StackCount;
+    public override bool ShowCounter => StackCount > 1; //unused, gotta wait for basegame to stack isStackable relics.
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CustomEnum.Bless)];
 
@@ -34,7 +34,7 @@ public class ALyricsSheet : TheValkyrieRelic
             RequireManualConfirmation = true
         };
         //FromDeckForEnchantment requires an enchantmentModel, we don't know what we want to enchant with yet so we need a generic; because it's a generic we need to do all the common isEnchantable checks in the filter
-        foreach (CardModel card in await CardSelectCmd.FromDeckGeneric(this.Owner, prefs, 
+        foreach (CardModel card in await CardSelectCmd.FromDeckGeneric(Owner, prefs, 
                      c => (c.Enchantment == null || c.Enchantment.ShowAmount) //enchantment (or lack thereof) is valid
                            && c.Type is not (CardType.Curse or CardType.Status or CardType.Quest) //AND cardType is valid
                      ))

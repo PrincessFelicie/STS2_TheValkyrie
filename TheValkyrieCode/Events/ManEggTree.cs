@@ -14,7 +14,7 @@ using TheValkyrie.TheValkyrieCode.ModConfiguration;
 
 namespace TheValkyrie.TheValkyrieCode.Events;
 
-public class ManEggTree() : CustomEventModel
+public class ManEggTree : CustomEventModel
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
     ];
@@ -43,23 +43,23 @@ public class ManEggTree() : CustomEventModel
     {
         EventOption yes = Option(Yes, "APPROACH");
         EventOption no = Option(No, "APPROACH");
-        this.SetEventState(this.L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.APPROACH.description"), [yes, no]);
+        SetEventState(L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.APPROACH.description"), [yes, no]);
     }
     
     private async Task Leave()
     {
-        this.SetEventFinished(this.L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.LEAVE.description"));
+        SetEventFinished(L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.LEAVE.description"));
     }
     
     private async Task Yes()
     {
-        if (this.Owner == null) return;
-        CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(this.Owner.RunState.CreateCard<ByrdonisEgg>(this.Owner), PileType.Deck), 2f);
-        this.SetEventFinished(this.L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.YES.description"));
+        if (Owner == null) return;
+        CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(Owner.RunState.CreateCard<ByrdonisEgg>(Owner), PileType.Deck), 2f);
+        SetEventFinished(L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.YES.description"));
     }
     
     private async Task No()
     {
-        this.SetEventFinished(this.L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.NO.description"));
+        SetEventFinished(L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.NO.description"));
     }
 }

@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Entities.RestSite;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves.Runs;
@@ -26,7 +25,7 @@ public class ByrdNest : TheValkyrieRelic
 
     protected override bool IsAllowedInternal(IRunState runState)
     {
-        return !RelicModel.IsLateInAct3(runState) && runState.GameMode != GameMode.Blitz;
+        return !IsLateInAct3(runState) && runState.GameMode != GameMode.Blitz;
     }
     
     public override string PackedIconPath
@@ -34,13 +33,13 @@ public class ByrdNest : TheValkyrieRelic
         get
         {
             string path;
-            if (this.IsCanonical)
+            if (IsCanonical)
             {
                 path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_full.png".RelicImagePath();
             }
             else
             {
-                string suffix = (3 - this.TimesHatched) switch
+                string suffix = (3 - TimesHatched) switch
                 {
                     0 => "empty",
                     1 => "one",
@@ -59,13 +58,13 @@ public class ByrdNest : TheValkyrieRelic
         get
         {
             string path;
-            if (this.IsCanonical)
+            if (IsCanonical)
             {
                 path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_full_outline.png".RelicImagePath();
             }
             else
             {
-                string suffix = (3 - this.TimesHatched) switch
+                string suffix = (3 - TimesHatched) switch
                 {
                     0 => "empty",
                     1 => "one",
@@ -84,13 +83,13 @@ public class ByrdNest : TheValkyrieRelic
         get
         {
             string path;
-            if (this.IsCanonical)
+            if (IsCanonical)
             {
                 path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_full.png".BigRelicImagePath();
             }
             else
             {
-                string suffix = (3 - this.TimesHatched) switch
+                string suffix = (3 - TimesHatched) switch
                 {
                     0 => "empty",
                     1 => "one",
@@ -106,18 +105,18 @@ public class ByrdNest : TheValkyrieRelic
     
     public override bool ShowCounter => true;
     
-    public override int DisplayAmount => this.TimesHatched;
+    public override int DisplayAmount => TimesHatched;
     
     [SavedProperty]
     public int TimesHatched
     {
-        get => this._timesHatched;
+        get => _timesHatched;
         set
         {
-            this.AssertMutable();
-            this._timesHatched = value;
-            this.InvokeDisplayAmountChanged();
-            this.RelicIconChanged(); //this only uncaches the big icon, and doesn't propagate down to the NRelic!!!
+            AssertMutable();
+            _timesHatched = value;
+            InvokeDisplayAmountChanged();
+            RelicIconChanged(); //this only uncaches the big icon, and doesn't propagate down to the NRelic!!!
             RelicIconUpdater.ReloadRelicIcon(Id); //thank you to JohnnyBazooka89 for this piece of code!
         }
     }
@@ -132,7 +131,7 @@ public class ByrdNest : TheValkyrieRelic
 
     public override bool TryModifyRestSiteOptions(Player player, ICollection<RestSiteOption> options)
     {
-        if (player != this.Owner || this.TimesHatched >= MaxHatches)
+        if (player != Owner || TimesHatched >= MaxHatches)
             return false;
         options.Add(new ValkyrieNestHatchRestSiteOption(player));
         return true;

@@ -28,8 +28,8 @@ public class DancingPlaguePower : TheValkyriePower
     {
         if (power is OverexertionPower && applier == Owner && power.Owner == Owner && amount > 0)
         {
-            this.Flash();
-            for (var i = 0; i < this.Amount; ++i)
+            Flash();
+            for (var i = 0; i < Amount; ++i)
             {
                 Creature? target = Owner.Player?.RunState.Rng.CombatTargets.NextItem(CombatState.HittableEnemies);
                 if (target == null) return;

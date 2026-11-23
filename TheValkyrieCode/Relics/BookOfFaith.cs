@@ -20,7 +20,7 @@ public class BookOfFaith : TheValkyrieRelic
     {
         if (player != Owner || Owner.PlayerCombatState == null || Owner.PlayerCombatState.TurnNumber > 1)
             return;
-        this.Flash();
+        Flash();
         await Smite.CreateInHand(Owner, DynamicVars["Smites"].IntValue, combatState);
     }
 

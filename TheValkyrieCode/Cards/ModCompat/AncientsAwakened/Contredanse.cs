@@ -24,13 +24,13 @@ public Contredanse() : base(1, CardType.Skill, CardRarity.Ancient, TargetType.Se
     WithTip(typeof(OverexertionPower));
 }
 
-protected override bool ShouldGlowGoldInternal => this.Owner.Creature.GetPowerAmount<OverexertionPower>() >= 30;
+protected override bool ShouldGlowGoldInternal => Owner.Creature.GetPowerAmount<OverexertionPower>() >= 30;
 
 protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
 {
     await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-    await CardPileCmd.Draw(choiceContext, ((CalculatedVar) DynamicVars["CardsAndEnergy"]).Calculate(play.Target), this.Owner);
-    await PlayerCmd.GainEnergy(((CalculatedVar) DynamicVars["CardsAndEnergy"]).Calculate(play.Target), this.Owner);
+    await CardPileCmd.Draw(choiceContext, ((CalculatedVar) DynamicVars["CardsAndEnergy"]).Calculate(play.Target), Owner);
+    await PlayerCmd.GainEnergy(((CalculatedVar) DynamicVars["CardsAndEnergy"]).Calculate(play.Target), Owner);
     await PowerCmd.Remove(Owner.Creature.GetPower<OverexertionPower>());
 }
 

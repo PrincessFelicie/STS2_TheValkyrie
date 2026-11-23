@@ -21,7 +21,7 @@ public class CrudeIdol : TheValkyrieRelic
     {
         if (!participants.Contains(Owner.Creature) || Owner.Creature.GetPowerAmount<OverexertionPower>() == 0)
             return;
-        this.Flash();
+        Flash();
         await Cmd.Wait(0.1f);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, -Math.Ceiling((decimal) Owner.Creature.GetPowerAmount<OverexertionPower>()/2), Owner.Creature, null);
     }

@@ -28,7 +28,7 @@ public class BookOfOrnithology : TheValkyrieRelic
         if (player != Owner || Owner.PlayerCombatState == null || Owner.PlayerCombatState.TurnNumber > 1)
             return;
         
-        this.Flash();
+        Flash();
         for (int i = 0; i < DynamicVars["Smites"].BaseValue; ++i)
         {
             CardModel? card = await Smite.CreateInHand(Owner, combatState);
@@ -48,7 +48,7 @@ public class BookOfOrnithology : TheValkyrieRelic
         return Owner.Creature != dealer 
                || !props.IsPoweredAttack() 
                || cardSource == null 
-               || !cardSource.Tags.Contains<CardTag>(CustomEnum.Smite) ? 
+               || !cardSource.Tags.Contains(CustomEnum.Smite) ? 
             0 : DynamicVars["BonusDamage"].BaseValue;
     }
 }

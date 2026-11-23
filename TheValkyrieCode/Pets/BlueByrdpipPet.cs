@@ -1,10 +1,9 @@
 using MegaCrit.Sts2.Core.Bindings.MegaSpine;
-using MegaCrit.Sts2.Core.MonsterMoves.Intents;
-using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine;
+using TheValkyrie.TheValkyrieCode.Relics.NestBirdpyps;
 
-#nullable enable
 namespace TheValkyrie.TheValkyrieCode.Pets;
 
 public sealed class BlueByrdpipPet : MonsterModel
@@ -19,15 +18,16 @@ public sealed class BlueByrdpipPet : MonsterModel
 
     public override void SetupSkins(MegaSprite spine, MegaSkeleton skeleton)
     {
-        string skinName = !this.IsMutable ? Relics.NestBirdpyps.BlueByrdpip.SkinOptions[0] : this.Creature.PetOwner?.GetRelic<Relics.NestBirdpyps.BlueByrdpip>()?.Skin ?? Relics.NestBirdpyps.BlueByrdpip.SkinOptions[0];
+        string skinName = !IsMutable ? BlueByrdpip.SkinOptions[0] : Creature.PetOwner?.GetRelic<BlueByrdpip>()?.Skin ?? BlueByrdpip.SkinOptions[0];
         MegaSkeletonDataResource data = skeleton.GetData();
         skeleton.SetSkin(data.FindSkin(skinName));
         skeleton.SetSlotsToSetupPose();
+        
     }
 
     protected override MonsterMoveStateMachine GenerateMoveStateMachine()
     {
-        MoveState initialState = new MoveState("NOTHING_MOVE",  _ => Task.CompletedTask, Array.Empty<AbstractIntent>());
+        MoveState initialState = new MoveState("NOTHING_MOVE",  _ => Task.CompletedTask);
         initialState.FollowUpState = initialState;
         return new MonsterMoveStateMachine([initialState], initialState);
     }

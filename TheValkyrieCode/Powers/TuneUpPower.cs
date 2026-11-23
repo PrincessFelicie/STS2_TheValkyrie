@@ -28,7 +28,7 @@ public sealed class TuneUpPower : TheValkyriePower
         out decimal modifiedCost)
     {
         modifiedCost = originalCost;
-        if (card.Owner.Creature != this.Owner || !card.Keywords.Contains(CardKeyword.Retain))
+        if (card.Owner.Creature != Owner || !card.Keywords.Contains(CardKeyword.Retain))
             return false;
         PileType? pileType = card.Pile?.Type;
         if (pileType is not (PileType.Hand or PileType.Play))
@@ -39,7 +39,7 @@ public sealed class TuneUpPower : TheValkyriePower
     
     public override async Task BeforeCardPlayed(CardPlay cardPlay)
     {
-        if (cardPlay.Card.Owner.Creature != this.Owner || !cardPlay.Card.Keywords.Contains(CardKeyword.Retain))
+        if (cardPlay.Card.Owner.Creature != Owner || !cardPlay.Card.Keywords.Contains(CardKeyword.Retain))
             return;
         PileType? pileType = cardPlay.Card.Pile?.Type;
         if (pileType is not (PileType.Hand or PileType.Play))

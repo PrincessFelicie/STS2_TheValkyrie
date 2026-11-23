@@ -1,7 +1,7 @@
-using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Utilities;
 
@@ -27,7 +27,7 @@ public class Zeal : TheValkyrieCard
             if (!card.IsUpgraded)
                 CardCmd.Upgrade(card);
 
-            await BlessCmd.EnchantOrUpgradeEnchant(card, 1);
+            await BlessCmd.EnchantOrUpgradeEnchant(card);
             
             CardCmd.Preview(card);
         }

@@ -39,8 +39,8 @@ public sealed class ChurchHymnPower : TheValkyriePower
     {
         if (player != Owner.Player)
             return;
-        this.Flash();
-        await Smite.CreateInHand(Owner.Player, this.Amount, combatState);
-        await PowerCmd.Apply<OverexertionPower>(choiceContext, this.Owner, Amount*3, this.Owner, null, true);
+        Flash();
+        await Smite.CreateInHand(Owner.Player, Amount, combatState);
+        await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner, Amount*3, Owner, null, true);
     }
 }

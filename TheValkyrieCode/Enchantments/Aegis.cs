@@ -27,6 +27,6 @@ public class Aegis : CustomEnchantmentModel
     
     public override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay? cardPlay)
     {
-        await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, Card.Owner.Creature, this.Amount, Card.Owner.Creature, Card);
+        await PowerCmd.Apply<TemporaryArmorPower>(choiceContext, Card.Owner.Creature, Amount, Card.Owner.Creature, Card);
     }
 }

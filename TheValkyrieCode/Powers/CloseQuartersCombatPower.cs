@@ -20,8 +20,8 @@ namespace TheValkyrie.TheValkyrieCode.Powers;
 
 public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmount
 {
-    public float InitialPositionFirstPlayerX = 0;
-    private float _offsetDistanceFromFirstPlayerX = 0;
+    public float InitialPositionFirstPlayerX;
+    private float _offsetDistanceFromFirstPlayerX;
     
     private class Data
     {
@@ -63,12 +63,12 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         
         _offsetDistanceFromFirstPlayerX = InitialPositionFirstPlayerX - ownerPlayerCreatureNode.GlobalPosition.X;
         
-        await this.VisualsMoveToLeftMostEnemy();
+        await VisualsMoveToLeftMostEnemy();
     }
 
     public override async Task AfterCreatureAddedToCombat(Creature creature)
     {
-        await this.VisualsMoveToLeftMostEnemy(); //if a new creature is spawned (e.g. mid-fight minions, like w/ ovicopter), we want the Owner of CQC to move accordingly to avoid hiding any creature
+        await VisualsMoveToLeftMostEnemy(); //if a new creature is spawned (e.g. mid-fight minions, like w/ ovicopter), we want the Owner of CQC to move accordingly to avoid hiding any creature
     }
 
     public override async Task AfterDeath(
@@ -78,7 +78,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         bool wasRemovalPrevented,
         float deathAnimLength)
     {
-        await this.VisualsMoveToLeftMostEnemy(); //if a creature dies, recalculate where to move in case it was the leftmost one
+        await VisualsMoveToLeftMostEnemy(); //if a creature dies, recalculate where to move in case it was the leftmost one
     }
 
     /* public override async Task AfterCurrentHpChanged(Creature creature, Decimal delta)
@@ -95,7 +95,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         CardModel? cardSource,
         CardPlay? cardPlay)
     {
-        return !props.IsPoweredAttack() || cardSource == null || cardSource.Owner.Creature != this.Owner || target == null ? 1 : 1 + (decimal) this.Amount / 100;
+        return !props.IsPoweredAttack() || cardSource == null || cardSource.Owner.Creature != Owner || target == null ? 1 : 1 + (decimal) Amount / 100;
     }
     
     public override decimal ModifyPowerAmountGivenMultiplicative(
@@ -114,7 +114,7 @@ public sealed class CloseQuartersCombatPower : TheValkyriePower, IHasSecondAmoun
         if (TestMode.IsOn || instance == null || CombatState.ContainsMonster<TheInsatiable>() || Owner.HasPower<SurroundedPower>()) //Insatiable and Surrounded fights are exceptions
             return;
         
-        NCreature? ownerCreature = instance.GetCreatureNode(this.Owner);
+        NCreature? ownerCreature = instance.GetCreatureNode(Owner);
         NCreature? targetCreature = null;
         
         foreach (Creature creature in CombatState.GetOpponentsOf(Owner)) //Find the left-most enemy...

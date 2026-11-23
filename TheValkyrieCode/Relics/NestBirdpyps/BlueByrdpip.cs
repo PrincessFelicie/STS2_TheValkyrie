@@ -1,11 +1,14 @@
+using Godot;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using TheValkyrie.TheValkyrieCode.Cards.Rare;
@@ -40,11 +43,11 @@ public class BlueByrdpip : TheValkyrieRelic
     [SavedProperty]
     public string Skin
     {
-        get => this._skin;
+        get => _skin;
         set
         {
-            this.AssertMutable();
-            this._skin = value;
+            AssertMutable();
+            _skin = value;
         }
     }
     
@@ -58,16 +61,16 @@ public class BlueByrdpip : TheValkyrieRelic
         Skin = new Rng((uint) (Owner.NetId + Owner.RunState.Rng.Seed)).NextItem(SkinOptions) ?? SkinOptions[0];
         if (!CombatManager.Instance.IsInProgress)
             return;
-        await this.SummonPet();
+        await SummonPet();
     }
 
-    public override async Task BeforeCombatStart() => await this.SummonPet();
+    public override async Task BeforeCombatStart() => await SummonPet();
 
     public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
         if (player != Owner || combatState.RoundNumber > 1)
             return;
-        this.Flash();
+        Flash();
         CardModel card = combatState.CreateCard<TerritorialInstincts>(Owner);
         CardCmd.Upgrade(card);
         await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner);
@@ -79,7 +82,7 @@ public class BlueByrdpip : TheValkyrieRelic
         out Decimal modifiedCost)
     {
         modifiedCost = originalCost;
-        if (card.Owner.Creature != this.Owner.Creature || card is not TerritorialInstincts)
+        if (card.Owner.Creature != Owner.Creature || card is not TerritorialInstincts)
             return false;
         modifiedCost = originalCost - 1;
         return true;
@@ -87,6 +90,8 @@ public class BlueByrdpip : TheValkyrieRelic
     
     private async Task SummonPet()
     {
-        await PlayerCmd.AddPet<BlueByrdpipPet>(this.Owner);
+        Creature creature = await PlayerCmd.AddPet<BlueByrdpipPet>(Owner);
+        NCreature? cNode = creature.GetCreatureNode();
+        cNode?.SetModulate(new Color(0.592f, 0.527f, 1.828f));
     }
 }

@@ -33,15 +33,15 @@ public sealed class TemporaryArmorPower : TheValkyriePower
     {
         if (power != this)
             return;
-        await PowerCmd.Apply<ArmorPower>(choiceContext, this.Owner, amount, applier, cardSource, true);
+        await PowerCmd.Apply<ArmorPower>(choiceContext, Owner, amount, applier, cardSource, true);
     }
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (participants.Contains(Owner))
             return;
-        this.Flash();
-        await PowerCmd.Apply<ArmorPower>(choiceContext, this.Owner, -this.Amount, null, null, true);
+        Flash();
+        await PowerCmd.Apply<ArmorPower>(choiceContext, Owner, -Amount, null, null, true);
         await PowerCmd.Remove(this);
     }
 }

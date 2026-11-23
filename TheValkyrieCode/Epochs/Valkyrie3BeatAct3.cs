@@ -25,6 +25,6 @@ public class Valkyrie3BeatAct3 : EpochModel
     public override void QueueUnlocks()
     {
         NTimelineScreen.Instance.QueuePotionUnlock(Potions);
-        NTimelineScreen.Instance.QueueMiscUnlock(new LocString("epochs", this.Id + ".unlock").GetFormattedText() ?? "");
+        NTimelineScreen.Instance.QueueMiscUnlock(new LocString("epochs", Id + ".unlock").GetFormattedText() ?? "");
     }
 }

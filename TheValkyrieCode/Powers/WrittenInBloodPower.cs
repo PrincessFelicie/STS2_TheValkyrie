@@ -30,7 +30,7 @@ public sealed class WrittenInBloodPower : TheValkyriePower
     public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (target != this.Owner || result.UnblockedDamage <= 0)
+        if (target != Owner || result.UnblockedDamage <= 0)
         {
             return;
         }
@@ -39,9 +39,9 @@ public sealed class WrittenInBloodPower : TheValkyriePower
     
     public override Task AfterCombatEnd(CombatRoom room)
     {
-        var ownerPlayer = this.Owner.Player;
+        var ownerPlayer = Owner.Player;
         if (ownerPlayer != null)
-            for (int i = 0; i < this.Amount; ++i)
+            for (int i = 0; i < Amount; ++i)
             {
                 room.AddExtraReward(ownerPlayer, new RelicReward(ModelDb.Relic<ALyricsSheet>().ToMutable(), ownerPlayer));
             }

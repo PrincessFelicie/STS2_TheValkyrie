@@ -32,29 +32,29 @@ public sealed class EbbAndFlowPower : TheValkyriePower
 
     public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
-        await this.CheckForActivation();
+        await CheckForActivation();
     }
 
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
     {
         if (power is not OverexertionPower) return;
-        await this.CheckForActivation();
+        await CheckForActivation();
     }
     
     public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
-        if (!participants.Contains(Owner) || this.DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
+        if (!participants.Contains(Owner) || DynamicVars["IsActive"].BaseValue == 1) //at the start of our turn, reset the power...
             return;
-        this.DynamicVars["IsActive"].BaseValue = 1;
-        this.Flash();
+        DynamicVars["IsActive"].BaseValue = 1;
+        Flash();
     }
 
     private async Task CheckForActivation()
     {
-        if (Owner.GetPowerAmount<OverexertionPower>() >= 10 && this.DynamicVars["IsActive"].BaseValue == 1)
+        if (Owner.GetPowerAmount<OverexertionPower>() >= 10 && DynamicVars["IsActive"].BaseValue == 1)
         {
-            this.Flash();
-            this.DynamicVars["IsActive"].BaseValue = 0;
+            Flash();
+            DynamicVars["IsActive"].BaseValue = 0;
             await PowerCmd.Apply<DrawCardsNextTurnPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, Owner, null);
         }
     }

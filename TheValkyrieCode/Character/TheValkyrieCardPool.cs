@@ -1,5 +1,4 @@
 ﻿using BaseLib.Abstracts;
-using TheValkyrie.TheValkyrieCode.Extensions;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
@@ -7,6 +6,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Unlocks;
 using TheValkyrie.TheValkyrieCode.Cards.ModCompat;
 using TheValkyrie.TheValkyrieCode.Cards.ModCompat.AncientsAwakened;
+using TheValkyrie.TheValkyrieCode.Extensions;
 using TheValkyrie.TheValkyrieCode.ModConfiguration;
 using TheValkyrie.TheValkyrieCode.Patches.ModCompatPatches.AncientsAwakened;
 
@@ -45,10 +45,10 @@ public class TheValkyrieCardPool : CustomCardPoolModel
     {
         get
         {
-            if (this._allCards == null)
+            if (_allCards == null)
             {
-                this._allCards = this.GenerateAllCards();
-                this._allCards = [.. ModHelper.ConcatModelsFromMods(this, this._allCards)];
+                _allCards = GenerateAllCards();
+                _allCards = [.. ModHelper.ConcatModelsFromMods(this, _allCards)];
             }
             
             if (ValkyrieModConfig.AncientsAwakenedCustomCards && AncientsAwakenedCardRegisterPatch.IsLoaded)
@@ -62,7 +62,7 @@ public class TheValkyrieCardPool : CustomCardPoolModel
                 _allCards = _allCards.Where(c => c is not TheValkyrieAncientsAwakenedCard).ToArray();
             }
             
-            return this._allCards;
+            return _allCards;
         }
     }
     

@@ -6,7 +6,6 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
-
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
 public class SpikedPauldronsPower : TheValkyriePower
@@ -32,8 +31,8 @@ public class SpikedPauldronsPower : TheValkyriePower
         Creature? applier,
         CardModel? cardSource)
     {
-        if (power is not ArmorPower || power.Owner != this.Owner)
+        if (power is not ArmorPower || power.Owner != Owner)
             return;
-        await PowerCmd.Apply<ThornsPower>(choiceContext, this.Owner, amount*this.Amount, applier, cardSource, true);
+        await PowerCmd.Apply<ThornsPower>(choiceContext, Owner, amount*Amount, applier, cardSource, true);
     }
 }

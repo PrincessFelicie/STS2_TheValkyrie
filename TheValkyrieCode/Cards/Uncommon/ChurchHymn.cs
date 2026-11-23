@@ -1,6 +1,6 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.HoverTips;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Powers;
@@ -19,7 +19,7 @@ public class ChurchHymn : TheValkyrieCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         if (CombatState == null) return;
-        if (this.IsUpgraded)
+        if (IsUpgraded)
             await Smite.CreateInHand(Owner,1, CombatState);
         
         await PowerCmd.Apply<ChurchHymnPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);

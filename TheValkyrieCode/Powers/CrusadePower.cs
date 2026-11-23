@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.ValueProps;
 using TheValkyrie.TheValkyrieCode.Cards.Token;
 using TheValkyrie.TheValkyrieCode.Utilities;
 
-
 namespace TheValkyrie.TheValkyrieCode.Powers;
 
 public class CrusadePower : TheValkyriePower, IHasSecondAmount

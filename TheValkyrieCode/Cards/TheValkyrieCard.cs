@@ -2,9 +2,9 @@
 using BaseLib.Extensions;
 using BaseLib.Utils;
 using Godot;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using TheValkyrie.TheValkyrieCode.Character;
 using TheValkyrie.TheValkyrieCode.Extensions;
-using MegaCrit.Sts2.Core.Entities.Cards;
 
 namespace TheValkyrie.TheValkyrieCode.Cards;
 

@@ -23,7 +23,7 @@ public class CawCaw : TheValkyrieCard
         TalkCmd.Play(new LocString("combat_messages", "CAW_CAW"), Owner.Creature, VfxColor.Blue);
         await PowerCmd.Apply<RitualPower>(choiceContext, Owner.Creature, DynamicVars["RitualPower"].IntValue, Owner.Creature, this);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
-        PlayerCmd.EndTurn(this.Owner, false);
+        PlayerCmd.EndTurn(Owner, false);
     }
 
     protected override void OnUpgrade()

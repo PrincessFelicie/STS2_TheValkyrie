@@ -26,7 +26,7 @@ public sealed class PullAMusclePower : TheValkyriePower
     {
         if (!participants.Contains(Owner))
             return;
-        this.Flash();
-        await PowerCmd.Apply<OverexertionPower>(new ThrowingPlayerChoiceContext(), this.Owner, this.Amount, this.Owner, null);
+        Flash();
+        await PowerCmd.Apply<OverexertionPower>(new ThrowingPlayerChoiceContext(), Owner, Amount, Owner, null);
     }
 }

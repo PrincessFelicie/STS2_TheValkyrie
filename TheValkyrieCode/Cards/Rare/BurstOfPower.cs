@@ -1,6 +1,6 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
 using TheValkyrie.TheValkyrieCode.Powers;
 using TheValkyrie.TheValkyrieCode.Utilities;
@@ -19,7 +19,7 @@ public class BurstOfPower : TheValkyrieCard
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
-        foreach (CardModel card in PileType.Hand.GetPile(this.Owner).Cards)
+        foreach (CardModel card in PileType.Hand.GetPile(Owner).Cards)
         {
             await BlessCmd.EnchantOrUpgradeEnchant(card, DynamicVars["Bless"].IntValue);
         }

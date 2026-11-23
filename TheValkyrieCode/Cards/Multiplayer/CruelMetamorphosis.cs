@@ -1,6 +1,6 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 
@@ -23,7 +23,7 @@ public class CruelMetamorphosis : TheValkyrieCard
             foreach (CardModel original in PileType.Hand.GetPile(play.Target.Player).Cards.Where(c => c.IsTransformable).ToList())
             {
                 CardModel card = CombatState.CreateCard<GodByrd>(play.Target.Player);
-                if (this.IsUpgraded)
+                if (IsUpgraded)
                     CardCmd.Upgrade(card);
                 await CardCmd.Transform(original, card);
             }

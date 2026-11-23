@@ -14,14 +14,14 @@ public class FishingHook : TheValkyrieRelic
     public override RelicRarity Rarity => RelicRarity.Shop;
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CardsVar(2),
-        new DynamicVar("SanguineAmount", 2)
+        new DynamicVar("Flay", 2)
     ];
     
     public override bool HasUponPickupEffect => true;
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips
     {
-        get => HoverTipFactory.FromEnchantment<Flay>(DynamicVars["SanguineAmount"].IntValue);
+        get => HoverTipFactory.FromEnchantment<Flay>(DynamicVars["Flay"].IntValue);
     }
 
     public override async Task AfterObtained()
@@ -32,9 +32,9 @@ public class FishingHook : TheValkyrieRelic
             RequireManualConfirmation = true
         };
         Flay canonicalEnchantment = ModelDb.Enchantment<Flay>();
-        foreach (CardModel card in await CardSelectCmd.FromDeckForEnchantment(this.Owner, canonicalEnchantment, DynamicVars["SanguineAmount"].IntValue, c => c?.Type == CardType.Attack, prefs))
+        foreach (CardModel card in await CardSelectCmd.FromDeckForEnchantment(Owner, canonicalEnchantment, DynamicVars["Flay"].IntValue, c => c?.Type == CardType.Attack, prefs))
         {
-            CardCmd.Enchant(canonicalEnchantment.ToMutable(), card, DynamicVars["SanguineAmount"].BaseValue);
+            CardCmd.Enchant(canonicalEnchantment.ToMutable(), card, DynamicVars["Flay"].BaseValue);
             CardCmd.Preview(card);
         }
     }

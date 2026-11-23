@@ -58,6 +58,6 @@ public sealed class BirdFistPower : TheValkyriePower
         CardModel? cardSource,
         CardPlay? cardPlay)
     {
-        return target != this.Owner || !props.IsPoweredAttack() ? 1 : (decimal) 0.5;
+        return target != Owner || !props.IsPoweredAttack() ? 1 : (decimal) 0.5;
     }
 }

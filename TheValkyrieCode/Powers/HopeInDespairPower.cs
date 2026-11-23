@@ -21,7 +21,7 @@ public sealed class HopeInDespairPower : TheValkyriePower
 
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
-        return card.Owner.Creature != this.Owner ? playCount : playCount + this.Amount;
+        return card.Owner.Creature != Owner ? playCount : playCount + Amount;
     }
 
     public override async Task AfterModifyingCardPlayCount(CardModel card)

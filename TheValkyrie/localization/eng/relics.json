@@ -20,7 +20,7 @@
   "THEVALKYRIE-BLOODIED_TITHE.flavor": "All must pay the price.",
 
   "THEVALKYRIE-FISHING_HOOK.title": "Fishing Hook",
-  "THEVALKYRIE-FISHING_HOOK.description": "Upon pickup, [gold]Enchant[/gold] up to [blue]{Cards}[/blue] {Cards:plural:Attack|Attacks} with [purple]Sanguine[/purple] [blue]{SanguineAmount:diff()}[/blue].",
+  "THEVALKYRIE-FISHING_HOOK.description": "Upon pickup, [gold]Enchant[/gold] up to [blue]{Cards}[/blue] {Cards:plural:Attack|Attacks} with [purple]Flay[/purple] [blue]{Flay:diff()}[/blue].",
   "THEVALKYRIE-FISHING_HOOK.flavor": "It brings to mind memories of dried kelp.",
 
   "THEVALKYRIE-CRUDE_IDOL.title": "Crude Idol",
