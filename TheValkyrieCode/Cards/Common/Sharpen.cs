@@ -18,20 +18,20 @@ public class Sharpen : TheValkyrieCard
 
         WithTip(typeof(BleedPower));
         WithTip(CustomEnum.Bless);
-        WithTips(c => HoverTipFactory.FromEnchantment<Sanguine>(c.DynamicVars["Bless"].IntValue));
+        WithTips(c => HoverTipFactory.FromEnchantment<Flay>(c.DynamicVars["Bless"].IntValue));
     }
 
-    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(Owner).Cards.Any(c => ModelDb.Enchantment<Sanguine>().CanEnchant(c) && c.Type == CardType.Attack);
+    protected override bool ShouldGlowRedInternal => !PileType.Draw.GetPile(Owner).Cards.Any(c => ModelDb.Enchantment<Flay>().CanEnchant(c) && c.Type == CardType.Attack);
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         CardSelectorPrefs prefs = new (SelectionScreenPrompt, 1);
         foreach (CardModel card in (await CardSelectCmd.FromSimpleGrid(choiceContext, 
                      PileType.Draw.GetPile(Owner).Cards
-                         .Where(c => ModelDb.Enchantment<Sanguine>().CanEnchant(c) && c.Type == CardType.Attack)
+                         .Where(c => ModelDb.Enchantment<Flay>().CanEnchant(c) && c.Type == CardType.Attack)
                          .OrderBy(c => c.Rarity).ThenBy((Func<CardModel, ModelId>) (c => c.Id)).ToList(), Owner, prefs)).ToList())
         {
-            CardCmd.Enchant<Sanguine>(card, DynamicVars["Bless"].BaseValue); //Because Sanguine is flagged as stackable, CardCmd.Enchant handles either creating the new enchantment or incrementing the enchantment.amount
+            CardCmd.Enchant<Flay>(card, DynamicVars["Bless"].BaseValue); //Because Flay is flagged as stackable, CardCmd.Enchant handles either creating the new enchantment or incrementing the enchantment.amount
             CardCmd.Preview(card);
         }
     }

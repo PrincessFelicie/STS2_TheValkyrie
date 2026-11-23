@@ -84,7 +84,7 @@
   "THEVALKYRIE-BURN_BRIGHT.description": "Lose {StrengthPower:diff()} [gold]Strength[/gold].\nLose {DexterityPower:diff()} [gold]Dexterity[/gold].\nGain {energyPrefix:energyIcons(1)} at the start of each turn.",
   
   "THEVALKYRIE-RAIN_OF_FEATHERS.title": "Rain of Feathers",
-  "THEVALKYRIE-RAIN_OF_FEATHERS.description": "Apply {BleedPower:diff()} [gold]Gash[/gold] and deal {Damage:diff()} damage to all enemies {HitCount:diff()} times.",
+  "THEVALKYRIE-RAIN_OF_FEATHERS.description": "Deal {Damage:diff()} damage to all enemies {HitCount:diff()} times.\nApply {BleedPower:diff()} [gold]Gash[/gold] after every hit.",
 
   "THEVALKYRIE-CRUSADE.title": "Crusade",
   "THEVALKYRIE-CRUSADE.description": "Your [gold]Smites[/gold] deal {CrusadeAttackPower:diff()} additional damage and give {CrusadeBlockPower:diff()} additional [gold]Block[/gold].",

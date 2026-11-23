@@ -4,15 +4,21 @@
   "THEVALKYRIE-MYSTIC_LIGHTER_NERF.title": "Nerf Mystic Lighter (+9 damage -> +6 Damage) [red](Requires Restart)[/red]",
   "THEVALKYRIE-MYSTIC_LIGHTER_NERF.hover.title": "Nerf Mystic Lighter",
   "THEVALKYRIE-MYSTIC_LIGHTER_NERF.hover.desc": "Mystic Lighter is a base game shop relic that raises the damage of all enchanted attacks by 9.\nDue to the many sources of reliable enchantments in this mod, Mystic Lighter is nerfed by default. Uncheck to set its value back to normal.\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]",
-
-  "THEVALKYRIE-FUNNY_CONTENT.title": "Wild Spire",
-  "THEVALKYRIE-FUNNY_CONTENT.hover.title": "Wild Spire",
-  "THEVALKYRIE-FUNNY_CONTENT.hover.desc": "Unleashes bizarre and silly elements. Not for the faint of heart or the serious of temperament.\n(Currently only toggles one event.)\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]",
-
+  
   "THEVALKYRIE-METRICS_DATA_SHARE.title": "Share run data with mod creator (Opt-in only)",
   "THEVALKYRIE-METRICS_DATA_SHARE.hover.title": "Metrics Upload",
   "THEVALKYRIE-METRICS_DATA_SHARE.hover.desc": "Gameplay data is sent to this mod's creator after completing a run to help with balance decisions.\nThis uses the same system as the base game, so no personal information is collected!",
 
+  "THEVALKYRIE-CUSTOM_EVENTS.title": "Custom Events",
+
+  "THEVALKYRIE-FUNNY_CONTENT.title": "???",
+  "THEVALKYRIE-FUNNY_CONTENT.hover.title": "???",
+  "THEVALKYRIE-FUNNY_CONTENT.hover.desc": "Adds a ??? between ???.\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]",
+
+  "THEVALKYRIE-EVENT_ROOTED_LIBRARY.title": "The Overgrown Library",
+  "THEVALKYRIE-EVENT_ROOTED_LIBRARY.hover.title": "The Overgrown Library",
+  "THEVALKYRIE-EVENT_ROOTED_LIBRARY.hover.desc": "Adds a new event in Act 2.\n[red]In Multiplayer, all players must have this setting synced to avoid state divergence.[/red]",
+  
   "THEVALKYRIE-CROSS_MOD_CONTENT.title": "Cross Mod Content",
 
   "THEVALKYRIE-ANCIENTS_AWAKENED_CUSTOM_CARDS.title": "Ancients Awakened custom cards [red](Requires Restart)[/red]",

@@ -11,7 +11,7 @@ public class HeavyFlail : TheValkyrieCard
 {
     public HeavyFlail() : base(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
     {
-        WithDamage(9, 4);
+        WithDamage(9, 3);
         WithTip(typeof(VigorPower));
     }
 

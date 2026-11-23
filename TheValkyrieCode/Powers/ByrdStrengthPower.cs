@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheValkyrie.TheValkyrieCode.Powers;
@@ -36,6 +37,16 @@ public sealed class ByrdStrengthPower : TheValkyriePower
         CardModel? card,
         CardPlay? cardPlay)
     {
-        return this.Owner != dealer || card is not (Peck or ByrdSwoop or GodByrd) ? 0 : this.Amount;
+        return this.Owner == dealer && card is Peck or ByrdSwoop or GodByrd ? this.Amount : 0;
+    }
+    
+    public override decimal ModifyPowerAmountGivenAdditive(
+        PowerModel power,
+        Creature giver,
+        decimal amount,
+        Creature? target,
+        CardModel? cardSource)
+    {
+        return power is GodByrdPower && giver == Owner ? this.Amount : 0;
     }
 }

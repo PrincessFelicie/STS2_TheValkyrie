@@ -35,5 +35,27 @@
   "THEVALKYRIE-MAN_EGG_TREE.pages.APPROACH.options.NO.title": "No",
   "THEVALKYRIE-MAN_EGG_TREE.pages.APPROACH.options.NO.description": "Refuse the gift.",
   
-  "THEVALKYRIE-MAN_EGG_TREE.pages.NO.description": "Then he needn't be here.\n\nStrange men hiding behind trees distributing things are no basis for a cohesive deck. You resume your climb."
+  "THEVALKYRIE-MAN_EGG_TREE.pages.NO.description": "Then he needn't be here.\n\nStrange men hiding behind trees distributing things are no basis for a cohesive deck. You resume your climb.",
+  
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.title": "The Overgrown Library",
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.description": "Following a trail of loose pages leads you to the remains of a library, covered in [green]invasive plants from the Overgrowth[/green].\nSuch a sight this high up the Spire does not bode well.\nWhile most books have long since turned to dust, you manage to find a [red]medical journal[/red], some [yellow]annotated music[/yellow], and a nook with a [color=#aaaaaa]dusty stone chair[/color].",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.STUDY_WEAKPOINTS.title": "Study Weak Points",
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.STUDY_WEAKPOINTS.description": "[gold]Enchant[/gold] a multi-hit Attack with [purple]{Enchantment}[/purple]. Add [red]Writhe[/red] to your [gold]Deck[/gold].",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.STUDY_WEAKPOINTS_LOCKED.title": "Locked",
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.STUDY_WEAKPOINTS_LOCKED.description": "You have no multi-hit Attack that can be [purple]Enchanted[/purple].",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.NAB_POETRY.title": "Nab Music Sheet",
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.NAB_POETRY.description": "Receive [gold]{Relic}[/gold].",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.DOZE_OFF.title": "Doze Off",
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.INITIAL.options.DOZE_OFF.description": "Heal [green]{Heal}[/green] HP. Add [red]Poor Sleep[/red] to your [gold]Deck[/gold].",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.STUDY_WEAKPOINTS.description": "The journal is a fascinating, but long read. After a few hours, you obtain a new understanding of how to target enemy weak points.\n[sine]But so much time spent hunched over has left your back [red][jitter]aching[/jitter][/red]...[/sine]",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.NAB_POETRY.description": "You spend a couple minutes working out the melody written down. It's quite a pleasant earworm! You stash the page for later, feeling inspired.",
+
+  "THEVALKYRIE-THE_ROOTED_LIBRARY.pages.DOZE_OFF.description": "Reading has been and always will be for chumps.\nYou use the chair as an impromptu nap spot instead.\n[sine]Zzz... zzz... ..Zz...[/sine]\nMaybe this wasn't such a good idea. You feel more rested, but your seat has left you [jitter]sore[/jitter]."
 }

@@ -22,7 +22,11 @@ public class ValkyrieModConfig : SimpleModConfig
     
     public static bool MysticLighterNerf { get; set; } = true;
     
+    
+    [ConfigSection("CustomEvents", CollapsedByDefault = true)]
     public static bool FunnyContent { get; set; } = true;
+    public static bool EventRootedLibrary { get; set; } = true;
+    
     
     [ConfigSection("CrossModContent", CollapsedByDefault = true)]
     public static bool AncientsAwakenedCustomCards { get; set; } = true;

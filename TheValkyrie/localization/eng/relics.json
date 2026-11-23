@@ -51,5 +51,9 @@
   "THEVALKYRIE-ARIA_OF_WIND.description": "At the start of each combat, [gold]Bless[/gold] your starting hand.",
   "THEVALKYRIE-ARIA_OF_WIND.flavor": "A masterpiece of historical importance. Holding this feels almost forbidden.",
 
+  "THEVALKYRIE-ROUSING_DITTY.title": "Rousing Ditty",
+  "THEVALKYRIE-ROUSING_DITTY.description": "Whenever you play a [blue]0[/blue]-cost card, gain [blue]{Block}[/blue] [gold]Block[/gold].",
+  "THEVALKYRIE-ROUSING_DITTY.flavor": "It's so catchy!",
+  
   "SEA_GLASS.THEVALKYRIE-THE_VALKYRIE.title": "Harpy Glass"
 }

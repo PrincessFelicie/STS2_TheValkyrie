@@ -9,7 +9,7 @@ using TheValkyrie.TheValkyrieCode.Powers;
 
 namespace TheValkyrie.TheValkyrieCode.Enchantments;
 
-public class Sanguine : CustomEnchantmentModel
+public class Flay : CustomEnchantmentModel
 {
     protected override string CustomIconPath => "TheValkyrie/images/enchantments/sanguine.png";
     

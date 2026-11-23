@@ -17,8 +17,10 @@ namespace TheValkyrie.TheValkyrieCode.Events;
 public class ManEggTree() : CustomEventModel
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new HealVar(10)
     ];
+    
+    public override string CustomInitialPortraitPath => "/events/man_egg_tree.png".ImagePath();
+    public override string CustomBackgroundScenePath => SceneHelper.GetScenePath("events/background_scenes/" + ModelDb.Event<ThisOrThat>().Id.Entry.ToLowerInvariant());
 
     protected override IReadOnlyList<EventOption> GenerateInitialOptions() =>
     [
@@ -60,7 +62,4 @@ public class ManEggTree() : CustomEventModel
     {
         this.SetEventFinished(this.L10NLookup("THEVALKYRIE-MAN_EGG_TREE.pages.NO.description"));
     }
-    
-    public override string CustomInitialPortraitPath => "/events/man_egg_tree.png".ImagePath();
-    public override string CustomBackgroundScenePath => SceneHelper.GetScenePath("events/background_scenes/" + ModelDb.Event<ThisOrThat>().Id.Entry.ToLowerInvariant());
 }

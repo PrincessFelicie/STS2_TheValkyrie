@@ -17,13 +17,13 @@ public class SongOfDestruction : TheValkyrieCard
         WithPower<BleedPower>(3, 1);
         WithPower<OverexertionPower>(4);
         WithVar("Quantity", 1);
-        WithVar("Sanguine", 1, 1);
+        WithVar("Flay", 1, 1);
         
         WithTips(c => c.IsInCombat ? 
-            [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner, ModelDb.Enchantment<Sanguine>(), c.DynamicVars["Sanguine"].IntValue)] : 
-            [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<Sanguine>(), c.DynamicVars["Sanguine"].IntValue)]
+            [CustomHoverTipFactory.FromCombatSmiteWithEnchant(c.Owner, ModelDb.Enchantment<Flay>(), c.DynamicVars["Flay"].IntValue)] : 
+            [CustomHoverTipFactory.FromCardWithEnchant(ModelDb.Card<Smite>(), false, ModelDb.Enchantment<Flay>(), c.DynamicVars["Flay"].IntValue)]
         );
-        WithTips(c => HoverTipFactory.FromEnchantment<Sanguine>(c.DynamicVars["Sanguine"].IntValue));
+        WithTips(c => HoverTipFactory.FromEnchantment<Flay>(c.DynamicVars["Flay"].IntValue));
     }
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -33,7 +33,7 @@ public class SongOfDestruction : TheValkyrieCard
         await PowerCmd.Apply<BleedPower>(choiceContext, play.Target, DynamicVars["BleedPower"].IntValue, Owner.Creature, this);
         await PowerCmd.Apply<OverexertionPower>(choiceContext, Owner.Creature, DynamicVars["OverexertionPower"].IntValue, Owner.Creature, this);
         if (CombatState == null) return; //solves a warning
-        await Smite.CreateInHandWithEnchantment<Sanguine>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Sanguine"].IntValue, CombatState);
+        await Smite.CreateInHandWithEnchantment<Flay>(Owner, DynamicVars["Quantity"].IntValue,DynamicVars["Flay"].IntValue, CombatState);
     }
 
     protected override void OnUpgrade()

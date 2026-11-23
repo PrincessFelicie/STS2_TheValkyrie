@@ -32,7 +32,7 @@ public class BlessCmd
                 validEnchantments.Add(ModelDb.Enchantment<Sharp>());
             
             if (card.TargetType is TargetType.AllEnemies or TargetType.AnyEnemy or TargetType.RandomEnemy)
-                validEnchantments.Add(ModelDb.Enchantment<Sanguine>());
+                validEnchantments.Add(ModelDb.Enchantment<Flay>());
             
             if (card.GainsBlock)
                 validEnchantments.Add(ModelDb.Enchantment<Nimble>());
@@ -53,7 +53,7 @@ public class BlessCmd
                 case Adroit:
                     enchantmentCount = amount+1;
                     break;
-                case Sanguine:
+                case Flay:
                 case Aegis:
                     enchantmentCount = amount;
                     break;
@@ -68,8 +68,8 @@ public class BlessCmd
         
         NCard? nCard = NCard.FindOnTable(card);
         if (nCard == null || card.Enchantment == null) return;
-        SfxCmd.Play("event:/sfx/enemy/enemy_attacks/devoted_sculptor/devoted_sculptor_attack",Math.Min(1.2f, (float)0.5f+(0.1f*card.Enchantment.Amount)));
-        await CustomCardAnimCmd.GrowAndShrink(nCard, Math.Min(2.0f, (float)1.0f+(0.1f*card.Enchantment.Amount)));
+        SfxCmd.Play("event:/sfx/enemy/enemy_attacks/devoted_sculptor/devoted_sculptor_attack",Math.Min(1.2f, 0.5f+(0.1f*card.Enchantment.Amount)));
+        await CustomCardAnimCmd.GrowAndShrink(nCard, Math.Min(2.0f, 1.0f+(0.1f*card.Enchantment.Amount)));
     }
 
     public static bool CanBless(

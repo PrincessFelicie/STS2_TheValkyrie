@@ -72,8 +72,8 @@
   "THEVALKYRIE-SECOND_WIND_POWER.smartDescription": "At the end of your turn, lose [blue]{Amount}[/blue] [gold]Overexhaustion[/gold].",
 
   "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.title": "Territorial Instincts",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, [gold]Transform[/gold] {Amount:plural:a card|[blue]{}[/blue] cards} in your hand into a [gold]Byrd Card[/gold], then gain [blue]{Amount}[/blue] [gold]Byrd Strength[/gold].",
-  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, [gold]Transform[/gold] a card in your hand into a [gold]Byrd Card[/gold], then gain [blue]{Amount}[/blue] [gold]Byrd Strength[/gold].\n[blue]{PlayedUpgraded:diff()}[/blue] of them will be [gold]Upgraded[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.description": "At the start of your turn, [gold]Transform[/gold] a card in your hand into a [gold]Byrd Card[/gold], then gain 1 [gold]Byrd Strength[/gold].",
+  "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.smartDescription": "At the start of your turn, [gold]Transform[/gold] {Amount:plural:a card|[blue]{}[/blue] cards} card in your hand into a [gold]Byrd Card[/gold], then gain [blue]{Amount}[/blue] [gold]Byrd Strength[/gold].\n[blue]{PlayedUpgraded:diff()}[/blue] of them will be [gold]Upgraded[/gold].",
   "THEVALKYRIE-TERRITORIAL_PURPOSE_POWER.selectionScreenPrompt": "Choose {Amount:plural:a card|[blue]{}[/blue] cards} to [gold]Transform[/gold] into {Amount:plural:a [gold]Byrd Card[/gold]|[blue]{}[/blue] [gold]Byrd Cards[/gold]}.",
 
   "THEVALKYRIE-BYRD_STRENGTH_POWER.title": "Byrd Strength",

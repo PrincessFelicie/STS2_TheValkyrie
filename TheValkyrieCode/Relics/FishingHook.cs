@@ -21,7 +21,7 @@ public class FishingHook : TheValkyrieRelic
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips
     {
-        get => HoverTipFactory.FromEnchantment<Sanguine>(DynamicVars["SanguineAmount"].IntValue);
+        get => HoverTipFactory.FromEnchantment<Flay>(DynamicVars["SanguineAmount"].IntValue);
     }
 
     public override async Task AfterObtained()
@@ -31,7 +31,7 @@ public class FishingHook : TheValkyrieRelic
             Cancelable = false,
             RequireManualConfirmation = true
         };
-        Sanguine canonicalEnchantment = ModelDb.Enchantment<Sanguine>();
+        Flay canonicalEnchantment = ModelDb.Enchantment<Flay>();
         foreach (CardModel card in await CardSelectCmd.FromDeckForEnchantment(this.Owner, canonicalEnchantment, DynamicVars["SanguineAmount"].IntValue, c => c?.Type == CardType.Attack, prefs))
         {
             CardCmd.Enchant(canonicalEnchantment.ToMutable(), card, DynamicVars["SanguineAmount"].BaseValue);

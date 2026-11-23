@@ -164,7 +164,7 @@ public sealed class RunMetricsUploader<TPayload>
             return false;
         }
         
-        if (_config.RequireStandardGameMode && run.GameMode != GameMode.Standard)
+        if (_config.RequireStandardGameMode && run.GameMode is not (GameMode.Standard or GameMode.Dread))
         {
             log?.Info($"[{mod}] Skipping metrics upload, custom mode detected.");
             return false;

@@ -41,20 +41,20 @@ public sealed class TerritorialPurposePower : TheValkyriePower
     {
         if (player != Owner.Player)
             return;
-        this.DynamicVars["HasUpgradedThisTurn"].BaseValue = 0;
-        this.Flash();
+        DynamicVars["HasUpgradedThisTurn"].BaseValue = 0;
+        Flash();
         
-        foreach (CardModel original in (await CardSelectCmd.FromHand(choiceContext, player, new CardSelectorPrefs(SelectionScreenPrompt, this.Amount), c => c is not (ByrdSwoop or Peck or GodByrd), this)).ToList())
+        foreach (CardModel original in (await CardSelectCmd.FromHand(choiceContext, player, new CardSelectorPrefs(SelectionScreenPrompt, Amount), c => c is not (ByrdSwoop or Peck or GodByrd), this)).ToList())
         {
             List<CardModel> possibleCards = [ModelDb.Card<ByrdSwoop>(), ModelDb.Card<Peck>(), ModelDb.Card<GodByrd>()];
             CardModel? replacement = Owner.Player.PlayerRng.GetRng(PlayerRngType.Transformations)
-                .WeightedNextItem<CardModel>(possibleCards, (c => c is GodByrd ? 0.2f : 1f));
+                .WeightedNextItem(possibleCards, (c => c is GodByrd ? 0.2f : 1f));
             if (replacement is null) return;
             CardModel createdCard = CombatState.CreateCard(replacement, Owner.Player);
-            if (this.DynamicVars["HasUpgradedThisTurn"].BaseValue < this.DynamicVars["PlayedUpgraded"].BaseValue)
+            if (DynamicVars["HasUpgradedThisTurn"].BaseValue < DynamicVars["PlayedUpgraded"].BaseValue)
             {
                 CardCmd.Upgrade(createdCard);
-                this.DynamicVars["HasUpgradedThisTurn"].BaseValue++;
+                DynamicVars["HasUpgradedThisTurn"].BaseValue++;
             }
             if (original.Enchantment != null)
             {
@@ -63,6 +63,6 @@ public sealed class TerritorialPurposePower : TheValkyriePower
             }
             await CardCmd.Transform(original, createdCard);
         }
-        await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, this.Owner, this.Amount, Owner, null);
+        await PowerCmd.Apply<ByrdStrengthPower>(choiceContext, Owner, Amount, Owner, null);
     }
 }
